@@ -20,4 +20,4 @@ This Framework include:
 
 4) Distance
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set a threshold how big the distance of your number value
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set a threshold how big the distance between every random number
