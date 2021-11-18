@@ -11,7 +11,7 @@ namespace RandEXom.SeedLib
     /// <summary>
     /// The value will be change and iterate every random process
     /// </summary>
-    public class IterativeSeed : ISeed
+    public class IterativeSeed : ISeedR
     {
         private long _seed = 0;
         public long init

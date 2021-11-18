@@ -9,7 +9,7 @@ namespace RandEXom.SeedLib
     /// <summary>
     /// If you want to custom how the seed work. Each of the random process will use a new seed by your function.
     /// </summary>
-    class IterativeSeedCustom : RandEXom.Interface.ISeed
+    class IterativeSeedCustom : RandEXom.Interface.ISeedR
     {
         private long _seed = 0;
         public long init

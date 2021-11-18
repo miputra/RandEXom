@@ -1,4 +1,8 @@
-﻿using System;
+﻿// Made by Muhammad Ihsan Diputra
+// Lincense under MIT
+// https://github.com/miputra/RandEXom
+
+using System;
 using RandEXom.SeedLib;
 
 namespace RandEXom.RandomLib
@@ -9,9 +13,9 @@ namespace RandEXom.RandomLib
     /// and the algorithm based on Numerical Recipes in C (2nd Ed.)
     /// The long parameter will converted to int and may cause memory dump
     /// </summary>
-    public class NetRandom :RandEXom.Interface.IRandom
+    public class NetRandom :RandEXom.Interface.IRandomR
     {
-        private RandEXom.Interface.ISeed seed;
+        private RandEXom.Interface.ISeedR seed;
         System.Random net_r;
 
         public string GetSeed()
@@ -32,7 +36,7 @@ namespace RandEXom.RandomLib
             net_r = new System.Random((int)RandEXom.Utility.Type.RoundLongToInt(this.seed.now));
         }
 
-        public NetRandom(RandEXom.Interface.ISeed seed)
+        public NetRandom(RandEXom.Interface.ISeedR seed)
         {
             this.seed = seed;
             net_r = new System.Random((int)RandEXom.Utility.Type.RoundLongToInt(this.seed.now));
@@ -63,7 +67,7 @@ namespace RandEXom.RandomLib
         }
 
         /// <summary>
-        /// this code made by Mark Amery from
+        /// this code in particular function is made by Mark Amery from
         /// https://stackoverflow.com/questions/6651554/random-number-in-long-range-is-this-the-way
         /// </summary>
         /// <param name="min">inclusive</param>

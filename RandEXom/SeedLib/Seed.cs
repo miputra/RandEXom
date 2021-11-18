@@ -9,7 +9,7 @@ namespace RandEXom.SeedLib
     /// <summary>
     /// Default seed. The value will not changed every random process.
     /// </summary>
-    class Seed : RandEXom.Interface.ISeed
+    class Seed : RandEXom.Interface.ISeedR
     {
         private long _seed = 0;
         public long init

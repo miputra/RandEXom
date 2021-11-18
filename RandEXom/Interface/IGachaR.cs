@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿// Made by Muhammad Ihsan Diputra
+// Lincense under MIT
+// https://github.com/miputra/RandEXom
+
 
 namespace RandEXom.Interface
 {
-    public interface IGacha<T>
+    public interface IGachaR<T>
     {
         /// <summary>
         /// Count every item in pool

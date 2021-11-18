@@ -1,9 +1,9 @@
-﻿using System;
+﻿// Made by Muhammad Ihsan Diputra
+// Lincense under MIT
+// https://github.com/miputra/RandEXom
+
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using RandEXom.RandomLib;
 using RandEXom.SeedLib;
 
 namespace RandEXom.Framework
@@ -12,23 +12,23 @@ namespace RandEXom.Framework
     /// Gacha or random picker framework. Heavy on memory because saving the entire item but low in process
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public class Gacha<T> : RandEXom.Interface.IGacha<T>
+    public class GachaR<T> : RandEXom.Interface.IGachaR<T>
     {
         List<T> items_init = new List<T>();
         List<T> items_current = new List<T>();
 
-        RandEXom.Interface.IRandom rand;
+        RandEXom.Interface.IRandomR rand;
 
-        public Gacha()
+        public GachaR()
         {
             rand = new RandomLib.NetRandom(new Seed());
         }
-        public Gacha(long? seed)
+        public GachaR(long? seed)
         {
             rand = new RandomLib.NetRandom(new Seed(seed));
         }
 
-        public Gacha(RandEXom.Interface.IRandom framework)
+        public GachaR(RandEXom.Interface.IRandomR framework)
         {
             rand = framework;
         }
