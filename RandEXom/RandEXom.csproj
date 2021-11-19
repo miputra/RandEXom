@@ -53,10 +53,10 @@
     <Compile Include="Interface\ISeedR.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RandomLib\NetRandom.cs" />
-    <Compile Include="SeedLib\IterativeSeed.cs" />
-    <Compile Include="SeedLib\IterativeSeedCustom.cs" />
-    <Compile Include="SeedLib\Seed.cs" />
-    <Compile Include="Utility\Type.cs" />
+    <Compile Include="SeedLib\IterativeSeedR.cs" />
+    <Compile Include="SeedLib\IterativeSeedRCustom.cs" />
+    <Compile Include="SeedLib\SeedR.cs" />
+    <Compile Include="Utility\TypeR.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

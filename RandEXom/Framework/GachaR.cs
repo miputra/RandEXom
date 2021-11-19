@@ -21,11 +21,11 @@ namespace RandEXom.Framework
 
         public GachaR()
         {
-            rand = new RandomLib.NetRandom(new Seed());
+            rand = new RandomLib.NetRandom(new SeedR());
         }
         public GachaR(long? seed)
         {
-            rand = new RandomLib.NetRandom(new Seed(seed));
+            rand = new RandomLib.NetRandom(new SeedR(seed));
         }
 
         public GachaR(RandEXom.Interface.IRandomR framework)

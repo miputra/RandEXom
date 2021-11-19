@@ -11,7 +11,7 @@ namespace RandEXom.SeedLib
     /// <summary>
     /// The value will be change and iterate every random process
     /// </summary>
-    public class IterativeSeed : ISeedR
+    public class IterativeSeedR : ISeedR
     {
         private long _seed = 0;
         public long init
@@ -49,7 +49,7 @@ namespace RandEXom.SeedLib
         }
         public Process process = Process.Addition;
         
-        public IterativeSeed(long ? seed = null)
+        public IterativeSeedR(long ? seed = null)
         {
             long new_seed = 0;
             if (seed == null)
@@ -90,12 +90,12 @@ namespace RandEXom.SeedLib
                     break;
                 case Process.Cos:
                     this.currentSeed = long.MaxValue - (long)(
-                        (double) long.MaxValue * Math.Cos((double) RandEXom.Utility.Type.RoundLongToInt(this.currentSeed))
+                        (double) long.MaxValue * Math.Cos((double) RandEXom.Utility.TypeR.RoundLongToInt(this.currentSeed))
                         );
                     break;
                 case Process.Sin:
                     this.currentSeed = this.currentSeed = long.MaxValue - (long)(
-                        (double)long.MaxValue * Math.Sin((double)RandEXom.Utility.Type.RoundLongToInt(this.currentSeed))
+                        (double)long.MaxValue * Math.Sin((double)RandEXom.Utility.TypeR.RoundLongToInt(this.currentSeed))
                         );
                     break;
             }

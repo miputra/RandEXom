@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 namespace RandEXom.SeedLib
 {
     /// <summary>
-    /// Default seed. The value will not changed every random process.
+    /// If you want to custom how the seed work. Each of the random process will use a new seed by your function.
     /// </summary>
-    class Seed : RandEXom.Interface.ISeedR
+    class IterativeSeedRCustom : RandEXom.Interface.ISeedR
     {
         private long _seed = 0;
         public long init
@@ -24,7 +24,7 @@ namespace RandEXom.SeedLib
         {
             get
             {
-                return _seed;
+                return previousSeed;
             }
         }
 
@@ -32,11 +32,19 @@ namespace RandEXom.SeedLib
         {
             get
             {
-                return _seed;
+                return currentSeed;
             }
         }
+        private long currentSeed = 0;
+        private long previousSeed = 0;
+        Func<long, long> process;
 
-        public Seed(long? seed = null)
+        /// <summary>
+        /// Use your process here for generating next seed
+        /// </summary>
+        /// <param name="process">The input of process is previous seed, where the output is generated seed</param>
+        /// <param name="seed"></param>
+        public IterativeSeedRCustom(Func<long, long> process, long? seed = null)
         {
             long new_seed = 0;
             if (seed == null)
@@ -51,15 +59,16 @@ namespace RandEXom.SeedLib
 
                     );
             else
-                new_seed = (long) seed;
+                new_seed = (long)seed;
             this._seed = new_seed;
+            this.process = process;
         }
 
-        public virtual void Next()
+        public void Next()
         {
+            this.previousSeed = currentSeed;
+
+            this.currentSeed = process(currentSeed);
         }
-
-
-        
     }
 }

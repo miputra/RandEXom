@@ -25,21 +25,21 @@ namespace RandEXom.RandomLib
 
         public NetRandom()
         {
-            this.seed = new Seed();
-            net_r = new System.Random((int)RandEXom.Utility.Type.RoundLongToInt(this.seed.now));
+            this.seed = new SeedR();
+            net_r = new System.Random((int)RandEXom.Utility.TypeR.RoundLongToInt(this.seed.now));
         }
 
 
         public NetRandom(long seed)
         {
-            this.seed = new Seed(seed);
-            net_r = new System.Random((int)RandEXom.Utility.Type.RoundLongToInt(this.seed.now));
+            this.seed = new SeedR(seed);
+            net_r = new System.Random((int)RandEXom.Utility.TypeR.RoundLongToInt(this.seed.now));
         }
 
         public NetRandom(RandEXom.Interface.ISeedR seed)
         {
             this.seed = seed;
-            net_r = new System.Random((int)RandEXom.Utility.Type.RoundLongToInt(this.seed.now));
+            net_r = new System.Random((int)RandEXom.Utility.TypeR.RoundLongToInt(this.seed.now));
         }      
 
         /// <summary>

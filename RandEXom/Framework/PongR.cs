@@ -19,11 +19,11 @@ namespace RandEXom.Framework
 
         public PongR()
         {
-            rand = new RandomLib.NetRandom(new Seed());
+            rand = new RandomLib.NetRandom(new SeedR());
         }
         public PongR(long? seed)
         {
-            rand = new RandomLib.NetRandom(new Seed(seed));
+            rand = new RandomLib.NetRandom(new SeedR(seed));
         }
 
         public PongR(RandEXom.Interface.IRandomR framework)

@@ -47,12 +47,12 @@ namespace RandEXom.Framework
 
         public GachaRBatched(long seed)
         {
-            rand = new RandomLib.NetRandom(new Seed(seed));
+            rand = new RandomLib.NetRandom(new SeedR(seed));
         }
 
         public GachaRBatched()
         {
-            rand = new RandomLib.NetRandom(new Seed());
+            rand = new RandomLib.NetRandom(new SeedR());
         }
 
         public GachaRBatched(RandEXom.Interface.IRandomR framework)

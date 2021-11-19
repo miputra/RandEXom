@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RandEXom.Utility
 {
-    class Type
+    class TypeR
     {
         /// <summary>
         /// Used when random system doesnt support long. The type data will still long, but the length will be interger
