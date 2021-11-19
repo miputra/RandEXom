@@ -10,6 +10,9 @@ using RandEXom.SeedLib;
 
 namespace RandEXom.Framework
 {
+    /// <summary>
+    /// Your next random value will have not less distance than previous random value
+    /// </summary>
     public class DistanceR
     {
         IRandomR rand;
