@@ -26,7 +26,7 @@ namespace RandEXom.Framework
             rand = new RandomLib.NetRandom(new SeedR());
             this.distance = distance;
         }
-        public DistanceR(long? seed, int distance = 5)
+        public DistanceR(long seed, int distance = 5)
         {
             rand = new RandomLib.NetRandom(new SeedR(seed));
             this.distance = distance;

@@ -21,7 +21,7 @@ namespace RandEXom.Framework
         {
             rand = new RandomLib.NetRandom(new SeedR());
         }
-        public PongR(long? seed)
+        public PongR(long seed)
         {
             rand = new RandomLib.NetRandom(new SeedR(seed));
         }

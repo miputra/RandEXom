@@ -23,7 +23,7 @@ namespace RandEXom.Framework
         {
             rand = new RandomLib.NetRandom(new SeedR());
         }
-        public GachaR(long? seed)
+        public GachaR(long seed)
         {
             rand = new RandomLib.NetRandom(new SeedR(seed));
         }
