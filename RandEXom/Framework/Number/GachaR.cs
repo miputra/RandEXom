@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using RandEXom.SeedLib;
 
-namespace RandEXom.Framework
+namespace RandEXom.Framework.Number
 {
     /// <summary>
     /// Gacha or random picker framework. Heavy on memory because saving the entire item but low in process

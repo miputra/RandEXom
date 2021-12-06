@@ -44,10 +44,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Framework\DistanceR.cs" />
-    <Compile Include="Framework\GachaR.cs" />
-    <Compile Include="Framework\GachaRBatched.cs" />
-    <Compile Include="Framework\PongR.cs" />
+    <Compile Include="Framework\Item\DistanceR.cs" />
+    <Compile Include="Framework\Number\GachaR.cs" />
+    <Compile Include="Framework\Number\GachaRBatched.cs" />
+    <Compile Include="Framework\Item\PongR.cs" />
     <Compile Include="Interface\IGachaR.cs" />
     <Compile Include="Interface\IRandomR.cs" />
     <Compile Include="Interface\ISeedR.cs" />
