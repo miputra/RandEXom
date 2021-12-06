@@ -1,52 +1,23 @@
-**What is RandEXom?**
+# RandEXom
+Framework for randoming stuff
 
-RandEXom basically a library to make randomization easier. There are so many ways you can do to do randomizing in programming, and RandEXom trying to archieve those methods in a single library, either by using an already made algorithm or a new algorithm, so we can do randomizing with whatever method we want.
+Just add RandEXom.dll as reference in your project.
+For now it only contain randomisation via default .Net
 
+This Framework include:
 
-***
+1) Gacha (Pooling Picker)
 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Like a gacha box, you put items inside, and when you pull you get the random value
 
-## Requirement
+2) GachaBatched
 
-To use this library, you need at least:
-.Net Framework 4.6.1
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Like previous gacha system, but batched the same item into one for memory performance, but the process is slower than the vanilla (Around 100 ms) 
 
+3) Pong
 
-***
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The random number, where it is change pole in next random, between near minimum or maximum
 
+4) Distance
 
-## How to use
-
-Note: Every IDE has a different way to add .dll as a reference. 
-
-If you use the visual studio on your project:
-
-1. In Solution Explorer, right-click your project, then click add reference
-2. On the bottom left window, click the browser button, and choose RandEXom.dll
-3. Now you can using RandEXom library in your project
-
-
-***
-
-## Structure
-
-RandEXom library consists of several modules and classes
-
-* RandEXom   
-  * RandomLib
-    * NetRandom
-  * SeedLib
-    * SeedR
-    * IterativeSeedR
-    * IterativeSeedRCustom
-  * FrameWork
-    * DistanceR
-    * GachaR
-    * GachaRBatched
-    * PongR
-  * Interface
-    * IGachaR
-    * IRandomR
-    * ISeedR
-  * Utility
-    * TypeR
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set a threshold how big the distance between every random number
