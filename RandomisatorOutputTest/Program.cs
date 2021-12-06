@@ -20,6 +20,7 @@ namespace RandomisatorOutputTest
                 Console.WriteLine("[2] to test gachalite");
                 Console.WriteLine("[3] to test pong");
                 Console.WriteLine("[4] to test distance");
+                Console.WriteLine("[5] to test SSRNG");
                 string res = Console.ReadLine();
                 switch (res)
                 {
@@ -34,6 +35,9 @@ namespace RandomisatorOutputTest
                         break;
                     case "4":
                         TestDistance();
+                        break;
+                    case "5":
+                        TestSSRNG();
                         break;
                     default:
                         return;
@@ -148,6 +152,25 @@ namespace RandomisatorOutputTest
 
             string finish = (DateTime.Now - lastTime).Milliseconds.ToString();
             Console.WriteLine("Process is done by " + finish + "ms");
+        }
+    
+        static void TestSSRNG()
+        {
+            SSRNGRandom rand = new SSRNGRandom();
+
+            Console.WriteLine("Test Int");
+
+            for(int i = 0;i < 10; i++)
+            {
+                Console.WriteLine(rand.NextInt(0, 100));
+            }
+
+            Console.WriteLine("Test long");
+
+            for (int i = 0; i < 10; i++)
+            {
+                Console.WriteLine(rand.NextLong(0, 10000));
+            }
         }
     }
 }
