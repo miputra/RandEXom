@@ -1,0 +1,368 @@
+{
+  "homepages": [],
+  "source_base_path": "C:/Users/Ichisan/source/repos/RandEXom/RandEXom",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "/8MQ9bFWMRM+dEBut7Yd1dJ3LeCehwx/7Zp/pyFGcK0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/intro.html",
+          "hash": "acAFeopSlBc1Kj2+BdnauGwP6g2bRFnYNvv3tX6a5qk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html",
+          "hash": "BlPxk5mtl2kgfcZUgkEguqiSAR/EUyUTT4EdebwkQvs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "J7od8oJhbZVPQ1T4AKsddXvKqXnwaE+FRkjhbfT8/lk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/RandEXom.Framework.DistanceR.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RandEXom.Framework.DistanceR.html",
+          "hash": "S9LQ9AO2DsZTIm6W8c11GlIbA45nI6hYBCT6i30qF18="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/RandEXom.Framework.GachaR-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RandEXom.Framework.GachaR-1.html",
+          "hash": "xjsDu8pCJT7duI4LRBF1IwiAdzCgFKCUyUK3EsGF4Cs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/RandEXom.Framework.GachaRBatched-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RandEXom.Framework.GachaRBatched-1.html",
+          "hash": "IPOydnh2zs4XE5zBPKRfa3UwKCYTz5vxH94xqtWy/uY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/RandEXom.Framework.PongR.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RandEXom.Framework.PongR.html",
+          "hash": "cdsc/XIZc/9TSRxeTJdYbgc+sV/m4Y+W4Kji+ZUzIsM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/RandEXom.Framework.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RandEXom.Framework.html",
+          "hash": "gFYKsQ54DgzsXWbQKqWjfMPMtXsqz2sPBDtzPHH2QZs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/RandEXom.Interface.IGachaR-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RandEXom.Interface.IGachaR-1.html",
+          "hash": "ZwNQFG+xcxvtpJYjyzec0NtSdPDHl3EH8zeIKRqcDRU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/RandEXom.Interface.IRandomR.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RandEXom.Interface.IRandomR.html",
+          "hash": "ia1S274NckMvYkbiZTnX4jlYXh1FodefvROVQfNMokc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/RandEXom.Interface.ISeedR.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RandEXom.Interface.ISeedR.html",
+          "hash": "uTJ6Qz5+Ne3XZ8HyCHDSqrh9wvw7w8WXzW1Rn2mfXmE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/RandEXom.Interface.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RandEXom.Interface.html",
+          "hash": "HfKZJ0QrIx3qDsE2fYgWuL4VpJ4ovXlrAjy5mLIktzc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/RandEXom.RandomLib.ModuloRandom.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RandEXom.RandomLib.ModuloRandom.html",
+          "hash": "qVjKwQOTZEuGoAXzrpQq5HSSWfQJS/+W7WBTEmVljtg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/RandEXom.RandomLib.NetRandom.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RandEXom.RandomLib.NetRandom.html",
+          "hash": "MvmHl6owxtoVBxM+5sUR0COuPTPGMtUzW4g+Xbz9S0Q="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/RandEXom.RandomLib.SSRNGRandom.ParameterTemplate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RandEXom.RandomLib.SSRNGRandom.ParameterTemplate.html",
+          "hash": "o4TNZP3EgV52nzjn5i409OD18sKLwYlHFggdiM7ZR3E="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/RandEXom.RandomLib.SSRNGRandom.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RandEXom.RandomLib.SSRNGRandom.html",
+          "hash": "RgCYsBGjqmMg+AswP/IV6TzUE+eeqGAgfEW2LOXb048="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/RandEXom.RandomLib.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RandEXom.RandomLib.html",
+          "hash": "wsLRF3j2Kt9L+PLOVSpWMpd1JirimOEv3lZsTaTTKdg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/RandEXom.SeedLib.IterativeSeedR.Process.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RandEXom.SeedLib.IterativeSeedR.Process.html",
+          "hash": "bwfZpiV3wjZCUc1DWClgaaD/JBVVslJUiGyL6+LcAMs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/RandEXom.SeedLib.IterativeSeedR.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RandEXom.SeedLib.IterativeSeedR.html",
+          "hash": "ZquKvVse8/FIQBNWY1RVaW7WdJiOeS4BZQknizJ68H8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/RandEXom.SeedLib.LCGSeedR.ParameterTemplate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RandEXom.SeedLib.LCGSeedR.ParameterTemplate.html",
+          "hash": "zE6urxI7z01AEiFTC1B6Uth7Ij8N8sk43n8WpwLS8Kw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/RandEXom.SeedLib.LCGSeedR.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RandEXom.SeedLib.LCGSeedR.html",
+          "hash": "r52Q9CFDGTcXANVuyA2TW4hqpDWEqqHiw807o9aGo2A="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/RandEXom.SeedLib.XORShiftSeed.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RandEXom.SeedLib.XORShiftSeed.html",
+          "hash": "zCXC128H/irhMFvtAn9q5v/ys/izyEfeuPV6n37C8nE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/RandEXom.SeedLib.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RandEXom.SeedLib.html",
+          "hash": "+wJX0Yj/BcU905NKpXcPknE5LYLldAQaIB+hYjiKt1A="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "obj/api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "t9Iv8sdJy4WPRgNA0hQkCfvBbfeGeQcMExAxq/UFvXg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "Oa9PuD4E1hvZnCkVjUgzNBX6S00Zo5YilamTERTZo54="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot build incrementally because last build info is missing.",
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0,
+        "full_build_reason_code": "NoAvailableBuildCache"
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 3,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 20,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: last post processor info is null.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
