@@ -21,6 +21,7 @@ namespace RandomisatorOutputTest
                 Console.WriteLine("[3] to test pong");
                 Console.WriteLine("[4] to test distance");
                 Console.WriteLine("[5] to test SSRNG");
+                Console.WriteLine("[6] to test XORShift");
                 string res = Console.ReadLine();
                 switch (res)
                 {
@@ -38,6 +39,9 @@ namespace RandomisatorOutputTest
                         break;
                     case "5":
                         TestSSRNG();
+                        break;
+                    case "6":
+                        TestXORShift();
                         break;
                     default:
                         return;
@@ -161,6 +165,21 @@ namespace RandomisatorOutputTest
             Console.WriteLine("Test Int");
 
             for(int i = 0;i < 10; i++)
+            {
+                Console.WriteLine(rand.NextInt(0, 100));
+            }
+
+            Console.WriteLine("Test long");
+
+            for (int i = 0; i < 10; i++)
+            {
+                Console.WriteLine(rand.NextLong(0, 10000));
+            }
+        }
+        static void TestXORShift()
+        {
+            ModuloRandom rand = new ModuloRandom();
+            for (int i = 0; i < 10; i++)
             {
                 Console.WriteLine(rand.NextInt(0, 100));
             }

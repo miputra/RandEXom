@@ -12,8 +12,6 @@ namespace RandEXom.SeedLib
     class SeedR : RandEXom.Interface.ISeedR
     {
         private long _seed = 0;
-        private long currentSeed = 0;
-        private long previousSeed = 0;
 
         public long init
         {

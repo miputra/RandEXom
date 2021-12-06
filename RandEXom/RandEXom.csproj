@@ -52,12 +52,14 @@
     <Compile Include="Interface\IRandomR.cs" />
     <Compile Include="Interface\ISeedR.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RandomLib\ModuloRandom.cs" />
     <Compile Include="RandomLib\NetRandom.cs" />
     <Compile Include="RandomLib\SSRNGRandom.cs" />
     <Compile Include="SeedLib\IterativeSeedR.cs" />
     <Compile Include="SeedLib\IterativeSeedRCustom.cs" />
     <Compile Include="SeedLib\LCGSeedR.cs" />
     <Compile Include="SeedLib\SeedR.cs" />
+    <Compile Include="SeedLib\XORShiftSeed.cs" />
     <Compile Include="Utility\LongR.cs" />
     <Compile Include="Utility\TypeR.cs" />
   </ItemGroup>
