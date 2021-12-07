@@ -1,23 +1,19 @@
-# RandEXom
-Framework for randoming stuff
 
-Just add RandEXom.dll as reference in your project.
-For now it only contain randomisation via default .Net
+## Requirement
 
-This Framework include:
+To use this library, you need at least:
+.Net Framework 4.6.1
 
-1) Gacha (Pooling Picker)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Like a gacha box, you put items inside, and when you pull you get the random value
+***
 
-2) GachaBatched
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Like previous gacha system, but batched the same item into one for memory performance, but the process is slower than the vanilla (Around 100 ms) 
+## How to use
 
-3) Pong
+Note: Every IDE has a different way to add .dll as a reference. 
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The random number, where it is change pole in next random, between near minimum or maximum
+If you use the visual studio on your project:
 
-4) Distance
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set a threshold how big the distance between every random number
+1. In Solution Explorer, right-click your project, then click add reference
+2. On the bottom left window, click the browser button, and choose RandEXom.dll
+3. Now you can using RandEXom library in your project
