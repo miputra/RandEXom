@@ -27,7 +27,8 @@ namespace RandEXom.SeedLib
             c ^= c << 25; // b
             c ^= c >> 27; // c
             c = c * 2685821657736338717;
-            currentSeed = unchecked((long)c + long.MinValue);
+            this.currentSeed = unchecked((long)c + long.MinValue);
+            this.currentSeed = currentSeed == 0 ? currentSeed + 1 : currentSeed;
         }
     }
 }

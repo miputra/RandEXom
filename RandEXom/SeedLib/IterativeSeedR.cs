@@ -53,7 +53,7 @@ namespace RandEXom.SeedLib
         {
             long new_seed = 0;
             if (seed == null)
-                new_seed = long.Parse(
+                this._seed = long.Parse(
                     System.DateTime.Now.Millisecond.ToString() +
                     System.DateTime.Now.Second.ToString() +
                     System.DateTime.Now.Minute.ToString() +
@@ -64,11 +64,12 @@ namespace RandEXom.SeedLib
                     
                     );
             else
-                new_seed = (long)seed;
+                this._seed = (long)seed;
             Console.WriteLine("init seed = " + new_seed);
             Console.WriteLine("init seed = " + this.init);
-            currentSeed = _seed;
-            previousSeed = currentSeed;
+            this.currentSeed = _seed;
+            this.currentSeed = currentSeed == 0 ? currentSeed + 1 : currentSeed;
+            this.previousSeed = currentSeed;
         }
 
         /// <summary>
@@ -99,7 +100,7 @@ namespace RandEXom.SeedLib
                         );
                     break;
             }
-             
+            currentSeed = currentSeed == 0 ? currentSeed + 1 : currentSeed;
         }        
 
     }

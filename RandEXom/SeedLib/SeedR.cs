@@ -54,10 +54,12 @@ namespace RandEXom.SeedLib
             else
                 new_seed = (long) seed;
             this._seed = new_seed;
+            this._seed = _seed == 0 ? _seed + 1 : _seed;
         }
 
         public virtual void Next()
         {
+            _seed = _seed == 0 ? _seed + 1 : _seed;
         }
 
 

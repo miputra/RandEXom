@@ -61,6 +61,9 @@ namespace RandEXom.SeedLib
             else
                 new_seed = (long)seed;
             this._seed = new_seed;
+            this.currentSeed = _seed;
+            this.currentSeed = currentSeed == 0 ? currentSeed + 1 : currentSeed;
+            this.previousSeed = currentSeed;
             this.process = process;
         }
 
@@ -69,6 +72,7 @@ namespace RandEXom.SeedLib
             this.previousSeed = currentSeed;
 
             this.currentSeed = process(currentSeed);
+            currentSeed = currentSeed == 0 ? currentSeed + 1 : currentSeed;
         }
     }
 }

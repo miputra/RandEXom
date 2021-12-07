@@ -92,6 +92,7 @@ namespace RandEXom.SeedLib
                 new_seed = (long)seed;
             this._seed = new_seed;
             this.currentSeed = new_seed;
+            this.currentSeed = currentSeed == 0 ? currentSeed + 1 : currentSeed;
             this.previousSeed = new_seed;
             this.a = a;
             this.c = c;
@@ -195,7 +196,8 @@ namespace RandEXom.SeedLib
         public void Next()
         {
             previousSeed = currentSeed;
-            currentSeed = (a * currentSeed + c);            
+            currentSeed = (a * currentSeed + c);
+            currentSeed = currentSeed == 0 ? currentSeed + 1 : currentSeed;
         }
     }
 }
