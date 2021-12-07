@@ -5,14 +5,15 @@ using System.Text;
 using System.Threading.Tasks;
 using RandEXom;
 using RandEXom.RandomLib;
-using RandEXom.Framework;
+using RandEXom.Framework.Item;
+using RandEXom.Framework.Number;
 
 namespace RandomisatorOutputTest
 {
     class Program
     {
         static void Main(string[] args)
-        {          
+        {
 
             while (true)
             {
@@ -22,6 +23,7 @@ namespace RandomisatorOutputTest
                 Console.WriteLine("[4] to test distance");
                 Console.WriteLine("[5] to test SSRNG");
                 Console.WriteLine("[6] to test XORShift");
+                Console.WriteLine("[7] to test XORShiftStar");
                 string res = Console.ReadLine();
                 switch (res)
                 {
@@ -43,11 +45,14 @@ namespace RandomisatorOutputTest
                     case "6":
                         TestXORShift();
                         break;
+                    case "7":
+                        TestXORShift();
+                        break;
                     default:
                         return;
                 }
 
-            }          
+            }
 
         }
 
@@ -75,7 +80,7 @@ namespace RandomisatorOutputTest
 
             Console.WriteLine("Process is done by " + finish + "ms");
         }
-    
+
         static void TestGachaLite()
         {
             DateTime lastTime = DateTime.Now;
@@ -100,7 +105,7 @@ namespace RandomisatorOutputTest
 
             Console.WriteLine("Process is done by " + finish + "ms");
         }
-    
+
         static void TestPong()
         {
             DateTime lastTime = DateTime.Now;
@@ -108,7 +113,7 @@ namespace RandomisatorOutputTest
             Console.WriteLine("=====================================");
             Console.WriteLine();
             Console.WriteLine("Int Pong");
-            for(int i = 0; i < 10; i++)
+            for (int i = 0; i < 10; i++)
             {
                 Console.WriteLine(pong.Next(0, 1000));
             }
@@ -117,7 +122,7 @@ namespace RandomisatorOutputTest
             Console.WriteLine("Long Pong");
             for (int i = 0; i < 10; i++)
             {
-                Console.WriteLine(pong.Next((long)0,(long) 1000));
+                Console.WriteLine(pong.Next((long)0, (long)1000));
             }
 
 
@@ -157,14 +162,14 @@ namespace RandomisatorOutputTest
             string finish = (DateTime.Now - lastTime).Milliseconds.ToString();
             Console.WriteLine("Process is done by " + finish + "ms");
         }
-    
+
         static void TestSSRNG()
         {
             SSRNGRandom rand = new SSRNGRandom();
 
             Console.WriteLine("Test Int");
 
-            for(int i = 0;i < 10; i++)
+            for (int i = 0; i < 10; i++)
             {
                 Console.WriteLine(rand.NextInt(0, 100));
             }
@@ -179,6 +184,22 @@ namespace RandomisatorOutputTest
         static void TestXORShift()
         {
             ModuloRandom rand = new ModuloRandom();
+            for (int i = 0; i < 10; i++)
+            {
+                Console.WriteLine(rand.NextInt(0, 100));
+            }
+
+            Console.WriteLine("Test long");
+
+            for (int i = 0; i < 10; i++)
+            {
+                Console.WriteLine(rand.NextLong(0, 10000));
+            }
+        }
+
+        static void TestXORShiftStar()
+        {
+            XORShiftStarRandom rand = new XORShiftStarRandom();
             for (int i = 0; i < 10; i++)
             {
                 Console.WriteLine(rand.NextInt(0, 100));

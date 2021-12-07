@@ -36,8 +36,8 @@ namespace RandEXom.SeedLib
                 return currentSeed;
             }
         }
-        private long currentSeed = 0;
-        private long previousSeed = 0;
+        protected long currentSeed = 0;
+        protected long previousSeed = 0;
 
         public XORShiftSeed(long? seed = null)
         {
@@ -52,7 +52,7 @@ namespace RandEXom.SeedLib
             //this.m = m;
         }
 
-        public void Next()
+        public virtual void Next()
         {
             previousSeed = currentSeed;
             ulong c = unchecked((ulong)(currentSeed - long.MinValue));

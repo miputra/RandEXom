@@ -126,12 +126,12 @@ namespace RandEXom.RandomLib
         }
 
 
-        public string GetSeed()
+        public virtual string GetSeed()
         {
             return seed.init.ToString();
         }
 
-        public void NextBytes(byte[] buffers)
+        public virtual void NextBytes(byte[] buffers)
         {
             for (int i = 0; i < buffers.Length; i++)
             {
@@ -140,14 +140,14 @@ namespace RandEXom.RandomLib
             }
         }
 
-        public int NextInt(int min, int max)
+        public virtual int NextInt(int min, int max)
         {
             int val = min + Math.Abs((int)((seed.now % m) % (max - min)));  
             seed.Next();
             return val;
         }
 
-        public long NextLong(long min, long max)
+        public virtual long NextLong(long min, long max)
         {
             long val = min + Math.Abs(((seed.now % m) % (max - min))); 
             seed.Next();
