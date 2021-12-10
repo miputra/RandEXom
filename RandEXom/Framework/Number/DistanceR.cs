@@ -7,9 +7,9 @@ using System.Collections.Generic;
 using System.Linq;
 using RandEXom.Interface;
 using RandEXom.SeedLib;
-using RandEXom.Framework.Number;
+using RandEXom.Framework.Item;
 
-namespace RandEXom.Framework.Item
+namespace RandEXom.Framework.Number
 {
     /// <summary>
     /// Your next random value will have not less distance than previous random value

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using RandEXom;
 using RandEXom.RandomLib;
 using RandEXom.Framework.Item;
-using RandEXom.Framework.Number;
+using RandEXom.Framework.Item;
 
 namespace RandomisatorOutputTest
 {

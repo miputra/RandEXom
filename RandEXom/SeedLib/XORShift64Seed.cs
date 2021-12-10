@@ -9,7 +9,7 @@ namespace RandEXom.SeedLib
     /// <summary>
     /// Based on research by George Marsaglia https://www.jstatsoft.org/article/view/v008i14
     /// </summary>
-    public class XORShiftSeed : RandEXom.Interface.ISeedR
+    public class XORShift64Seed : RandEXom.Interface.ISeedR
     {
 
         private long _seed = 0;
@@ -39,7 +39,7 @@ namespace RandEXom.SeedLib
         protected long currentSeed = 0;
         protected long previousSeed = 0;
 
-        public XORShiftSeed(long? seed = null)
+        public XORShift64Seed(long? seed = null)
         {
             long new_seed = 0;
             if (seed == null)

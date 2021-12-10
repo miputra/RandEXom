@@ -14,9 +14,9 @@ using System.Threading.Tasks;
 
 namespace RandEXom.SeedLib
 {
-    public class XORShiftStarSeed : XORShiftSeed
+    public class XORShift64StarSeed : XORShift64Seed
     {
-        public XORShiftStarSeed(long ? seed) : base(seed)
+        public XORShift64StarSeed(long ? seed) : base(seed)
         {
         }
 

@@ -19,7 +19,7 @@ namespace RandEXom.RandomLib
         private RandEXom.Interface.ISeedR seed;
         public XORShiftStarRandom(long? seed = null)
         {
-            this.seed = new SeedLib.XORShiftStarSeed(seed);
+            this.seed = new SeedLib.XORShift64StarSeed(seed);
         }
 
         public XORShiftStarRandom(Interface.ISeedR seed)

@@ -6,7 +6,7 @@
 using RandEXom.Interface;
 using RandEXom.SeedLib;
 
-namespace RandEXom.Framework.Item
+namespace RandEXom.Framework.Number
 {
     /// <summary>
     /// Random.Next will always oposite of each other

@@ -44,10 +44,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Framework\Item\DistanceR.cs" />
-    <Compile Include="Framework\Number\GachaR.cs" />
-    <Compile Include="Framework\Number\GachaRBatched.cs" />
-    <Compile Include="Framework\Item\PongR.cs" />
+    <Compile Include="Framework\Number\DistanceR.cs" />
+    <Compile Include="Framework\Item\GachaR.cs" />
+    <Compile Include="Framework\Item\GachaRBatched.cs" />
+    <Compile Include="Framework\Number\PongR.cs" />
     <Compile Include="Interface\IGachaR.cs" />
     <Compile Include="Interface\IRandomR.cs" />
     <Compile Include="Interface\ISeedR.cs" />
@@ -60,8 +60,8 @@
     <Compile Include="SeedLib\IterativeSeedRCustom.cs" />
     <Compile Include="SeedLib\LCGSeedR.cs" />
     <Compile Include="SeedLib\SeedR.cs" />
-    <Compile Include="SeedLib\XORShiftSeed.cs" />
-    <Compile Include="SeedLib\XORShiftStarSeed.cs" />
+    <Compile Include="SeedLib\XORShift64Seed.cs" />
+    <Compile Include="SeedLib\XORShift64StarSeed.cs" />
     <Compile Include="Utility\LongR.cs" />
     <Compile Include="Utility\TypeR.cs" />
   </ItemGroup>

@@ -14,7 +14,7 @@ namespace RandEXom.RandomLib
         private RandEXom.Interface.ISeedR seed;
         public ModuloRandom(long? seed = null)
         {
-            this.seed = new SeedLib.XORShiftSeed(seed);
+            this.seed = new SeedLib.XORShift64Seed(seed);
         }
 
         public ModuloRandom(Interface.ISeedR seed)
