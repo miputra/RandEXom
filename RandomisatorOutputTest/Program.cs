@@ -200,7 +200,8 @@ namespace RandomisatorOutputTest
 
         static void TestXORShiftStar()
         {
-            XORShift64StarRandom rand = new XORShift64StarRandom();
+            //XORShift64StarRandom rand = new XORShift64StarRandom();
+            ModuloRandom rand = new ModuloRandom(ModuloRandom.Multiplier.XORShift64_Star);
             for (int i = 0; i < 10; i++)
             {
                 Console.WriteLine(rand.NextInt(0, 100));

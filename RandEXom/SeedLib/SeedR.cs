@@ -60,9 +60,6 @@ namespace RandEXom.SeedLib
         public virtual void Next()
         {
             _seed = _seed == 0 ? _seed + 1 : _seed;
-        }
-
-
-        
+        }        
     }
 }

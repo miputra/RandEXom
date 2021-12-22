@@ -56,7 +56,6 @@
     <Compile Include="RandomLib\ModuloRandom.cs" />
     <Compile Include="RandomLib\NetRandom.cs" />
     <Compile Include="RandomLib\SSRNGRandom.cs" />
-    <Compile Include="RandomLib\XORShift64StarRandom.cs" />
     <Compile Include="SeedLib\IterativeSeedR.cs" />
     <Compile Include="SeedLib\IterativeSeedRCustom.cs" />
     <Compile Include="SeedLib\LCGSeedR.cs" />
