@@ -47,6 +47,7 @@
     <Compile Include="Framework\Number\DistanceR.cs" />
     <Compile Include="Framework\Item\GachaR.cs" />
     <Compile Include="Framework\Item\GachaRBatched.cs" />
+    <Compile Include="Framework\Number\DistributedTree.cs" />
     <Compile Include="Framework\Number\PongR.cs" />
     <Compile Include="Interface\IGachaR.cs" />
     <Compile Include="Interface\IRandomR.cs" />
@@ -55,13 +56,12 @@
     <Compile Include="RandomLib\ModuloRandom.cs" />
     <Compile Include="RandomLib\NetRandom.cs" />
     <Compile Include="RandomLib\SSRNGRandom.cs" />
-    <Compile Include="RandomLib\XORShiftStarRandom.cs" />
+    <Compile Include="RandomLib\XORShift64StarRandom.cs" />
     <Compile Include="SeedLib\IterativeSeedR.cs" />
     <Compile Include="SeedLib\IterativeSeedRCustom.cs" />
     <Compile Include="SeedLib\LCGSeedR.cs" />
     <Compile Include="SeedLib\SeedR.cs" />
     <Compile Include="SeedLib\XORShift64Seed.cs" />
-    <Compile Include="SeedLib\XORShift64StarSeed.cs" />
     <Compile Include="Utility\LongR.cs" />
     <Compile Include="Utility\TypeR.cs" />
   </ItemGroup>

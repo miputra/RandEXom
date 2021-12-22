@@ -14,15 +14,15 @@ using System.Threading.Tasks;
 
 namespace RandEXom.RandomLib
 {
-    public class XORShiftStarRandom : RandEXom.Interface.IRandomR
+    public class XORShift64StarRandom : RandEXom.Interface.IRandomR
     {
         private RandEXom.Interface.ISeedR seed;
-        public XORShiftStarRandom(long? seed = null)
+        public XORShift64StarRandom(long? seed = null)
         {
-            this.seed = new SeedLib.XORShift64StarSeed(seed);
+            this.seed = new SeedLib.XORShift64Seed(SeedLib.XORShift64Seed.Type.Xorshift64_star,seed);
         }
 
-        public XORShiftStarRandom(Interface.ISeedR seed)
+        public XORShift64StarRandom(Interface.ISeedR seed)
         {
             this.seed = seed;
         }

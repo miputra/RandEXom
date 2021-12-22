@@ -7,6 +7,7 @@ using RandEXom;
 using RandEXom.RandomLib;
 using RandEXom.Framework.Item;
 using RandEXom.Framework.Item;
+using RandEXom.Framework.Number;
 
 namespace RandomisatorOutputTest
 {
@@ -199,7 +200,7 @@ namespace RandomisatorOutputTest
 
         static void TestXORShiftStar()
         {
-            XORShiftStarRandom rand = new XORShiftStarRandom();
+            XORShift64StarRandom rand = new XORShift64StarRandom();
             for (int i = 0; i < 10; i++)
             {
                 Console.WriteLine(rand.NextInt(0, 100));
