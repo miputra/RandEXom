@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace RandEXom.Framework.Number
 {
-    public class DistributedTree
+    public class DistributedTreeR
     {
         readonly int level = 5;
         readonly int child = 2;
@@ -75,22 +75,25 @@ namespace RandEXom.Framework.Number
             }
 
             /// <summary>
-            /// update weight from node
+            /// update weight from bottom node
             /// </summary>
-            public void UpdateWeightFB(Node node)
+            public void UpdateWeightFB(Node node, bool updateWeight = false)
             {
                 List<Node> childs = GetChilds(); 
                 if (!childs.Contains(node))
                 {
                     //do this so we doesn't need to recount all of nodes
-                    int weight = (this.weight - node.prevWeight) + node.weight;
-                    this._prevWeight = this._weight;
-                    this._weight = weight;
+                    if (updateWeight)
+                    {
+                        int weight = (this.weight - node.prevWeight) + node.weight;
+                        this._prevWeight = this._weight;
+                        this._weight = weight;
+                    }
 
                     if (parentID != 0)
                     {
                         Node parent = nodes.Find(x=> x.ID == parentID);
-                        parent.UpdateWeightFB(this); //.UpdateWeight(weight);
+                        parent.UpdateWeightFB(this, true); //.UpdateWeight(weight);
                     }
                 }
                 return;
@@ -102,36 +105,33 @@ namespace RandEXom.Framework.Number
         Node top;
         List<Node> bottomNode = new List<Node>();
 
-        public DistributedTree(int level = 5,int child = 2, long min = int.MinValue, long max = int.MaxValue)
+        public DistributedTreeR(int level = 5,int child = 2, long min = int.MinValue, long max = int.MaxValue)
         {
             random = new RandomLib.NetRandom();
             this.level = level;
             this.child = child;
             this.min = min;
             CreateNodes(level,child);
-            //top = CreateNode();
             this.range = unchecked((ulong)(max - min)) / (ulong)bottomNode.Count;            
         }
 
-        public DistributedTree(long seed, int level = 5, int child =2, long min = int.MinValue, long max = int.MaxValue)
+        public DistributedTreeR(long seed, int level = 5, int child =2, long min = int.MinValue, long max = int.MaxValue)
         {
             random = new RandomLib.NetRandom(seed);
             this.level = level;
             this.child = child;
             this.min = min;
             CreateNodes(level, child);
-            //top = CreateNode();
             this.range = unchecked((ulong)(max - min)) / (ulong)bottomNode.Count;
         }
 
-        public DistributedTree(IRandomR random, int level = 5, int child = 2, long min = int.MinValue, long max = int.MaxValue)
+        public DistributedTreeR(IRandomR random, int level = 5, int child = 2, long min = int.MinValue, long max = int.MaxValue)
         {
             this.random = random;
             this.level = level;
             this.child = child;
             this.min = min;
             CreateNodes(level, child);
-            //top = CreateNode();
             this.range = unchecked((ulong)(max - min)) / (ulong)bottomNode.Count;
         }
 

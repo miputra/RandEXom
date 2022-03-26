@@ -219,7 +219,7 @@ namespace RandomisatorOutputTest
 
         static void TestDistributed()
         {
-            DistributedTree rand = new DistributedTree(min:0,max:100);
+            DistributedTreeR rand = new DistributedTreeR(min:0,max:100);
             for(int i = 0; i < 10; i++)
             {
                 Console.WriteLine(rand.NextInt());
