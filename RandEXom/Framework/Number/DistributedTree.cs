@@ -1,4 +1,9 @@
-﻿using RandEXom.Interface;
+﻿// Made by Muhammad Ihsan Diputra
+// Lincense under MIT
+// https://github.com/miputra/RandEXom
+
+
+using RandEXom.Interface;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,8 +22,14 @@ namespace RandEXom.Framework.Number
 
         public class Node
         {
-            public Node parent;
-            public List<Node> child = new List<Node>();
+            public static List<Node> nodes = new List<Node>();
+            private static uint idlast = 0;
+            public uint parentID;
+            public uint ID;
+            public List<uint> childs = new List<uint>();
+
+            //this apperently not good if there is a seriliazition limit.
+            //public List<Node> child = new List<Node>();
             private int _weight = 0;
             public int weight { get { return _weight; } }
 
@@ -27,35 +38,59 @@ namespace RandEXom.Framework.Number
 
             public Node()
             {
-
+                parentID = 0;
+                ID = ++idlast;
+                idlast = ID;
+                nodes.Add(this);
             }
 
             public Node(Node parent)
             {
-                this.parent = parent;                
+                this.parentID = parent.ID;
+                ID = ++idlast;
+                idlast = ID;
+                nodes.Add(this);
             }
 
             public void UpdateWeight(int weight)
             {
                 this._prevWeight = this._weight;
                 this._weight = weight;
+                UpdateWeightFB(this);
             }
 
+            public List<Node> GetChilds()
+            {
+                List<Node> list = new List<Node>();
 
+
+                //may not efficient because searching for all nodes
+                //Node child = nodes.FindAll(x => x.ID == this.parentID);
+                for (int i = 0; i < this.childs.Count; i++)
+                {
+                    Node child = nodes.Find(x => x.ID == this.childs[i]);
+                    list.Add(child);
+                }
+                return list;
+            }
 
             /// <summary>
             /// update weight from node
             /// </summary>
             public void UpdateWeightFB(Node node)
             {
-                if (!child.Contains(node))
+                List<Node> childs = GetChilds(); 
+                if (!childs.Contains(node))
                 {
                     //do this so we doesn't need to recount all of nodes
                     int weight = (this.weight - node.prevWeight) + node.weight;
-                    UpdateWeight(weight);
-                    if(parent != null)
+                    this._prevWeight = this._weight;
+                    this._weight = weight;
+
+                    if (parentID != 0)
                     {
-                        parent.UpdateWeight(weight);
+                        Node parent = nodes.Find(x=> x.ID == parentID);
+                        parent.UpdateWeightFB(this); //.UpdateWeight(weight);
                     }
                 }
                 return;
@@ -73,7 +108,8 @@ namespace RandEXom.Framework.Number
             this.level = level;
             this.child = child;
             this.min = min;
-            top = CreateNode();
+            CreateNodes(level,child);
+            //top = CreateNode();
             this.range = unchecked((ulong)(max - min)) / (ulong)bottomNode.Count;            
         }
 
@@ -83,7 +119,8 @@ namespace RandEXom.Framework.Number
             this.level = level;
             this.child = child;
             this.min = min;
-            top = CreateNode();
+            CreateNodes(level, child);
+            //top = CreateNode();
             this.range = unchecked((ulong)(max - min)) / (ulong)bottomNode.Count;
         }
 
@@ -93,69 +130,67 @@ namespace RandEXom.Framework.Number
             this.level = level;
             this.child = child;
             this.min = min;
-            top = CreateNode();
+            CreateNodes(level, child);
+            //top = CreateNode();
             this.range = unchecked((ulong)(max - min)) / (ulong)bottomNode.Count;
         }
 
         public void CreateNodes(int level, int child)
         {
-
+            top = new Node();
+            List<Node> parents = new List<Node> {top};
+            List<Node> childrens = new List<Node>();
+            
+            for (int lv=1; lv<level; lv++)
+            {
+                foreach (Node parent in parents)
+                {
+                    for (int i = 0; i < child; i++)
+                    {
+                        Node ch = new Node();
+                        ch.parentID = top.ID;
+                        childrens.Add(ch);
+                        parent.childs.Add(ch.ID);
+                    }
+                }
+                parents.Clear();
+                parents.AddRange(childrens);
+                childrens.Clear();
+            }
+            bottomNode.Clear();
+            bottomNode.AddRange(parents);
         }
 
-        
-
-        //protected virtual int GetMinNode(int level)
-        //{
-            
-        //}
-
-
-        /// recursive is very bad in performance, and not all builder support deep recursive,
-        //public virtual Node CreateNode(Node node = null, int i=0)
-        //{
-
-            
-
-        //    Node _node = new Node(node);
-        //    if (i < level)
-        //    {
-        //        for (int j = 0; j < child; j++)
-        //        {
-        //            _node.child.Add(CreateNodeRecursive(_node, i + 1));
-        //        }
-        //    }
-        //    else
-        //    {
-        //        bottomNode.Add(_node);
-        //    }
-        //    return _node;
-        //}
-
-        public virtual Node CreateNode()
+        public virtual int NextInt()
         {
-            Node node_0 = new Node(null);
-            List<Node> currentNode = new List<Node>();
-            List<Node> childNode = new List<Node>();
-            currentNode.Add(node_0);
-            for(int lv = 1; lv <= level; lv++)
-            {
-                int pi = 0;
-                Node p = currentNode[pi];
-                for(int i=1; i <= Math.Pow(child,lv); i++)
-                {
-                    p = currentNode[pi];
-                    p.child.Add(p);
-                    childNode.Add(p);
-                    if (i % child == 0)
-                        pi++;                    
-                }
-                currentNode.Clear();
-                currentNode.AddRange(childNode);
-                childNode.Clear();
-            }
-            this.bottomNode = currentNode;
+            return (int)Next();
+        }
 
-            return node_0;
+        public virtual long Next()
+        {
+            List<Node> childs = top.GetChilds();
+
+            if (bottomNode.Count() == 0)
+                return random.NextLong(min, unchecked(min + (long)range));
+            
+            if (childs.Count == 0)
+                return random.NextLong(min, unchecked( min + (long) range) * bottomNode.Count());
+
+            childs = childs.OrderBy(x => x.weight).ToList();
+            int minWeight = childs[0].weight;
+            childs.RemoveAll(x => x.weight > minWeight);
+
+            Node node = null;
+            int i = 0;
+            while (childs.Count > 0)
+            {
+                i = random.NextInt(0, childs.Count());
+                node = childs[i];
+                childs = node.GetChilds();
+            }
+            i = bottomNode.IndexOf(node);
+            node.UpdateWeight(node.weight + 1);
+            return random.NextLong(min * (i + 1), unchecked(min + (long)range) * (i + 1));
         }
     }
 }

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using RandEXom;
 using RandEXom.RandomLib;
-using RandEXom.Framework.Item;
+using RandEXom.Framework;
 using RandEXom.Framework.Item;
 using RandEXom.Framework.Number;
 
@@ -25,6 +25,7 @@ namespace RandomisatorOutputTest
                 Console.WriteLine("[5] to test SSRNG");
                 Console.WriteLine("[6] to test XORShift");
                 Console.WriteLine("[7] to test XORShiftStar");
+                Console.WriteLine("[8] to test Distributed Tree");
                 string res = Console.ReadLine();
                 switch (res)
                 {
@@ -49,12 +50,13 @@ namespace RandomisatorOutputTest
                     case "7":
                         TestXORShift();
                         break;
+                    case "8":
+                        TestDistributed();
+                        break;
                     default:
                         return;
                 }
-
             }
-
         }
 
         static void TestGacha()
@@ -212,6 +214,22 @@ namespace RandomisatorOutputTest
             for (int i = 0; i < 10; i++)
             {
                 Console.WriteLine(rand.NextLong(0, 10000));
+            }
+        }
+
+        static void TestDistributed()
+        {
+            DistributedTree rand = new DistributedTree(min:0,max:100);
+            for(int i = 0; i < 10; i++)
+            {
+                Console.WriteLine(rand.NextInt());
+            }
+
+            Console.WriteLine("Test long");
+
+            for (int i = 0; i < 10; i++)
+            {
+                Console.WriteLine(rand.Next());
             }
         }
     }
