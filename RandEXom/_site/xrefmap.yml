@@ -1,0 +1,1815 @@
+### YamlMime:XRefMap
+sorted: true
+references:
+- uid: RandEXom.Framework.Item
+  name: RandEXom.Framework.Item
+  href: api/RandEXom.Framework.Item.html
+  commentId: N:RandEXom.Framework.Item
+  fullName: RandEXom.Framework.Item
+  nameWithType: RandEXom.Framework.Item
+- uid: RandEXom.Framework.Item.GachaR`1
+  name: GachaR<T>
+  href: api/RandEXom.Framework.Item.GachaR-1.html
+  commentId: T:RandEXom.Framework.Item.GachaR`1
+  name.vb: GachaR(Of T)
+  fullName: RandEXom.Framework.Item.GachaR<T>
+  fullName.vb: RandEXom.Framework.Item.GachaR(Of T)
+  nameWithType: GachaR<T>
+  nameWithType.vb: GachaR(Of T)
+- uid: RandEXom.Framework.Item.GachaR`1.#ctor
+  name: GachaR()
+  href: api/RandEXom.Framework.Item.GachaR-1.html#RandEXom_Framework_Item_GachaR_1__ctor
+  commentId: M:RandEXom.Framework.Item.GachaR`1.#ctor
+  fullName: RandEXom.Framework.Item.GachaR<T>.GachaR()
+  fullName.vb: RandEXom.Framework.Item.GachaR(Of T).GachaR()
+  nameWithType: GachaR<T>.GachaR()
+  nameWithType.vb: GachaR(Of T).GachaR()
+- uid: RandEXom.Framework.Item.GachaR`1.#ctor(RandEXom.Interface.IRandomR)
+  name: GachaR(IRandomR)
+  href: api/RandEXom.Framework.Item.GachaR-1.html#RandEXom_Framework_Item_GachaR_1__ctor_RandEXom_Interface_IRandomR_
+  commentId: M:RandEXom.Framework.Item.GachaR`1.#ctor(RandEXom.Interface.IRandomR)
+  fullName: RandEXom.Framework.Item.GachaR<T>.GachaR(RandEXom.Interface.IRandomR)
+  fullName.vb: RandEXom.Framework.Item.GachaR(Of T).GachaR(RandEXom.Interface.IRandomR)
+  nameWithType: GachaR<T>.GachaR(IRandomR)
+  nameWithType.vb: GachaR(Of T).GachaR(IRandomR)
+- uid: RandEXom.Framework.Item.GachaR`1.#ctor(System.Int64)
+  name: GachaR(Int64)
+  href: api/RandEXom.Framework.Item.GachaR-1.html#RandEXom_Framework_Item_GachaR_1__ctor_System_Int64_
+  commentId: M:RandEXom.Framework.Item.GachaR`1.#ctor(System.Int64)
+  fullName: RandEXom.Framework.Item.GachaR<T>.GachaR(System.Int64)
+  fullName.vb: RandEXom.Framework.Item.GachaR(Of T).GachaR(System.Int64)
+  nameWithType: GachaR<T>.GachaR(Int64)
+  nameWithType.vb: GachaR(Of T).GachaR(Int64)
+- uid: RandEXom.Framework.Item.GachaR`1.#ctor*
+  name: GachaR
+  href: api/RandEXom.Framework.Item.GachaR-1.html#RandEXom_Framework_Item_GachaR_1__ctor_
+  commentId: Overload:RandEXom.Framework.Item.GachaR`1.#ctor
+  isSpec: "True"
+  fullName: RandEXom.Framework.Item.GachaR<T>.GachaR
+  fullName.vb: RandEXom.Framework.Item.GachaR(Of T).GachaR
+  nameWithType: GachaR<T>.GachaR
+  nameWithType.vb: GachaR(Of T).GachaR
+- uid: RandEXom.Framework.Item.GachaR`1.AddItem(`0,System.Int32)
+  name: AddItem(T, Int32)
+  href: api/RandEXom.Framework.Item.GachaR-1.html#RandEXom_Framework_Item_GachaR_1_AddItem__0_System_Int32_
+  commentId: M:RandEXom.Framework.Item.GachaR`1.AddItem(`0,System.Int32)
+  fullName: RandEXom.Framework.Item.GachaR<T>.AddItem(T, System.Int32)
+  fullName.vb: RandEXom.Framework.Item.GachaR(Of T).AddItem(T, System.Int32)
+  nameWithType: GachaR<T>.AddItem(T, Int32)
+  nameWithType.vb: GachaR(Of T).AddItem(T, Int32)
+- uid: RandEXom.Framework.Item.GachaR`1.AddItem*
+  name: AddItem
+  href: api/RandEXom.Framework.Item.GachaR-1.html#RandEXom_Framework_Item_GachaR_1_AddItem_
+  commentId: Overload:RandEXom.Framework.Item.GachaR`1.AddItem
+  isSpec: "True"
+  fullName: RandEXom.Framework.Item.GachaR<T>.AddItem
+  fullName.vb: RandEXom.Framework.Item.GachaR(Of T).AddItem
+  nameWithType: GachaR<T>.AddItem
+  nameWithType.vb: GachaR(Of T).AddItem
+- uid: RandEXom.Framework.Item.GachaR`1.Count
+  name: Count()
+  href: api/RandEXom.Framework.Item.GachaR-1.html#RandEXom_Framework_Item_GachaR_1_Count
+  commentId: M:RandEXom.Framework.Item.GachaR`1.Count
+  fullName: RandEXom.Framework.Item.GachaR<T>.Count()
+  fullName.vb: RandEXom.Framework.Item.GachaR(Of T).Count()
+  nameWithType: GachaR<T>.Count()
+  nameWithType.vb: GachaR(Of T).Count()
+- uid: RandEXom.Framework.Item.GachaR`1.Count(`0)
+  name: Count(T)
+  href: api/RandEXom.Framework.Item.GachaR-1.html#RandEXom_Framework_Item_GachaR_1_Count__0_
+  commentId: M:RandEXom.Framework.Item.GachaR`1.Count(`0)
+  fullName: RandEXom.Framework.Item.GachaR<T>.Count(T)
+  fullName.vb: RandEXom.Framework.Item.GachaR(Of T).Count(T)
+  nameWithType: GachaR<T>.Count(T)
+  nameWithType.vb: GachaR(Of T).Count(T)
+- uid: RandEXom.Framework.Item.GachaR`1.Count*
+  name: Count
+  href: api/RandEXom.Framework.Item.GachaR-1.html#RandEXom_Framework_Item_GachaR_1_Count_
+  commentId: Overload:RandEXom.Framework.Item.GachaR`1.Count
+  isSpec: "True"
+  fullName: RandEXom.Framework.Item.GachaR<T>.Count
+  fullName.vb: RandEXom.Framework.Item.GachaR(Of T).Count
+  nameWithType: GachaR<T>.Count
+  nameWithType.vb: GachaR(Of T).Count
+- uid: RandEXom.Framework.Item.GachaR`1.CountType
+  name: CountType()
+  href: api/RandEXom.Framework.Item.GachaR-1.html#RandEXom_Framework_Item_GachaR_1_CountType
+  commentId: M:RandEXom.Framework.Item.GachaR`1.CountType
+  fullName: RandEXom.Framework.Item.GachaR<T>.CountType()
+  fullName.vb: RandEXom.Framework.Item.GachaR(Of T).CountType()
+  nameWithType: GachaR<T>.CountType()
+  nameWithType.vb: GachaR(Of T).CountType()
+- uid: RandEXom.Framework.Item.GachaR`1.CountType*
+  name: CountType
+  href: api/RandEXom.Framework.Item.GachaR-1.html#RandEXom_Framework_Item_GachaR_1_CountType_
+  commentId: Overload:RandEXom.Framework.Item.GachaR`1.CountType
+  isSpec: "True"
+  fullName: RandEXom.Framework.Item.GachaR<T>.CountType
+  fullName.vb: RandEXom.Framework.Item.GachaR(Of T).CountType
+  nameWithType: GachaR<T>.CountType
+  nameWithType.vb: GachaR(Of T).CountType
+- uid: RandEXom.Framework.Item.GachaR`1.Pull
+  name: Pull()
+  href: api/RandEXom.Framework.Item.GachaR-1.html#RandEXom_Framework_Item_GachaR_1_Pull
+  commentId: M:RandEXom.Framework.Item.GachaR`1.Pull
+  fullName: RandEXom.Framework.Item.GachaR<T>.Pull()
+  fullName.vb: RandEXom.Framework.Item.GachaR(Of T).Pull()
+  nameWithType: GachaR<T>.Pull()
+  nameWithType.vb: GachaR(Of T).Pull()
+- uid: RandEXom.Framework.Item.GachaR`1.Pull*
+  name: Pull
+  href: api/RandEXom.Framework.Item.GachaR-1.html#RandEXom_Framework_Item_GachaR_1_Pull_
+  commentId: Overload:RandEXom.Framework.Item.GachaR`1.Pull
+  isSpec: "True"
+  fullName: RandEXom.Framework.Item.GachaR<T>.Pull
+  fullName.vb: RandEXom.Framework.Item.GachaR(Of T).Pull
+  nameWithType: GachaR<T>.Pull
+  nameWithType.vb: GachaR(Of T).Pull
+- uid: RandEXom.Framework.Item.GachaR`1.Refill
+  name: Refill()
+  href: api/RandEXom.Framework.Item.GachaR-1.html#RandEXom_Framework_Item_GachaR_1_Refill
+  commentId: M:RandEXom.Framework.Item.GachaR`1.Refill
+  fullName: RandEXom.Framework.Item.GachaR<T>.Refill()
+  fullName.vb: RandEXom.Framework.Item.GachaR(Of T).Refill()
+  nameWithType: GachaR<T>.Refill()
+  nameWithType.vb: GachaR(Of T).Refill()
+- uid: RandEXom.Framework.Item.GachaR`1.Refill*
+  name: Refill
+  href: api/RandEXom.Framework.Item.GachaR-1.html#RandEXom_Framework_Item_GachaR_1_Refill_
+  commentId: Overload:RandEXom.Framework.Item.GachaR`1.Refill
+  isSpec: "True"
+  fullName: RandEXom.Framework.Item.GachaR<T>.Refill
+  fullName.vb: RandEXom.Framework.Item.GachaR(Of T).Refill
+  nameWithType: GachaR<T>.Refill
+  nameWithType.vb: GachaR(Of T).Refill
+- uid: RandEXom.Framework.Item.GachaR`1.Remove(`0)
+  name: Remove(T)
+  href: api/RandEXom.Framework.Item.GachaR-1.html#RandEXom_Framework_Item_GachaR_1_Remove__0_
+  commentId: M:RandEXom.Framework.Item.GachaR`1.Remove(`0)
+  fullName: RandEXom.Framework.Item.GachaR<T>.Remove(T)
+  fullName.vb: RandEXom.Framework.Item.GachaR(Of T).Remove(T)
+  nameWithType: GachaR<T>.Remove(T)
+  nameWithType.vb: GachaR(Of T).Remove(T)
+- uid: RandEXom.Framework.Item.GachaR`1.Remove*
+  name: Remove
+  href: api/RandEXom.Framework.Item.GachaR-1.html#RandEXom_Framework_Item_GachaR_1_Remove_
+  commentId: Overload:RandEXom.Framework.Item.GachaR`1.Remove
+  isSpec: "True"
+  fullName: RandEXom.Framework.Item.GachaR<T>.Remove
+  fullName.vb: RandEXom.Framework.Item.GachaR(Of T).Remove
+  nameWithType: GachaR<T>.Remove
+  nameWithType.vb: GachaR(Of T).Remove
+- uid: RandEXom.Framework.Item.GachaR`1.RemoveEmpty(`0)
+  name: RemoveEmpty(T)
+  href: api/RandEXom.Framework.Item.GachaR-1.html#RandEXom_Framework_Item_GachaR_1_RemoveEmpty__0_
+  commentId: M:RandEXom.Framework.Item.GachaR`1.RemoveEmpty(`0)
+  fullName: RandEXom.Framework.Item.GachaR<T>.RemoveEmpty(T)
+  fullName.vb: RandEXom.Framework.Item.GachaR(Of T).RemoveEmpty(T)
+  nameWithType: GachaR<T>.RemoveEmpty(T)
+  nameWithType.vb: GachaR(Of T).RemoveEmpty(T)
+- uid: RandEXom.Framework.Item.GachaR`1.RemoveEmpty*
+  name: RemoveEmpty
+  href: api/RandEXom.Framework.Item.GachaR-1.html#RandEXom_Framework_Item_GachaR_1_RemoveEmpty_
+  commentId: Overload:RandEXom.Framework.Item.GachaR`1.RemoveEmpty
+  isSpec: "True"
+  fullName: RandEXom.Framework.Item.GachaR<T>.RemoveEmpty
+  fullName.vb: RandEXom.Framework.Item.GachaR(Of T).RemoveEmpty
+  nameWithType: GachaR<T>.RemoveEmpty
+  nameWithType.vb: GachaR(Of T).RemoveEmpty
+- uid: RandEXom.Framework.Item.GachaRBatched`1
+  name: GachaRBatched<T>
+  href: api/RandEXom.Framework.Item.GachaRBatched-1.html
+  commentId: T:RandEXom.Framework.Item.GachaRBatched`1
+  name.vb: GachaRBatched(Of T)
+  fullName: RandEXom.Framework.Item.GachaRBatched<T>
+  fullName.vb: RandEXom.Framework.Item.GachaRBatched(Of T)
+  nameWithType: GachaRBatched<T>
+  nameWithType.vb: GachaRBatched(Of T)
+- uid: RandEXom.Framework.Item.GachaRBatched`1.#ctor
+  name: GachaRBatched()
+  href: api/RandEXom.Framework.Item.GachaRBatched-1.html#RandEXom_Framework_Item_GachaRBatched_1__ctor
+  commentId: M:RandEXom.Framework.Item.GachaRBatched`1.#ctor
+  fullName: RandEXom.Framework.Item.GachaRBatched<T>.GachaRBatched()
+  fullName.vb: RandEXom.Framework.Item.GachaRBatched(Of T).GachaRBatched()
+  nameWithType: GachaRBatched<T>.GachaRBatched()
+  nameWithType.vb: GachaRBatched(Of T).GachaRBatched()
+- uid: RandEXom.Framework.Item.GachaRBatched`1.#ctor(RandEXom.Interface.IRandomR)
+  name: GachaRBatched(IRandomR)
+  href: api/RandEXom.Framework.Item.GachaRBatched-1.html#RandEXom_Framework_Item_GachaRBatched_1__ctor_RandEXom_Interface_IRandomR_
+  commentId: M:RandEXom.Framework.Item.GachaRBatched`1.#ctor(RandEXom.Interface.IRandomR)
+  fullName: RandEXom.Framework.Item.GachaRBatched<T>.GachaRBatched(RandEXom.Interface.IRandomR)
+  fullName.vb: RandEXom.Framework.Item.GachaRBatched(Of T).GachaRBatched(RandEXom.Interface.IRandomR)
+  nameWithType: GachaRBatched<T>.GachaRBatched(IRandomR)
+  nameWithType.vb: GachaRBatched(Of T).GachaRBatched(IRandomR)
+- uid: RandEXom.Framework.Item.GachaRBatched`1.#ctor(System.Int64)
+  name: GachaRBatched(Int64)
+  href: api/RandEXom.Framework.Item.GachaRBatched-1.html#RandEXom_Framework_Item_GachaRBatched_1__ctor_System_Int64_
+  commentId: M:RandEXom.Framework.Item.GachaRBatched`1.#ctor(System.Int64)
+  fullName: RandEXom.Framework.Item.GachaRBatched<T>.GachaRBatched(System.Int64)
+  fullName.vb: RandEXom.Framework.Item.GachaRBatched(Of T).GachaRBatched(System.Int64)
+  nameWithType: GachaRBatched<T>.GachaRBatched(Int64)
+  nameWithType.vb: GachaRBatched(Of T).GachaRBatched(Int64)
+- uid: RandEXom.Framework.Item.GachaRBatched`1.#ctor*
+  name: GachaRBatched
+  href: api/RandEXom.Framework.Item.GachaRBatched-1.html#RandEXom_Framework_Item_GachaRBatched_1__ctor_
+  commentId: Overload:RandEXom.Framework.Item.GachaRBatched`1.#ctor
+  isSpec: "True"
+  fullName: RandEXom.Framework.Item.GachaRBatched<T>.GachaRBatched
+  fullName.vb: RandEXom.Framework.Item.GachaRBatched(Of T).GachaRBatched
+  nameWithType: GachaRBatched<T>.GachaRBatched
+  nameWithType.vb: GachaRBatched(Of T).GachaRBatched
+- uid: RandEXom.Framework.Item.GachaRBatched`1.AddItem(`0,System.Int32)
+  name: AddItem(T, Int32)
+  href: api/RandEXom.Framework.Item.GachaRBatched-1.html#RandEXom_Framework_Item_GachaRBatched_1_AddItem__0_System_Int32_
+  commentId: M:RandEXom.Framework.Item.GachaRBatched`1.AddItem(`0,System.Int32)
+  fullName: RandEXom.Framework.Item.GachaRBatched<T>.AddItem(T, System.Int32)
+  fullName.vb: RandEXom.Framework.Item.GachaRBatched(Of T).AddItem(T, System.Int32)
+  nameWithType: GachaRBatched<T>.AddItem(T, Int32)
+  nameWithType.vb: GachaRBatched(Of T).AddItem(T, Int32)
+- uid: RandEXom.Framework.Item.GachaRBatched`1.AddItem*
+  name: AddItem
+  href: api/RandEXom.Framework.Item.GachaRBatched-1.html#RandEXom_Framework_Item_GachaRBatched_1_AddItem_
+  commentId: Overload:RandEXom.Framework.Item.GachaRBatched`1.AddItem
+  isSpec: "True"
+  fullName: RandEXom.Framework.Item.GachaRBatched<T>.AddItem
+  fullName.vb: RandEXom.Framework.Item.GachaRBatched(Of T).AddItem
+  nameWithType: GachaRBatched<T>.AddItem
+  nameWithType.vb: GachaRBatched(Of T).AddItem
+- uid: RandEXom.Framework.Item.GachaRBatched`1.Count
+  name: Count()
+  href: api/RandEXom.Framework.Item.GachaRBatched-1.html#RandEXom_Framework_Item_GachaRBatched_1_Count
+  commentId: M:RandEXom.Framework.Item.GachaRBatched`1.Count
+  fullName: RandEXom.Framework.Item.GachaRBatched<T>.Count()
+  fullName.vb: RandEXom.Framework.Item.GachaRBatched(Of T).Count()
+  nameWithType: GachaRBatched<T>.Count()
+  nameWithType.vb: GachaRBatched(Of T).Count()
+- uid: RandEXom.Framework.Item.GachaRBatched`1.Count(`0)
+  name: Count(T)
+  href: api/RandEXom.Framework.Item.GachaRBatched-1.html#RandEXom_Framework_Item_GachaRBatched_1_Count__0_
+  commentId: M:RandEXom.Framework.Item.GachaRBatched`1.Count(`0)
+  fullName: RandEXom.Framework.Item.GachaRBatched<T>.Count(T)
+  fullName.vb: RandEXom.Framework.Item.GachaRBatched(Of T).Count(T)
+  nameWithType: GachaRBatched<T>.Count(T)
+  nameWithType.vb: GachaRBatched(Of T).Count(T)
+- uid: RandEXom.Framework.Item.GachaRBatched`1.Count*
+  name: Count
+  href: api/RandEXom.Framework.Item.GachaRBatched-1.html#RandEXom_Framework_Item_GachaRBatched_1_Count_
+  commentId: Overload:RandEXom.Framework.Item.GachaRBatched`1.Count
+  isSpec: "True"
+  fullName: RandEXom.Framework.Item.GachaRBatched<T>.Count
+  fullName.vb: RandEXom.Framework.Item.GachaRBatched(Of T).Count
+  nameWithType: GachaRBatched<T>.Count
+  nameWithType.vb: GachaRBatched(Of T).Count
+- uid: RandEXom.Framework.Item.GachaRBatched`1.CountType
+  name: CountType()
+  href: api/RandEXom.Framework.Item.GachaRBatched-1.html#RandEXom_Framework_Item_GachaRBatched_1_CountType
+  commentId: M:RandEXom.Framework.Item.GachaRBatched`1.CountType
+  fullName: RandEXom.Framework.Item.GachaRBatched<T>.CountType()
+  fullName.vb: RandEXom.Framework.Item.GachaRBatched(Of T).CountType()
+  nameWithType: GachaRBatched<T>.CountType()
+  nameWithType.vb: GachaRBatched(Of T).CountType()
+- uid: RandEXom.Framework.Item.GachaRBatched`1.CountType*
+  name: CountType
+  href: api/RandEXom.Framework.Item.GachaRBatched-1.html#RandEXom_Framework_Item_GachaRBatched_1_CountType_
+  commentId: Overload:RandEXom.Framework.Item.GachaRBatched`1.CountType
+  isSpec: "True"
+  fullName: RandEXom.Framework.Item.GachaRBatched<T>.CountType
+  fullName.vb: RandEXom.Framework.Item.GachaRBatched(Of T).CountType
+  nameWithType: GachaRBatched<T>.CountType
+  nameWithType.vb: GachaRBatched(Of T).CountType
+- uid: RandEXom.Framework.Item.GachaRBatched`1.Pull
+  name: Pull()
+  href: api/RandEXom.Framework.Item.GachaRBatched-1.html#RandEXom_Framework_Item_GachaRBatched_1_Pull
+  commentId: M:RandEXom.Framework.Item.GachaRBatched`1.Pull
+  fullName: RandEXom.Framework.Item.GachaRBatched<T>.Pull()
+  fullName.vb: RandEXom.Framework.Item.GachaRBatched(Of T).Pull()
+  nameWithType: GachaRBatched<T>.Pull()
+  nameWithType.vb: GachaRBatched(Of T).Pull()
+- uid: RandEXom.Framework.Item.GachaRBatched`1.Pull*
+  name: Pull
+  href: api/RandEXom.Framework.Item.GachaRBatched-1.html#RandEXom_Framework_Item_GachaRBatched_1_Pull_
+  commentId: Overload:RandEXom.Framework.Item.GachaRBatched`1.Pull
+  isSpec: "True"
+  fullName: RandEXom.Framework.Item.GachaRBatched<T>.Pull
+  fullName.vb: RandEXom.Framework.Item.GachaRBatched(Of T).Pull
+  nameWithType: GachaRBatched<T>.Pull
+  nameWithType.vb: GachaRBatched(Of T).Pull
+- uid: RandEXom.Framework.Item.GachaRBatched`1.Refill
+  name: Refill()
+  href: api/RandEXom.Framework.Item.GachaRBatched-1.html#RandEXom_Framework_Item_GachaRBatched_1_Refill
+  commentId: M:RandEXom.Framework.Item.GachaRBatched`1.Refill
+  fullName: RandEXom.Framework.Item.GachaRBatched<T>.Refill()
+  fullName.vb: RandEXom.Framework.Item.GachaRBatched(Of T).Refill()
+  nameWithType: GachaRBatched<T>.Refill()
+  nameWithType.vb: GachaRBatched(Of T).Refill()
+- uid: RandEXom.Framework.Item.GachaRBatched`1.Refill(System.Boolean)
+  name: Refill(Boolean)
+  href: api/RandEXom.Framework.Item.GachaRBatched-1.html#RandEXom_Framework_Item_GachaRBatched_1_Refill_System_Boolean_
+  commentId: M:RandEXom.Framework.Item.GachaRBatched`1.Refill(System.Boolean)
+  fullName: RandEXom.Framework.Item.GachaRBatched<T>.Refill(System.Boolean)
+  fullName.vb: RandEXom.Framework.Item.GachaRBatched(Of T).Refill(System.Boolean)
+  nameWithType: GachaRBatched<T>.Refill(Boolean)
+  nameWithType.vb: GachaRBatched(Of T).Refill(Boolean)
+- uid: RandEXom.Framework.Item.GachaRBatched`1.Refill*
+  name: Refill
+  href: api/RandEXom.Framework.Item.GachaRBatched-1.html#RandEXom_Framework_Item_GachaRBatched_1_Refill_
+  commentId: Overload:RandEXom.Framework.Item.GachaRBatched`1.Refill
+  isSpec: "True"
+  fullName: RandEXom.Framework.Item.GachaRBatched<T>.Refill
+  fullName.vb: RandEXom.Framework.Item.GachaRBatched(Of T).Refill
+  nameWithType: GachaRBatched<T>.Refill
+  nameWithType.vb: GachaRBatched(Of T).Refill
+- uid: RandEXom.Framework.Item.GachaRBatched`1.Remove(`0)
+  name: Remove(T)
+  href: api/RandEXom.Framework.Item.GachaRBatched-1.html#RandEXom_Framework_Item_GachaRBatched_1_Remove__0_
+  commentId: M:RandEXom.Framework.Item.GachaRBatched`1.Remove(`0)
+  fullName: RandEXom.Framework.Item.GachaRBatched<T>.Remove(T)
+  fullName.vb: RandEXom.Framework.Item.GachaRBatched(Of T).Remove(T)
+  nameWithType: GachaRBatched<T>.Remove(T)
+  nameWithType.vb: GachaRBatched(Of T).Remove(T)
+- uid: RandEXom.Framework.Item.GachaRBatched`1.Remove*
+  name: Remove
+  href: api/RandEXom.Framework.Item.GachaRBatched-1.html#RandEXom_Framework_Item_GachaRBatched_1_Remove_
+  commentId: Overload:RandEXom.Framework.Item.GachaRBatched`1.Remove
+  isSpec: "True"
+  fullName: RandEXom.Framework.Item.GachaRBatched<T>.Remove
+  fullName.vb: RandEXom.Framework.Item.GachaRBatched(Of T).Remove
+  nameWithType: GachaRBatched<T>.Remove
+  nameWithType.vb: GachaRBatched(Of T).Remove
+- uid: RandEXom.Framework.Item.GachaRBatched`1.RemoveEmpty(`0)
+  name: RemoveEmpty(T)
+  href: api/RandEXom.Framework.Item.GachaRBatched-1.html#RandEXom_Framework_Item_GachaRBatched_1_RemoveEmpty__0_
+  commentId: M:RandEXom.Framework.Item.GachaRBatched`1.RemoveEmpty(`0)
+  fullName: RandEXom.Framework.Item.GachaRBatched<T>.RemoveEmpty(T)
+  fullName.vb: RandEXom.Framework.Item.GachaRBatched(Of T).RemoveEmpty(T)
+  nameWithType: GachaRBatched<T>.RemoveEmpty(T)
+  nameWithType.vb: GachaRBatched(Of T).RemoveEmpty(T)
+- uid: RandEXom.Framework.Item.GachaRBatched`1.RemoveEmpty(`0,System.Boolean)
+  name: RemoveEmpty(T, Boolean)
+  href: api/RandEXom.Framework.Item.GachaRBatched-1.html#RandEXom_Framework_Item_GachaRBatched_1_RemoveEmpty__0_System_Boolean_
+  commentId: M:RandEXom.Framework.Item.GachaRBatched`1.RemoveEmpty(`0,System.Boolean)
+  fullName: RandEXom.Framework.Item.GachaRBatched<T>.RemoveEmpty(T, System.Boolean)
+  fullName.vb: RandEXom.Framework.Item.GachaRBatched(Of T).RemoveEmpty(T, System.Boolean)
+  nameWithType: GachaRBatched<T>.RemoveEmpty(T, Boolean)
+  nameWithType.vb: GachaRBatched(Of T).RemoveEmpty(T, Boolean)
+- uid: RandEXom.Framework.Item.GachaRBatched`1.RemoveEmpty*
+  name: RemoveEmpty
+  href: api/RandEXom.Framework.Item.GachaRBatched-1.html#RandEXom_Framework_Item_GachaRBatched_1_RemoveEmpty_
+  commentId: Overload:RandEXom.Framework.Item.GachaRBatched`1.RemoveEmpty
+  isSpec: "True"
+  fullName: RandEXom.Framework.Item.GachaRBatched<T>.RemoveEmpty
+  fullName.vb: RandEXom.Framework.Item.GachaRBatched(Of T).RemoveEmpty
+  nameWithType: GachaRBatched<T>.RemoveEmpty
+  nameWithType.vb: GachaRBatched(Of T).RemoveEmpty
+- uid: RandEXom.Framework.Number
+  name: RandEXom.Framework.Number
+  href: api/RandEXom.Framework.Number.html
+  commentId: N:RandEXom.Framework.Number
+  fullName: RandEXom.Framework.Number
+  nameWithType: RandEXom.Framework.Number
+- uid: RandEXom.Framework.Number.DistanceR
+  name: DistanceR
+  href: api/RandEXom.Framework.Number.DistanceR.html
+  commentId: T:RandEXom.Framework.Number.DistanceR
+  fullName: RandEXom.Framework.Number.DistanceR
+  nameWithType: DistanceR
+- uid: RandEXom.Framework.Number.DistanceR.#ctor(RandEXom.Interface.IRandomR,System.Int32)
+  name: DistanceR(IRandomR, Int32)
+  href: api/RandEXom.Framework.Number.DistanceR.html#RandEXom_Framework_Number_DistanceR__ctor_RandEXom_Interface_IRandomR_System_Int32_
+  commentId: M:RandEXom.Framework.Number.DistanceR.#ctor(RandEXom.Interface.IRandomR,System.Int32)
+  fullName: RandEXom.Framework.Number.DistanceR.DistanceR(RandEXom.Interface.IRandomR, System.Int32)
+  nameWithType: DistanceR.DistanceR(IRandomR, Int32)
+- uid: RandEXom.Framework.Number.DistanceR.#ctor(System.Int32)
+  name: DistanceR(Int32)
+  href: api/RandEXom.Framework.Number.DistanceR.html#RandEXom_Framework_Number_DistanceR__ctor_System_Int32_
+  commentId: M:RandEXom.Framework.Number.DistanceR.#ctor(System.Int32)
+  fullName: RandEXom.Framework.Number.DistanceR.DistanceR(System.Int32)
+  nameWithType: DistanceR.DistanceR(Int32)
+- uid: RandEXom.Framework.Number.DistanceR.#ctor(System.Int64,System.Int32)
+  name: DistanceR(Int64, Int32)
+  href: api/RandEXom.Framework.Number.DistanceR.html#RandEXom_Framework_Number_DistanceR__ctor_System_Int64_System_Int32_
+  commentId: M:RandEXom.Framework.Number.DistanceR.#ctor(System.Int64,System.Int32)
+  fullName: RandEXom.Framework.Number.DistanceR.DistanceR(System.Int64, System.Int32)
+  nameWithType: DistanceR.DistanceR(Int64, Int32)
+- uid: RandEXom.Framework.Number.DistanceR.#ctor*
+  name: DistanceR
+  href: api/RandEXom.Framework.Number.DistanceR.html#RandEXom_Framework_Number_DistanceR__ctor_
+  commentId: Overload:RandEXom.Framework.Number.DistanceR.#ctor
+  isSpec: "True"
+  fullName: RandEXom.Framework.Number.DistanceR.DistanceR
+  nameWithType: DistanceR.DistanceR
+- uid: RandEXom.Framework.Number.DistanceR.Next(System.Int32,System.Int32)
+  name: Next(Int32, Int32)
+  href: api/RandEXom.Framework.Number.DistanceR.html#RandEXom_Framework_Number_DistanceR_Next_System_Int32_System_Int32_
+  commentId: M:RandEXom.Framework.Number.DistanceR.Next(System.Int32,System.Int32)
+  fullName: RandEXom.Framework.Number.DistanceR.Next(System.Int32, System.Int32)
+  nameWithType: DistanceR.Next(Int32, Int32)
+- uid: RandEXom.Framework.Number.DistanceR.Next(System.Int64,System.Int64)
+  name: Next(Int64, Int64)
+  href: api/RandEXom.Framework.Number.DistanceR.html#RandEXom_Framework_Number_DistanceR_Next_System_Int64_System_Int64_
+  commentId: M:RandEXom.Framework.Number.DistanceR.Next(System.Int64,System.Int64)
+  fullName: RandEXom.Framework.Number.DistanceR.Next(System.Int64, System.Int64)
+  nameWithType: DistanceR.Next(Int64, Int64)
+- uid: RandEXom.Framework.Number.DistanceR.Next*
+  name: Next
+  href: api/RandEXom.Framework.Number.DistanceR.html#RandEXom_Framework_Number_DistanceR_Next_
+  commentId: Overload:RandEXom.Framework.Number.DistanceR.Next
+  isSpec: "True"
+  fullName: RandEXom.Framework.Number.DistanceR.Next
+  nameWithType: DistanceR.Next
+- uid: RandEXom.Framework.Number.DistanceR.SetDistance(System.Int32)
+  name: SetDistance(Int32)
+  href: api/RandEXom.Framework.Number.DistanceR.html#RandEXom_Framework_Number_DistanceR_SetDistance_System_Int32_
+  commentId: M:RandEXom.Framework.Number.DistanceR.SetDistance(System.Int32)
+  fullName: RandEXom.Framework.Number.DistanceR.SetDistance(System.Int32)
+  nameWithType: DistanceR.SetDistance(Int32)
+- uid: RandEXom.Framework.Number.DistanceR.SetDistance*
+  name: SetDistance
+  href: api/RandEXom.Framework.Number.DistanceR.html#RandEXom_Framework_Number_DistanceR_SetDistance_
+  commentId: Overload:RandEXom.Framework.Number.DistanceR.SetDistance
+  isSpec: "True"
+  fullName: RandEXom.Framework.Number.DistanceR.SetDistance
+  nameWithType: DistanceR.SetDistance
+- uid: RandEXom.Framework.Number.DistributedTreeR
+  name: DistributedTreeR
+  href: api/RandEXom.Framework.Number.DistributedTreeR.html
+  commentId: T:RandEXom.Framework.Number.DistributedTreeR
+  fullName: RandEXom.Framework.Number.DistributedTreeR
+  nameWithType: DistributedTreeR
+- uid: RandEXom.Framework.Number.DistributedTreeR.#ctor(RandEXom.Interface.IRandomR,System.Int32,System.Int32,System.Int64,System.Int64)
+  name: DistributedTreeR(IRandomR, Int32, Int32, Int64, Int64)
+  href: api/RandEXom.Framework.Number.DistributedTreeR.html#RandEXom_Framework_Number_DistributedTreeR__ctor_RandEXom_Interface_IRandomR_System_Int32_System_Int32_System_Int64_System_Int64_
+  commentId: M:RandEXom.Framework.Number.DistributedTreeR.#ctor(RandEXom.Interface.IRandomR,System.Int32,System.Int32,System.Int64,System.Int64)
+  fullName: RandEXom.Framework.Number.DistributedTreeR.DistributedTreeR(RandEXom.Interface.IRandomR, System.Int32, System.Int32, System.Int64, System.Int64)
+  nameWithType: DistributedTreeR.DistributedTreeR(IRandomR, Int32, Int32, Int64, Int64)
+- uid: RandEXom.Framework.Number.DistributedTreeR.#ctor(System.Int32,System.Int32,System.Int64,System.Int64)
+  name: DistributedTreeR(Int32, Int32, Int64, Int64)
+  href: api/RandEXom.Framework.Number.DistributedTreeR.html#RandEXom_Framework_Number_DistributedTreeR__ctor_System_Int32_System_Int32_System_Int64_System_Int64_
+  commentId: M:RandEXom.Framework.Number.DistributedTreeR.#ctor(System.Int32,System.Int32,System.Int64,System.Int64)
+  fullName: RandEXom.Framework.Number.DistributedTreeR.DistributedTreeR(System.Int32, System.Int32, System.Int64, System.Int64)
+  nameWithType: DistributedTreeR.DistributedTreeR(Int32, Int32, Int64, Int64)
+- uid: RandEXom.Framework.Number.DistributedTreeR.#ctor(System.Int64,System.Int32,System.Int32,System.Int64,System.Int64)
+  name: DistributedTreeR(Int64, Int32, Int32, Int64, Int64)
+  href: api/RandEXom.Framework.Number.DistributedTreeR.html#RandEXom_Framework_Number_DistributedTreeR__ctor_System_Int64_System_Int32_System_Int32_System_Int64_System_Int64_
+  commentId: M:RandEXom.Framework.Number.DistributedTreeR.#ctor(System.Int64,System.Int32,System.Int32,System.Int64,System.Int64)
+  fullName: RandEXom.Framework.Number.DistributedTreeR.DistributedTreeR(System.Int64, System.Int32, System.Int32, System.Int64, System.Int64)
+  nameWithType: DistributedTreeR.DistributedTreeR(Int64, Int32, Int32, Int64, Int64)
+- uid: RandEXom.Framework.Number.DistributedTreeR.#ctor*
+  name: DistributedTreeR
+  href: api/RandEXom.Framework.Number.DistributedTreeR.html#RandEXom_Framework_Number_DistributedTreeR__ctor_
+  commentId: Overload:RandEXom.Framework.Number.DistributedTreeR.#ctor
+  isSpec: "True"
+  fullName: RandEXom.Framework.Number.DistributedTreeR.DistributedTreeR
+  nameWithType: DistributedTreeR.DistributedTreeR
+- uid: RandEXom.Framework.Number.DistributedTreeR.CreateNodes(System.Int32,System.Int32)
+  name: CreateNodes(Int32, Int32)
+  href: api/RandEXom.Framework.Number.DistributedTreeR.html#RandEXom_Framework_Number_DistributedTreeR_CreateNodes_System_Int32_System_Int32_
+  commentId: M:RandEXom.Framework.Number.DistributedTreeR.CreateNodes(System.Int32,System.Int32)
+  fullName: RandEXom.Framework.Number.DistributedTreeR.CreateNodes(System.Int32, System.Int32)
+  nameWithType: DistributedTreeR.CreateNodes(Int32, Int32)
+- uid: RandEXom.Framework.Number.DistributedTreeR.CreateNodes*
+  name: CreateNodes
+  href: api/RandEXom.Framework.Number.DistributedTreeR.html#RandEXom_Framework_Number_DistributedTreeR_CreateNodes_
+  commentId: Overload:RandEXom.Framework.Number.DistributedTreeR.CreateNodes
+  isSpec: "True"
+  fullName: RandEXom.Framework.Number.DistributedTreeR.CreateNodes
+  nameWithType: DistributedTreeR.CreateNodes
+- uid: RandEXom.Framework.Number.DistributedTreeR.Next
+  name: Next()
+  href: api/RandEXom.Framework.Number.DistributedTreeR.html#RandEXom_Framework_Number_DistributedTreeR_Next
+  commentId: M:RandEXom.Framework.Number.DistributedTreeR.Next
+  fullName: RandEXom.Framework.Number.DistributedTreeR.Next()
+  nameWithType: DistributedTreeR.Next()
+- uid: RandEXom.Framework.Number.DistributedTreeR.Next*
+  name: Next
+  href: api/RandEXom.Framework.Number.DistributedTreeR.html#RandEXom_Framework_Number_DistributedTreeR_Next_
+  commentId: Overload:RandEXom.Framework.Number.DistributedTreeR.Next
+  isSpec: "True"
+  fullName: RandEXom.Framework.Number.DistributedTreeR.Next
+  nameWithType: DistributedTreeR.Next
+- uid: RandEXom.Framework.Number.DistributedTreeR.NextInt
+  name: NextInt()
+  href: api/RandEXom.Framework.Number.DistributedTreeR.html#RandEXom_Framework_Number_DistributedTreeR_NextInt
+  commentId: M:RandEXom.Framework.Number.DistributedTreeR.NextInt
+  fullName: RandEXom.Framework.Number.DistributedTreeR.NextInt()
+  nameWithType: DistributedTreeR.NextInt()
+- uid: RandEXom.Framework.Number.DistributedTreeR.NextInt*
+  name: NextInt
+  href: api/RandEXom.Framework.Number.DistributedTreeR.html#RandEXom_Framework_Number_DistributedTreeR_NextInt_
+  commentId: Overload:RandEXom.Framework.Number.DistributedTreeR.NextInt
+  isSpec: "True"
+  fullName: RandEXom.Framework.Number.DistributedTreeR.NextInt
+  nameWithType: DistributedTreeR.NextInt
+- uid: RandEXom.Framework.Number.DistributedTreeR.Node
+  name: DistributedTreeR.Node
+  href: api/RandEXom.Framework.Number.DistributedTreeR.Node.html
+  commentId: T:RandEXom.Framework.Number.DistributedTreeR.Node
+  fullName: RandEXom.Framework.Number.DistributedTreeR.Node
+  nameWithType: DistributedTreeR.Node
+- uid: RandEXom.Framework.Number.DistributedTreeR.Node.#ctor
+  name: Node()
+  href: api/RandEXom.Framework.Number.DistributedTreeR.Node.html#RandEXom_Framework_Number_DistributedTreeR_Node__ctor
+  commentId: M:RandEXom.Framework.Number.DistributedTreeR.Node.#ctor
+  fullName: RandEXom.Framework.Number.DistributedTreeR.Node.Node()
+  nameWithType: DistributedTreeR.Node.Node()
+- uid: RandEXom.Framework.Number.DistributedTreeR.Node.#ctor(RandEXom.Framework.Number.DistributedTreeR.Node)
+  name: Node(DistributedTreeR.Node)
+  href: api/RandEXom.Framework.Number.DistributedTreeR.Node.html#RandEXom_Framework_Number_DistributedTreeR_Node__ctor_RandEXom_Framework_Number_DistributedTreeR_Node_
+  commentId: M:RandEXom.Framework.Number.DistributedTreeR.Node.#ctor(RandEXom.Framework.Number.DistributedTreeR.Node)
+  fullName: RandEXom.Framework.Number.DistributedTreeR.Node.Node(RandEXom.Framework.Number.DistributedTreeR.Node)
+  nameWithType: DistributedTreeR.Node.Node(DistributedTreeR.Node)
+- uid: RandEXom.Framework.Number.DistributedTreeR.Node.#ctor*
+  name: Node
+  href: api/RandEXom.Framework.Number.DistributedTreeR.Node.html#RandEXom_Framework_Number_DistributedTreeR_Node__ctor_
+  commentId: Overload:RandEXom.Framework.Number.DistributedTreeR.Node.#ctor
+  isSpec: "True"
+  fullName: RandEXom.Framework.Number.DistributedTreeR.Node.Node
+  nameWithType: DistributedTreeR.Node.Node
+- uid: RandEXom.Framework.Number.DistributedTreeR.Node._prevWeight
+  name: _prevWeight
+  href: api/RandEXom.Framework.Number.DistributedTreeR.Node.html#RandEXom_Framework_Number_DistributedTreeR_Node__prevWeight
+  commentId: F:RandEXom.Framework.Number.DistributedTreeR.Node._prevWeight
+  fullName: RandEXom.Framework.Number.DistributedTreeR.Node._prevWeight
+  nameWithType: DistributedTreeR.Node._prevWeight
+- uid: RandEXom.Framework.Number.DistributedTreeR.Node.childs
+  name: childs
+  href: api/RandEXom.Framework.Number.DistributedTreeR.Node.html#RandEXom_Framework_Number_DistributedTreeR_Node_childs
+  commentId: F:RandEXom.Framework.Number.DistributedTreeR.Node.childs
+  fullName: RandEXom.Framework.Number.DistributedTreeR.Node.childs
+  nameWithType: DistributedTreeR.Node.childs
+- uid: RandEXom.Framework.Number.DistributedTreeR.Node.GetChilds
+  name: GetChilds()
+  href: api/RandEXom.Framework.Number.DistributedTreeR.Node.html#RandEXom_Framework_Number_DistributedTreeR_Node_GetChilds
+  commentId: M:RandEXom.Framework.Number.DistributedTreeR.Node.GetChilds
+  fullName: RandEXom.Framework.Number.DistributedTreeR.Node.GetChilds()
+  nameWithType: DistributedTreeR.Node.GetChilds()
+- uid: RandEXom.Framework.Number.DistributedTreeR.Node.GetChilds*
+  name: GetChilds
+  href: api/RandEXom.Framework.Number.DistributedTreeR.Node.html#RandEXom_Framework_Number_DistributedTreeR_Node_GetChilds_
+  commentId: Overload:RandEXom.Framework.Number.DistributedTreeR.Node.GetChilds
+  isSpec: "True"
+  fullName: RandEXom.Framework.Number.DistributedTreeR.Node.GetChilds
+  nameWithType: DistributedTreeR.Node.GetChilds
+- uid: RandEXom.Framework.Number.DistributedTreeR.Node.ID
+  name: ID
+  href: api/RandEXom.Framework.Number.DistributedTreeR.Node.html#RandEXom_Framework_Number_DistributedTreeR_Node_ID
+  commentId: F:RandEXom.Framework.Number.DistributedTreeR.Node.ID
+  fullName: RandEXom.Framework.Number.DistributedTreeR.Node.ID
+  nameWithType: DistributedTreeR.Node.ID
+- uid: RandEXom.Framework.Number.DistributedTreeR.Node.nodes
+  name: nodes
+  href: api/RandEXom.Framework.Number.DistributedTreeR.Node.html#RandEXom_Framework_Number_DistributedTreeR_Node_nodes
+  commentId: F:RandEXom.Framework.Number.DistributedTreeR.Node.nodes
+  fullName: RandEXom.Framework.Number.DistributedTreeR.Node.nodes
+  nameWithType: DistributedTreeR.Node.nodes
+- uid: RandEXom.Framework.Number.DistributedTreeR.Node.parentID
+  name: parentID
+  href: api/RandEXom.Framework.Number.DistributedTreeR.Node.html#RandEXom_Framework_Number_DistributedTreeR_Node_parentID
+  commentId: F:RandEXom.Framework.Number.DistributedTreeR.Node.parentID
+  fullName: RandEXom.Framework.Number.DistributedTreeR.Node.parentID
+  nameWithType: DistributedTreeR.Node.parentID
+- uid: RandEXom.Framework.Number.DistributedTreeR.Node.prevWeight
+  name: prevWeight
+  href: api/RandEXom.Framework.Number.DistributedTreeR.Node.html#RandEXom_Framework_Number_DistributedTreeR_Node_prevWeight
+  commentId: P:RandEXom.Framework.Number.DistributedTreeR.Node.prevWeight
+  fullName: RandEXom.Framework.Number.DistributedTreeR.Node.prevWeight
+  nameWithType: DistributedTreeR.Node.prevWeight
+- uid: RandEXom.Framework.Number.DistributedTreeR.Node.prevWeight*
+  name: prevWeight
+  href: api/RandEXom.Framework.Number.DistributedTreeR.Node.html#RandEXom_Framework_Number_DistributedTreeR_Node_prevWeight_
+  commentId: Overload:RandEXom.Framework.Number.DistributedTreeR.Node.prevWeight
+  isSpec: "True"
+  fullName: RandEXom.Framework.Number.DistributedTreeR.Node.prevWeight
+  nameWithType: DistributedTreeR.Node.prevWeight
+- uid: RandEXom.Framework.Number.DistributedTreeR.Node.UpdateWeight(System.Int32)
+  name: UpdateWeight(Int32)
+  href: api/RandEXom.Framework.Number.DistributedTreeR.Node.html#RandEXom_Framework_Number_DistributedTreeR_Node_UpdateWeight_System_Int32_
+  commentId: M:RandEXom.Framework.Number.DistributedTreeR.Node.UpdateWeight(System.Int32)
+  fullName: RandEXom.Framework.Number.DistributedTreeR.Node.UpdateWeight(System.Int32)
+  nameWithType: DistributedTreeR.Node.UpdateWeight(Int32)
+- uid: RandEXom.Framework.Number.DistributedTreeR.Node.UpdateWeight*
+  name: UpdateWeight
+  href: api/RandEXom.Framework.Number.DistributedTreeR.Node.html#RandEXom_Framework_Number_DistributedTreeR_Node_UpdateWeight_
+  commentId: Overload:RandEXom.Framework.Number.DistributedTreeR.Node.UpdateWeight
+  isSpec: "True"
+  fullName: RandEXom.Framework.Number.DistributedTreeR.Node.UpdateWeight
+  nameWithType: DistributedTreeR.Node.UpdateWeight
+- uid: RandEXom.Framework.Number.DistributedTreeR.Node.UpdateWeightFB(RandEXom.Framework.Number.DistributedTreeR.Node,System.Boolean)
+  name: UpdateWeightFB(DistributedTreeR.Node, Boolean)
+  href: api/RandEXom.Framework.Number.DistributedTreeR.Node.html#RandEXom_Framework_Number_DistributedTreeR_Node_UpdateWeightFB_RandEXom_Framework_Number_DistributedTreeR_Node_System_Boolean_
+  commentId: M:RandEXom.Framework.Number.DistributedTreeR.Node.UpdateWeightFB(RandEXom.Framework.Number.DistributedTreeR.Node,System.Boolean)
+  fullName: RandEXom.Framework.Number.DistributedTreeR.Node.UpdateWeightFB(RandEXom.Framework.Number.DistributedTreeR.Node, System.Boolean)
+  nameWithType: DistributedTreeR.Node.UpdateWeightFB(DistributedTreeR.Node, Boolean)
+- uid: RandEXom.Framework.Number.DistributedTreeR.Node.UpdateWeightFB*
+  name: UpdateWeightFB
+  href: api/RandEXom.Framework.Number.DistributedTreeR.Node.html#RandEXom_Framework_Number_DistributedTreeR_Node_UpdateWeightFB_
+  commentId: Overload:RandEXom.Framework.Number.DistributedTreeR.Node.UpdateWeightFB
+  isSpec: "True"
+  fullName: RandEXom.Framework.Number.DistributedTreeR.Node.UpdateWeightFB
+  nameWithType: DistributedTreeR.Node.UpdateWeightFB
+- uid: RandEXom.Framework.Number.DistributedTreeR.Node.weight
+  name: weight
+  href: api/RandEXom.Framework.Number.DistributedTreeR.Node.html#RandEXom_Framework_Number_DistributedTreeR_Node_weight
+  commentId: P:RandEXom.Framework.Number.DistributedTreeR.Node.weight
+  fullName: RandEXom.Framework.Number.DistributedTreeR.Node.weight
+  nameWithType: DistributedTreeR.Node.weight
+- uid: RandEXom.Framework.Number.DistributedTreeR.Node.weight*
+  name: weight
+  href: api/RandEXom.Framework.Number.DistributedTreeR.Node.html#RandEXom_Framework_Number_DistributedTreeR_Node_weight_
+  commentId: Overload:RandEXom.Framework.Number.DistributedTreeR.Node.weight
+  isSpec: "True"
+  fullName: RandEXom.Framework.Number.DistributedTreeR.Node.weight
+  nameWithType: DistributedTreeR.Node.weight
+- uid: RandEXom.Framework.Number.PongR
+  name: PongR
+  href: api/RandEXom.Framework.Number.PongR.html
+  commentId: T:RandEXom.Framework.Number.PongR
+  fullName: RandEXom.Framework.Number.PongR
+  nameWithType: PongR
+- uid: RandEXom.Framework.Number.PongR.#ctor
+  name: PongR()
+  href: api/RandEXom.Framework.Number.PongR.html#RandEXom_Framework_Number_PongR__ctor
+  commentId: M:RandEXom.Framework.Number.PongR.#ctor
+  fullName: RandEXom.Framework.Number.PongR.PongR()
+  nameWithType: PongR.PongR()
+- uid: RandEXom.Framework.Number.PongR.#ctor(RandEXom.Interface.IRandomR)
+  name: PongR(IRandomR)
+  href: api/RandEXom.Framework.Number.PongR.html#RandEXom_Framework_Number_PongR__ctor_RandEXom_Interface_IRandomR_
+  commentId: M:RandEXom.Framework.Number.PongR.#ctor(RandEXom.Interface.IRandomR)
+  fullName: RandEXom.Framework.Number.PongR.PongR(RandEXom.Interface.IRandomR)
+  nameWithType: PongR.PongR(IRandomR)
+- uid: RandEXom.Framework.Number.PongR.#ctor(System.Int64)
+  name: PongR(Int64)
+  href: api/RandEXom.Framework.Number.PongR.html#RandEXom_Framework_Number_PongR__ctor_System_Int64_
+  commentId: M:RandEXom.Framework.Number.PongR.#ctor(System.Int64)
+  fullName: RandEXom.Framework.Number.PongR.PongR(System.Int64)
+  nameWithType: PongR.PongR(Int64)
+- uid: RandEXom.Framework.Number.PongR.#ctor*
+  name: PongR
+  href: api/RandEXom.Framework.Number.PongR.html#RandEXom_Framework_Number_PongR__ctor_
+  commentId: Overload:RandEXom.Framework.Number.PongR.#ctor
+  isSpec: "True"
+  fullName: RandEXom.Framework.Number.PongR.PongR
+  nameWithType: PongR.PongR
+- uid: RandEXom.Framework.Number.PongR.Next(System.Int32,System.Int32)
+  name: Next(Int32, Int32)
+  href: api/RandEXom.Framework.Number.PongR.html#RandEXom_Framework_Number_PongR_Next_System_Int32_System_Int32_
+  commentId: M:RandEXom.Framework.Number.PongR.Next(System.Int32,System.Int32)
+  fullName: RandEXom.Framework.Number.PongR.Next(System.Int32, System.Int32)
+  nameWithType: PongR.Next(Int32, Int32)
+- uid: RandEXom.Framework.Number.PongR.Next(System.Int64,System.Int64)
+  name: Next(Int64, Int64)
+  href: api/RandEXom.Framework.Number.PongR.html#RandEXom_Framework_Number_PongR_Next_System_Int64_System_Int64_
+  commentId: M:RandEXom.Framework.Number.PongR.Next(System.Int64,System.Int64)
+  fullName: RandEXom.Framework.Number.PongR.Next(System.Int64, System.Int64)
+  nameWithType: PongR.Next(Int64, Int64)
+- uid: RandEXom.Framework.Number.PongR.Next*
+  name: Next
+  href: api/RandEXom.Framework.Number.PongR.html#RandEXom_Framework_Number_PongR_Next_
+  commentId: Overload:RandEXom.Framework.Number.PongR.Next
+  isSpec: "True"
+  fullName: RandEXom.Framework.Number.PongR.Next
+  nameWithType: PongR.Next
+- uid: RandEXom.Interface
+  name: RandEXom.Interface
+  href: api/RandEXom.Interface.html
+  commentId: N:RandEXom.Interface
+  fullName: RandEXom.Interface
+  nameWithType: RandEXom.Interface
+- uid: RandEXom.Interface.IGachaR`1
+  name: IGachaR<T>
+  href: api/RandEXom.Interface.IGachaR-1.html
+  commentId: T:RandEXom.Interface.IGachaR`1
+  name.vb: IGachaR(Of T)
+  fullName: RandEXom.Interface.IGachaR<T>
+  fullName.vb: RandEXom.Interface.IGachaR(Of T)
+  nameWithType: IGachaR<T>
+  nameWithType.vb: IGachaR(Of T)
+- uid: RandEXom.Interface.IGachaR`1.AddItem(`0,System.Int32)
+  name: AddItem(T, Int32)
+  href: api/RandEXom.Interface.IGachaR-1.html#RandEXom_Interface_IGachaR_1_AddItem__0_System_Int32_
+  commentId: M:RandEXom.Interface.IGachaR`1.AddItem(`0,System.Int32)
+  fullName: RandEXom.Interface.IGachaR<T>.AddItem(T, System.Int32)
+  fullName.vb: RandEXom.Interface.IGachaR(Of T).AddItem(T, System.Int32)
+  nameWithType: IGachaR<T>.AddItem(T, Int32)
+  nameWithType.vb: IGachaR(Of T).AddItem(T, Int32)
+- uid: RandEXom.Interface.IGachaR`1.AddItem*
+  name: AddItem
+  href: api/RandEXom.Interface.IGachaR-1.html#RandEXom_Interface_IGachaR_1_AddItem_
+  commentId: Overload:RandEXom.Interface.IGachaR`1.AddItem
+  isSpec: "True"
+  fullName: RandEXom.Interface.IGachaR<T>.AddItem
+  fullName.vb: RandEXom.Interface.IGachaR(Of T).AddItem
+  nameWithType: IGachaR<T>.AddItem
+  nameWithType.vb: IGachaR(Of T).AddItem
+- uid: RandEXom.Interface.IGachaR`1.Count
+  name: Count()
+  href: api/RandEXom.Interface.IGachaR-1.html#RandEXom_Interface_IGachaR_1_Count
+  commentId: M:RandEXom.Interface.IGachaR`1.Count
+  fullName: RandEXom.Interface.IGachaR<T>.Count()
+  fullName.vb: RandEXom.Interface.IGachaR(Of T).Count()
+  nameWithType: IGachaR<T>.Count()
+  nameWithType.vb: IGachaR(Of T).Count()
+- uid: RandEXom.Interface.IGachaR`1.Count(`0)
+  name: Count(T)
+  href: api/RandEXom.Interface.IGachaR-1.html#RandEXom_Interface_IGachaR_1_Count__0_
+  commentId: M:RandEXom.Interface.IGachaR`1.Count(`0)
+  fullName: RandEXom.Interface.IGachaR<T>.Count(T)
+  fullName.vb: RandEXom.Interface.IGachaR(Of T).Count(T)
+  nameWithType: IGachaR<T>.Count(T)
+  nameWithType.vb: IGachaR(Of T).Count(T)
+- uid: RandEXom.Interface.IGachaR`1.Count*
+  name: Count
+  href: api/RandEXom.Interface.IGachaR-1.html#RandEXom_Interface_IGachaR_1_Count_
+  commentId: Overload:RandEXom.Interface.IGachaR`1.Count
+  isSpec: "True"
+  fullName: RandEXom.Interface.IGachaR<T>.Count
+  fullName.vb: RandEXom.Interface.IGachaR(Of T).Count
+  nameWithType: IGachaR<T>.Count
+  nameWithType.vb: IGachaR(Of T).Count
+- uid: RandEXom.Interface.IGachaR`1.CountType
+  name: CountType()
+  href: api/RandEXom.Interface.IGachaR-1.html#RandEXom_Interface_IGachaR_1_CountType
+  commentId: M:RandEXom.Interface.IGachaR`1.CountType
+  fullName: RandEXom.Interface.IGachaR<T>.CountType()
+  fullName.vb: RandEXom.Interface.IGachaR(Of T).CountType()
+  nameWithType: IGachaR<T>.CountType()
+  nameWithType.vb: IGachaR(Of T).CountType()
+- uid: RandEXom.Interface.IGachaR`1.CountType*
+  name: CountType
+  href: api/RandEXom.Interface.IGachaR-1.html#RandEXom_Interface_IGachaR_1_CountType_
+  commentId: Overload:RandEXom.Interface.IGachaR`1.CountType
+  isSpec: "True"
+  fullName: RandEXom.Interface.IGachaR<T>.CountType
+  fullName.vb: RandEXom.Interface.IGachaR(Of T).CountType
+  nameWithType: IGachaR<T>.CountType
+  nameWithType.vb: IGachaR(Of T).CountType
+- uid: RandEXom.Interface.IGachaR`1.Pull
+  name: Pull()
+  href: api/RandEXom.Interface.IGachaR-1.html#RandEXom_Interface_IGachaR_1_Pull
+  commentId: M:RandEXom.Interface.IGachaR`1.Pull
+  fullName: RandEXom.Interface.IGachaR<T>.Pull()
+  fullName.vb: RandEXom.Interface.IGachaR(Of T).Pull()
+  nameWithType: IGachaR<T>.Pull()
+  nameWithType.vb: IGachaR(Of T).Pull()
+- uid: RandEXom.Interface.IGachaR`1.Pull*
+  name: Pull
+  href: api/RandEXom.Interface.IGachaR-1.html#RandEXom_Interface_IGachaR_1_Pull_
+  commentId: Overload:RandEXom.Interface.IGachaR`1.Pull
+  isSpec: "True"
+  fullName: RandEXom.Interface.IGachaR<T>.Pull
+  fullName.vb: RandEXom.Interface.IGachaR(Of T).Pull
+  nameWithType: IGachaR<T>.Pull
+  nameWithType.vb: IGachaR(Of T).Pull
+- uid: RandEXom.Interface.IGachaR`1.Refill
+  name: Refill()
+  href: api/RandEXom.Interface.IGachaR-1.html#RandEXom_Interface_IGachaR_1_Refill
+  commentId: M:RandEXom.Interface.IGachaR`1.Refill
+  fullName: RandEXom.Interface.IGachaR<T>.Refill()
+  fullName.vb: RandEXom.Interface.IGachaR(Of T).Refill()
+  nameWithType: IGachaR<T>.Refill()
+  nameWithType.vb: IGachaR(Of T).Refill()
+- uid: RandEXom.Interface.IGachaR`1.Refill*
+  name: Refill
+  href: api/RandEXom.Interface.IGachaR-1.html#RandEXom_Interface_IGachaR_1_Refill_
+  commentId: Overload:RandEXom.Interface.IGachaR`1.Refill
+  isSpec: "True"
+  fullName: RandEXom.Interface.IGachaR<T>.Refill
+  fullName.vb: RandEXom.Interface.IGachaR(Of T).Refill
+  nameWithType: IGachaR<T>.Refill
+  nameWithType.vb: IGachaR(Of T).Refill
+- uid: RandEXom.Interface.IGachaR`1.Remove(`0)
+  name: Remove(T)
+  href: api/RandEXom.Interface.IGachaR-1.html#RandEXom_Interface_IGachaR_1_Remove__0_
+  commentId: M:RandEXom.Interface.IGachaR`1.Remove(`0)
+  fullName: RandEXom.Interface.IGachaR<T>.Remove(T)
+  fullName.vb: RandEXom.Interface.IGachaR(Of T).Remove(T)
+  nameWithType: IGachaR<T>.Remove(T)
+  nameWithType.vb: IGachaR(Of T).Remove(T)
+- uid: RandEXom.Interface.IGachaR`1.Remove*
+  name: Remove
+  href: api/RandEXom.Interface.IGachaR-1.html#RandEXom_Interface_IGachaR_1_Remove_
+  commentId: Overload:RandEXom.Interface.IGachaR`1.Remove
+  isSpec: "True"
+  fullName: RandEXom.Interface.IGachaR<T>.Remove
+  fullName.vb: RandEXom.Interface.IGachaR(Of T).Remove
+  nameWithType: IGachaR<T>.Remove
+  nameWithType.vb: IGachaR(Of T).Remove
+- uid: RandEXom.Interface.IGachaR`1.RemoveEmpty(`0)
+  name: RemoveEmpty(T)
+  href: api/RandEXom.Interface.IGachaR-1.html#RandEXom_Interface_IGachaR_1_RemoveEmpty__0_
+  commentId: M:RandEXom.Interface.IGachaR`1.RemoveEmpty(`0)
+  fullName: RandEXom.Interface.IGachaR<T>.RemoveEmpty(T)
+  fullName.vb: RandEXom.Interface.IGachaR(Of T).RemoveEmpty(T)
+  nameWithType: IGachaR<T>.RemoveEmpty(T)
+  nameWithType.vb: IGachaR(Of T).RemoveEmpty(T)
+- uid: RandEXom.Interface.IGachaR`1.RemoveEmpty*
+  name: RemoveEmpty
+  href: api/RandEXom.Interface.IGachaR-1.html#RandEXom_Interface_IGachaR_1_RemoveEmpty_
+  commentId: Overload:RandEXom.Interface.IGachaR`1.RemoveEmpty
+  isSpec: "True"
+  fullName: RandEXom.Interface.IGachaR<T>.RemoveEmpty
+  fullName.vb: RandEXom.Interface.IGachaR(Of T).RemoveEmpty
+  nameWithType: IGachaR<T>.RemoveEmpty
+  nameWithType.vb: IGachaR(Of T).RemoveEmpty
+- uid: RandEXom.Interface.IRandomR
+  name: IRandomR
+  href: api/RandEXom.Interface.IRandomR.html
+  commentId: T:RandEXom.Interface.IRandomR
+  fullName: RandEXom.Interface.IRandomR
+  nameWithType: IRandomR
+- uid: RandEXom.Interface.IRandomR.GetSeed
+  name: GetSeed()
+  href: api/RandEXom.Interface.IRandomR.html#RandEXom_Interface_IRandomR_GetSeed
+  commentId: M:RandEXom.Interface.IRandomR.GetSeed
+  fullName: RandEXom.Interface.IRandomR.GetSeed()
+  nameWithType: IRandomR.GetSeed()
+- uid: RandEXom.Interface.IRandomR.GetSeed*
+  name: GetSeed
+  href: api/RandEXom.Interface.IRandomR.html#RandEXom_Interface_IRandomR_GetSeed_
+  commentId: Overload:RandEXom.Interface.IRandomR.GetSeed
+  isSpec: "True"
+  fullName: RandEXom.Interface.IRandomR.GetSeed
+  nameWithType: IRandomR.GetSeed
+- uid: RandEXom.Interface.IRandomR.NextBytes(System.Byte[])
+  name: NextBytes(Byte[])
+  href: api/RandEXom.Interface.IRandomR.html#RandEXom_Interface_IRandomR_NextBytes_System_Byte___
+  commentId: M:RandEXom.Interface.IRandomR.NextBytes(System.Byte[])
+  name.vb: NextBytes(Byte())
+  fullName: RandEXom.Interface.IRandomR.NextBytes(System.Byte[])
+  fullName.vb: RandEXom.Interface.IRandomR.NextBytes(System.Byte())
+  nameWithType: IRandomR.NextBytes(Byte[])
+  nameWithType.vb: IRandomR.NextBytes(Byte())
+- uid: RandEXom.Interface.IRandomR.NextBytes*
+  name: NextBytes
+  href: api/RandEXom.Interface.IRandomR.html#RandEXom_Interface_IRandomR_NextBytes_
+  commentId: Overload:RandEXom.Interface.IRandomR.NextBytes
+  isSpec: "True"
+  fullName: RandEXom.Interface.IRandomR.NextBytes
+  nameWithType: IRandomR.NextBytes
+- uid: RandEXom.Interface.IRandomR.NextInt(System.Int32,System.Int32)
+  name: NextInt(Int32, Int32)
+  href: api/RandEXom.Interface.IRandomR.html#RandEXom_Interface_IRandomR_NextInt_System_Int32_System_Int32_
+  commentId: M:RandEXom.Interface.IRandomR.NextInt(System.Int32,System.Int32)
+  fullName: RandEXom.Interface.IRandomR.NextInt(System.Int32, System.Int32)
+  nameWithType: IRandomR.NextInt(Int32, Int32)
+- uid: RandEXom.Interface.IRandomR.NextInt*
+  name: NextInt
+  href: api/RandEXom.Interface.IRandomR.html#RandEXom_Interface_IRandomR_NextInt_
+  commentId: Overload:RandEXom.Interface.IRandomR.NextInt
+  isSpec: "True"
+  fullName: RandEXom.Interface.IRandomR.NextInt
+  nameWithType: IRandomR.NextInt
+- uid: RandEXom.Interface.IRandomR.NextLong(System.Int64,System.Int64)
+  name: NextLong(Int64, Int64)
+  href: api/RandEXom.Interface.IRandomR.html#RandEXom_Interface_IRandomR_NextLong_System_Int64_System_Int64_
+  commentId: M:RandEXom.Interface.IRandomR.NextLong(System.Int64,System.Int64)
+  fullName: RandEXom.Interface.IRandomR.NextLong(System.Int64, System.Int64)
+  nameWithType: IRandomR.NextLong(Int64, Int64)
+- uid: RandEXom.Interface.IRandomR.NextLong*
+  name: NextLong
+  href: api/RandEXom.Interface.IRandomR.html#RandEXom_Interface_IRandomR_NextLong_
+  commentId: Overload:RandEXom.Interface.IRandomR.NextLong
+  isSpec: "True"
+  fullName: RandEXom.Interface.IRandomR.NextLong
+  nameWithType: IRandomR.NextLong
+- uid: RandEXom.Interface.ISeedR
+  name: ISeedR
+  href: api/RandEXom.Interface.ISeedR.html
+  commentId: T:RandEXom.Interface.ISeedR
+  fullName: RandEXom.Interface.ISeedR
+  nameWithType: ISeedR
+- uid: RandEXom.Interface.ISeedR.init
+  name: init
+  href: api/RandEXom.Interface.ISeedR.html#RandEXom_Interface_ISeedR_init
+  commentId: P:RandEXom.Interface.ISeedR.init
+  fullName: RandEXom.Interface.ISeedR.init
+  nameWithType: ISeedR.init
+- uid: RandEXom.Interface.ISeedR.init*
+  name: init
+  href: api/RandEXom.Interface.ISeedR.html#RandEXom_Interface_ISeedR_init_
+  commentId: Overload:RandEXom.Interface.ISeedR.init
+  isSpec: "True"
+  fullName: RandEXom.Interface.ISeedR.init
+  nameWithType: ISeedR.init
+- uid: RandEXom.Interface.ISeedR.Next
+  name: Next()
+  href: api/RandEXom.Interface.ISeedR.html#RandEXom_Interface_ISeedR_Next
+  commentId: M:RandEXom.Interface.ISeedR.Next
+  fullName: RandEXom.Interface.ISeedR.Next()
+  nameWithType: ISeedR.Next()
+- uid: RandEXom.Interface.ISeedR.Next*
+  name: Next
+  href: api/RandEXom.Interface.ISeedR.html#RandEXom_Interface_ISeedR_Next_
+  commentId: Overload:RandEXom.Interface.ISeedR.Next
+  isSpec: "True"
+  fullName: RandEXom.Interface.ISeedR.Next
+  nameWithType: ISeedR.Next
+- uid: RandEXom.Interface.ISeedR.now
+  name: now
+  href: api/RandEXom.Interface.ISeedR.html#RandEXom_Interface_ISeedR_now
+  commentId: P:RandEXom.Interface.ISeedR.now
+  fullName: RandEXom.Interface.ISeedR.now
+  nameWithType: ISeedR.now
+- uid: RandEXom.Interface.ISeedR.now*
+  name: now
+  href: api/RandEXom.Interface.ISeedR.html#RandEXom_Interface_ISeedR_now_
+  commentId: Overload:RandEXom.Interface.ISeedR.now
+  isSpec: "True"
+  fullName: RandEXom.Interface.ISeedR.now
+  nameWithType: ISeedR.now
+- uid: RandEXom.Interface.ISeedR.previous
+  name: previous
+  href: api/RandEXom.Interface.ISeedR.html#RandEXom_Interface_ISeedR_previous
+  commentId: P:RandEXom.Interface.ISeedR.previous
+  fullName: RandEXom.Interface.ISeedR.previous
+  nameWithType: ISeedR.previous
+- uid: RandEXom.Interface.ISeedR.previous*
+  name: previous
+  href: api/RandEXom.Interface.ISeedR.html#RandEXom_Interface_ISeedR_previous_
+  commentId: Overload:RandEXom.Interface.ISeedR.previous
+  isSpec: "True"
+  fullName: RandEXom.Interface.ISeedR.previous
+  nameWithType: ISeedR.previous
+- uid: RandEXom.RandomLib
+  name: RandEXom.RandomLib
+  href: api/RandEXom.RandomLib.html
+  commentId: N:RandEXom.RandomLib
+  fullName: RandEXom.RandomLib
+  nameWithType: RandEXom.RandomLib
+- uid: RandEXom.RandomLib.ModuloRandom
+  name: ModuloRandom
+  href: api/RandEXom.RandomLib.ModuloRandom.html
+  commentId: T:RandEXom.RandomLib.ModuloRandom
+  fullName: RandEXom.RandomLib.ModuloRandom
+  nameWithType: ModuloRandom
+- uid: RandEXom.RandomLib.ModuloRandom.#ctor(RandEXom.Interface.ISeedR,RandEXom.RandomLib.ModuloRandom.Multiplier)
+  name: ModuloRandom(ISeedR, ModuloRandom.Multiplier)
+  href: api/RandEXom.RandomLib.ModuloRandom.html#RandEXom_RandomLib_ModuloRandom__ctor_RandEXom_Interface_ISeedR_RandEXom_RandomLib_ModuloRandom_Multiplier_
+  commentId: M:RandEXom.RandomLib.ModuloRandom.#ctor(RandEXom.Interface.ISeedR,RandEXom.RandomLib.ModuloRandom.Multiplier)
+  fullName: RandEXom.RandomLib.ModuloRandom.ModuloRandom(RandEXom.Interface.ISeedR, RandEXom.RandomLib.ModuloRandom.Multiplier)
+  nameWithType: ModuloRandom.ModuloRandom(ISeedR, ModuloRandom.Multiplier)
+- uid: RandEXom.RandomLib.ModuloRandom.#ctor(RandEXom.Interface.ISeedR,System.Int64)
+  name: ModuloRandom(ISeedR, Int64)
+  href: api/RandEXom.RandomLib.ModuloRandom.html#RandEXom_RandomLib_ModuloRandom__ctor_RandEXom_Interface_ISeedR_System_Int64_
+  commentId: M:RandEXom.RandomLib.ModuloRandom.#ctor(RandEXom.Interface.ISeedR,System.Int64)
+  fullName: RandEXom.RandomLib.ModuloRandom.ModuloRandom(RandEXom.Interface.ISeedR, System.Int64)
+  nameWithType: ModuloRandom.ModuloRandom(ISeedR, Int64)
+- uid: RandEXom.RandomLib.ModuloRandom.#ctor(RandEXom.RandomLib.ModuloRandom.Multiplier,System.Nullable{System.Int64})
+  name: ModuloRandom(ModuloRandom.Multiplier, Nullable<Int64>)
+  href: api/RandEXom.RandomLib.ModuloRandom.html#RandEXom_RandomLib_ModuloRandom__ctor_RandEXom_RandomLib_ModuloRandom_Multiplier_System_Nullable_System_Int64__
+  commentId: M:RandEXom.RandomLib.ModuloRandom.#ctor(RandEXom.RandomLib.ModuloRandom.Multiplier,System.Nullable{System.Int64})
+  name.vb: ModuloRandom(ModuloRandom.Multiplier, Nullable(Of Int64))
+  fullName: RandEXom.RandomLib.ModuloRandom.ModuloRandom(RandEXom.RandomLib.ModuloRandom.Multiplier, System.Nullable<System.Int64>)
+  fullName.vb: RandEXom.RandomLib.ModuloRandom.ModuloRandom(RandEXom.RandomLib.ModuloRandom.Multiplier, System.Nullable(Of System.Int64))
+  nameWithType: ModuloRandom.ModuloRandom(ModuloRandom.Multiplier, Nullable<Int64>)
+  nameWithType.vb: ModuloRandom.ModuloRandom(ModuloRandom.Multiplier, Nullable(Of Int64))
+- uid: RandEXom.RandomLib.ModuloRandom.#ctor(System.Int64,System.Nullable{System.Int64})
+  name: ModuloRandom(Int64, Nullable<Int64>)
+  href: api/RandEXom.RandomLib.ModuloRandom.html#RandEXom_RandomLib_ModuloRandom__ctor_System_Int64_System_Nullable_System_Int64__
+  commentId: M:RandEXom.RandomLib.ModuloRandom.#ctor(System.Int64,System.Nullable{System.Int64})
+  name.vb: ModuloRandom(Int64, Nullable(Of Int64))
+  fullName: RandEXom.RandomLib.ModuloRandom.ModuloRandom(System.Int64, System.Nullable<System.Int64>)
+  fullName.vb: RandEXom.RandomLib.ModuloRandom.ModuloRandom(System.Int64, System.Nullable(Of System.Int64))
+  nameWithType: ModuloRandom.ModuloRandom(Int64, Nullable<Int64>)
+  nameWithType.vb: ModuloRandom.ModuloRandom(Int64, Nullable(Of Int64))
+- uid: RandEXom.RandomLib.ModuloRandom.#ctor(System.Nullable{System.Int64})
+  name: ModuloRandom(Nullable<Int64>)
+  href: api/RandEXom.RandomLib.ModuloRandom.html#RandEXom_RandomLib_ModuloRandom__ctor_System_Nullable_System_Int64__
+  commentId: M:RandEXom.RandomLib.ModuloRandom.#ctor(System.Nullable{System.Int64})
+  name.vb: ModuloRandom(Nullable(Of Int64))
+  fullName: RandEXom.RandomLib.ModuloRandom.ModuloRandom(System.Nullable<System.Int64>)
+  fullName.vb: RandEXom.RandomLib.ModuloRandom.ModuloRandom(System.Nullable(Of System.Int64))
+  nameWithType: ModuloRandom.ModuloRandom(Nullable<Int64>)
+  nameWithType.vb: ModuloRandom.ModuloRandom(Nullable(Of Int64))
+- uid: RandEXom.RandomLib.ModuloRandom.#ctor*
+  name: ModuloRandom
+  href: api/RandEXom.RandomLib.ModuloRandom.html#RandEXom_RandomLib_ModuloRandom__ctor_
+  commentId: Overload:RandEXom.RandomLib.ModuloRandom.#ctor
+  isSpec: "True"
+  fullName: RandEXom.RandomLib.ModuloRandom.ModuloRandom
+  nameWithType: ModuloRandom.ModuloRandom
+- uid: RandEXom.RandomLib.ModuloRandom.GetSeed
+  name: GetSeed()
+  href: api/RandEXom.RandomLib.ModuloRandom.html#RandEXom_RandomLib_ModuloRandom_GetSeed
+  commentId: M:RandEXom.RandomLib.ModuloRandom.GetSeed
+  fullName: RandEXom.RandomLib.ModuloRandom.GetSeed()
+  nameWithType: ModuloRandom.GetSeed()
+- uid: RandEXom.RandomLib.ModuloRandom.GetSeed*
+  name: GetSeed
+  href: api/RandEXom.RandomLib.ModuloRandom.html#RandEXom_RandomLib_ModuloRandom_GetSeed_
+  commentId: Overload:RandEXom.RandomLib.ModuloRandom.GetSeed
+  isSpec: "True"
+  fullName: RandEXom.RandomLib.ModuloRandom.GetSeed
+  nameWithType: ModuloRandom.GetSeed
+- uid: RandEXom.RandomLib.ModuloRandom.Multiplier
+  name: ModuloRandom.Multiplier
+  href: api/RandEXom.RandomLib.ModuloRandom.Multiplier.html
+  commentId: T:RandEXom.RandomLib.ModuloRandom.Multiplier
+  fullName: RandEXom.RandomLib.ModuloRandom.Multiplier
+  nameWithType: ModuloRandom.Multiplier
+- uid: RandEXom.RandomLib.ModuloRandom.Multiplier.One
+  name: One
+  href: api/RandEXom.RandomLib.ModuloRandom.Multiplier.html#RandEXom_RandomLib_ModuloRandom_Multiplier_One
+  commentId: F:RandEXom.RandomLib.ModuloRandom.Multiplier.One
+  fullName: RandEXom.RandomLib.ModuloRandom.Multiplier.One
+  nameWithType: ModuloRandom.Multiplier.One
+- uid: RandEXom.RandomLib.ModuloRandom.Multiplier.XORShift64_Star
+  name: XORShift64_Star
+  href: api/RandEXom.RandomLib.ModuloRandom.Multiplier.html#RandEXom_RandomLib_ModuloRandom_Multiplier_XORShift64_Star
+  commentId: F:RandEXom.RandomLib.ModuloRandom.Multiplier.XORShift64_Star
+  fullName: RandEXom.RandomLib.ModuloRandom.Multiplier.XORShift64_Star
+  nameWithType: ModuloRandom.Multiplier.XORShift64_Star
+- uid: RandEXom.RandomLib.ModuloRandom.NextBytes(System.Byte[])
+  name: NextBytes(Byte[])
+  href: api/RandEXom.RandomLib.ModuloRandom.html#RandEXom_RandomLib_ModuloRandom_NextBytes_System_Byte___
+  commentId: M:RandEXom.RandomLib.ModuloRandom.NextBytes(System.Byte[])
+  name.vb: NextBytes(Byte())
+  fullName: RandEXom.RandomLib.ModuloRandom.NextBytes(System.Byte[])
+  fullName.vb: RandEXom.RandomLib.ModuloRandom.NextBytes(System.Byte())
+  nameWithType: ModuloRandom.NextBytes(Byte[])
+  nameWithType.vb: ModuloRandom.NextBytes(Byte())
+- uid: RandEXom.RandomLib.ModuloRandom.NextBytes*
+  name: NextBytes
+  href: api/RandEXom.RandomLib.ModuloRandom.html#RandEXom_RandomLib_ModuloRandom_NextBytes_
+  commentId: Overload:RandEXom.RandomLib.ModuloRandom.NextBytes
+  isSpec: "True"
+  fullName: RandEXom.RandomLib.ModuloRandom.NextBytes
+  nameWithType: ModuloRandom.NextBytes
+- uid: RandEXom.RandomLib.ModuloRandom.NextInt(System.Int32,System.Int32)
+  name: NextInt(Int32, Int32)
+  href: api/RandEXom.RandomLib.ModuloRandom.html#RandEXom_RandomLib_ModuloRandom_NextInt_System_Int32_System_Int32_
+  commentId: M:RandEXom.RandomLib.ModuloRandom.NextInt(System.Int32,System.Int32)
+  fullName: RandEXom.RandomLib.ModuloRandom.NextInt(System.Int32, System.Int32)
+  nameWithType: ModuloRandom.NextInt(Int32, Int32)
+- uid: RandEXom.RandomLib.ModuloRandom.NextInt*
+  name: NextInt
+  href: api/RandEXom.RandomLib.ModuloRandom.html#RandEXom_RandomLib_ModuloRandom_NextInt_
+  commentId: Overload:RandEXom.RandomLib.ModuloRandom.NextInt
+  isSpec: "True"
+  fullName: RandEXom.RandomLib.ModuloRandom.NextInt
+  nameWithType: ModuloRandom.NextInt
+- uid: RandEXom.RandomLib.ModuloRandom.NextLong(System.Int64,System.Int64)
+  name: NextLong(Int64, Int64)
+  href: api/RandEXom.RandomLib.ModuloRandom.html#RandEXom_RandomLib_ModuloRandom_NextLong_System_Int64_System_Int64_
+  commentId: M:RandEXom.RandomLib.ModuloRandom.NextLong(System.Int64,System.Int64)
+  fullName: RandEXom.RandomLib.ModuloRandom.NextLong(System.Int64, System.Int64)
+  nameWithType: ModuloRandom.NextLong(Int64, Int64)
+- uid: RandEXom.RandomLib.ModuloRandom.NextLong*
+  name: NextLong
+  href: api/RandEXom.RandomLib.ModuloRandom.html#RandEXom_RandomLib_ModuloRandom_NextLong_
+  commentId: Overload:RandEXom.RandomLib.ModuloRandom.NextLong
+  isSpec: "True"
+  fullName: RandEXom.RandomLib.ModuloRandom.NextLong
+  nameWithType: ModuloRandom.NextLong
+- uid: RandEXom.RandomLib.NetRandom
+  name: NetRandom
+  href: api/RandEXom.RandomLib.NetRandom.html
+  commentId: T:RandEXom.RandomLib.NetRandom
+  fullName: RandEXom.RandomLib.NetRandom
+  nameWithType: NetRandom
+- uid: RandEXom.RandomLib.NetRandom.#ctor
+  name: NetRandom()
+  href: api/RandEXom.RandomLib.NetRandom.html#RandEXom_RandomLib_NetRandom__ctor
+  commentId: M:RandEXom.RandomLib.NetRandom.#ctor
+  fullName: RandEXom.RandomLib.NetRandom.NetRandom()
+  nameWithType: NetRandom.NetRandom()
+- uid: RandEXom.RandomLib.NetRandom.#ctor(RandEXom.Interface.ISeedR)
+  name: NetRandom(ISeedR)
+  href: api/RandEXom.RandomLib.NetRandom.html#RandEXom_RandomLib_NetRandom__ctor_RandEXom_Interface_ISeedR_
+  commentId: M:RandEXom.RandomLib.NetRandom.#ctor(RandEXom.Interface.ISeedR)
+  fullName: RandEXom.RandomLib.NetRandom.NetRandom(RandEXom.Interface.ISeedR)
+  nameWithType: NetRandom.NetRandom(ISeedR)
+- uid: RandEXom.RandomLib.NetRandom.#ctor(System.Int64)
+  name: NetRandom(Int64)
+  href: api/RandEXom.RandomLib.NetRandom.html#RandEXom_RandomLib_NetRandom__ctor_System_Int64_
+  commentId: M:RandEXom.RandomLib.NetRandom.#ctor(System.Int64)
+  fullName: RandEXom.RandomLib.NetRandom.NetRandom(System.Int64)
+  nameWithType: NetRandom.NetRandom(Int64)
+- uid: RandEXom.RandomLib.NetRandom.#ctor*
+  name: NetRandom
+  href: api/RandEXom.RandomLib.NetRandom.html#RandEXom_RandomLib_NetRandom__ctor_
+  commentId: Overload:RandEXom.RandomLib.NetRandom.#ctor
+  isSpec: "True"
+  fullName: RandEXom.RandomLib.NetRandom.NetRandom
+  nameWithType: NetRandom.NetRandom
+- uid: RandEXom.RandomLib.NetRandom.GetSeed
+  name: GetSeed()
+  href: api/RandEXom.RandomLib.NetRandom.html#RandEXom_RandomLib_NetRandom_GetSeed
+  commentId: M:RandEXom.RandomLib.NetRandom.GetSeed
+  fullName: RandEXom.RandomLib.NetRandom.GetSeed()
+  nameWithType: NetRandom.GetSeed()
+- uid: RandEXom.RandomLib.NetRandom.GetSeed*
+  name: GetSeed
+  href: api/RandEXom.RandomLib.NetRandom.html#RandEXom_RandomLib_NetRandom_GetSeed_
+  commentId: Overload:RandEXom.RandomLib.NetRandom.GetSeed
+  isSpec: "True"
+  fullName: RandEXom.RandomLib.NetRandom.GetSeed
+  nameWithType: NetRandom.GetSeed
+- uid: RandEXom.RandomLib.NetRandom.NextBytes(System.Byte[])
+  name: NextBytes(Byte[])
+  href: api/RandEXom.RandomLib.NetRandom.html#RandEXom_RandomLib_NetRandom_NextBytes_System_Byte___
+  commentId: M:RandEXom.RandomLib.NetRandom.NextBytes(System.Byte[])
+  name.vb: NextBytes(Byte())
+  fullName: RandEXom.RandomLib.NetRandom.NextBytes(System.Byte[])
+  fullName.vb: RandEXom.RandomLib.NetRandom.NextBytes(System.Byte())
+  nameWithType: NetRandom.NextBytes(Byte[])
+  nameWithType.vb: NetRandom.NextBytes(Byte())
+- uid: RandEXom.RandomLib.NetRandom.NextBytes*
+  name: NextBytes
+  href: api/RandEXom.RandomLib.NetRandom.html#RandEXom_RandomLib_NetRandom_NextBytes_
+  commentId: Overload:RandEXom.RandomLib.NetRandom.NextBytes
+  isSpec: "True"
+  fullName: RandEXom.RandomLib.NetRandom.NextBytes
+  nameWithType: NetRandom.NextBytes
+- uid: RandEXom.RandomLib.NetRandom.NextInt(System.Int32,System.Int32)
+  name: NextInt(Int32, Int32)
+  href: api/RandEXom.RandomLib.NetRandom.html#RandEXom_RandomLib_NetRandom_NextInt_System_Int32_System_Int32_
+  commentId: M:RandEXom.RandomLib.NetRandom.NextInt(System.Int32,System.Int32)
+  fullName: RandEXom.RandomLib.NetRandom.NextInt(System.Int32, System.Int32)
+  nameWithType: NetRandom.NextInt(Int32, Int32)
+- uid: RandEXom.RandomLib.NetRandom.NextInt*
+  name: NextInt
+  href: api/RandEXom.RandomLib.NetRandom.html#RandEXom_RandomLib_NetRandom_NextInt_
+  commentId: Overload:RandEXom.RandomLib.NetRandom.NextInt
+  isSpec: "True"
+  fullName: RandEXom.RandomLib.NetRandom.NextInt
+  nameWithType: NetRandom.NextInt
+- uid: RandEXom.RandomLib.NetRandom.NextLong(System.Int64,System.Int64)
+  name: NextLong(Int64, Int64)
+  href: api/RandEXom.RandomLib.NetRandom.html#RandEXom_RandomLib_NetRandom_NextLong_System_Int64_System_Int64_
+  commentId: M:RandEXom.RandomLib.NetRandom.NextLong(System.Int64,System.Int64)
+  fullName: RandEXom.RandomLib.NetRandom.NextLong(System.Int64, System.Int64)
+  nameWithType: NetRandom.NextLong(Int64, Int64)
+- uid: RandEXom.RandomLib.NetRandom.NextLong*
+  name: NextLong
+  href: api/RandEXom.RandomLib.NetRandom.html#RandEXom_RandomLib_NetRandom_NextLong_
+  commentId: Overload:RandEXom.RandomLib.NetRandom.NextLong
+  isSpec: "True"
+  fullName: RandEXom.RandomLib.NetRandom.NextLong
+  nameWithType: NetRandom.NextLong
+- uid: RandEXom.RandomLib.SSRNGRandom
+  name: SSRNGRandom
+  href: api/RandEXom.RandomLib.SSRNGRandom.html
+  commentId: T:RandEXom.RandomLib.SSRNGRandom
+  fullName: RandEXom.RandomLib.SSRNGRandom
+  nameWithType: SSRNGRandom
+- uid: RandEXom.RandomLib.SSRNGRandom.#ctor(RandEXom.Interface.ISeedR,RandEXom.RandomLib.SSRNGRandom.ParameterTemplate)
+  name: SSRNGRandom(ISeedR, SSRNGRandom.ParameterTemplate)
+  href: api/RandEXom.RandomLib.SSRNGRandom.html#RandEXom_RandomLib_SSRNGRandom__ctor_RandEXom_Interface_ISeedR_RandEXom_RandomLib_SSRNGRandom_ParameterTemplate_
+  commentId: M:RandEXom.RandomLib.SSRNGRandom.#ctor(RandEXom.Interface.ISeedR,RandEXom.RandomLib.SSRNGRandom.ParameterTemplate)
+  fullName: RandEXom.RandomLib.SSRNGRandom.SSRNGRandom(RandEXom.Interface.ISeedR, RandEXom.RandomLib.SSRNGRandom.ParameterTemplate)
+  nameWithType: SSRNGRandom.SSRNGRandom(ISeedR, SSRNGRandom.ParameterTemplate)
+- uid: RandEXom.RandomLib.SSRNGRandom.#ctor(RandEXom.Interface.ISeedR,System.Int64)
+  name: SSRNGRandom(ISeedR, Int64)
+  href: api/RandEXom.RandomLib.SSRNGRandom.html#RandEXom_RandomLib_SSRNGRandom__ctor_RandEXom_Interface_ISeedR_System_Int64_
+  commentId: M:RandEXom.RandomLib.SSRNGRandom.#ctor(RandEXom.Interface.ISeedR,System.Int64)
+  fullName: RandEXom.RandomLib.SSRNGRandom.SSRNGRandom(RandEXom.Interface.ISeedR, System.Int64)
+  nameWithType: SSRNGRandom.SSRNGRandom(ISeedR, Int64)
+- uid: RandEXom.RandomLib.SSRNGRandom.#ctor(RandEXom.RandomLib.SSRNGRandom.ParameterTemplate,System.Nullable{System.Int64})
+  name: SSRNGRandom(SSRNGRandom.ParameterTemplate, Nullable<Int64>)
+  href: api/RandEXom.RandomLib.SSRNGRandom.html#RandEXom_RandomLib_SSRNGRandom__ctor_RandEXom_RandomLib_SSRNGRandom_ParameterTemplate_System_Nullable_System_Int64__
+  commentId: M:RandEXom.RandomLib.SSRNGRandom.#ctor(RandEXom.RandomLib.SSRNGRandom.ParameterTemplate,System.Nullable{System.Int64})
+  name.vb: SSRNGRandom(SSRNGRandom.ParameterTemplate, Nullable(Of Int64))
+  fullName: RandEXom.RandomLib.SSRNGRandom.SSRNGRandom(RandEXom.RandomLib.SSRNGRandom.ParameterTemplate, System.Nullable<System.Int64>)
+  fullName.vb: RandEXom.RandomLib.SSRNGRandom.SSRNGRandom(RandEXom.RandomLib.SSRNGRandom.ParameterTemplate, System.Nullable(Of System.Int64))
+  nameWithType: SSRNGRandom.SSRNGRandom(SSRNGRandom.ParameterTemplate, Nullable<Int64>)
+  nameWithType.vb: SSRNGRandom.SSRNGRandom(SSRNGRandom.ParameterTemplate, Nullable(Of Int64))
+- uid: RandEXom.RandomLib.SSRNGRandom.#ctor(System.Nullable{System.Int64},System.Int64)
+  name: SSRNGRandom(Nullable<Int64>, Int64)
+  href: api/RandEXom.RandomLib.SSRNGRandom.html#RandEXom_RandomLib_SSRNGRandom__ctor_System_Nullable_System_Int64__System_Int64_
+  commentId: M:RandEXom.RandomLib.SSRNGRandom.#ctor(System.Nullable{System.Int64},System.Int64)
+  name.vb: SSRNGRandom(Nullable(Of Int64), Int64)
+  fullName: RandEXom.RandomLib.SSRNGRandom.SSRNGRandom(System.Nullable<System.Int64>, System.Int64)
+  fullName.vb: RandEXom.RandomLib.SSRNGRandom.SSRNGRandom(System.Nullable(Of System.Int64), System.Int64)
+  nameWithType: SSRNGRandom.SSRNGRandom(Nullable<Int64>, Int64)
+  nameWithType.vb: SSRNGRandom.SSRNGRandom(Nullable(Of Int64), Int64)
+- uid: RandEXom.RandomLib.SSRNGRandom.#ctor*
+  name: SSRNGRandom
+  href: api/RandEXom.RandomLib.SSRNGRandom.html#RandEXom_RandomLib_SSRNGRandom__ctor_
+  commentId: Overload:RandEXom.RandomLib.SSRNGRandom.#ctor
+  isSpec: "True"
+  fullName: RandEXom.RandomLib.SSRNGRandom.SSRNGRandom
+  nameWithType: SSRNGRandom.SSRNGRandom
+- uid: RandEXom.RandomLib.SSRNGRandom.GetSeed
+  name: GetSeed()
+  href: api/RandEXom.RandomLib.SSRNGRandom.html#RandEXom_RandomLib_SSRNGRandom_GetSeed
+  commentId: M:RandEXom.RandomLib.SSRNGRandom.GetSeed
+  fullName: RandEXom.RandomLib.SSRNGRandom.GetSeed()
+  nameWithType: SSRNGRandom.GetSeed()
+- uid: RandEXom.RandomLib.SSRNGRandom.GetSeed*
+  name: GetSeed
+  href: api/RandEXom.RandomLib.SSRNGRandom.html#RandEXom_RandomLib_SSRNGRandom_GetSeed_
+  commentId: Overload:RandEXom.RandomLib.SSRNGRandom.GetSeed
+  isSpec: "True"
+  fullName: RandEXom.RandomLib.SSRNGRandom.GetSeed
+  nameWithType: SSRNGRandom.GetSeed
+- uid: RandEXom.RandomLib.SSRNGRandom.NextBytes(System.Byte[])
+  name: NextBytes(Byte[])
+  href: api/RandEXom.RandomLib.SSRNGRandom.html#RandEXom_RandomLib_SSRNGRandom_NextBytes_System_Byte___
+  commentId: M:RandEXom.RandomLib.SSRNGRandom.NextBytes(System.Byte[])
+  name.vb: NextBytes(Byte())
+  fullName: RandEXom.RandomLib.SSRNGRandom.NextBytes(System.Byte[])
+  fullName.vb: RandEXom.RandomLib.SSRNGRandom.NextBytes(System.Byte())
+  nameWithType: SSRNGRandom.NextBytes(Byte[])
+  nameWithType.vb: SSRNGRandom.NextBytes(Byte())
+- uid: RandEXom.RandomLib.SSRNGRandom.NextBytes*
+  name: NextBytes
+  href: api/RandEXom.RandomLib.SSRNGRandom.html#RandEXom_RandomLib_SSRNGRandom_NextBytes_
+  commentId: Overload:RandEXom.RandomLib.SSRNGRandom.NextBytes
+  isSpec: "True"
+  fullName: RandEXom.RandomLib.SSRNGRandom.NextBytes
+  nameWithType: SSRNGRandom.NextBytes
+- uid: RandEXom.RandomLib.SSRNGRandom.NextInt(System.Int32,System.Int32)
+  name: NextInt(Int32, Int32)
+  href: api/RandEXom.RandomLib.SSRNGRandom.html#RandEXom_RandomLib_SSRNGRandom_NextInt_System_Int32_System_Int32_
+  commentId: M:RandEXom.RandomLib.SSRNGRandom.NextInt(System.Int32,System.Int32)
+  fullName: RandEXom.RandomLib.SSRNGRandom.NextInt(System.Int32, System.Int32)
+  nameWithType: SSRNGRandom.NextInt(Int32, Int32)
+- uid: RandEXom.RandomLib.SSRNGRandom.NextInt*
+  name: NextInt
+  href: api/RandEXom.RandomLib.SSRNGRandom.html#RandEXom_RandomLib_SSRNGRandom_NextInt_
+  commentId: Overload:RandEXom.RandomLib.SSRNGRandom.NextInt
+  isSpec: "True"
+  fullName: RandEXom.RandomLib.SSRNGRandom.NextInt
+  nameWithType: SSRNGRandom.NextInt
+- uid: RandEXom.RandomLib.SSRNGRandom.NextLong(System.Int64,System.Int64)
+  name: NextLong(Int64, Int64)
+  href: api/RandEXom.RandomLib.SSRNGRandom.html#RandEXom_RandomLib_SSRNGRandom_NextLong_System_Int64_System_Int64_
+  commentId: M:RandEXom.RandomLib.SSRNGRandom.NextLong(System.Int64,System.Int64)
+  fullName: RandEXom.RandomLib.SSRNGRandom.NextLong(System.Int64, System.Int64)
+  nameWithType: SSRNGRandom.NextLong(Int64, Int64)
+- uid: RandEXom.RandomLib.SSRNGRandom.NextLong*
+  name: NextLong
+  href: api/RandEXom.RandomLib.SSRNGRandom.html#RandEXom_RandomLib_SSRNGRandom_NextLong_
+  commentId: Overload:RandEXom.RandomLib.SSRNGRandom.NextLong
+  isSpec: "True"
+  fullName: RandEXom.RandomLib.SSRNGRandom.NextLong
+  nameWithType: SSRNGRandom.NextLong
+- uid: RandEXom.RandomLib.SSRNGRandom.ParameterTemplate
+  name: SSRNGRandom.ParameterTemplate
+  href: api/RandEXom.RandomLib.SSRNGRandom.ParameterTemplate.html
+  commentId: T:RandEXom.RandomLib.SSRNGRandom.ParameterTemplate
+  fullName: RandEXom.RandomLib.SSRNGRandom.ParameterTemplate
+  nameWithType: SSRNGRandom.ParameterTemplate
+- uid: RandEXom.RandomLib.SSRNGRandom.ParameterTemplate.Apple_CarbonLib
+  name: Apple_CarbonLib
+  href: api/RandEXom.RandomLib.SSRNGRandom.ParameterTemplate.html#RandEXom_RandomLib_SSRNGRandom_ParameterTemplate_Apple_CarbonLib
+  commentId: F:RandEXom.RandomLib.SSRNGRandom.ParameterTemplate.Apple_CarbonLib
+  fullName: RandEXom.RandomLib.SSRNGRandom.ParameterTemplate.Apple_CarbonLib
+  nameWithType: SSRNGRandom.ParameterTemplate.Apple_CarbonLib
+- uid: RandEXom.RandomLib.SSRNGRandom.ParameterTemplate.Borland_C
+  name: Borland_C
+  href: api/RandEXom.RandomLib.SSRNGRandom.ParameterTemplate.html#RandEXom_RandomLib_SSRNGRandom_ParameterTemplate_Borland_C
+  commentId: F:RandEXom.RandomLib.SSRNGRandom.ParameterTemplate.Borland_C
+  fullName: RandEXom.RandomLib.SSRNGRandom.ParameterTemplate.Borland_C
+  nameWithType: SSRNGRandom.ParameterTemplate.Borland_C
+- uid: RandEXom.RandomLib.SSRNGRandom.ParameterTemplate.Borland_Delphi
+  name: Borland_Delphi
+  href: api/RandEXom.RandomLib.SSRNGRandom.ParameterTemplate.html#RandEXom_RandomLib_SSRNGRandom_ParameterTemplate_Borland_Delphi
+  commentId: F:RandEXom.RandomLib.SSRNGRandom.ParameterTemplate.Borland_Delphi
+  fullName: RandEXom.RandomLib.SSRNGRandom.ParameterTemplate.Borland_Delphi
+  nameWithType: SSRNGRandom.ParameterTemplate.Borland_Delphi
+- uid: RandEXom.RandomLib.SSRNGRandom.ParameterTemplate.C_Plus_11
+  name: C_Plus_11
+  href: api/RandEXom.RandomLib.SSRNGRandom.ParameterTemplate.html#RandEXom_RandomLib_SSRNGRandom_ParameterTemplate_C_Plus_11
+  commentId: F:RandEXom.RandomLib.SSRNGRandom.ParameterTemplate.C_Plus_11
+  fullName: RandEXom.RandomLib.SSRNGRandom.ParameterTemplate.C_Plus_11
+  nameWithType: SSRNGRandom.ParameterTemplate.C_Plus_11
+- uid: RandEXom.RandomLib.SSRNGRandom.ParameterTemplate.cc65
+  name: cc65
+  href: api/RandEXom.RandomLib.SSRNGRandom.ParameterTemplate.html#RandEXom_RandomLib_SSRNGRandom_ParameterTemplate_cc65
+  commentId: F:RandEXom.RandomLib.SSRNGRandom.ParameterTemplate.cc65
+  fullName: RandEXom.RandomLib.SSRNGRandom.ParameterTemplate.cc65
+  nameWithType: SSRNGRandom.ParameterTemplate.cc65
+- uid: RandEXom.RandomLib.SSRNGRandom.ParameterTemplate.cc65_2
+  name: cc65_2
+  href: api/RandEXom.RandomLib.SSRNGRandom.ParameterTemplate.html#RandEXom_RandomLib_SSRNGRandom_ParameterTemplate_cc65_2
+  commentId: F:RandEXom.RandomLib.SSRNGRandom.ParameterTemplate.cc65_2
+  fullName: RandEXom.RandomLib.SSRNGRandom.ParameterTemplate.cc65_2
+  nameWithType: SSRNGRandom.ParameterTemplate.cc65_2
+- uid: RandEXom.RandomLib.SSRNGRandom.ParameterTemplate.GLIBC
+  name: GLIBC
+  href: api/RandEXom.RandomLib.SSRNGRandom.ParameterTemplate.html#RandEXom_RandomLib_SSRNGRandom_ParameterTemplate_GLIBC
+  commentId: F:RandEXom.RandomLib.SSRNGRandom.ParameterTemplate.GLIBC
+  fullName: RandEXom.RandomLib.SSRNGRandom.ParameterTemplate.GLIBC
+  nameWithType: SSRNGRandom.ParameterTemplate.GLIBC
+- uid: RandEXom.RandomLib.SSRNGRandom.ParameterTemplate.IBM
+  name: IBM
+  href: api/RandEXom.RandomLib.SSRNGRandom.ParameterTemplate.html#RandEXom_RandomLib_SSRNGRandom_ParameterTemplate_IBM
+  commentId: F:RandEXom.RandomLib.SSRNGRandom.ParameterTemplate.IBM
+  fullName: RandEXom.RandomLib.SSRNGRandom.ParameterTemplate.IBM
+  nameWithType: SSRNGRandom.ParameterTemplate.IBM
+- uid: RandEXom.RandomLib.SSRNGRandom.ParameterTemplate.Java
+  name: Java
+  href: api/RandEXom.RandomLib.SSRNGRandom.ParameterTemplate.html#RandEXom_RandomLib_SSRNGRandom_ParameterTemplate_Java
+  commentId: F:RandEXom.RandomLib.SSRNGRandom.ParameterTemplate.Java
+  fullName: RandEXom.RandomLib.SSRNGRandom.ParameterTemplate.Java
+  nameWithType: SSRNGRandom.ParameterTemplate.Java
+- uid: RandEXom.RandomLib.SSRNGRandom.ParameterTemplate.Microsoft_Visual_Basic
+  name: Microsoft_Visual_Basic
+  href: api/RandEXom.RandomLib.SSRNGRandom.ParameterTemplate.html#RandEXom_RandomLib_SSRNGRandom_ParameterTemplate_Microsoft_Visual_Basic
+  commentId: F:RandEXom.RandomLib.SSRNGRandom.ParameterTemplate.Microsoft_Visual_Basic
+  fullName: RandEXom.RandomLib.SSRNGRandom.ParameterTemplate.Microsoft_Visual_Basic
+  nameWithType: SSRNGRandom.ParameterTemplate.Microsoft_Visual_Basic
+- uid: RandEXom.RandomLib.SSRNGRandom.ParameterTemplate.Microsoft_Visual_C
+  name: Microsoft_Visual_C
+  href: api/RandEXom.RandomLib.SSRNGRandom.ParameterTemplate.html#RandEXom_RandomLib_SSRNGRandom_ParameterTemplate_Microsoft_Visual_C
+  commentId: F:RandEXom.RandomLib.SSRNGRandom.ParameterTemplate.Microsoft_Visual_C
+  fullName: RandEXom.RandomLib.SSRNGRandom.ParameterTemplate.Microsoft_Visual_C
+  nameWithType: SSRNGRandom.ParameterTemplate.Microsoft_Visual_C
+- uid: RandEXom.RandomLib.SSRNGRandom.ParameterTemplate.MTH_RANDOM
+  name: MTH_RANDOM
+  href: api/RandEXom.RandomLib.SSRNGRandom.ParameterTemplate.html#RandEXom_RandomLib_SSRNGRandom_ParameterTemplate_MTH_RANDOM
+  commentId: F:RandEXom.RandomLib.SSRNGRandom.ParameterTemplate.MTH_RANDOM
+  fullName: RandEXom.RandomLib.SSRNGRandom.ParameterTemplate.MTH_RANDOM
+  nameWithType: SSRNGRandom.ParameterTemplate.MTH_RANDOM
+- uid: RandEXom.RandomLib.SSRNGRandom.ParameterTemplate.Numerical_Recipes
+  name: Numerical_Recipes
+  href: api/RandEXom.RandomLib.SSRNGRandom.ParameterTemplate.html#RandEXom_RandomLib_SSRNGRandom_ParameterTemplate_Numerical_Recipes
+  commentId: F:RandEXom.RandomLib.SSRNGRandom.ParameterTemplate.Numerical_Recipes
+  fullName: RandEXom.RandomLib.SSRNGRandom.ParameterTemplate.Numerical_Recipes
+  nameWithType: SSRNGRandom.ParameterTemplate.Numerical_Recipes
+- uid: RandEXom.RandomLib.SSRNGRandom.ParameterTemplate.POSIX
+  name: POSIX
+  href: api/RandEXom.RandomLib.SSRNGRandom.ParameterTemplate.html#RandEXom_RandomLib_SSRNGRandom_ParameterTemplate_POSIX
+  commentId: F:RandEXom.RandomLib.SSRNGRandom.ParameterTemplate.POSIX
+  fullName: RandEXom.RandomLib.SSRNGRandom.ParameterTemplate.POSIX
+  nameWithType: SSRNGRandom.ParameterTemplate.POSIX
+- uid: RandEXom.RandomLib.SSRNGRandom.ParameterTemplate.random0
+  name: random0
+  href: api/RandEXom.RandomLib.SSRNGRandom.ParameterTemplate.html#RandEXom_RandomLib_SSRNGRandom_ParameterTemplate_random0
+  commentId: F:RandEXom.RandomLib.SSRNGRandom.ParameterTemplate.random0
+  fullName: RandEXom.RandomLib.SSRNGRandom.ParameterTemplate.random0
+  nameWithType: SSRNGRandom.ParameterTemplate.random0
+- uid: RandEXom.RandomLib.SSRNGRandom.ParameterTemplate.RANDU
+  name: RANDU
+  href: api/RandEXom.RandomLib.SSRNGRandom.ParameterTemplate.html#RandEXom_RandomLib_SSRNGRandom_ParameterTemplate_RANDU
+  commentId: F:RandEXom.RandomLib.SSRNGRandom.ParameterTemplate.RANDU
+  fullName: RandEXom.RandomLib.SSRNGRandom.ParameterTemplate.RANDU
+  nameWithType: SSRNGRandom.ParameterTemplate.RANDU
+- uid: RandEXom.RandomLib.SSRNGRandom.ParameterTemplate.RtlUniform
+  name: RtlUniform
+  href: api/RandEXom.RandomLib.SSRNGRandom.ParameterTemplate.html#RandEXom_RandomLib_SSRNGRandom_ParameterTemplate_RtlUniform
+  commentId: F:RandEXom.RandomLib.SSRNGRandom.ParameterTemplate.RtlUniform
+  fullName: RandEXom.RandomLib.SSRNGRandom.ParameterTemplate.RtlUniform
+  nameWithType: SSRNGRandom.ParameterTemplate.RtlUniform
+- uid: RandEXom.RandomLib.SSRNGRandom.ParameterTemplate.Turbo_Pascal
+  name: Turbo_Pascal
+  href: api/RandEXom.RandomLib.SSRNGRandom.ParameterTemplate.html#RandEXom_RandomLib_SSRNGRandom_ParameterTemplate_Turbo_Pascal
+  commentId: F:RandEXom.RandomLib.SSRNGRandom.ParameterTemplate.Turbo_Pascal
+  fullName: RandEXom.RandomLib.SSRNGRandom.ParameterTemplate.Turbo_Pascal
+  nameWithType: SSRNGRandom.ParameterTemplate.Turbo_Pascal
+- uid: RandEXom.RandomLib.SSRNGRandom.ParameterTemplate.ZX81
+  name: ZX81
+  href: api/RandEXom.RandomLib.SSRNGRandom.ParameterTemplate.html#RandEXom_RandomLib_SSRNGRandom_ParameterTemplate_ZX81
+  commentId: F:RandEXom.RandomLib.SSRNGRandom.ParameterTemplate.ZX81
+  fullName: RandEXom.RandomLib.SSRNGRandom.ParameterTemplate.ZX81
+  nameWithType: SSRNGRandom.ParameterTemplate.ZX81
+- uid: RandEXom.SeedLib
+  name: RandEXom.SeedLib
+  href: api/RandEXom.SeedLib.html
+  commentId: N:RandEXom.SeedLib
+  fullName: RandEXom.SeedLib
+  nameWithType: RandEXom.SeedLib
+- uid: RandEXom.SeedLib.IterativeSeedR
+  name: IterativeSeedR
+  href: api/RandEXom.SeedLib.IterativeSeedR.html
+  commentId: T:RandEXom.SeedLib.IterativeSeedR
+  fullName: RandEXom.SeedLib.IterativeSeedR
+  nameWithType: IterativeSeedR
+- uid: RandEXom.SeedLib.IterativeSeedR.#ctor(System.Nullable{System.Int64})
+  name: IterativeSeedR(Nullable<Int64>)
+  href: api/RandEXom.SeedLib.IterativeSeedR.html#RandEXom_SeedLib_IterativeSeedR__ctor_System_Nullable_System_Int64__
+  commentId: M:RandEXom.SeedLib.IterativeSeedR.#ctor(System.Nullable{System.Int64})
+  name.vb: IterativeSeedR(Nullable(Of Int64))
+  fullName: RandEXom.SeedLib.IterativeSeedR.IterativeSeedR(System.Nullable<System.Int64>)
+  fullName.vb: RandEXom.SeedLib.IterativeSeedR.IterativeSeedR(System.Nullable(Of System.Int64))
+  nameWithType: IterativeSeedR.IterativeSeedR(Nullable<Int64>)
+  nameWithType.vb: IterativeSeedR.IterativeSeedR(Nullable(Of Int64))
+- uid: RandEXom.SeedLib.IterativeSeedR.#ctor*
+  name: IterativeSeedR
+  href: api/RandEXom.SeedLib.IterativeSeedR.html#RandEXom_SeedLib_IterativeSeedR__ctor_
+  commentId: Overload:RandEXom.SeedLib.IterativeSeedR.#ctor
+  isSpec: "True"
+  fullName: RandEXom.SeedLib.IterativeSeedR.IterativeSeedR
+  nameWithType: IterativeSeedR.IterativeSeedR
+- uid: RandEXom.SeedLib.IterativeSeedR.init
+  name: init
+  href: api/RandEXom.SeedLib.IterativeSeedR.html#RandEXom_SeedLib_IterativeSeedR_init
+  commentId: P:RandEXom.SeedLib.IterativeSeedR.init
+  fullName: RandEXom.SeedLib.IterativeSeedR.init
+  nameWithType: IterativeSeedR.init
+- uid: RandEXom.SeedLib.IterativeSeedR.init*
+  name: init
+  href: api/RandEXom.SeedLib.IterativeSeedR.html#RandEXom_SeedLib_IterativeSeedR_init_
+  commentId: Overload:RandEXom.SeedLib.IterativeSeedR.init
+  isSpec: "True"
+  fullName: RandEXom.SeedLib.IterativeSeedR.init
+  nameWithType: IterativeSeedR.init
+- uid: RandEXom.SeedLib.IterativeSeedR.Next
+  name: Next()
+  href: api/RandEXom.SeedLib.IterativeSeedR.html#RandEXom_SeedLib_IterativeSeedR_Next
+  commentId: M:RandEXom.SeedLib.IterativeSeedR.Next
+  fullName: RandEXom.SeedLib.IterativeSeedR.Next()
+  nameWithType: IterativeSeedR.Next()
+- uid: RandEXom.SeedLib.IterativeSeedR.Next*
+  name: Next
+  href: api/RandEXom.SeedLib.IterativeSeedR.html#RandEXom_SeedLib_IterativeSeedR_Next_
+  commentId: Overload:RandEXom.SeedLib.IterativeSeedR.Next
+  isSpec: "True"
+  fullName: RandEXom.SeedLib.IterativeSeedR.Next
+  nameWithType: IterativeSeedR.Next
+- uid: RandEXom.SeedLib.IterativeSeedR.now
+  name: now
+  href: api/RandEXom.SeedLib.IterativeSeedR.html#RandEXom_SeedLib_IterativeSeedR_now
+  commentId: P:RandEXom.SeedLib.IterativeSeedR.now
+  fullName: RandEXom.SeedLib.IterativeSeedR.now
+  nameWithType: IterativeSeedR.now
+- uid: RandEXom.SeedLib.IterativeSeedR.now*
+  name: now
+  href: api/RandEXom.SeedLib.IterativeSeedR.html#RandEXom_SeedLib_IterativeSeedR_now_
+  commentId: Overload:RandEXom.SeedLib.IterativeSeedR.now
+  isSpec: "True"
+  fullName: RandEXom.SeedLib.IterativeSeedR.now
+  nameWithType: IterativeSeedR.now
+- uid: RandEXom.SeedLib.IterativeSeedR.previous
+  name: previous
+  href: api/RandEXom.SeedLib.IterativeSeedR.html#RandEXom_SeedLib_IterativeSeedR_previous
+  commentId: P:RandEXom.SeedLib.IterativeSeedR.previous
+  fullName: RandEXom.SeedLib.IterativeSeedR.previous
+  nameWithType: IterativeSeedR.previous
+- uid: RandEXom.SeedLib.IterativeSeedR.previous*
+  name: previous
+  href: api/RandEXom.SeedLib.IterativeSeedR.html#RandEXom_SeedLib_IterativeSeedR_previous_
+  commentId: Overload:RandEXom.SeedLib.IterativeSeedR.previous
+  isSpec: "True"
+  fullName: RandEXom.SeedLib.IterativeSeedR.previous
+  nameWithType: IterativeSeedR.previous
+- uid: RandEXom.SeedLib.IterativeSeedR.process
+  name: process
+  href: api/RandEXom.SeedLib.IterativeSeedR.html#RandEXom_SeedLib_IterativeSeedR_process
+  commentId: F:RandEXom.SeedLib.IterativeSeedR.process
+  fullName: RandEXom.SeedLib.IterativeSeedR.process
+  nameWithType: IterativeSeedR.process
+- uid: RandEXom.SeedLib.IterativeSeedR.Process
+  name: IterativeSeedR.Process
+  href: api/RandEXom.SeedLib.IterativeSeedR.Process.html
+  commentId: T:RandEXom.SeedLib.IterativeSeedR.Process
+  fullName: RandEXom.SeedLib.IterativeSeedR.Process
+  nameWithType: IterativeSeedR.Process
+- uid: RandEXom.SeedLib.IterativeSeedR.Process.Addition
+  name: Addition
+  href: api/RandEXom.SeedLib.IterativeSeedR.Process.html#RandEXom_SeedLib_IterativeSeedR_Process_Addition
+  commentId: F:RandEXom.SeedLib.IterativeSeedR.Process.Addition
+  fullName: RandEXom.SeedLib.IterativeSeedR.Process.Addition
+  nameWithType: IterativeSeedR.Process.Addition
+- uid: RandEXom.SeedLib.IterativeSeedR.Process.Cos
+  name: Cos
+  href: api/RandEXom.SeedLib.IterativeSeedR.Process.html#RandEXom_SeedLib_IterativeSeedR_Process_Cos
+  commentId: F:RandEXom.SeedLib.IterativeSeedR.Process.Cos
+  fullName: RandEXom.SeedLib.IterativeSeedR.Process.Cos
+  nameWithType: IterativeSeedR.Process.Cos
+- uid: RandEXom.SeedLib.IterativeSeedR.Process.Multiplication
+  name: Multiplication
+  href: api/RandEXom.SeedLib.IterativeSeedR.Process.html#RandEXom_SeedLib_IterativeSeedR_Process_Multiplication
+  commentId: F:RandEXom.SeedLib.IterativeSeedR.Process.Multiplication
+  fullName: RandEXom.SeedLib.IterativeSeedR.Process.Multiplication
+  nameWithType: IterativeSeedR.Process.Multiplication
+- uid: RandEXom.SeedLib.IterativeSeedR.Process.Sin
+  name: Sin
+  href: api/RandEXom.SeedLib.IterativeSeedR.Process.html#RandEXom_SeedLib_IterativeSeedR_Process_Sin
+  commentId: F:RandEXom.SeedLib.IterativeSeedR.Process.Sin
+  fullName: RandEXom.SeedLib.IterativeSeedR.Process.Sin
+  nameWithType: IterativeSeedR.Process.Sin
+- uid: RandEXom.SeedLib.IterativeSeedR.Process.Substraction
+  name: Substraction
+  href: api/RandEXom.SeedLib.IterativeSeedR.Process.html#RandEXom_SeedLib_IterativeSeedR_Process_Substraction
+  commentId: F:RandEXom.SeedLib.IterativeSeedR.Process.Substraction
+  fullName: RandEXom.SeedLib.IterativeSeedR.Process.Substraction
+  nameWithType: IterativeSeedR.Process.Substraction
+- uid: RandEXom.SeedLib.LCGSeedR
+  name: LCGSeedR
+  href: api/RandEXom.SeedLib.LCGSeedR.html
+  commentId: T:RandEXom.SeedLib.LCGSeedR
+  fullName: RandEXom.SeedLib.LCGSeedR
+  nameWithType: LCGSeedR
+- uid: RandEXom.SeedLib.LCGSeedR.#ctor(RandEXom.SeedLib.LCGSeedR.ParameterTemplate,System.Nullable{System.Int64})
+  name: LCGSeedR(LCGSeedR.ParameterTemplate, Nullable<Int64>)
+  href: api/RandEXom.SeedLib.LCGSeedR.html#RandEXom_SeedLib_LCGSeedR__ctor_RandEXom_SeedLib_LCGSeedR_ParameterTemplate_System_Nullable_System_Int64__
+  commentId: M:RandEXom.SeedLib.LCGSeedR.#ctor(RandEXom.SeedLib.LCGSeedR.ParameterTemplate,System.Nullable{System.Int64})
+  name.vb: LCGSeedR(LCGSeedR.ParameterTemplate, Nullable(Of Int64))
+  fullName: RandEXom.SeedLib.LCGSeedR.LCGSeedR(RandEXom.SeedLib.LCGSeedR.ParameterTemplate, System.Nullable<System.Int64>)
+  fullName.vb: RandEXom.SeedLib.LCGSeedR.LCGSeedR(RandEXom.SeedLib.LCGSeedR.ParameterTemplate, System.Nullable(Of System.Int64))
+  nameWithType: LCGSeedR.LCGSeedR(LCGSeedR.ParameterTemplate, Nullable<Int64>)
+  nameWithType.vb: LCGSeedR.LCGSeedR(LCGSeedR.ParameterTemplate, Nullable(Of Int64))
+- uid: RandEXom.SeedLib.LCGSeedR.#ctor(System.Nullable{System.Int64},System.Int64,System.Int64,System.Int64)
+  name: LCGSeedR(Nullable<Int64>, Int64, Int64, Int64)
+  href: api/RandEXom.SeedLib.LCGSeedR.html#RandEXom_SeedLib_LCGSeedR__ctor_System_Nullable_System_Int64__System_Int64_System_Int64_System_Int64_
+  commentId: M:RandEXom.SeedLib.LCGSeedR.#ctor(System.Nullable{System.Int64},System.Int64,System.Int64,System.Int64)
+  name.vb: LCGSeedR(Nullable(Of Int64), Int64, Int64, Int64)
+  fullName: RandEXom.SeedLib.LCGSeedR.LCGSeedR(System.Nullable<System.Int64>, System.Int64, System.Int64, System.Int64)
+  fullName.vb: RandEXom.SeedLib.LCGSeedR.LCGSeedR(System.Nullable(Of System.Int64), System.Int64, System.Int64, System.Int64)
+  nameWithType: LCGSeedR.LCGSeedR(Nullable<Int64>, Int64, Int64, Int64)
+  nameWithType.vb: LCGSeedR.LCGSeedR(Nullable(Of Int64), Int64, Int64, Int64)
+- uid: RandEXom.SeedLib.LCGSeedR.#ctor*
+  name: LCGSeedR
+  href: api/RandEXom.SeedLib.LCGSeedR.html#RandEXom_SeedLib_LCGSeedR__ctor_
+  commentId: Overload:RandEXom.SeedLib.LCGSeedR.#ctor
+  isSpec: "True"
+  fullName: RandEXom.SeedLib.LCGSeedR.LCGSeedR
+  nameWithType: LCGSeedR.LCGSeedR
+- uid: RandEXom.SeedLib.LCGSeedR.init
+  name: init
+  href: api/RandEXom.SeedLib.LCGSeedR.html#RandEXom_SeedLib_LCGSeedR_init
+  commentId: P:RandEXom.SeedLib.LCGSeedR.init
+  fullName: RandEXom.SeedLib.LCGSeedR.init
+  nameWithType: LCGSeedR.init
+- uid: RandEXom.SeedLib.LCGSeedR.init*
+  name: init
+  href: api/RandEXom.SeedLib.LCGSeedR.html#RandEXom_SeedLib_LCGSeedR_init_
+  commentId: Overload:RandEXom.SeedLib.LCGSeedR.init
+  isSpec: "True"
+  fullName: RandEXom.SeedLib.LCGSeedR.init
+  nameWithType: LCGSeedR.init
+- uid: RandEXom.SeedLib.LCGSeedR.Next
+  name: Next()
+  href: api/RandEXom.SeedLib.LCGSeedR.html#RandEXom_SeedLib_LCGSeedR_Next
+  commentId: M:RandEXom.SeedLib.LCGSeedR.Next
+  fullName: RandEXom.SeedLib.LCGSeedR.Next()
+  nameWithType: LCGSeedR.Next()
+- uid: RandEXom.SeedLib.LCGSeedR.Next*
+  name: Next
+  href: api/RandEXom.SeedLib.LCGSeedR.html#RandEXom_SeedLib_LCGSeedR_Next_
+  commentId: Overload:RandEXom.SeedLib.LCGSeedR.Next
+  isSpec: "True"
+  fullName: RandEXom.SeedLib.LCGSeedR.Next
+  nameWithType: LCGSeedR.Next
+- uid: RandEXom.SeedLib.LCGSeedR.now
+  name: now
+  href: api/RandEXom.SeedLib.LCGSeedR.html#RandEXom_SeedLib_LCGSeedR_now
+  commentId: P:RandEXom.SeedLib.LCGSeedR.now
+  fullName: RandEXom.SeedLib.LCGSeedR.now
+  nameWithType: LCGSeedR.now
+- uid: RandEXom.SeedLib.LCGSeedR.now*
+  name: now
+  href: api/RandEXom.SeedLib.LCGSeedR.html#RandEXom_SeedLib_LCGSeedR_now_
+  commentId: Overload:RandEXom.SeedLib.LCGSeedR.now
+  isSpec: "True"
+  fullName: RandEXom.SeedLib.LCGSeedR.now
+  nameWithType: LCGSeedR.now
+- uid: RandEXom.SeedLib.LCGSeedR.ParameterTemplate
+  name: LCGSeedR.ParameterTemplate
+  href: api/RandEXom.SeedLib.LCGSeedR.ParameterTemplate.html
+  commentId: T:RandEXom.SeedLib.LCGSeedR.ParameterTemplate
+  fullName: RandEXom.SeedLib.LCGSeedR.ParameterTemplate
+  nameWithType: LCGSeedR.ParameterTemplate
+- uid: RandEXom.SeedLib.LCGSeedR.ParameterTemplate.Apple_CarbonLib
+  name: Apple_CarbonLib
+  href: api/RandEXom.SeedLib.LCGSeedR.ParameterTemplate.html#RandEXom_SeedLib_LCGSeedR_ParameterTemplate_Apple_CarbonLib
+  commentId: F:RandEXom.SeedLib.LCGSeedR.ParameterTemplate.Apple_CarbonLib
+  fullName: RandEXom.SeedLib.LCGSeedR.ParameterTemplate.Apple_CarbonLib
+  nameWithType: LCGSeedR.ParameterTemplate.Apple_CarbonLib
+- uid: RandEXom.SeedLib.LCGSeedR.ParameterTemplate.Borland_C
+  name: Borland_C
+  href: api/RandEXom.SeedLib.LCGSeedR.ParameterTemplate.html#RandEXom_SeedLib_LCGSeedR_ParameterTemplate_Borland_C
+  commentId: F:RandEXom.SeedLib.LCGSeedR.ParameterTemplate.Borland_C
+  fullName: RandEXom.SeedLib.LCGSeedR.ParameterTemplate.Borland_C
+  nameWithType: LCGSeedR.ParameterTemplate.Borland_C
+- uid: RandEXom.SeedLib.LCGSeedR.ParameterTemplate.Borland_Delphi
+  name: Borland_Delphi
+  href: api/RandEXom.SeedLib.LCGSeedR.ParameterTemplate.html#RandEXom_SeedLib_LCGSeedR_ParameterTemplate_Borland_Delphi
+  commentId: F:RandEXom.SeedLib.LCGSeedR.ParameterTemplate.Borland_Delphi
+  fullName: RandEXom.SeedLib.LCGSeedR.ParameterTemplate.Borland_Delphi
+  nameWithType: LCGSeedR.ParameterTemplate.Borland_Delphi
+- uid: RandEXom.SeedLib.LCGSeedR.ParameterTemplate.C_Plus_11
+  name: C_Plus_11
+  href: api/RandEXom.SeedLib.LCGSeedR.ParameterTemplate.html#RandEXom_SeedLib_LCGSeedR_ParameterTemplate_C_Plus_11
+  commentId: F:RandEXom.SeedLib.LCGSeedR.ParameterTemplate.C_Plus_11
+  fullName: RandEXom.SeedLib.LCGSeedR.ParameterTemplate.C_Plus_11
+  nameWithType: LCGSeedR.ParameterTemplate.C_Plus_11
+- uid: RandEXom.SeedLib.LCGSeedR.ParameterTemplate.cc65
+  name: cc65
+  href: api/RandEXom.SeedLib.LCGSeedR.ParameterTemplate.html#RandEXom_SeedLib_LCGSeedR_ParameterTemplate_cc65
+  commentId: F:RandEXom.SeedLib.LCGSeedR.ParameterTemplate.cc65
+  fullName: RandEXom.SeedLib.LCGSeedR.ParameterTemplate.cc65
+  nameWithType: LCGSeedR.ParameterTemplate.cc65
+- uid: RandEXom.SeedLib.LCGSeedR.ParameterTemplate.cc65_2
+  name: cc65_2
+  href: api/RandEXom.SeedLib.LCGSeedR.ParameterTemplate.html#RandEXom_SeedLib_LCGSeedR_ParameterTemplate_cc65_2
+  commentId: F:RandEXom.SeedLib.LCGSeedR.ParameterTemplate.cc65_2
+  fullName: RandEXom.SeedLib.LCGSeedR.ParameterTemplate.cc65_2
+  nameWithType: LCGSeedR.ParameterTemplate.cc65_2
+- uid: RandEXom.SeedLib.LCGSeedR.ParameterTemplate.GLIBC
+  name: GLIBC
+  href: api/RandEXom.SeedLib.LCGSeedR.ParameterTemplate.html#RandEXom_SeedLib_LCGSeedR_ParameterTemplate_GLIBC
+  commentId: F:RandEXom.SeedLib.LCGSeedR.ParameterTemplate.GLIBC
+  fullName: RandEXom.SeedLib.LCGSeedR.ParameterTemplate.GLIBC
+  nameWithType: LCGSeedR.ParameterTemplate.GLIBC
+- uid: RandEXom.SeedLib.LCGSeedR.ParameterTemplate.IBM
+  name: IBM
+  href: api/RandEXom.SeedLib.LCGSeedR.ParameterTemplate.html#RandEXom_SeedLib_LCGSeedR_ParameterTemplate_IBM
+  commentId: F:RandEXom.SeedLib.LCGSeedR.ParameterTemplate.IBM
+  fullName: RandEXom.SeedLib.LCGSeedR.ParameterTemplate.IBM
+  nameWithType: LCGSeedR.ParameterTemplate.IBM
+- uid: RandEXom.SeedLib.LCGSeedR.ParameterTemplate.Java
+  name: Java
+  href: api/RandEXom.SeedLib.LCGSeedR.ParameterTemplate.html#RandEXom_SeedLib_LCGSeedR_ParameterTemplate_Java
+  commentId: F:RandEXom.SeedLib.LCGSeedR.ParameterTemplate.Java
+  fullName: RandEXom.SeedLib.LCGSeedR.ParameterTemplate.Java
+  nameWithType: LCGSeedR.ParameterTemplate.Java
+- uid: RandEXom.SeedLib.LCGSeedR.ParameterTemplate.Microsoft_Visual_Basic
+  name: Microsoft_Visual_Basic
+  href: api/RandEXom.SeedLib.LCGSeedR.ParameterTemplate.html#RandEXom_SeedLib_LCGSeedR_ParameterTemplate_Microsoft_Visual_Basic
+  commentId: F:RandEXom.SeedLib.LCGSeedR.ParameterTemplate.Microsoft_Visual_Basic
+  fullName: RandEXom.SeedLib.LCGSeedR.ParameterTemplate.Microsoft_Visual_Basic
+  nameWithType: LCGSeedR.ParameterTemplate.Microsoft_Visual_Basic
+- uid: RandEXom.SeedLib.LCGSeedR.ParameterTemplate.Microsoft_Visual_C
+  name: Microsoft_Visual_C
+  href: api/RandEXom.SeedLib.LCGSeedR.ParameterTemplate.html#RandEXom_SeedLib_LCGSeedR_ParameterTemplate_Microsoft_Visual_C
+  commentId: F:RandEXom.SeedLib.LCGSeedR.ParameterTemplate.Microsoft_Visual_C
+  fullName: RandEXom.SeedLib.LCGSeedR.ParameterTemplate.Microsoft_Visual_C
+  nameWithType: LCGSeedR.ParameterTemplate.Microsoft_Visual_C
+- uid: RandEXom.SeedLib.LCGSeedR.ParameterTemplate.MTH_RANDOM
+  name: MTH_RANDOM
+  href: api/RandEXom.SeedLib.LCGSeedR.ParameterTemplate.html#RandEXom_SeedLib_LCGSeedR_ParameterTemplate_MTH_RANDOM
+  commentId: F:RandEXom.SeedLib.LCGSeedR.ParameterTemplate.MTH_RANDOM
+  fullName: RandEXom.SeedLib.LCGSeedR.ParameterTemplate.MTH_RANDOM
+  nameWithType: LCGSeedR.ParameterTemplate.MTH_RANDOM
+- uid: RandEXom.SeedLib.LCGSeedR.ParameterTemplate.Numerical_Recipes
+  name: Numerical_Recipes
+  href: api/RandEXom.SeedLib.LCGSeedR.ParameterTemplate.html#RandEXom_SeedLib_LCGSeedR_ParameterTemplate_Numerical_Recipes
+  commentId: F:RandEXom.SeedLib.LCGSeedR.ParameterTemplate.Numerical_Recipes
+  fullName: RandEXom.SeedLib.LCGSeedR.ParameterTemplate.Numerical_Recipes
+  nameWithType: LCGSeedR.ParameterTemplate.Numerical_Recipes
+- uid: RandEXom.SeedLib.LCGSeedR.ParameterTemplate.POSIX
+  name: POSIX
+  href: api/RandEXom.SeedLib.LCGSeedR.ParameterTemplate.html#RandEXom_SeedLib_LCGSeedR_ParameterTemplate_POSIX
+  commentId: F:RandEXom.SeedLib.LCGSeedR.ParameterTemplate.POSIX
+  fullName: RandEXom.SeedLib.LCGSeedR.ParameterTemplate.POSIX
+  nameWithType: LCGSeedR.ParameterTemplate.POSIX
+- uid: RandEXom.SeedLib.LCGSeedR.ParameterTemplate.random0
+  name: random0
+  href: api/RandEXom.SeedLib.LCGSeedR.ParameterTemplate.html#RandEXom_SeedLib_LCGSeedR_ParameterTemplate_random0
+  commentId: F:RandEXom.SeedLib.LCGSeedR.ParameterTemplate.random0
+  fullName: RandEXom.SeedLib.LCGSeedR.ParameterTemplate.random0
+  nameWithType: LCGSeedR.ParameterTemplate.random0
+- uid: RandEXom.SeedLib.LCGSeedR.ParameterTemplate.RANDU
+  name: RANDU
+  href: api/RandEXom.SeedLib.LCGSeedR.ParameterTemplate.html#RandEXom_SeedLib_LCGSeedR_ParameterTemplate_RANDU
+  commentId: F:RandEXom.SeedLib.LCGSeedR.ParameterTemplate.RANDU
+  fullName: RandEXom.SeedLib.LCGSeedR.ParameterTemplate.RANDU
+  nameWithType: LCGSeedR.ParameterTemplate.RANDU
+- uid: RandEXom.SeedLib.LCGSeedR.ParameterTemplate.RtlUniform
+  name: RtlUniform
+  href: api/RandEXom.SeedLib.LCGSeedR.ParameterTemplate.html#RandEXom_SeedLib_LCGSeedR_ParameterTemplate_RtlUniform
+  commentId: F:RandEXom.SeedLib.LCGSeedR.ParameterTemplate.RtlUniform
+  fullName: RandEXom.SeedLib.LCGSeedR.ParameterTemplate.RtlUniform
+  nameWithType: LCGSeedR.ParameterTemplate.RtlUniform
+- uid: RandEXom.SeedLib.LCGSeedR.ParameterTemplate.Turbo_Pascal
+  name: Turbo_Pascal
+  href: api/RandEXom.SeedLib.LCGSeedR.ParameterTemplate.html#RandEXom_SeedLib_LCGSeedR_ParameterTemplate_Turbo_Pascal
+  commentId: F:RandEXom.SeedLib.LCGSeedR.ParameterTemplate.Turbo_Pascal
+  fullName: RandEXom.SeedLib.LCGSeedR.ParameterTemplate.Turbo_Pascal
+  nameWithType: LCGSeedR.ParameterTemplate.Turbo_Pascal
+- uid: RandEXom.SeedLib.LCGSeedR.ParameterTemplate.ZX81
+  name: ZX81
+  href: api/RandEXom.SeedLib.LCGSeedR.ParameterTemplate.html#RandEXom_SeedLib_LCGSeedR_ParameterTemplate_ZX81
+  commentId: F:RandEXom.SeedLib.LCGSeedR.ParameterTemplate.ZX81
+  fullName: RandEXom.SeedLib.LCGSeedR.ParameterTemplate.ZX81
+  nameWithType: LCGSeedR.ParameterTemplate.ZX81
+- uid: RandEXom.SeedLib.LCGSeedR.previous
+  name: previous
+  href: api/RandEXom.SeedLib.LCGSeedR.html#RandEXom_SeedLib_LCGSeedR_previous
+  commentId: P:RandEXom.SeedLib.LCGSeedR.previous
+  fullName: RandEXom.SeedLib.LCGSeedR.previous
+  nameWithType: LCGSeedR.previous
+- uid: RandEXom.SeedLib.LCGSeedR.previous*
+  name: previous
+  href: api/RandEXom.SeedLib.LCGSeedR.html#RandEXom_SeedLib_LCGSeedR_previous_
+  commentId: Overload:RandEXom.SeedLib.LCGSeedR.previous
+  isSpec: "True"
+  fullName: RandEXom.SeedLib.LCGSeedR.previous
+  nameWithType: LCGSeedR.previous
+- uid: RandEXom.SeedLib.XORShift64Seed
+  name: XORShift64Seed
+  href: api/RandEXom.SeedLib.XORShift64Seed.html
+  commentId: T:RandEXom.SeedLib.XORShift64Seed
+  fullName: RandEXom.SeedLib.XORShift64Seed
+  nameWithType: XORShift64Seed
+- uid: RandEXom.SeedLib.XORShift64Seed.#ctor(RandEXom.SeedLib.XORShift64Seed.Type,System.Nullable{System.Int64})
+  name: XORShift64Seed(XORShift64Seed.Type, Nullable<Int64>)
+  href: api/RandEXom.SeedLib.XORShift64Seed.html#RandEXom_SeedLib_XORShift64Seed__ctor_RandEXom_SeedLib_XORShift64Seed_Type_System_Nullable_System_Int64__
+  commentId: M:RandEXom.SeedLib.XORShift64Seed.#ctor(RandEXom.SeedLib.XORShift64Seed.Type,System.Nullable{System.Int64})
+  name.vb: XORShift64Seed(XORShift64Seed.Type, Nullable(Of Int64))
+  fullName: RandEXom.SeedLib.XORShift64Seed.XORShift64Seed(RandEXom.SeedLib.XORShift64Seed.Type, System.Nullable<System.Int64>)
+  fullName.vb: RandEXom.SeedLib.XORShift64Seed.XORShift64Seed(RandEXom.SeedLib.XORShift64Seed.Type, System.Nullable(Of System.Int64))
+  nameWithType: XORShift64Seed.XORShift64Seed(XORShift64Seed.Type, Nullable<Int64>)
+  nameWithType.vb: XORShift64Seed.XORShift64Seed(XORShift64Seed.Type, Nullable(Of Int64))
+- uid: RandEXom.SeedLib.XORShift64Seed.#ctor(System.Int32,System.Int32,System.Int32,System.Nullable{System.Int64})
+  name: XORShift64Seed(Int32, Int32, Int32, Nullable<Int64>)
+  href: api/RandEXom.SeedLib.XORShift64Seed.html#RandEXom_SeedLib_XORShift64Seed__ctor_System_Int32_System_Int32_System_Int32_System_Nullable_System_Int64__
+  commentId: M:RandEXom.SeedLib.XORShift64Seed.#ctor(System.Int32,System.Int32,System.Int32,System.Nullable{System.Int64})
+  name.vb: XORShift64Seed(Int32, Int32, Int32, Nullable(Of Int64))
+  fullName: RandEXom.SeedLib.XORShift64Seed.XORShift64Seed(System.Int32, System.Int32, System.Int32, System.Nullable<System.Int64>)
+  fullName.vb: RandEXom.SeedLib.XORShift64Seed.XORShift64Seed(System.Int32, System.Int32, System.Int32, System.Nullable(Of System.Int64))
+  nameWithType: XORShift64Seed.XORShift64Seed(Int32, Int32, Int32, Nullable<Int64>)
+  nameWithType.vb: XORShift64Seed.XORShift64Seed(Int32, Int32, Int32, Nullable(Of Int64))
+- uid: RandEXom.SeedLib.XORShift64Seed.#ctor(System.Nullable{System.Int64})
+  name: XORShift64Seed(Nullable<Int64>)
+  href: api/RandEXom.SeedLib.XORShift64Seed.html#RandEXom_SeedLib_XORShift64Seed__ctor_System_Nullable_System_Int64__
+  commentId: M:RandEXom.SeedLib.XORShift64Seed.#ctor(System.Nullable{System.Int64})
+  name.vb: XORShift64Seed(Nullable(Of Int64))
+  fullName: RandEXom.SeedLib.XORShift64Seed.XORShift64Seed(System.Nullable<System.Int64>)
+  fullName.vb: RandEXom.SeedLib.XORShift64Seed.XORShift64Seed(System.Nullable(Of System.Int64))
+  nameWithType: XORShift64Seed.XORShift64Seed(Nullable<Int64>)
+  nameWithType.vb: XORShift64Seed.XORShift64Seed(Nullable(Of Int64))
+- uid: RandEXom.SeedLib.XORShift64Seed.#ctor*
+  name: XORShift64Seed
+  href: api/RandEXom.SeedLib.XORShift64Seed.html#RandEXom_SeedLib_XORShift64Seed__ctor_
+  commentId: Overload:RandEXom.SeedLib.XORShift64Seed.#ctor
+  isSpec: "True"
+  fullName: RandEXom.SeedLib.XORShift64Seed.XORShift64Seed
+  nameWithType: XORShift64Seed.XORShift64Seed
+- uid: RandEXom.SeedLib.XORShift64Seed.currentSeed
+  name: currentSeed
+  href: api/RandEXom.SeedLib.XORShift64Seed.html#RandEXom_SeedLib_XORShift64Seed_currentSeed
+  commentId: F:RandEXom.SeedLib.XORShift64Seed.currentSeed
+  fullName: RandEXom.SeedLib.XORShift64Seed.currentSeed
+  nameWithType: XORShift64Seed.currentSeed
+- uid: RandEXom.SeedLib.XORShift64Seed.init
+  name: init
+  href: api/RandEXom.SeedLib.XORShift64Seed.html#RandEXom_SeedLib_XORShift64Seed_init
+  commentId: P:RandEXom.SeedLib.XORShift64Seed.init
+  fullName: RandEXom.SeedLib.XORShift64Seed.init
+  nameWithType: XORShift64Seed.init
+- uid: RandEXom.SeedLib.XORShift64Seed.init*
+  name: init
+  href: api/RandEXom.SeedLib.XORShift64Seed.html#RandEXom_SeedLib_XORShift64Seed_init_
+  commentId: Overload:RandEXom.SeedLib.XORShift64Seed.init
+  isSpec: "True"
+  fullName: RandEXom.SeedLib.XORShift64Seed.init
+  nameWithType: XORShift64Seed.init
+- uid: RandEXom.SeedLib.XORShift64Seed.Next
+  name: Next()
+  href: api/RandEXom.SeedLib.XORShift64Seed.html#RandEXom_SeedLib_XORShift64Seed_Next
+  commentId: M:RandEXom.SeedLib.XORShift64Seed.Next
+  fullName: RandEXom.SeedLib.XORShift64Seed.Next()
+  nameWithType: XORShift64Seed.Next()
+- uid: RandEXom.SeedLib.XORShift64Seed.Next*
+  name: Next
+  href: api/RandEXom.SeedLib.XORShift64Seed.html#RandEXom_SeedLib_XORShift64Seed_Next_
+  commentId: Overload:RandEXom.SeedLib.XORShift64Seed.Next
+  isSpec: "True"
+  fullName: RandEXom.SeedLib.XORShift64Seed.Next
+  nameWithType: XORShift64Seed.Next
+- uid: RandEXom.SeedLib.XORShift64Seed.now
+  name: now
+  href: api/RandEXom.SeedLib.XORShift64Seed.html#RandEXom_SeedLib_XORShift64Seed_now
+  commentId: P:RandEXom.SeedLib.XORShift64Seed.now
+  fullName: RandEXom.SeedLib.XORShift64Seed.now
+  nameWithType: XORShift64Seed.now
+- uid: RandEXom.SeedLib.XORShift64Seed.now*
+  name: now
+  href: api/RandEXom.SeedLib.XORShift64Seed.html#RandEXom_SeedLib_XORShift64Seed_now_
+  commentId: Overload:RandEXom.SeedLib.XORShift64Seed.now
+  isSpec: "True"
+  fullName: RandEXom.SeedLib.XORShift64Seed.now
+  nameWithType: XORShift64Seed.now
+- uid: RandEXom.SeedLib.XORShift64Seed.previous
+  name: previous
+  href: api/RandEXom.SeedLib.XORShift64Seed.html#RandEXom_SeedLib_XORShift64Seed_previous
+  commentId: P:RandEXom.SeedLib.XORShift64Seed.previous
+  fullName: RandEXom.SeedLib.XORShift64Seed.previous
+  nameWithType: XORShift64Seed.previous
+- uid: RandEXom.SeedLib.XORShift64Seed.previous*
+  name: previous
+  href: api/RandEXom.SeedLib.XORShift64Seed.html#RandEXom_SeedLib_XORShift64Seed_previous_
+  commentId: Overload:RandEXom.SeedLib.XORShift64Seed.previous
+  isSpec: "True"
+  fullName: RandEXom.SeedLib.XORShift64Seed.previous
+  nameWithType: XORShift64Seed.previous
+- uid: RandEXom.SeedLib.XORShift64Seed.previousSeed
+  name: previousSeed
+  href: api/RandEXom.SeedLib.XORShift64Seed.html#RandEXom_SeedLib_XORShift64Seed_previousSeed
+  commentId: F:RandEXom.SeedLib.XORShift64Seed.previousSeed
+  fullName: RandEXom.SeedLib.XORShift64Seed.previousSeed
+  nameWithType: XORShift64Seed.previousSeed
+- uid: RandEXom.SeedLib.XORShift64Seed.Type
+  name: XORShift64Seed.Type
+  href: api/RandEXom.SeedLib.XORShift64Seed.Type.html
+  commentId: T:RandEXom.SeedLib.XORShift64Seed.Type
+  fullName: RandEXom.SeedLib.XORShift64Seed.Type
+  nameWithType: XORShift64Seed.Type
+- uid: RandEXom.SeedLib.XORShift64Seed.Type.Xorshift64
+  name: Xorshift64
+  href: api/RandEXom.SeedLib.XORShift64Seed.Type.html#RandEXom_SeedLib_XORShift64Seed_Type_Xorshift64
+  commentId: F:RandEXom.SeedLib.XORShift64Seed.Type.Xorshift64
+  fullName: RandEXom.SeedLib.XORShift64Seed.Type.Xorshift64
+  nameWithType: XORShift64Seed.Type.Xorshift64
+- uid: RandEXom.SeedLib.XORShift64Seed.Type.Xorshift64_star
+  name: Xorshift64_star
+  href: api/RandEXom.SeedLib.XORShift64Seed.Type.html#RandEXom_SeedLib_XORShift64Seed_Type_Xorshift64_star
+  commentId: F:RandEXom.SeedLib.XORShift64Seed.Type.Xorshift64_star
+  fullName: RandEXom.SeedLib.XORShift64Seed.Type.Xorshift64_star
+  nameWithType: XORShift64Seed.Type.Xorshift64_star

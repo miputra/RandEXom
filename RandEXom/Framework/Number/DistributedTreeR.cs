@@ -190,7 +190,7 @@ namespace RandEXom.Framework.Number
             }
             i = bottomNode.IndexOf(node);
             node.UpdateWeight(node.weight + 1);
-            return random.NextLong(min * (i + 1), unchecked(min + (long)range) * (i + 1));
+            return random.NextLong(unchecked(min + (long)range) * (i), unchecked(min + (long)range) * (i + 1));
         }
     }
 }
