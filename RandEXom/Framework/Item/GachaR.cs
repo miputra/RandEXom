@@ -16,21 +16,26 @@ namespace RandEXom.Framework.Item
     {
         List<T> items_init = new List<T>();
         List<T> items_current = new List<T>();
+        bool reset_on_empty = true;
 
         RandEXom.Interface.IRandomR rand;
 
-        public GachaR()
+        public GachaR(bool reset_on_empty = true)
         {
             rand = new RandomLib.NetRandom(new SeedR());
+            this.reset_on_empty = reset_on_empty;
         }
-        public GachaR(long seed)
+        public GachaR(long seed, bool reset_on_empty = true)
         {
             rand = new RandomLib.NetRandom(new SeedR(seed));
+            this.reset_on_empty=reset_on_empty;
+
         }
 
-        public GachaR(RandEXom.Interface.IRandomR framework)
+        public GachaR(RandEXom.Interface.IRandomR framework, bool reset_on_empty = true)
         {
             rand = framework;
+            this.reset_on_empty =(reset_on_empty);
         }
 
         public virtual void AddItem(T item, int count)
@@ -70,7 +75,16 @@ namespace RandEXom.Framework.Item
         public virtual T Pull()
         {
             if (items_current.Count <= 0)
-                return default(T);
+            {
+                if(!reset_on_empty)
+                    return default(T);
+
+                else
+                {
+                    Refill();
+                    return Pull();
+                }
+            }
             int n = rand.NextInt(0, items_current.Count);
             T get = items_current[n];
             items_current.RemoveAt(n);
