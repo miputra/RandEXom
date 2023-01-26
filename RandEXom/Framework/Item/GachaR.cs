@@ -42,7 +42,7 @@ namespace RandEXom.Framework.Item
             }
         }
 
-        public virtual void Shuffle<T>()
+        public virtual void Shuffle()
         {
             Shuffles_FisherYates shuffle = new Shuffles_FisherYates(rand);
             shuffle.Shuffle(items_current);
@@ -58,7 +58,7 @@ namespace RandEXom.Framework.Item
         {
             items_current.Clear();
             items_current.AddRange(items_init);
-            Shuffle<T>(items_current);
+            Shuffle<T>();
         }
 
         public virtual void Remove(T value)
