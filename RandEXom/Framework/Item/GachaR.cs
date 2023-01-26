@@ -58,7 +58,7 @@ namespace RandEXom.Framework.Item
         {
             items_current.Clear();
             items_current.AddRange(items_init);
-            Shuffle<T>();
+            Shuffle();
         }
 
         public virtual void Remove(T value)
