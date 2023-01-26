@@ -42,10 +42,10 @@ namespace RandEXom.Framework.Item
             }
         }
 
-        public virtual void Shuffle<T>(List<T> items)
+        public virtual void Shuffle<T>()
         {
             Shuffles_FisherYates shuffle = new Shuffles_FisherYates(rand);
-            shuffle.Shuffle<T>(items);
+            shuffle.Shuffle(items_current);
         }
 
         public virtual void RemoveEmpty(T item)
