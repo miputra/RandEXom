@@ -17,25 +17,29 @@ namespace RandEXom.Framework.Item
         List<T> items_init = new List<T>();
         List<T> items_current = new List<T>();
         bool reset_on_empty = true;
+        bool do_shuffle = true;
 
         RandEXom.Interface.IRandomR rand;
 
-        public GachaR(bool reset_on_empty = true)
+        public GachaR(bool do_shuffle = true, bool reset_on_empty = true)
         {
             rand = new RandomLib.NetRandom(new SeedR());
             this.reset_on_empty = reset_on_empty;
+            this.do_shuffle = do_shuffle;
         }
-        public GachaR(long seed, bool reset_on_empty = true)
+        public GachaR(long seed, bool do_shuffle = true, bool reset_on_empty = true)
         {
             rand = new RandomLib.NetRandom(new SeedR(seed));
             this.reset_on_empty=reset_on_empty;
+            this.do_shuffle = do_shuffle;
 
         }
 
-        public GachaR(RandEXom.Interface.IRandomR framework, bool reset_on_empty = true)
+        public GachaR(RandEXom.Interface.IRandomR framework,bool do_shuffle = true, bool reset_on_empty = true)
         {
             rand = framework;
             this.reset_on_empty =(reset_on_empty);
+            this.do_shuffle = true;
         }
 
         public virtual void AddItem(T item, int count)
@@ -44,6 +48,10 @@ namespace RandEXom.Framework.Item
             {
                 items_init.Add(item);
                 items_current.Add(item);
+            }
+            if (do_shuffle)
+            {
+                Shuffle();
             }
         }
 
@@ -63,7 +71,8 @@ namespace RandEXom.Framework.Item
         {
             items_current.Clear();
             items_current.AddRange(items_init);
-            Shuffle();
+            if(do_shuffle)
+                Shuffle();
         }
 
         public virtual void Remove(T value)

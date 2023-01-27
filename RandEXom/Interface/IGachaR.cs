@@ -38,5 +38,7 @@ namespace RandEXom.Interface
         void Refill();
         void Remove(T value);
         T Pull();
+
+        //void Shuffle();
     }
 }
