@@ -18,9 +18,14 @@ namespace RandEXom.RandomLib
         private RandEXom.Interface.ISeedR seed;
         System.Random net_r;
 
-        public string GetSeed()
+        public string GetSeedSTR()
         {
             return seed.init.ToString();
+        }
+
+        public RandEXom.Interface.ISeedR GetSeed()
+        {
+            return seed;
         }
 
         public NetRandom()

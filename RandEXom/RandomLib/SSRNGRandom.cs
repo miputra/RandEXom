@@ -5,6 +5,7 @@
  * 
  */
 
+using RandEXom.Interface;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -126,7 +127,7 @@ namespace RandEXom.RandomLib
         }
 
 
-        public virtual string GetSeed()
+        public virtual string GetSeedSTR()
         {
             return seed.init.ToString();
         }
@@ -152,6 +153,11 @@ namespace RandEXom.RandomLib
             long val = min + Math.Abs(((seed.now % m) % (max - min))); 
             seed.Next();
             return val;
+        }
+
+        public ISeedR GetSeed()
+        {
+            return this.seed;
         }
     }
 }

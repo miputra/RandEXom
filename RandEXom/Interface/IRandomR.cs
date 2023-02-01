@@ -7,7 +7,8 @@ namespace RandEXom.Interface
 {
     public interface IRandomR
     {
-        string GetSeed();
+        string GetSeedSTR();
+        RandEXom.Interface.ISeedR GetSeed();
         int NextInt(int min, int max);
         void NextBytes(byte[] buffers);
         long NextLong(long min, long max);

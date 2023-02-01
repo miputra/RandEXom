@@ -32,7 +32,6 @@ namespace RandEXom.Framework.Item
             rand = new RandomLib.NetRandom(new SeedR(seed));
             this.reset_on_empty=reset_on_empty;
             this.do_shuffle = do_shuffle;
-
         }
 
         public GachaR(RandEXom.Interface.IRandomR framework,bool do_shuffle = true, bool reset_on_empty = true)
