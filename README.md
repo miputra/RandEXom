@@ -8,8 +8,8 @@ RandEXom is a C# randomisation utility library to give more controllable randomi
 
 ## Requirement
 
-To use this library, you need at least:
-.Net Framework 4.6.1
+This library using .Net Standard 2.0.
+The test project using .Net framework 4.8.1
 
 
 ***
