@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,7 +10,7 @@ using RandEXom.Framework;
 using RandEXom.Framework.Item;
 using RandEXom.Framework.Number;
 
-namespace RandomisatorOutputTest
+namespace RandExOmTestOut
 {
     class Program
     {
@@ -26,6 +27,7 @@ namespace RandomisatorOutputTest
                 Console.WriteLine("[6] to test XORShift");
                 Console.WriteLine("[7] to test XORShiftStar");
                 Console.WriteLine("[8] to test Distributed Tree");
+                Console.WriteLine("[9] to test SlotR");
                 string res = Console.ReadLine();
                 switch (res)
                 {
@@ -52,6 +54,9 @@ namespace RandomisatorOutputTest
                         break;
                     case "8":
                         TestDistributed();
+                        break;
+                    case "9":
+                        TestSlotNumber();
                         break;
                     default:
                         return;
@@ -219,8 +224,8 @@ namespace RandomisatorOutputTest
 
         static void TestDistributed()
         {
-            DistributedTreeR rand = new DistributedTreeR(min:0,max:100);
-            for(int i = 0; i < 10; i++)
+            DistributedTreeR rand = new DistributedTreeR(min: 0, max: 100);
+            for (int i = 0; i < 10; i++)
             {
                 Console.WriteLine(rand.NextInt());
             }
@@ -231,6 +236,17 @@ namespace RandomisatorOutputTest
             {
                 Console.WriteLine(rand.Next());
             }
+        }
+
+        static void TestSlotNumber()
+        {
+            SlotR rand = new SlotR();
+            for (int i = 0; i < 10; i++)
+            {
+                Console.WriteLine(rand.Next(0, 100));
+            }
+
+
         }
     }
 }

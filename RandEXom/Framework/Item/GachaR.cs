@@ -38,7 +38,7 @@ namespace RandEXom.Framework.Item
         {
             rand = framework;
             this.reset_on_empty =(reset_on_empty);
-            this.do_shuffle = true;
+            this.do_shuffle = do_shuffle;
         }
 
         public virtual void AddItem(T item, int count)
@@ -79,6 +79,12 @@ namespace RandEXom.Framework.Item
             items_init.Remove(value);
             items_current.Remove(value);
         }
+
+        public List<T> ToList()
+        {
+            return items_current;
+        }
+        
 
         public virtual T Pull()
         {
