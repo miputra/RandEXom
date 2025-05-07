@@ -87,7 +87,7 @@ namespace RandEXom.SeedLib
         {
             long new_seed = 0;
             if (seed == null)
-                new_seed = Utility.LongR.GetJoinedCurrentDate();
+                new_seed = Utility.SeedGenerator.GetJoinedCurrentDate();
             else
                 new_seed = (long)seed;
             this._seed = new_seed;
@@ -108,7 +108,7 @@ namespace RandEXom.SeedLib
         {
             long new_seed = 0;
             if (seed == null)
-                new_seed = Utility.LongR.GetJoinedCurrentDate();
+                new_seed = Utility.SeedGenerator.GetJoinedCurrentDate();
             else
                 new_seed = (long)seed;
             this._seed = new_seed;
