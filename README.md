@@ -8,13 +8,42 @@ RandEXom is a C# randomisation utility library to give more controllable randomi
 
 ## Requirement
 
-This library using .Net Standard 2.0.
+This library using .Net Standard 2.1.
 
-The test project using .Net framework 4.8.1
+The test project using .Net 8
 
 
 ***
 
+## Featured
+
+### Random Library
+- Modulo random
+- default .Net random
+- System-Supplied Random Number Generators ([Based on Numerical Recipes in C The Art of Scientific Computing 2nd ed](https://www.amazon.com/Numerical-Recipes-Scientific-Computing-Second/dp/0521431085) )
+
+### Seed Library
+- Iterative
+- Linear Congruential Generators ([Based on Numerical Recipes in C The Art of Scientific Computing 2nd ed](https://www.amazon.com/Numerical-Recipes-Scientific-Computing-Second/dp/0521431085) )
+- default Seed
+- XORShift64 (Based on research by [George Marsaglia](https://www.jstatsoft.org/article/view/v008i14))
+
+### Framework
+| Boolean | 
+
+ - True Percentage Randomization
+
+| Item |
+
+- Gacha
+- [Shuffles Fisher Yates](https://www.isa-afp.org/entries/Fisher_Yates.html#)
+
+| Number |
+
+- Distance
+- Distributed Tree
+- Pong
+- Slot
 
 ## How to use
 
@@ -28,4 +57,5 @@ If you use the visual studio on your project:
 
 
 ***
+
 
