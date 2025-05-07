@@ -11,28 +11,31 @@ namespace RandEXom.Framework.Boolean
     /// <summary>
     /// Do Random of boolean using initial persentage
     /// </summary>
-    public class ByPersentage
+    public class TruePercentageR
     {
         IRandomR rand;
         List<bool> items = new List<bool>();
         float persentage = 0;
         GachaR<bool> gachaR;
 
-        public ByPersentage(float persentage)
+        /// <summary>
+        /// </summary>
+        /// <param name="percentage">the chance of 'true'</param>
+        public TruePercentageR(float percentage)
         {
             rand = new RandomLib.NetRandom(new SeedR());
             gachaR = new GachaR<bool>(rand);
-            this.persentage = persentage;
+            this.persentage = percentage;
         }
 
-        public ByPersentage(long seed, float persentage)
+        public TruePercentageR(long seed, float persentage)
         {
             rand = new RandomLib.NetRandom(new SeedR(seed));
             gachaR = new GachaR<bool>(rand);
             this.persentage = persentage;
         }
 
-        public ByPersentage(RandEXom.Interface.IRandomR framework, float persentage)
+        public TruePercentageR(RandEXom.Interface.IRandomR framework, float persentage)
         {
             rand = framework;
             gachaR = new GachaR<bool>(rand);
