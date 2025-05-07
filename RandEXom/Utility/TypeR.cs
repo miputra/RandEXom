@@ -9,25 +9,24 @@ namespace RandEXom.Utility
     class TypeR
     {
         /// <summary>
-        /// Used when random system doesnt support long. The type data will still long, but the length will be interger
-        /// That mean it will not cut off when casted to interger
+        /// Generate long value so it will not cut off when casted to interger. The return value will be different than the input. Useful for overflowed seed
         /// </summary>
-        /// <param name="seed"></param>
+        /// <param name="value"></param>
         /// <returns></returns>
-        public static long RoundLongToInt(long seed)
+        public static long RoundLongToInt(long value)
         {
-            if (seed <= int.MaxValue)
-                return seed;
+            if (value <= int.MaxValue)
+                return value;
 
-            int new_seed = 0;
+            int new_value = 0;
 
-            while (seed > int.MaxValue)
+            while (value > int.MaxValue)
             {
-                new_seed += int.MaxValue;
-                seed -= int.MaxValue;
+                new_value += int.MaxValue;
+                value -= int.MaxValue;
             }
-            new_seed += (int)seed;
-            return new_seed;
+            new_value += (int)value;
+            return new_value;
         }
     }
 }
