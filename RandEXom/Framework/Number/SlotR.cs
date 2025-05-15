@@ -1,4 +1,11 @@
-﻿using RandEXom.Interface;
+﻿
+
+// Made by Muhammad Ihsan Diputra
+// Lincense under MIT
+// https://github.com/miputra/RandEXom
+
+
+using RandEXom.Interface;
 using RandEXom.SeedLib;
 using System;
 using System.Collections.Generic;
