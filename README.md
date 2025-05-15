@@ -36,7 +36,7 @@ The test project using .Net 8
 | Item |
 
 - Gacha
-- [Shuffles Fisher Yates](https://www.isa-afp.org/entries/Fisher_Yates.html#)
+- [Shuffles Fisher Yates](https://digital.library.adelaide.edu.au/items/8d93d3ef-a4d1-4c27-b976-5bcdf3cce5eb)
 
 | Number |
 
