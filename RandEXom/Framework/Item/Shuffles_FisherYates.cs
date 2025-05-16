@@ -1,4 +1,4 @@
-﻿//Based on https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle
+﻿//Based on https://digital.library.adelaide.edu.au/items/8d93d3ef-a4d1-4c27-b976-5bcdf3cce5eb
 
 using RandEXom.SeedLib;
 using System;
