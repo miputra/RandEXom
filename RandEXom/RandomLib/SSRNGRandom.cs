@@ -48,11 +48,13 @@ namespace RandEXom.RandomLib
         public SSRNGRandom(long ? seed = null, long m = 4294967296)
         {
             this.seed = new SeedLib.LCGSeedR(seed);
+            this.m = m;
         }
 
         public SSRNGRandom(Interface.ISeedR seed, long m = 4294967296)
         {
             this.seed = seed;
+            this.m = m;
         }
 
         public SSRNGRandom(ParameterTemplate template, long? seed = null)
