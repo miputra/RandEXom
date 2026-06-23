@@ -32,7 +32,7 @@ namespace RandEXom.Interface
         void RemoveEmpty(T item);
 
         /// <summary>
-        /// set current pool to init pool
+        /// set current pool as init pool
         /// </summary>
         /// <param name="isIterative"></param>
         void Refill();
