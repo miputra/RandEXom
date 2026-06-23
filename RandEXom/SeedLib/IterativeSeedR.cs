@@ -51,7 +51,7 @@ namespace RandEXom.SeedLib
         
         public IterativeSeedR(long ? seed = null)
         {
-            long new_seed = 0;
+            //long new_seed = 0;
             if (seed == null)
                 this._seed = long.Parse(
                     System.DateTime.Now.Millisecond.ToString() +
@@ -65,8 +65,8 @@ namespace RandEXom.SeedLib
                     );
             else
                 this._seed = (long)seed;
-            Console.WriteLine("init seed = " + new_seed);
-            Console.WriteLine("init seed = " + this.init);
+            //Console.WriteLine("init seed = " + new_seed);
+            //Console.WriteLine("init seed = " + this.init);
             this.currentSeed = _seed;
             this.currentSeed = currentSeed == 0 ? currentSeed + 1 : currentSeed;
             this.previousSeed = currentSeed;

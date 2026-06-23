@@ -83,11 +83,11 @@ namespace RandEXom.SeedLib
         /// <param name="a">multiplier</param>
         /// <param name="c">Increment</param>
         /// <param name="m">modulo</param>
-        public LCGSeedR(long? seed = null, long a = 1664525, long c = 1013904223, long m = 2 ^ 32)
+        public LCGSeedR(long? seed = null, long a = 1664525, long c = 1013904223) //long m = 2 ^ 32)
         {
             long new_seed = 0;
             if (seed == null)
-                new_seed = Utility.SeedGenerator.GetJoinedCurrentDate();
+                new_seed = DateTime.Now.Ticks; // Utility.SeedGenerator.GetJoinedCurrentDate();
             else
                 new_seed = (long)seed;
             this._seed = new_seed;
@@ -108,7 +108,7 @@ namespace RandEXom.SeedLib
         {
             long new_seed = 0;
             if (seed == null)
-                new_seed = Utility.SeedGenerator.GetJoinedCurrentDate();
+                new_seed = DateTime.Now.Ticks; //Utility.SeedGenerator.GetJoinedCurrentDate();
             else
                 new_seed = (long)seed;
             this._seed = new_seed;

@@ -58,11 +58,13 @@ namespace RandEXom.RandomLib
         public SSRNGRandom(ParameterTemplate template, long? seed = null)
         {
             this.seed = new SeedLib.LCGSeedR(seed);
+            SetParameter(template);
         }
 
         public SSRNGRandom(Interface.ISeedR seed, ParameterTemplate template)
         {
             this.seed = seed;
+            SetParameter(template);
         }
 
         private void SetParameter(ParameterTemplate template)

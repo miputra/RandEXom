@@ -17,7 +17,7 @@ namespace RandEXom.Framework.Number
         readonly int level = 5;
         readonly int child = 2;
         readonly long min = int.MinValue;
-        readonly ulong range = int.MaxValue - int.MaxValue;
+        ulong range = int.MaxValue - int.MaxValue;
         IRandomR random;
 
         public class Node
@@ -148,7 +148,7 @@ namespace RandEXom.Framework.Number
                     for (int i = 0; i < child; i++)
                     {
                         Node ch = new Node();
-                        ch.parentID = top.ID;
+                        ch.parentID = parent.ID;
                         childrens.Add(ch);
                         parent.childs.Add(ch.ID);
                     }

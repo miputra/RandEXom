@@ -52,7 +52,7 @@ namespace RandEXom.SeedLib
         {
             long new_seed = 0;
             if (seed == null)
-                new_seed = Utility.SeedGenerator.GetJoinedCurrentDate();
+                new_seed = DateTime.Now.Ticks;  //Utility.SeedGenerator.GetJoinedCurrentDate();
             else
                 new_seed = (long)seed;
             this._seed = new_seed;
@@ -66,7 +66,7 @@ namespace RandEXom.SeedLib
         {
             long new_seed = 0;
             if (seed == null)
-                new_seed = Utility.SeedGenerator.GetJoinedCurrentDate();
+                new_seed = DateTime.Now.Ticks;  //Utility.SeedGenerator.GetJoinedCurrentDate();
             else
                 new_seed = (long)seed;
             this._seed = new_seed;
@@ -93,7 +93,7 @@ namespace RandEXom.SeedLib
         {
             long new_seed = 0;
             if (seed == null)
-                new_seed = Utility.SeedGenerator.GetJoinedCurrentDate();
+                new_seed = DateTime.Now.Ticks; //Utility.SeedGenerator.GetJoinedCurrentDate();
             else
                 new_seed = (long)seed;
             this._seed = new_seed;
@@ -110,9 +110,12 @@ namespace RandEXom.SeedLib
         {
             previousSeed = currentSeed;
             ulong c = unchecked((ulong)(currentSeed - long.MinValue));
-            c ^= c << 13;
-            c ^= c >> 7;
-            c ^= c << 17;
+            //c ^= c << 13;
+            //c ^= c >> 7;
+            //c ^= c << 17;
+            c ^= c << shift1;
+            c ^= c >> shift2;
+            c ^= c << shift3;
             currentSeed = unchecked((long)c + long.MinValue);
             currentSeed = currentSeed == 0 ? currentSeed + 1 : currentSeed;
         }

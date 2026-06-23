@@ -79,7 +79,7 @@ namespace RandEXom.RandomLib
 
             for (int i = 0; i < buffers.Length; i++)
             {
-                buffers[i] = (byte)(Math.Abs((seed)) % byte.MaxValue);
+                buffers[i] = (byte)(Math.Abs((seed)) % (byte.MaxValue+1));
                 this.seed.Next();
             }
         }
