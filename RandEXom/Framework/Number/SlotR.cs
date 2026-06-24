@@ -61,7 +61,8 @@ namespace RandEXom.Framework.Number
                 else
                 {
                     //Console.Write("i = " + i + "; array length = " + bMin.Length + "min length = " + min.ToString().Length);
-                    bMin[i] = byte.Parse(min.ToString()[bMin.Length - i -1].ToString());
+                    //bMin[i] = byte.Parse(min.ToString()[bMin.Length - i -1].ToString());
+                    bMin[i] = byte.Parse(min.ToString()[i - (bMin.Length - min.ToString().Length)].ToString());
                 }
             }
 

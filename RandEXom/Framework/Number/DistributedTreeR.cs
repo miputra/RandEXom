@@ -6,12 +6,15 @@
 using RandEXom.Interface;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace RandEXom.Framework.Number
 {
+    [EditorBrowsable(EditorBrowsableState.Never)]  // hidden from IntelliSense
+    [Obsolete("There is an unexpected result to this class and need to be fixed", error: false)]      // warning if somehow used
     public class DistributedTreeR
     {
         readonly int level = 5;
@@ -22,7 +25,7 @@ namespace RandEXom.Framework.Number
 
         public class Node
         {
-            public static List<Node> nodes = new List<Node>();
+            public static List<Node> nodes = new List<Node>(); //THIS THING SHOULD NOT STATIC. WAIT FOR FIX TO USE ENTIRE CLASS
             private static uint idlast = 0;
             public uint parentID;
             public uint ID;
