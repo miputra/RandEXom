@@ -1,3 +1,5 @@
 
+- name: Guide map
+  href: index.md
 - name: Read the guide
-  href: articles/
+  href: articles/toc.yml
