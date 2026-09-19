@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="RandEXom is a modular C# randomization library for .NET Standard 2.1.">
+  <title>RandEXom — modular randomization for C#</title>
+  <style>
+    :root { color-scheme: dark; font-family: system-ui, -apple-system, Segoe UI, sans-serif; }
+    body { margin: 0; background: #101827; color: #e8eef8; line-height: 1.55; }
+    main { max-width: 780px; margin: 0 auto; padding: 56px 24px 80px; }
+    a { color: #8bd8ff; }
+    .eyebrow { color: #79d8a2; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+    h1 { font-size: clamp(2.3rem, 6vw, 4rem); line-height: 1.1; margin: 12px 0; }
+    h2 { margin-top: 44px; }
+    .lead { font-size: 1.2rem; color: #bed0e7; max-width: 60ch; }
+    .card { background: #1b2940; border: 1px solid #344562; border-radius: 16px; padding: 24px; margin: 30px 0; }
+    .button { display: inline-block; background: #79d8a2; color: #10221a; text-decoration: none; font-weight: 700; border-radius: 8px; padding: 12px 18px; margin: 8px 12px 8px 0; }
+    .button.secondary { background: transparent; border: 1px solid #8bd8ff; color: #8bd8ff; }
+    code, pre { background: #0b1320; border-radius: 6px; }
+    code { padding: 2px 5px; }
+    pre { padding: 18px; overflow-x: auto; }
+    pre code { padding: 0; }
+    .muted { color: #a9bbd0; }
+    footer { margin-top: 64px; color: #a9bbd0; font-size: .9rem; }
+  </style>
+</head>
+<body>
+<main>
+  <div class="eyebrow">RandEXom · v1.5b</div>
+  <h1>Build the randomizer you need.</h1>
+  <p class="lead">RandEXom is a C# library with interchangeable seed generators, bounded random sources, and helpers for weighted picks, percentages, shuffles, and number ranges.</p>
+  <section class="card" aria-labelledby="download-title">
+    <h2 id="download-title">Download</h2>
+    <p>For .NET Standard 2.1 or a compatible runtime.</p>
+    <a class="button" href="downloads/RandEXom.dll" download>Download RandEXom.dll</a>
+    <a class="button secondary" href="https://github.com/miputra/RandEXom/releases/tag/1.5b">View release on GitHub</a>
+    <p class="muted">SHA-256: <code>148f2e0f5e3ca3512d41fe1c47ecf0e9e06384b41115566fe27546b99dd6a1e7</code></p>
+  </section>
+  <h2>Get started</h2>
+  <p>Add the DLL as a project reference, then choose a generator and a seed:</p>
+  <pre><code>using RandEXom.RandomLib;
+
+var random = new ModuloRandom(seed: 12345);
+int value = random.NextInt(0, 100); // 0 through 99
+</code></pre>
+  <p>Minimum bounds are inclusive; maximum bounds are exclusive. The source is available in the <a href="https://github.com/miputra/RandEXom">GitHub repository</a>.</p>
+  <h2>What changed in v1.5b</h2>
+  <p>This release corrects LCG and xorshift64* transitions, bounded sampling, weighted draws, and several range helpers. <strong>Seeded output sequences may differ from earlier releases.</strong> Review the <a href="https://github.com/miputra/RandEXom/blob/main/README.md">README</a> and <a href="https://github.com/miputra/RandEXom/tree/main/Verification">verification checks</a> for details.</p>
+  <footer>RandEXom is licensed under the <a href="https://github.com/miputra/RandEXom/blob/main/LICENSE">MIT License</a>.</footer>
+</main>
+</body>
+</html>

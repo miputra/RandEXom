@@ -45,6 +45,13 @@ The test project using .Net 8
 - Pong
 - Slot
 
+## Download
+
+- [RandEXom.dll v1.5b](https://miputra.github.io/RandEXom/downloads/RandEXom.dll)
+- [GitHub release](https://github.com/miputra/RandEXom/releases/tag/1.5b)
+
+The v1.5b release fixes generator and range calculations. Seeded sequences may differ from earlier releases.
+
 ## How to use
 
 Note: Every IDE has a different way to add .dll as a reference. 
