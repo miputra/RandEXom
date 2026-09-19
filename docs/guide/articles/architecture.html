@@ -70,7 +70,7 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="11-how-randexom-fits-together">1.1 How RandEXom fits together</h1>
 
-<p>Chapter 1: Start here · Page 1 of 3 · <a href="../index.html">Guide map</a></p>
+<p>Chapter 1: Start here · Section 1 · <a href="../index.html">Guide map</a></p>
 <p>RandEXom is arranged in layers. A <strong>seed generator</strong> supplies state, a <strong>random source</strong> turns that state into bounded numbers or bytes, and a <strong>framework helper</strong> applies those draws to a task such as shuffling or drawing from a bag. The interfaces connect the layers; utilities support internal conversions and optional time-based seed creation.</p>
 <pre><code class="lang-text">Your application
   └─ Framework.Boolean / Framework.Item / Framework.Number  (optional task helpers)
@@ -79,7 +79,8 @@
 
 Utility ── supporting functions; not a required layer in application code
 </code></pre><p>You can use <code>RandomLib</code> directly without a framework helper. Most helpers also have constructors that build their own default <code>NetRandom</code>; supplying an <code>IRandomR</code> yourself lets you choose and share the source. No framework helper is necessary merely to get a bounded number.</p>
-<h2 id="namespaces-and-responsibilities">Namespaces and responsibilities</h2>
+<p><a id="namespaces-and-responsibilities"></a></p>
+<h2 id="111-namespaces-and-responsibilities">1.1.1 Namespaces and responsibilities</h2>
 <table>
 <thead>
 <tr>
@@ -141,7 +142,8 @@ Utility ── supporting functions; not a required layer in application code
 </tbody>
 </table>
 <p>The <a href="../api/index.html">class index</a> maps each type to its guide and availability. <code>Framework</code> means an application-level behavior built <em>on top of</em> a random source, not a separate random engine.</p>
-<h2 id="follow-one-draw-through-the-layers">Follow one draw through the layers</h2>
+<p><a id="follow-one-draw-through-the-layers"></a></p>
+<h2 id="112-follow-one-draw-through-the-layers">1.1.2 Follow one draw through the layers</h2>
 <pre><code class="lang-csharp">using RandEXom.Framework.Boolean;
 using RandEXom.RandomLib;
 using RandEXom.SeedLib;
@@ -157,7 +159,8 @@ bool result = chance.Next();
 <li>The draw advances state. The next <code>chance.Next()</code> uses the subsequent state, not a fresh copy of seed 42.</li>
 </ol>
 <p>Changing <em>either</em> the seed algorithm or the random-source algorithm changes the resulting sequence. A seed is an input to an algorithm, not a complete specification of the output. Some helpers construct <code>NetRandom</code> with a constant internal seed by default; passing a <code>RandomLib</code> implementation explicitly makes the composition visible.</p>
-<h2 id="how-to-choose-a-path">How to choose a path</h2>
+<p><a id="how-to-choose-a-path"></a></p>
+<h2 id="113-how-to-choose-a-path">1.1.3 How to choose a path</h2>
 <table>
 <thead>
 <tr>

@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>3.3.1 Shuffles_FisherYates: Fisher&#8211;Yates shuffle </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="3.3.1 Shuffles_FisherYates: Fisher&#8211;Yates shuffle ">
+    <meta name="generator" content="docfx 2.59.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../index.html">RandEXom <span class="brand-divider">/</span> Docs</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <ul class="nav navbar-nav">
+                <li><a href="../../">Project home</a></li>
+                <li><a href="../index.html">Guide map</a></li>
+                <li><a href="../api/index.html">Class index</a></li>
+              </ul>
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search docs" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="331-shufflesfisheryates-fisheryates-shuffle">3.3.1 <code>Shuffles_FisherYates</code>: Fisher–Yates shuffle</h1>
+
+<p><a href="items.html">Parent: 3.3 Framework.Item</a> · <a href="../index.html">Guide map</a></p>
+<p><code>Shuffles_FisherYates.Shuffle&lt;T&gt;</code> shuffles a <code>List&lt;T&gt;</code> <strong>in place</strong>. It does not return a new list.</p>
+<p>The in-place swap method is related to Richard Durstenfeld’s <a href="https://doi.org/10.1145/364520.364540">“Algorithm 235: Random permutation” (1964)</a>; this implementation traverses forward rather than backward. The Fisher–Yates name also honors the earlier procedure described in Fisher and Yates’s <a href="https://wellcomecollection.org/works/udsvs2rx">1938 book</a>. See <a href="research.html">research and provenance</a> for the distinction.</p>
+<pre><code class="lang-csharp">using System.Collections.Generic;
+using RandEXom.Framework.Item;
+
+var cards = new List&lt;string&gt; { &quot;red&quot;, &quot;blue&quot;, &quot;green&quot; };
+var shuffle = new Shuffles_FisherYates(seed: 42);
+shuffle.Shuffle(cards);
+</code></pre><p>Make a copy first if you need to preserve the original order.</p>
+<hr>
+<p>← Previous: <a href="items.html">3.3 Framework.Item</a> · <a href="items.html">Parent: 3.3 Framework.Item</a> · Next: <a href="items-gachar.html">3.3.2 GachaR<t>: list-backed bag</t></a> →</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/miputra/RandEXom/blob/main/RandEXom/articles/items-shuffles-fisheryates.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

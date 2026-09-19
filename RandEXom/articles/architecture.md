@@ -1,6 +1,6 @@
 # 1.1 How RandEXom fits together
 
-Chapter 1: Start here · Page 1 of 3 · [Guide map](../index.md)
+Chapter 1: Start here · Section 1 · [Guide map](../index.md)
 
 RandEXom is arranged in layers. A **seed generator** supplies state, a **random source** turns that state into bounded numbers or bytes, and a **framework helper** applies those draws to a task such as shuffling or drawing from a bag. The interfaces connect the layers; utilities support internal conversions and optional time-based seed creation.
 
@@ -15,7 +15,9 @@ Utility ── supporting functions; not a required layer in application code
 
 You can use `RandomLib` directly without a framework helper. Most helpers also have constructors that build their own default `NetRandom`; supplying an `IRandomR` yourself lets you choose and share the source. No framework helper is necessary merely to get a bounded number.
 
-## Namespaces and responsibilities
+<a id="namespaces-and-responsibilities"></a>
+
+## 1.1.1 Namespaces and responsibilities
 
 | Namespace | Question it answers | Main contract or types | Read next |
 | --- | --- | --- | --- |
@@ -30,7 +32,9 @@ You can use `RandomLib` directly without a framework helper. Most helpers also h
 
 The [class index](../api/index.md) maps each type to its guide and availability. `Framework` means an application-level behavior built *on top of* a random source, not a separate random engine.
 
-## Follow one draw through the layers
+<a id="follow-one-draw-through-the-layers"></a>
+
+## 1.1.2 Follow one draw through the layers
 
 ```csharp
 using RandEXom.Framework.Boolean;
@@ -50,7 +54,9 @@ bool result = chance.Next();
 
 Changing *either* the seed algorithm or the random-source algorithm changes the resulting sequence. A seed is an input to an algorithm, not a complete specification of the output. Some helpers construct `NetRandom` with a constant internal seed by default; passing a `RandomLib` implementation explicitly makes the composition visible.
 
-## How to choose a path
+<a id="how-to-choose-a-path"></a>
+
+## 1.1.3 How to choose a path
 
 | Goal | Start here | Why |
 | --- | --- | --- |

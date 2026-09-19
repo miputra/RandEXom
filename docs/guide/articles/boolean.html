@@ -70,21 +70,14 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="32-frameworkboolean">3.2 Framework.Boolean</h1>
 
-<p>Chapter 3: Framework helpers · Page 2 of 4 · <a href="../index.html">Guide map</a></p>
-<p>This branch of <a href="framework.html">Framework</a> converts a bounded draw from <code>IRandomR</code> into a Boolean event. It contains one helper, <code>RandEXom.Framework.Boolean.TruePercentageR</code>, which returns <code>true</code> with the requested probability on each independent draw. It accepts a percentage from 0 through 100, a seed for repeatable tests, or an <code>IRandomR</code> implementation.</p>
-<pre><code class="lang-csharp">using RandEXom.Framework.Boolean;
-
-var succeeds = new TruePercentageR(seed: 42, percentage: 25f);
-bool result = succeeds.Next();
-</code></pre><p><code>25f</code> means a 25% chance per call; it does <strong>not</strong> guarantee exactly 25 successes in 100 calls. Zero always returns <code>false</code>, and 100 always returns <code>true</code>. <code>NaN</code> and percentages outside 0–100 are rejected.</p>
-<p>To share a random source with other helpers:</p>
-<pre><code class="lang-csharp">using RandEXom.RandomLib;
-
-var random = new ModuloRandom(seed: 42);
-var succeeds = new TruePercentageR(random, percentage: 12.5f);
-</code></pre><p>Sharing a source also shares its advancing state, so the order of calls across helpers affects the sequence. <code>Reset()</code> recalculates the probability threshold; it does not rewind the random source or balance past results. <code>CreateItems()</code> performs the same threshold calculation and usually need not be called directly.</p>
+<p>Chapter 3: Framework helpers · Section 2 · <a href="../index.html">Guide map</a></p>
+<p>This branch of <a href="framework.html">Framework</a> provides independent percentage outcomes using a random source.</p>
+<h2 id="in-this-chapter">In this chapter</h2>
+<ul>
+<li><a href="boolean-truepercentager.html">3.2.1 TruePercentageR</a></li>
+</ul>
 <hr>
-<p>← Previous: <a href="framework.html">3.1 Framework overview</a> · <a href="../index.html">Guide map</a> · Next: <a href="items.html">3.3 Item</a> →</p>
+<p>← Previous: <a href="framework.html">3.1 Framework overview</a> · <a href="../index.html">Guide map</a> · Next: <a href="boolean-truepercentager.html">3.2.1 TruePercentageR</a> →</p>
 </article>
           </div>
           

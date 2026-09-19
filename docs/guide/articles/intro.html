@@ -70,17 +70,19 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="13-getting-started">1.3 Getting started</h1>
 
-<p>Chapter 1: Start here · Page 3 of 3 · <a href="../index.html">Guide map</a></p>
+<p>Chapter 1: Start here · Section 3 · <a href="../index.html">Guide map</a></p>
 <p>First read <a href="architecture.html">how the library fits together</a>: <code>SeedLib</code> holds state, <code>RandomLib</code> produces values, and <code>Framework</code> applies values to tasks. This page then gives a quick path from download to a few common draws. For a type-by-type lookup, use the <a href="../api/index.html">class index</a>.</p>
 <p>RandEXom targets .NET Standard 2.1. Download the <a href="https://miputra.github.io/RandEXom/downloads/RandEXom.dll">v1.5b DLL</a> or the <a href="https://github.com/miputra/RandEXom/releases/tag/1.5b">GitHub release</a>, then add the DLL as a reference to a compatible .NET project. In Visual Studio, right-click the project in Solution Explorer, choose <strong>Add Reference</strong>, browse to the DLL, and confirm.</p>
-<h2 id="generate-a-bounded-number">Generate a bounded number</h2>
+<p><a id="generate-a-bounded-number"></a></p>
+<h2 id="131-generate-a-bounded-number">1.3.1 Generate a bounded number</h2>
 <pre><code class="lang-csharp">using RandEXom.RandomLib;
 
 var random = new ModuloRandom(seed: 12345);
 int roll = random.NextInt(1, 7); // 1 through 6
 long sample = random.NextLong(0, 1000); // 0 through 999
 </code></pre><p>The minimum is inclusive and the maximum is exclusive. The minimum must be smaller than the maximum. Supplying a seed makes the generator&#39;s sequence reproducible for the same library version; v1.5b corrected generator behavior, so do not assume its output matches older releases. These generators are for simulation and application randomization, not cryptographic secrets.</p>
-<h2 id="choose-a-seed-generator">Choose a seed generator</h2>
+<p><a id="choose-a-seed-generator"></a></p>
+<h2 id="132-choose-a-seed-generator">1.3.2 Choose a seed generator</h2>
 <p><code>ModuloRandom</code> accepts an <code>ISeedR</code> implementation. For example, use the Numerical Recipes LCG parameters with a known seed:</p>
 <pre><code class="lang-csharp">using RandEXom.RandomLib;
 using RandEXom.SeedLib;
@@ -88,7 +90,8 @@ using RandEXom.SeedLib;
 var seed = new LCGSeedR(LCGSeedR.ParameterTemplate.Numerical_Recipes, seed: 42);
 var random = new ModuloRandom(seed);
 int value = random.NextInt(0, 10);
-</code></pre><h2 id="shuffle-and-draw-items">Shuffle and draw items</h2>
+</code></pre><p><a id="shuffle-and-draw-items"></a></p>
+<h2 id="133-shuffle-and-draw-items">1.3.3 Shuffle and draw items</h2>
 <pre><code class="lang-csharp">using System.Collections.Generic;
 using RandEXom.Framework.Item;
 
@@ -100,7 +103,8 @@ bag.AddItem(&quot;common&quot;, 3);
 bag.AddItem(&quot;rare&quot;, 1);
 string drawn = bag.Pull(); // removes one item from the bag
 </code></pre><p><code>AddItem</code> adds <code>count</code> copies, so adding more copies gives an item more chances to be drawn. With <code>reset_on_empty: false</code>, <code>Pull()</code> returns the type&#39;s default value when the bag is empty; the default behavior refills it instead. Use <code>Refill()</code> to restore the initial contents manually.</p>
-<h2 id="draw-a-percentage">Draw a percentage</h2>
+<p><a id="draw-a-percentage"></a></p>
+<h2 id="134-draw-a-percentage">1.3.4 Draw a percentage</h2>
 <pre><code class="lang-csharp">using RandEXom.Framework.Boolean;
 
 var succeeds = new TruePercentageR(seed: 42, percentage: 25f);

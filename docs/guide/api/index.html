@@ -70,9 +70,10 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="44-class-index">4.4 Class index</h1>
 
-<p>Chapter 4: Reference · Page 4 of 4 · <a href="../index.html">Guide map</a></p>
+<p>Chapter 4: Reference · Section 4 · <a href="../index.html">Guide map</a></p>
 <p>This is a map from source namespaces and class names to the explanatory guide. Start with <a href="../articles/architecture.html">the architecture</a> if <code>SeedLib</code>, <code>RandomLib</code>, and <code>Framework</code> are new to you; follow <a href="../articles/installation.html">installation</a> and <a href="../articles/intro.html">getting started</a> for a first program. The <a href="https://github.com/miputra/RandEXom/tree/main/RandEXom">source tree</a> has exact signatures and XML comments.</p>
-<h2 id="contracts-randexominterface">Contracts (<code>RandEXom.Interface</code>)</h2>
+<p><a id="contracts-randexom-interface"></a></p>
+<h2 id="441-contracts-randexominterface">4.4.1 Contracts (<code>RandEXom.Interface</code>)</h2>
 <table>
 <thead>
 <tr>
@@ -85,12 +86,12 @@
 <tr>
 <td><code>ISeedR</code></td>
 <td>A state generator to a random source</td>
-<td><a href="../articles/seed-generators.html">SeedLib</a>, <a href="../articles/extending.html">implementing interfaces</a></td>
+<td><a href="../articles/seed-generators.html">SeedLib</a>, <a href="../articles/extending.html#implement-an-interface">implementing interfaces</a></td>
 </tr>
 <tr>
 <td><code>IRandomR</code></td>
 <td>A random source to framework helpers</td>
-<td><a href="../articles/random-sources.html">RandomLib</a>, <a href="../articles/extending.html">implementing interfaces</a></td>
+<td><a href="../articles/random-sources.html">RandomLib</a>, <a href="../articles/extending.html#implement-an-interface">implementing interfaces</a></td>
 </tr>
 <tr>
 <td><code>IGachaR&lt;T&gt;</code></td>
@@ -99,7 +100,8 @@
 </tr>
 </tbody>
 </table>
-<h2 id="state-randexomseedlib">State (<code>RandEXom.SeedLib</code>)</h2>
+<p><a id="state-randexom-seedlib"></a></p>
+<h2 id="442-state-randexomseedlib">4.4.2 State (<code>RandEXom.SeedLib</code>)</h2>
 <table>
 <thead>
 <tr>
@@ -112,31 +114,32 @@
 <tr>
 <td><code>XORShift64Seed</code></td>
 <td>Xorshift state, default for <code>ModuloRandom</code></td>
-<td><a href="../articles/seed-generators.html">SeedLib</a></td>
+<td><a href="../articles/seed-generators-xorshift64seed.html">Open subchapter</a></td>
 </tr>
 <tr>
 <td><code>LCGSeedR</code></td>
 <td>Linear-congruential state and presets</td>
-<td><a href="../articles/seed-generators.html">SeedLib</a></td>
+<td><a href="../articles/seed-generators-lcgseedr.html">Open subchapter</a></td>
 </tr>
 <tr>
 <td><code>IterativeSeedR</code></td>
 <td>Built-in arithmetic/trigonometric progressions</td>
-<td><a href="../articles/seed-generators.html">SeedLib</a></td>
+<td><a href="../articles/seed-generators-iterativeseedr.html">Open subchapter</a></td>
 </tr>
 <tr>
 <td><code>IterativeSeedRCustom</code></td>
 <td>Function-defined progression</td>
-<td><a href="../articles/seed-generators.html">SeedLib</a></td>
+<td><a href="../articles/seed-generators-iterativeseedrcustom.html">Open subchapter</a></td>
 </tr>
 <tr>
 <td><code>SeedR</code></td>
 <td>Constant internal state; not public to consumers</td>
-<td><a href="../articles/seed-generators.html">SeedLib</a></td>
+<td><a href="../articles/seed-generators-seedr.html">Open subchapter</a></td>
 </tr>
 </tbody>
 </table>
-<h2 id="draws-randexomrandomlib">Draws (<code>RandEXom.RandomLib</code>)</h2>
+<p><a id="draws-randexom-randomlib"></a></p>
+<h2 id="443-draws-randexomrandomlib">4.4.3 Draws (<code>RandEXom.RandomLib</code>)</h2>
 <table>
 <thead>
 <tr>
@@ -149,21 +152,22 @@
 <tr>
 <td><code>ModuloRandom</code></td>
 <td>Xorshift-backed bounded source by default</td>
-<td><a href="../articles/random-sources.html">RandomLib</a></td>
+<td><a href="../articles/random-sources-modulorandom.html">Open subchapter</a></td>
 </tr>
 <tr>
 <td><code>NetRandom</code></td>
 <td>Adapter around <code>System.Random</code></td>
-<td><a href="../articles/random-sources.html">RandomLib</a></td>
+<td><a href="../articles/random-sources-netrandom.html">Open subchapter</a></td>
 </tr>
 <tr>
 <td><code>SSRNGRandom</code></td>
 <td>Historical LCG parameter-based source</td>
-<td><a href="../articles/random-sources.html">RandomLib</a></td>
+<td><a href="../articles/random-sources-ssrngrandom.html">Open subchapter</a></td>
 </tr>
 </tbody>
 </table>
-<h2 id="behaviors-randexomframework">Behaviors (<code>RandEXom.Framework</code>)</h2>
+<p><a id="behaviors-randexom-framework"></a></p>
+<h2 id="444-behaviors-randexomframework">4.4.4 Behaviors (<code>RandEXom.Framework</code>)</h2>
 <table>
 <thead>
 <tr>
@@ -176,56 +180,57 @@
 <tr>
 <td><code>Boolean.TruePercentageR</code></td>
 <td>Independent percentage outcome</td>
-<td><a href="../articles/boolean.html">Framework.Boolean</a></td>
+<td><a href="../articles/boolean-truepercentager.html">Open subchapter</a></td>
 </tr>
 <tr>
 <td><code>Item.Shuffles_FisherYates</code></td>
 <td>In-place list shuffle</td>
-<td><a href="../articles/items.html">Framework.Item</a></td>
+<td><a href="../articles/items-shuffles-fisheryates.html">Open subchapter</a></td>
 </tr>
 <tr>
 <td><code>Item.GachaR&lt;T&gt;</code></td>
 <td>List-backed weighted bag with optional automatic refill</td>
-<td><a href="../articles/items.html">Framework.Item</a></td>
+<td><a href="../articles/items-gachar.html">Open subchapter</a></td>
 </tr>
 <tr>
 <td><code>Item.GachaRBatched&lt;T&gt;</code></td>
 <td>Count-backed weighted bag with manual refill</td>
-<td><a href="../articles/items.html">Framework.Item</a></td>
+<td><a href="../articles/items-gacharbatched.html">Open subchapter</a></td>
 </tr>
 <tr>
 <td><code>Number.SlotR</code></td>
 <td>One bounded draw per call, intended for spinning reels one by one</td>
-<td><a href="../articles/numbers.html">Framework.Number</a></td>
+<td><a href="../articles/numbers-slotr.html">Open subchapter</a></td>
 </tr>
 <tr>
 <td><code>Number.PongR</code></td>
 <td>Alternating lower/upper range halves</td>
-<td><a href="../articles/numbers.html">Framework.Number</a></td>
+<td><a href="../articles/numbers-pongr.html">Open subchapter</a></td>
 </tr>
 <tr>
 <td><code>Number.DistanceR</code></td>
 <td>Minimum gap from the previous result</td>
-<td><a href="../articles/numbers.html">Framework.Number</a></td>
+<td><a href="../articles/numbers-distancer.html">Open subchapter</a></td>
 </tr>
 <tr>
 <td><code>Number.DistributedTreeR</code></td>
 <td>Obsolete/experimental tree distribution</td>
-<td><a href="../articles/numbers.html">Framework.Number</a></td>
+<td><a href="../articles/numbers-distributed-trees.html">Open subchapter</a></td>
 </tr>
 <tr>
 <td><code>Number.DistributedTreeNestedR</code></td>
 <td>Obsolete/experimental nested tree</td>
-<td><a href="../articles/numbers.html">Framework.Number</a></td>
+<td><a href="../articles/numbers-distributed-trees.html">Open subchapter</a></td>
 </tr>
 <tr>
 <td><code>Number.DiceR</code>, <code>Number.Dice6F</code>, <code>_2DNoise.PerlinNoise</code></td>
 <td>Incomplete, <code>DEBUG</code>-only types</td>
-<td><a href="../articles/numbers.html">Framework.Number</a></td>
+<td><a href="../articles/numbers-debug-placeholders.html">Open subchapter</a></td>
 </tr>
 </tbody>
 </table>
-<h2 id="support-randexomutility">Support (<code>RandEXom.Utility</code>)</h2>
+<p><a id="support-randexom-utility"></a></p>
+<h2 id="445-support-randexomutility">4.4.5 Support (<code>RandEXom.Utility</code>)</h2>
 <table>
 <thead>
 <tr>
@@ -238,12 +243,12 @@
 <tr>
 <td><code>SeedGenerator</code></td>
 <td>Public time-derived numeric seed helper</td>
-<td><a href="../articles/utility.html">Utility</a></td>
+<td><a href="../articles/utility-seedgenerator.html">Open subchapter</a></td>
 </tr>
 <tr>
 <td><code>TypeR</code></td>
 <td>Internal 64-to-32-bit seed conversion used by <code>NetRandom</code></td>
-<td><a href="../articles/utility.html">Utility</a></td>
+<td><a href="../articles/utility-typer.html">Open subchapter</a></td>
 </tr>
 </tbody>
 </table>

@@ -70,9 +70,10 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="43-research-and-provenance">4.3 Research and provenance</h1>
 
-<p>Chapter 4: Reference · Page 3 of 4 · <a href="../index.html">Guide map</a></p>
+<p>Chapter 4: Reference · Section 3 · <a href="../index.html">Guide map</a></p>
 <p>This page distinguishes <strong>implemented algorithms</strong>, <strong>parameter sources</strong>, and <strong>research related to an unfinished placeholder</strong>. A citation is not a claim that RandEXom reproduces every method or quality result in that work. Follow the feature guides for what this code actually does.</p>
-<h2 id="implemented-algorithm-families">Implemented algorithm families</h2>
+<p><a id="implemented-algorithm-families"></a></p>
+<h2 id="431-implemented-algorithm-families">4.3.1 Implemented algorithm families</h2>
 <table>
 <thead>
 <tr>
@@ -100,12 +101,15 @@
 </tbody>
 </table>
 <p>The name “Fisher–Yates” also acknowledges the earlier shuffle procedure by Ronald Fisher and Frank Yates. Their <em>Statistical Tables for Biological, Agricultural and Medical Research</em> is a <strong>book</strong>, not the linked Durstenfeld paper. The <a href="https://wellcomecollection.org/works/udsvs2rx">1938 library catalog record</a> is provided for historical provenance.</p>
-<h2 id="lcg-research-versus-preset-provenance">LCG research versus preset provenance</h2>
+<p><a id="lcg-research-versus-preset-provenance"></a></p>
+<h2 id="432-lcg-research-versus-preset-provenance">4.3.2 LCG research versus preset provenance</h2>
 <p><code>LCGSeedR</code> and <code>SSRNGRandom</code> use linear-congruential recurrences. Pierre L’Ecuyer’s paper <a href="https://www.ams.org/mcom/1999-68-225/S0025-5718-99-00996-5/S0025-5718-99-00996-5.pdf">“Tables of Linear Congruential Generators of Different Sizes and Good Lattice Structure” (1999)</a> discusses parameter quality and the lattice structure of LCGs. <strong>The paper is background research, not the source of RandEXom’s named historical presets.</strong></p>
 <p>The default <code>a = 1664525</code>, <code>c = 1013904223</code>, <code>m = 2^32</code> combination is from <em><a href="https://numerical.recipes/">Numerical Recipes in C, 2nd edition, section 7.1</a></em>. That is a <strong>book</strong>, not a research paper. Other enum presets carry names of historical systems; their names alone do not certify the quality or exact runtime output of those systems. See <a href="seed-generators.html">SeedLib</a> and <a href="random-sources.html">RandomLib</a> for this implementation’s behavior.</p>
-<h2 id="related-research-not-an-implemented-feature">Related research, not an implemented feature</h2>
+<p><a id="related-research-not-an-implemented-feature"></a></p>
+<h2 id="433-related-research-not-an-implemented-feature">4.3.3 Related research, not an implemented feature</h2>
 <p><code>PerlinNoise</code> is currently an empty <code>DEBUG</code>-only placeholder. Ken Perlin’s <a href="https://mrl.cs.nyu.edu/~perlin/paper445.pdf">“Improving Noise” (2002)</a> is the relevant research reference for the name and a possible future implementation, <strong>not</strong> evidence that RandEXom currently implements Perlin noise.</p>
-<h2 id="platform-behavior-and-project-specific-helpers">Platform behavior and project-specific helpers</h2>
+<p><a id="platform-behavior-and-project-specific-helpers"></a></p>
+<h2 id="434-platform-behavior-and-project-specific-helpers">4.3.4 Platform behavior and project-specific helpers</h2>
 <p><code>NetRandom</code> wraps <code>System.Random</code>; its behavior should be read from <a href="https://learn.microsoft.com/dotnet/api/system.random">Microsoft’s API documentation</a>, not attributed to a <em>Numerical Recipes</em> algorithm. <code>TruePercentageR</code>, <code>GachaR&lt;T&gt;</code>, <code>GachaRBatched&lt;T&gt;</code>, <code>SlotR</code>, <code>PongR</code>, and <code>DistanceR</code> are documented from the code’s behavior rather than presented as implementations of a particular paper. If research is added to their design later, it should be linked next to the exact claim it supports.</p>
 <hr>
 <p>← Previous: <a href="extending.html">4.2 Interfaces and limitations</a> · <a href="../index.html">Guide map</a> · Next: <a href="../api/index.html">4.4 Class index</a> →</p>

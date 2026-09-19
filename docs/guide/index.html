@@ -67,28 +67,106 @@
 <p>RandEXom is a .NET Standard 2.1 library. Its main path is <strong>SeedLib state → RandomLib draws → Framework behavior</strong>. <code>Interface</code> defines the connections; <code>Utility</code> contains support functions. If that map is unfamiliar, begin at 1.1.</p>
 <h2 id="1-start-here">1. Start here</h2>
 <ol>
-<li><a href="articles/architecture.html">How the library fits together</a> — what each namespace owns and how a draw travels through the layers.</li>
-<li><a href="articles/installation.html">Installation</a> — use the release DLL or a project reference.</li>
-<li><a href="articles/intro.html">Getting started</a> — make a first draw and try common helpers.</li>
+<li><p><a href="articles/architecture.html">How the library fits together</a> — what each namespace owns and how a draw travels through the layers.</p>
+<ul>
+<li><a href="articles/architecture.html#namespaces-and-responsibilities">1.1.1 Namespaces and responsibilities</a></li>
+<li><a href="articles/architecture.html#follow-one-draw-through-the-layers">1.1.2 Follow one draw through the layers</a></li>
+<li><a href="articles/architecture.html#how-to-choose-a-path">1.1.3 How to choose a path</a></li>
+</ul>
+</li>
+<li><p><a href="articles/installation.html">Installation</a> — use the release DLL or a project reference.</p>
+<ul>
+<li><a href="articles/installation.html#use-the-published-dll">1.2.1 Use the published DLL</a></li>
+<li><a href="articles/installation.html#reference-the-source-project">1.2.2 Reference the source project</a></li>
+<li><a href="articles/installation.html#first-compile-check">1.2.3 First compile check</a></li>
+<li><a href="articles/installation.html#build-and-verify-this-repository">1.2.4 Build and verify this repository</a></li>
+</ul>
+</li>
+<li><p><a href="articles/intro.html">Getting started</a> — make a first draw and try common helpers.</p>
+<ul>
+<li><a href="articles/intro.html#generate-a-bounded-number">1.3.1 Generate a bounded number</a></li>
+<li><a href="articles/intro.html#choose-a-seed-generator">1.3.2 Choose a seed generator</a></li>
+<li><a href="articles/intro.html#shuffle-and-draw-items">1.3.3 Shuffle and draw items</a></li>
+<li><a href="articles/intro.html#draw-a-percentage">1.3.4 Draw a percentage</a></li>
+</ul>
+</li>
 </ol>
 <h2 id="2-core-libraries">2. Core libraries</h2>
 <ol>
-<li><a href="articles/seed-generators.html">SeedLib: state</a> — choose how the seed changes.</li>
-<li><a href="articles/random-sources.html">RandomLib: draws</a> — turn state into ranges and bytes.</li>
+<li><p><a href="articles/seed-generators.html">SeedLib: state</a> — choose how the seed changes.</p>
+<ul>
+<li><a href="articles/seed-generators-xorshift64seed.html">2.1.1 XORShift64Seed</a></li>
+<li><a href="articles/seed-generators-lcgseedr.html">2.1.2 LCGSeedR</a></li>
+<li><a href="articles/seed-generators-iterativeseedr.html">2.1.3 IterativeSeedR</a></li>
+<li><a href="articles/seed-generators-iterativeseedrcustom.html">2.1.4 IterativeSeedRCustom</a></li>
+<li><a href="articles/seed-generators-seedr.html">2.1.5 Constant seed (SeedR)</a></li>
+</ul>
+</li>
+<li><p><a href="articles/random-sources.html">RandomLib: draws</a> — turn state into ranges and bytes.</p>
+<ul>
+<li><a href="articles/random-sources-modulorandom.html">2.2.1 ModuloRandom</a></li>
+<li><a href="articles/random-sources-netrandom.html">2.2.2 NetRandom</a></li>
+<li><a href="articles/random-sources-ssrngrandom.html">2.2.3 SSRNGRandom</a></li>
+<li><a href="articles/random-sources-choosing-a-source.html">2.2.4 Choosing a source</a></li>
+</ul>
+</li>
 </ol>
 <h2 id="3-framework-helpers">3. Framework helpers</h2>
 <ol>
-<li><a href="articles/framework.html">Framework overview</a> — choose a task-level behavior.</li>
-<li><a href="articles/boolean.html">Boolean</a> — independent percentage outcomes.</li>
-<li><a href="articles/items.html">Item</a> — shuffling and two kinds of gacha bag.</li>
-<li><a href="articles/numbers.html">Number</a> — slot, alternating halves, and minimum distance.</li>
+<li><p><a href="articles/framework.html">Framework overview</a> — choose a task-level behavior.</p>
+<ul>
+<li><a href="articles/framework.html#choose-a-behavior">3.1.1 Choose a behavior</a></li>
+<li><a href="articles/framework.html#default-versus-supplied-sources">3.1.2 Default versus supplied sources</a></li>
+</ul>
+</li>
+<li><p><a href="articles/boolean.html">Boolean</a> — independent percentage outcomes.</p>
+<ul>
+<li><a href="articles/boolean-truepercentager.html">3.2.1 TruePercentageR</a></li>
+</ul>
+</li>
+<li><p><a href="articles/items.html">Item</a> — shuffling and two kinds of gacha bag.</p>
+<ul>
+<li><a href="articles/items-shuffles-fisheryates.html">3.3.1 Shuffles_FisherYates: Fisher–Yates shuffle</a></li>
+<li><a href="articles/items-gachar.html">3.3.2 GachaR<t>: list-backed bag</t></a></li>
+<li><a href="articles/items-gacharbatched.html">3.3.3 GachaRBatched<t>: count-backed bag</t></a></li>
+</ul>
+</li>
+<li><p><a href="articles/numbers.html">Number</a> — slot, alternating halves, and minimum distance.</p>
+<ul>
+<li><a href="articles/numbers-slotr.html">3.4.1 SlotR: spin one reel at a time</a></li>
+<li><a href="articles/numbers-pongr.html">3.4.2 PongR: alternate halves</a></li>
+<li><a href="articles/numbers-distancer.html">3.4.3 DistanceR: keep draws apart</a></li>
+<li><a href="articles/numbers-distributed-trees.html">3.4.4 Experimental distributed trees</a></li>
+<li><a href="articles/numbers-debug-placeholders.html">3.4.5 Debug-only placeholders</a></li>
+</ul>
+</li>
 </ol>
 <h2 id="4-reference">4. Reference</h2>
 <ol>
-<li><a href="articles/utility.html">Utility</a> — time-derived seed helper and internal conversion.</li>
-<li><a href="articles/extending.html">Interfaces and limitations</a> — plug in your own source or seed and understand the limits.</li>
-<li><a href="articles/research.html">Research and provenance</a> — papers behind algorithms, book-sourced parameters, and non-implemented references.</li>
-<li><a href="api/index.html">Class index</a> — find a type by name and jump to its guide.</li>
+<li><p><a href="articles/utility.html">Utility</a> — time-derived seed helper and internal conversion.</p>
+<ul>
+<li><a href="articles/utility-seedgenerator.html">4.1.1 Public: SeedGenerator.GetJoinedCurrentDate()</a></li>
+<li><a href="articles/utility-typer.html">4.1.2 Internal: TypeR.RoundLongToInt(long)</a></li>
+</ul>
+</li>
+<li><p><a href="articles/extending.html">Interfaces and limitations</a> — plug in your own source or seed and understand the limits.</p>
+<ul>
+<li><a href="articles/extending.html#pass-a-custom-seed-progression">4.2.1 Pass a custom seed progression</a></li>
+<li><a href="articles/extending.html#implement-an-interface">4.2.2 Implement an interface</a></li>
+<li><a href="articles/extending.html#important-limits">4.2.3 Important limits</a></li>
+<li><a href="articles/extending.html#verification">4.2.4 Verification</a></li>
+</ul>
+</li>
+<li><p><a href="articles/research.html">Research and provenance</a> — papers behind algorithms, book-sourced parameters, and non-implemented references.</p>
+<ul>
+<li><a href="articles/research.html#implemented-algorithm-families">4.3.1 Implemented algorithm families</a></li>
+<li><a href="articles/research.html#lcg-research-versus-preset-provenance">4.3.2 LCG research versus preset provenance</a></li>
+<li><a href="articles/research.html#related-research-not-an-implemented-feature">4.3.3 Related research, not an implemented feature</a></li>
+<li><a href="articles/research.html#platform-behavior-and-project-specific-helpers">4.3.4 Platform behavior and project-specific helpers</a></li>
+</ul>
+</li>
+<li><p><a href="api/index.html">Class index</a> — find a type by name and jump to its guide.</p>
+</li>
 </ol>
 <p>Looking for one class rather than a learning path? Use the <a href="api/index.html">class index</a>. The <a href="https://github.com/miputra/RandEXom/blob/main/README.md">README</a> has release information, verification instructions, and support options.</p>
 <p><strong>Start reading → <a href="articles/architecture.html">1.1 How the library fits together</a></strong></p>

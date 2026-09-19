@@ -1,10 +1,12 @@
 # 4.2 Interfaces, extension, and limitations
 
-Chapter 4: Reference · Page 2 of 4 · [Guide map](../index.md)
+Chapter 4: Reference · Section 2 · [Guide map](../index.md)
 
 RandEXom separates a random source (`IRandomR`) from a seed generator (`ISeedR`). Most Boolean, item, and number helpers accept an `IRandomR`, so you can choose one source and reuse it across helpers. Be aware that sharing a source shares its mutable state: a call from one helper changes the sequence seen by the next.
 
-## Pass a custom seed progression
+<a id="pass-a-custom-seed-progression"></a>
+
+## 4.2.1 Pass a custom seed progression
 
 The easiest extension point is `IterativeSeedRCustom`, which implements `ISeedR` from a function:
 
@@ -21,7 +23,9 @@ int value = random.NextInt(0, 100);
 
 The example shows the extension mechanism, not a recommended statistical algorithm. A custom function with a short cycle or constant output can make draws poor or even prevent useful progression.
 
-## Implement an interface
+<a id="implement-an-interface"></a>
+
+## 4.2.2 Implement an interface
 
 An `ISeedR` implementation must expose `init`, `now`, `previous`, and `Next()`. An `IRandomR` implementation must provide `NextInt`, `NextLong`, `NextBytes`, `GetSeed`, and `GetSeedSTR`. Follow the range contract—minimum inclusive, maximum exclusive—and reject empty or reversed ranges. Advance state consistently when generating values and bytes.
 
@@ -36,7 +40,9 @@ IRandomR source = new ModuloRandom(seed: 42);
 var flag = new TruePercentageR(source, percentage: 10f);
 ```
 
-## Important limits
+<a id="important-limits"></a>
+
+## 4.2.3 Important limits
 
 - RandEXom's generators are not cryptographic random-number generators. Do not use them for keys, credentials, tokens, or other security-sensitive values.
 - Reproducibility depends on the generator, seed, library version, and—in the case of `NetRandom`—the .NET runtime. v1.5b fixed several generator and range calculations, changing some seeded sequences.
@@ -46,10 +52,12 @@ var flag = new TruePercentageR(source, percentage: 10f);
 - `GachaR<T>` and `GachaRBatched<T>` can return `default(T)` when empty, which may be indistinguishable from a valid item. Check the remaining count if that matters.
 - The distributed-tree types are obsolete/experimental, and dice/noise types are debug-only placeholders. See [number helpers](numbers.md).
 
-## Verification
+<a id="verification"></a>
+
+## 4.2.4 Verification
 
 Run `dotnet run --project Verification/Verification.csproj` from the repository root. If you change a generator or helper, add cases there for fixed-seed sequences, extreme bounds, empty pools, and invalid arguments.
 
 ---
 
-← Previous: [4.1 Utility](utility.md) · [Guide map](../index.md) · Next: [4.3 Research and provenance](research.md) →
+← Previous: [4.1.2 Internal: TypeR.RoundLongToInt(long)](utility-typer.md) · [Guide map](../index.md) · Next: [4.3 Research and provenance](research.md) →

@@ -9,7 +9,7 @@
       "output": {
         ".html": {
           "relative_path": "api/index.html",
-          "hash": "9Wv63NKD1Jcvv3fH8M9ewKkYBvroUWL3UgiCo64jdy0="
+          "hash": "ZczFpEwMRdPFD6m2BnQapVBmhfM5qMPFM0Pab15kZk4="
         }
       },
       "is_incremental": false,
@@ -21,7 +21,19 @@
       "output": {
         ".html": {
           "relative_path": "articles/architecture.html",
-          "hash": "AOjLWtLD+II+OXFFkUVlvPxaWaLbDxh9rVfNS/P4uJk="
+          "hash": "A0IiPbMEa21JMRQJ2u8o9RrOKNw3Sqvab41CGj+rjrQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/boolean-truepercentager.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/boolean-truepercentager.html",
+          "hash": "HstkIIsGRp8w16cW2w+smksbM66XG4kDCRwqHVXPX/A="
         }
       },
       "is_incremental": false,
@@ -33,10 +45,10 @@
       "output": {
         ".html": {
           "relative_path": "articles/boolean.html",
-          "hash": "lj/SwQRIxHFTQvPbxHW+65FqT7EIf5e396nqfZk3AJE="
+          "hash": "plEOl3AWsHm4dL9XTow8r740dY1eqTFRBGY4nnxHMUo="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -45,7 +57,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/extending.html",
-          "hash": "uv0G8LlkyhWjDiBK01dmq0v0fl4EOILbKQ0loNnJK/I="
+          "hash": "owP5kZ3eWyUd1TKsG8Iy23pQadp89rp+Z48j2NqOwyk="
         }
       },
       "is_incremental": false,
@@ -57,10 +69,10 @@
       "output": {
         ".html": {
           "relative_path": "articles/framework.html",
-          "hash": "/TSuyEaHSLiDxiCdgzeXpeR6vAJ4NU9r0V2n/rBhfWE="
+          "hash": "accemodSuA+HeWYqenukfC5Y8E8y3y0CR9kkV2XZeZY="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -69,10 +81,10 @@
       "output": {
         ".html": {
           "relative_path": "articles/installation.html",
-          "hash": "Q54/45ma3E9sxnD6SSQ51TNoBaixgEuE5n8cV7Zd63s="
+          "hash": "2p9m2JxXl7t1DoBn1j391XGvFRoLaeLAOM0ZaYap6xs="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -81,7 +93,43 @@
       "output": {
         ".html": {
           "relative_path": "articles/intro.html",
-          "hash": "7Tq9RxibR0ttK3XbvF1lqjG5g9VcaLWj7utRWMq5iWI="
+          "hash": "CJcQNTG3CIkJzriTtmV7An38tXUqqMZkHu0MJ7wae4w="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/items-gachar.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/items-gachar.html",
+          "hash": "/6BkmJ3hDl6OVoTRDhuDDn5nJqmE9dgq9FjDqWmGies="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/items-gacharbatched.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/items-gacharbatched.html",
+          "hash": "w5mD7w8b21+8OUeksw/y7ngJxBmHWsJjtmfNbLxsP1s="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/items-shuffles-fisheryates.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/items-shuffles-fisheryates.html",
+          "hash": "ihE33qjnBSRO3LEFinFZxmbSiBIGLn7YXrTiNJo60CI="
         }
       },
       "is_incremental": false,
@@ -93,7 +141,67 @@
       "output": {
         ".html": {
           "relative_path": "articles/items.html",
-          "hash": "2QDSuWz7jBTlM9hK9IZTxjvZGW39F0ALGy8Ofv0GbVA="
+          "hash": "YzSbwUD3cQ/Oh9swxYSrsQXPjWG+YNa1GdAIchuy5jE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/numbers-debug-placeholders.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/numbers-debug-placeholders.html",
+          "hash": "a/GsOcNqBrCPA6f9qFbXuYzQ99UlHNRnQNlL6+cHDpA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/numbers-distancer.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/numbers-distancer.html",
+          "hash": "qhscNaJvLhRUlgWaCNiMPPLTmaDG937Sn4dtBGK4aT4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/numbers-distributed-trees.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/numbers-distributed-trees.html",
+          "hash": "HbzQJ6ARBD05fKDZrs2smk7lYRpXWGSCp1M+KTNP67o="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/numbers-pongr.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/numbers-pongr.html",
+          "hash": "mNDx5KC387MJg8Ep7igXAhfyI8Dq/2i0VnGhzEnbv08="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/numbers-slotr.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/numbers-slotr.html",
+          "hash": "rQIwUKpkVP0LZYySQbpFOLKGGa+jmDlzAiPsL2QhsZU="
         }
       },
       "is_incremental": false,
@@ -105,10 +213,58 @@
       "output": {
         ".html": {
           "relative_path": "articles/numbers.html",
-          "hash": "Gz7hmWZldJMWuLZfr6DCEV1rXxbgPviUgiKZce36zVg="
+          "hash": "s/np0ivfAPN6DKO2HYXgX7a2WxsBaAqgHpJUWpPL/ec="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/random-sources-choosing-a-source.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/random-sources-choosing-a-source.html",
+          "hash": "sdzauK6d502s6gqbPz33sm72YVcfj+0kyPBXu3igqA0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/random-sources-modulorandom.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/random-sources-modulorandom.html",
+          "hash": "c99FT2B3QQQK1Z1mUoJw03XmnSQS4EhJIZC6oAyJXxY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/random-sources-netrandom.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/random-sources-netrandom.html",
+          "hash": "DuE8eJqLjtUOdQGWyZ0+Di/jHHxX/BSJiWUG2iZoJIU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/random-sources-ssrngrandom.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/random-sources-ssrngrandom.html",
+          "hash": "Mtgt8ZN96zOF6XvvXDQNspvIlIDlRN+oP7tve2GmE0U="
+        }
+      },
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -117,7 +273,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/random-sources.html",
-          "hash": "qC7fmADHCdfdpnNn1vOShTj6Re4t+3TwC3tnxh3rKO0="
+          "hash": "yTsJi0O1cuOT6cVZA2FxFoNrZqfnis+GUeqUfkc3lG4="
         }
       },
       "is_incremental": false,
@@ -129,7 +285,67 @@
       "output": {
         ".html": {
           "relative_path": "articles/research.html",
-          "hash": "pOmlgYgrGroA+PvSn3496/S8EOf+Ya1ZUfCHvvoCq70="
+          "hash": "d5SlkPNuSprJYdedRUdgXtiAXWZoSh1GZ+SMR30oZrc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/seed-generators-iterativeseedr.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/seed-generators-iterativeseedr.html",
+          "hash": "b9NwiBJGqOpjChFDCZpjpW0B1fYVbnGlruBYQ5TmDJs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/seed-generators-iterativeseedrcustom.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/seed-generators-iterativeseedrcustom.html",
+          "hash": "DJZvs7sgAr7bvST2ZlkpZ4plJdVollI+EDsWFWTx26Q="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/seed-generators-lcgseedr.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/seed-generators-lcgseedr.html",
+          "hash": "wvFxRgupBCgv1h+j4C0pmqIOQKKPs+wGYkThX/Gv+nM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/seed-generators-seedr.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/seed-generators-seedr.html",
+          "hash": "6FVQRx28Ukbf7QvassrIW9sNjUqasEKbET2w3QoR0w4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/seed-generators-xorshift64seed.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/seed-generators-xorshift64seed.html",
+          "hash": "TmhhB7KIsClUGHRzB2QlyvdxsmsnkFFu/XyqC1ylQxo="
         }
       },
       "is_incremental": false,
@@ -141,7 +357,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/seed-generators.html",
-          "hash": "NTQC6x0SX9wz+GysBX/bC0+vhFSDRiCTTqURnNY6hjk="
+          "hash": "Gy88vCAw8n7JyHRtJ0gW99aOGU7UNJTN76+FlzW9jA8="
         }
       },
       "is_incremental": false,
@@ -153,7 +369,31 @@
       "output": {
         ".html": {
           "relative_path": "articles/toc.html",
-          "hash": "6+ZHiOtJeDNheJjymFu7gIys2eJxEzDP0TZHoMpDBKQ="
+          "hash": "wdNzfZ54WjsP3oulGvCEj88UCBkve/7hDYx9Eb6CTqc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/utility-seedgenerator.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/utility-seedgenerator.html",
+          "hash": "rHqx/qFOXJ+MXt9cSETYw1xRqdnY6MC4Bpj39zSlgnU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/utility-typer.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/utility-typer.html",
+          "hash": "hQCSPmOttzP4ZYVF2LsE53c6v30/6cLbX3vtykZ+L2Y="
         }
       },
       "is_incremental": false,
@@ -165,7 +405,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/utility.html",
-          "hash": "8qpsAe4pUDPWRYd7lcYT8EsS60fSNiXbvuoDvOQM6Tg="
+          "hash": "LbRkQ4bdNyvcRBHIa3ndv8M25FSxymNc8ex6OlP1uLk="
         }
       },
       "is_incremental": false,
@@ -177,7 +417,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "G2SCNs974sxISouhI0TWt3Phf4inuXE8wyGVZzZZqmo="
+          "hash": "xuZPMYw1Z2UGlGc44EgkVEiBzgynjun+eEefJj2ezXU="
         }
       },
       "is_incremental": false,
@@ -208,8 +448,8 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 14,
-          "skipped_file_count": 12
+          "total_file_count": 34,
+          "skipped_file_count": 21
         },
         "TocDocumentProcessor": {
           "can_incremental": false,

@@ -70,7 +70,7 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="31-framework-behaviors-built-on-draws">3.1 Framework: behaviors built on draws</h1>
 
-<p>Chapter 3: Framework helpers · Page 1 of 4 · <a href="../index.html">Guide map</a></p>
+<p>Chapter 3: Framework helpers · Section 1 · <a href="../index.html">Guide map</a></p>
 <p><code>RandEXom.Framework</code> is the task layer. A framework class accepts or creates an <code>IRandomR</code> source, then adds rules around its draws: decide whether a probability succeeds, reorder or pick items, or constrain a number. It is not a replacement for <code>RandomLib</code>. If all you need is an integer in <code>[min, max)</code>, call <code>IRandomR.NextInt</code> directly; <code>SlotR</code> is a wrapper around that operation.</p>
 <pre><code class="lang-text">Framework.Boolean.TruePercentageR ── compare a bounded draw to a probability
 Framework.Item.Shuffles_FisherYates ── use draws to swap list positions
@@ -78,7 +78,8 @@ Framework.Item.GachaR&lt;T&gt; / GachaRBatched&lt;T&gt; ── use draws to remo
 Framework.Number.SlotR / PongR / DistanceR ── apply rules to numeric draws
                  │
                  └── each uses IRandomR ← RandomLib ← ISeedR ← SeedLib
-</code></pre><h2 id="choose-a-behavior">Choose a behavior</h2>
+</code></pre><p><a id="choose-a-behavior"></a></p>
+<h2 id="311-choose-a-behavior">3.1.1 Choose a behavior</h2>
 <table>
 <thead>
 <tr>
@@ -126,7 +127,8 @@ Framework.Number.SlotR / PongR / DistanceR ── apply rules to numeric draws
 </tbody>
 </table>
 <p>The <code>DistributedTreeR</code> and <code>DistributedTreeNestedR</code> number classes are obsolete/experimental; dice and noise classes are unfinished and <code>DEBUG</code>-only. See <a href="numbers.html">Framework.Number</a> rather than treating them as supported alternatives.</p>
-<h2 id="default-versus-supplied-sources">Default versus supplied sources</h2>
+<p><a id="default-versus-supplied-sources"></a></p>
+<h2 id="312-default-versus-supplied-sources">3.1.2 Default versus supplied sources</h2>
 <p>Most helpers offer a default constructor, a numeric-seed constructor, and a constructor accepting <code>IRandomR</code>. The first two create a <code>NetRandom</code> internally. The third gives you control over the source and its seed algorithm:</p>
 <pre><code class="lang-csharp">using RandEXom.Framework.Number;
 using RandEXom.RandomLib;
@@ -137,7 +139,7 @@ int next = spaced.Next(0, 10);
 </code></pre><p>If two helpers receive the <em>same</em> <code>source</code> object, their draws interleave and influence each other&#39;s later results. If they each construct a source from the same numeric seed, they have separate state. Framework classes may also maintain their own state—such as a bag&#39;s remaining items or <code>DistanceR</code>&#39;s last result—which is distinct from random-source state. A helper&#39;s <code>Reset()</code> or <code>Refill()</code> does not generally rewind its source.</p>
 <p>For operations and examples, continue to <a href="boolean.html">Boolean</a>, <a href="items.html">Item</a>, or <a href="numbers.html">Number</a>. The <a href="../api/index.html">class index</a> maps every type, and <a href="architecture.html">how the library fits together</a> explains the layer underneath.</p>
 <hr>
-<p>← Previous: <a href="random-sources.html">2.2 RandomLib</a> · <a href="../index.html">Guide map</a> · Next: <a href="boolean.html">3.2 Boolean</a> →</p>
+<p>← Previous: <a href="random-sources-choosing-a-source.html">2.2.4 Choosing a source</a> · <a href="../index.html">Guide map</a> · Next: <a href="boolean.html">3.2 Boolean</a> →</p>
 </article>
           </div>
           

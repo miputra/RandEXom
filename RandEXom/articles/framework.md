@@ -1,6 +1,6 @@
 # 3.1 Framework: behaviors built on draws
 
-Chapter 3: Framework helpers · Page 1 of 4 · [Guide map](../index.md)
+Chapter 3: Framework helpers · Section 1 · [Guide map](../index.md)
 
 `RandEXom.Framework` is the task layer. A framework class accepts or creates an `IRandomR` source, then adds rules around its draws: decide whether a probability succeeds, reorder or pick items, or constrain a number. It is not a replacement for `RandomLib`. If all you need is an integer in `[min, max)`, call `IRandomR.NextInt` directly; `SlotR` is a wrapper around that operation.
 
@@ -13,7 +13,9 @@ Framework.Number.SlotR / PongR / DistanceR ── apply rules to numeric draws
                  └── each uses IRandomR ← RandomLib ← ISeedR ← SeedLib
 ```
 
-## Choose a behavior
+<a id="choose-a-behavior"></a>
+
+## 3.1.1 Choose a behavior
 
 | You want | Type | Behavior and state |
 | --- | --- | --- |
@@ -27,7 +29,9 @@ Framework.Number.SlotR / PongR / DistanceR ── apply rules to numeric draws
 
 The `DistributedTreeR` and `DistributedTreeNestedR` number classes are obsolete/experimental; dice and noise classes are unfinished and `DEBUG`-only. See [Framework.Number](numbers.md) rather than treating them as supported alternatives.
 
-## Default versus supplied sources
+<a id="default-versus-supplied-sources"></a>
+
+## 3.1.2 Default versus supplied sources
 
 Most helpers offer a default constructor, a numeric-seed constructor, and a constructor accepting `IRandomR`. The first two create a `NetRandom` internally. The third gives you control over the source and its seed algorithm:
 
@@ -46,4 +50,4 @@ For operations and examples, continue to [Boolean](boolean.md), [Item](items.md)
 
 ---
 
-← Previous: [2.2 RandomLib](random-sources.md) · [Guide map](../index.md) · Next: [3.2 Boolean](boolean.md) →
+← Previous: [2.2.4 Choosing a source](random-sources-choosing-a-source.md) · [Guide map](../index.md) · Next: [3.2 Boolean](boolean.md) →

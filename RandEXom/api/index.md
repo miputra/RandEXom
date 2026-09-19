@@ -1,57 +1,67 @@
 
 # 4.4 Class index
 
-Chapter 4: Reference · Page 4 of 4 · [Guide map](../index.md)
+Chapter 4: Reference · Section 4 · [Guide map](../index.md)
 
 This is a map from source namespaces and class names to the explanatory guide. Start with [the architecture](../articles/architecture.md) if `SeedLib`, `RandomLib`, and `Framework` are new to you; follow [installation](../articles/installation.md) and [getting started](../articles/intro.md) for a first program. The [source tree](https://github.com/miputra/RandEXom/tree/main/RandEXom) has exact signatures and XML comments.
 
-## Contracts (`RandEXom.Interface`)
+<a id="contracts-randexom-interface"></a>
+
+## 4.4.1 Contracts (`RandEXom.Interface`)
 
 | Type | Connects | Guide |
 | --- | --- | --- |
-| `ISeedR` | A state generator to a random source | [SeedLib](../articles/seed-generators.md), [implementing interfaces](../articles/extending.md) |
-| `IRandomR` | A random source to framework helpers | [RandomLib](../articles/random-sources.md), [implementing interfaces](../articles/extending.md) |
+| `ISeedR` | A state generator to a random source | [SeedLib](../articles/seed-generators.md), [implementing interfaces](../articles/extending.md#implement-an-interface) |
+| `IRandomR` | A random source to framework helpers | [RandomLib](../articles/random-sources.md), [implementing interfaces](../articles/extending.md#implement-an-interface) |
 | `IGachaR<T>` | Shared bag operations for both item-pool variants | [Framework.Item](../articles/items.md) |
 
-## State (`RandEXom.SeedLib`)
+<a id="state-randexom-seedlib"></a>
+
+## 4.4.2 State (`RandEXom.SeedLib`)
 
 | Type | Role | Guide |
 | --- | --- | --- |
-| `XORShift64Seed` | Xorshift state, default for `ModuloRandom` | [SeedLib](../articles/seed-generators.md) |
-| `LCGSeedR` | Linear-congruential state and presets | [SeedLib](../articles/seed-generators.md) |
-| `IterativeSeedR` | Built-in arithmetic/trigonometric progressions | [SeedLib](../articles/seed-generators.md) |
-| `IterativeSeedRCustom` | Function-defined progression | [SeedLib](../articles/seed-generators.md) |
-| `SeedR` | Constant internal state; not public to consumers | [SeedLib](../articles/seed-generators.md) |
+| `XORShift64Seed` | Xorshift state, default for `ModuloRandom` | [Open subchapter](../articles/seed-generators-xorshift64seed.md) |
+| `LCGSeedR` | Linear-congruential state and presets | [Open subchapter](../articles/seed-generators-lcgseedr.md) |
+| `IterativeSeedR` | Built-in arithmetic/trigonometric progressions | [Open subchapter](../articles/seed-generators-iterativeseedr.md) |
+| `IterativeSeedRCustom` | Function-defined progression | [Open subchapter](../articles/seed-generators-iterativeseedrcustom.md) |
+| `SeedR` | Constant internal state; not public to consumers | [Open subchapter](../articles/seed-generators-seedr.md) |
 
-## Draws (`RandEXom.RandomLib`)
+<a id="draws-randexom-randomlib"></a>
+
+## 4.4.3 Draws (`RandEXom.RandomLib`)
 
 | Type | Role | Guide |
 | --- | --- | --- |
-| `ModuloRandom` | Xorshift-backed bounded source by default | [RandomLib](../articles/random-sources.md) |
-| `NetRandom` | Adapter around `System.Random` | [RandomLib](../articles/random-sources.md) |
-| `SSRNGRandom` | Historical LCG parameter-based source | [RandomLib](../articles/random-sources.md) |
+| `ModuloRandom` | Xorshift-backed bounded source by default | [Open subchapter](../articles/random-sources-modulorandom.md) |
+| `NetRandom` | Adapter around `System.Random` | [Open subchapter](../articles/random-sources-netrandom.md) |
+| `SSRNGRandom` | Historical LCG parameter-based source | [Open subchapter](../articles/random-sources-ssrngrandom.md) |
 
-## Behaviors (`RandEXom.Framework`)
+<a id="behaviors-randexom-framework"></a>
+
+## 4.4.4 Behaviors (`RandEXom.Framework`)
 
 | Namespace and type | Role | Guide |
 | --- | --- | --- |
-| `Boolean.TruePercentageR` | Independent percentage outcome | [Framework.Boolean](../articles/boolean.md) |
-| `Item.Shuffles_FisherYates` | In-place list shuffle | [Framework.Item](../articles/items.md) |
-| `Item.GachaR<T>` | List-backed weighted bag with optional automatic refill | [Framework.Item](../articles/items.md) |
-| `Item.GachaRBatched<T>` | Count-backed weighted bag with manual refill | [Framework.Item](../articles/items.md) |
-| `Number.SlotR` | One bounded draw per call, intended for spinning reels one by one | [Framework.Number](../articles/numbers.md) |
-| `Number.PongR` | Alternating lower/upper range halves | [Framework.Number](../articles/numbers.md) |
-| `Number.DistanceR` | Minimum gap from the previous result | [Framework.Number](../articles/numbers.md) |
-| `Number.DistributedTreeR` | Obsolete/experimental tree distribution | [Framework.Number](../articles/numbers.md) |
-| `Number.DistributedTreeNestedR` | Obsolete/experimental nested tree | [Framework.Number](../articles/numbers.md) |
-| `Number.DiceR`, `Number.Dice6F`, `_2DNoise.PerlinNoise` | Incomplete, `DEBUG`-only types | [Framework.Number](../articles/numbers.md) |
+| `Boolean.TruePercentageR` | Independent percentage outcome | [Open subchapter](../articles/boolean-truepercentager.md) |
+| `Item.Shuffles_FisherYates` | In-place list shuffle | [Open subchapter](../articles/items-shuffles-fisheryates.md) |
+| `Item.GachaR<T>` | List-backed weighted bag with optional automatic refill | [Open subchapter](../articles/items-gachar.md) |
+| `Item.GachaRBatched<T>` | Count-backed weighted bag with manual refill | [Open subchapter](../articles/items-gacharbatched.md) |
+| `Number.SlotR` | One bounded draw per call, intended for spinning reels one by one | [Open subchapter](../articles/numbers-slotr.md) |
+| `Number.PongR` | Alternating lower/upper range halves | [Open subchapter](../articles/numbers-pongr.md) |
+| `Number.DistanceR` | Minimum gap from the previous result | [Open subchapter](../articles/numbers-distancer.md) |
+| `Number.DistributedTreeR` | Obsolete/experimental tree distribution | [Open subchapter](../articles/numbers-distributed-trees.md) |
+| `Number.DistributedTreeNestedR` | Obsolete/experimental nested tree | [Open subchapter](../articles/numbers-distributed-trees.md) |
+| `Number.DiceR`, `Number.Dice6F`, `_2DNoise.PerlinNoise` | Incomplete, `DEBUG`-only types | [Open subchapter](../articles/numbers-debug-placeholders.md) |
 
-## Support (`RandEXom.Utility`)
+<a id="support-randexom-utility"></a>
+
+## 4.4.5 Support (`RandEXom.Utility`)
 
 | Type | Availability and role | Guide |
 | --- | --- | --- |
-| `SeedGenerator` | Public time-derived numeric seed helper | [Utility](../articles/utility.md) |
-| `TypeR` | Internal 64-to-32-bit seed conversion used by `NetRandom` | [Utility](../articles/utility.md) |
+| `SeedGenerator` | Public time-derived numeric seed helper | [Open subchapter](../articles/utility-seedgenerator.md) |
+| `TypeR` | Internal 64-to-32-bit seed conversion used by `NetRandom` | [Open subchapter](../articles/utility-typer.md) |
 
 This is an authored index, not generated member-by-member API metadata. Its purpose is to make the layer boundaries and type names discoverable; for overload signatures, see the linked source and feature guides.
 

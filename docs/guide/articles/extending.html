@@ -70,9 +70,10 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="42-interfaces-extension-and-limitations">4.2 Interfaces, extension, and limitations</h1>
 
-<p>Chapter 4: Reference · Page 2 of 4 · <a href="../index.html">Guide map</a></p>
+<p>Chapter 4: Reference · Section 2 · <a href="../index.html">Guide map</a></p>
 <p>RandEXom separates a random source (<code>IRandomR</code>) from a seed generator (<code>ISeedR</code>). Most Boolean, item, and number helpers accept an <code>IRandomR</code>, so you can choose one source and reuse it across helpers. Be aware that sharing a source shares its mutable state: a call from one helper changes the sequence seen by the next.</p>
-<h2 id="pass-a-custom-seed-progression">Pass a custom seed progression</h2>
+<p><a id="pass-a-custom-seed-progression"></a></p>
+<h2 id="421-pass-a-custom-seed-progression">4.2.1 Pass a custom seed progression</h2>
 <p>The easiest extension point is <code>IterativeSeedRCustom</code>, which implements <code>ISeedR</code> from a function:</p>
 <pre><code class="lang-csharp">using RandEXom.RandomLib;
 using RandEXom.SeedLib;
@@ -83,7 +84,8 @@ var seed = new IterativeSeedRCustom(
 var random = new ModuloRandom(seed);
 int value = random.NextInt(0, 100);
 </code></pre><p>The example shows the extension mechanism, not a recommended statistical algorithm. A custom function with a short cycle or constant output can make draws poor or even prevent useful progression.</p>
-<h2 id="implement-an-interface">Implement an interface</h2>
+<p><a id="implement-an-interface"></a></p>
+<h2 id="422-implement-an-interface">4.2.2 Implement an interface</h2>
 <p>An <code>ISeedR</code> implementation must expose <code>init</code>, <code>now</code>, <code>previous</code>, and <code>Next()</code>. An <code>IRandomR</code> implementation must provide <code>NextInt</code>, <code>NextLong</code>, <code>NextBytes</code>, <code>GetSeed</code>, and <code>GetSeedSTR</code>. Follow the range contract—minimum inclusive, maximum exclusive—and reject empty or reversed ranges. Advance state consistently when generating values and bytes.</p>
 <p>For example, a custom source can be passed directly to a helper:</p>
 <pre><code class="lang-csharp">using RandEXom.Framework.Boolean;
@@ -92,7 +94,8 @@ using RandEXom.RandomLib;
 
 IRandomR source = new ModuloRandom(seed: 42);
 var flag = new TruePercentageR(source, percentage: 10f);
-</code></pre><h2 id="important-limits">Important limits</h2>
+</code></pre><p><a id="important-limits"></a></p>
+<h2 id="423-important-limits">4.2.3 Important limits</h2>
 <ul>
 <li>RandEXom&#39;s generators are not cryptographic random-number generators. Do not use them for keys, credentials, tokens, or other security-sensitive values.</li>
 <li>Reproducibility depends on the generator, seed, library version, and—in the case of <code>NetRandom</code>—the .NET runtime. v1.5b fixed several generator and range calculations, changing some seeded sequences.</li>
@@ -102,10 +105,11 @@ var flag = new TruePercentageR(source, percentage: 10f);
 <li><code>GachaR&lt;T&gt;</code> and <code>GachaRBatched&lt;T&gt;</code> can return <code>default(T)</code> when empty, which may be indistinguishable from a valid item. Check the remaining count if that matters.</li>
 <li>The distributed-tree types are obsolete/experimental, and dice/noise types are debug-only placeholders. See <a href="numbers.html">number helpers</a>.</li>
 </ul>
-<h2 id="verification">Verification</h2>
+<p><a id="verification"></a></p>
+<h2 id="424-verification">4.2.4 Verification</h2>
 <p>Run <code>dotnet run --project Verification/Verification.csproj</code> from the repository root. If you change a generator or helper, add cases there for fixed-seed sequences, extreme bounds, empty pools, and invalid arguments.</p>
 <hr>
-<p>← Previous: <a href="utility.html">4.1 Utility</a> · <a href="../index.html">Guide map</a> · Next: <a href="research.html">4.3 Research and provenance</a> →</p>
+<p>← Previous: <a href="utility-typer.html">4.1.2 Internal: TypeR.RoundLongToInt(long)</a> · <a href="../index.html">Guide map</a> · Next: <a href="research.html">4.3 Research and provenance</a> →</p>
 </article>
           </div>
           

@@ -70,37 +70,18 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="34-frameworknumber">3.4 Framework.Number</h1>
 
-<p>Chapter 3: Framework helpers · Page 4 of 4 · <a href="../index.html">Guide map</a></p>
+<p>Chapter 3: Framework helpers · Section 4 · <a href="../index.html">Guide map</a></p>
 <p>This branch of <a href="framework.html">Framework</a> adds different rules to numeric draws. Its usable types are <code>SlotR</code> (one draw per slot-machine reel), <code>PongR</code> (alternating halves), and <code>DistanceR</code> (gap from the last result). They live in <code>RandEXom.Framework.Number</code> and accept either a seed number or an <code>IRandomR</code> source. Their range methods include the minimum and exclude the maximum. Experimental tree and unfinished dice/noise types are listed below so their presence in source code is not mistaken for a supported feature.</p>
-<h2 id="slotr-spin-one-reel-at-a-time"><code>SlotR</code>: spin one reel at a time</h2>
-<p><code>SlotR</code> is inspired by a classical slot machine: call <code>Next(min, max)</code> once for <strong>each reel or slot position</strong>, in order. Each call draws one bounded value from the configured random source and advances that source. It does not generate an entire three-reel result in one call, remember how many reels exist, or enforce slot-machine payout rules. Your application chooses the reel count and combines the returned values.</p>
-<pre><code class="lang-csharp">using RandEXom.Framework.Number;
-
-var slot = new SlotR(seed: 42);
-int[] reels = new int[3];
-for (int i = 0; i &lt; reels.Length; i++)
-{
-    reels[i] = slot.Next(0, 10); // draw this reel: 0 through 9
-}
-</code></pre><p>The example produces three reel values by making three sequential calls. If reels use different symbols or ranges, pass the appropriate bounds on each call. <code>SlotR</code> itself simply delegates each draw to <code>IRandomR.NextInt</code>.</p>
-<h2 id="pongr-alternate-halves"><code>PongR</code>: alternate halves</h2>
-<p><code>PongR</code> alternates between the lower and upper halves of a range on successive calls. Basically it is like a pong ball where bounce high and low. The first call samples the lower half. The integer and long overloads maintain <strong>separate</strong> alternation state.</p>
-<pre><code class="lang-csharp">var pong = new PongR(seed: 42);
-int lower = pong.Next(0, 10); // 0 through 4
-int upper = pong.Next(0, 10); // 5 through 9
-</code></pre><p>For odd-sized ranges, the upper half contains one extra value. For a one-value range, every call returns that value without changing the alternation state. Changing ranges between calls does not reset the alternating half.</p>
-<h2 id="distancer-keep-draws-apart"><code>DistanceR</code>: keep draws apart</h2>
-<p><code>DistanceR</code> samples a value at least <code>distance</code> away from its <strong>previous</strong> result. The first draw is unrestricted within the range.</p>
-<pre><code class="lang-csharp">var spaced = new DistanceR(seed: 42, distance: 3);
-int first = spaced.Next(0, 10);
-int second = spaced.Next(0, 10); // |second - first| &gt;= 3
-</code></pre><p><code>distance</code> must be nonnegative, and <code>SetDistance()</code> changes it for future calls. A distance of zero imposes no spacing. If no value in <code>[min, max)</code> can satisfy the requested gap, <code>Next()</code> throws <code>InvalidOperationException</code>. This is not a constraint against <em>all</em> earlier values—only the immediately preceding one. <code>Next</code> has both <code>int</code> and <code>long</code> overloads.</p>
-<h2 id="experimental-distributed-trees">Experimental distributed trees</h2>
-<p><code>DistributedTreeR</code> and <code>DistributedTreeNestedR</code> partition a numeric range into tree leaves and favor branches with lower accumulated weights. Both expose <code>Next()</code> and <code>NextInt()</code> plus <code>CreateNodes(level, child)</code>. These types are marked obsolete. <code>DistributedTreeR</code> is also hidden from IntelliSense and has shared static node storage; <code>DistributedTreeNestedR</code> is explicitly still in development. <strong>Do not rely on either for production behavior</strong>. They are documented here for completeness, not recommended as an alternative to <code>SlotR</code> or <code>DistanceR</code>.</p>
-<h2 id="debug-only-placeholders">Debug-only placeholders</h2>
-<p><code>DiceR</code>, <code>Dice6F</code>, and <code>PerlinNoise</code> are compiled only under <code>DEBUG</code>. <code>DiceR</code> is abstract, and these classes have no usable finished randomization or noise implementation. They are not part of the documented release workflow. The Perlin name refers to Ken Perlin’s <a href="https://mrl.cs.nyu.edu/~perlin/paper445.pdf">“Improving Noise” (2002)</a>, but this project <strong>does not yet implement</strong> that paper’s algorithm.</p>
+<h2 id="in-this-chapter">In this chapter</h2>
+<ul>
+<li><a id="slotr-spin-one-reel-at-a-time"></a><a href="numbers-slotr.html">3.4.1 SlotR: spin one reel at a time</a></li>
+<li><a id="pongr-alternate-halves"></a><a href="numbers-pongr.html">3.4.2 PongR: alternate halves</a></li>
+<li><a id="distancer-keep-draws-apart"></a><a href="numbers-distancer.html">3.4.3 DistanceR: keep draws apart</a></li>
+<li><a id="experimental-distributed-trees"></a><a href="numbers-distributed-trees.html">3.4.4 Experimental distributed trees</a></li>
+<li><a id="debug-only-placeholders"></a><a href="numbers-debug-placeholders.html">3.4.5 Debug-only placeholders</a></li>
+</ul>
 <hr>
-<p>← Previous: <a href="items.html">3.3 Item</a> · <a href="../index.html">Guide map</a> · Next: <a href="utility.html">4.1 Utility</a> →</p>
+<p>← Previous: <a href="items-gacharbatched.html">3.3.3 GachaRBatched<t>: count-backed bag</t></a> · <a href="../index.html">Guide map</a> · Next: <a href="numbers-slotr.html">3.4.1 SlotR: spin one reel at a time</a> →</p>
 </article>
           </div>
           

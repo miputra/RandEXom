@@ -70,21 +70,15 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="41-utility-namespace">4.1 Utility namespace</h1>
 
-<p>Chapter 4: Reference · Page 1 of 4 · <a href="../index.html">Guide map</a></p>
+<p>Chapter 4: Reference · Section 1 · <a href="../index.html">Guide map</a></p>
 <p><code>RandEXom.Utility</code> is supporting code, not a fourth kind of random source. Ordinary users can create a source with an explicit numeric seed and never call a utility method. The namespace currently has one public helper and one internal conversion helper.</p>
-<h2 id="public-seedgeneratorgetjoinedcurrentdate">Public: <code>SeedGenerator.GetJoinedCurrentDate()</code></h2>
-<p>This static method builds a <code>long</code> by concatenating parts of the <em>local</em> current date and time (milliseconds, seconds, minutes, hours, day, month, and two-digit year). It is a convenience for creating a time-derived input seed:</p>
-<pre><code class="lang-csharp">using RandEXom.RandomLib;
-using RandEXom.Utility;
-
-long seed = SeedGenerator.GetJoinedCurrentDate();
-var random = new ModuloRandom(seed);
-</code></pre><p>The returned number is not the random sequence itself; <code>ModuloRandom</code> still applies its seed and output algorithms. This value is not a unique identifier, high-entropy secret, or cryptographic seed. The implementation uses local clock fields and concatenates their unpadded decimal representations, so different timestamps can potentially form the same digits. Prefer a fixed explicit seed for reproducible tests. Most constructors can choose a time-based seed when you omit one, so you rarely need this helper.</p>
-<h2 id="internal-typerroundlongtointlong">Internal: <code>TypeR.RoundLongToInt(long)</code></h2>
-<p><code>TypeR</code> is an internal class and <strong>cannot be called from a consuming assembly</strong>. <code>NetRandom</code> uses its conversion to fold a 64-bit seed into the 32-bit seed supplied to <code>System.Random</code>. As a consequence, distinct <code>long</code> seeds may produce the same <code>NetRandom</code> initialization. It is not a general-purpose rounding operation despite the method&#39;s name.</p>
-<p>If you need to control a <code>NetRandom</code> sequence, pass a seed to <code>new NetRandom(42)</code>; do not try to reference <code>TypeR</code> in your application. See <a href="random-sources.html">RandomLib</a> for the resulting random-source behavior and <a href="seed-generators.html">SeedLib</a> for changing seed progression.</p>
+<h2 id="in-this-chapter">In this chapter</h2>
+<ul>
+<li><a id="public-seedgeneratorgetjoinedcurrentdate"></a><a href="utility-seedgenerator.html">4.1.1 Public: SeedGenerator.GetJoinedCurrentDate()</a></li>
+<li><a id="internal-typerroundlongtointlong"></a><a href="utility-typer.html">4.1.2 Internal: TypeR.RoundLongToInt(long)</a></li>
+</ul>
 <hr>
-<p>← Previous: <a href="numbers.html">3.4 Framework.Number</a> · <a href="../index.html">Guide map</a> · Next: <a href="extending.html">4.2 Interfaces and limitations</a> →</p>
+<p>← Previous: <a href="numbers-debug-placeholders.html">3.4.5 Debug-only placeholders</a> · <a href="../index.html">Guide map</a> · Next: <a href="utility-seedgenerator.html">4.1.1 Public: SeedGenerator.GetJoinedCurrentDate()</a> →</p>
 </article>
           </div>
           
