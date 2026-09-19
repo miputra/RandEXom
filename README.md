@@ -1,7 +1,5 @@
 ﻿# RandEXom
 
-**What is RandEXom?**
-
 RandEXom is a C# randomization library for .NET Standard 2.1. It provides interchangeable random sources and seed generators, plus helpers for shuffling, weighted picks, percentages, and number ranges.
 
 ## Quick start
@@ -15,78 +13,28 @@ var random = new ModuloRandom(seed: 12345);
 int value = random.NextInt(0, 100); // 0 through 99
 ```
 
-Random range methods include the minimum and exclude the maximum. See the [usage guide](RandEXom/articles/intro.md) for examples of seeded generators, shuffling, weighted picks, and percentages.
+Random range methods include the minimum and exclude the maximum.
 
 **Version note:** v1.5b fixes generator and range calculations. Seeded sequences may differ from earlier releases.
 
+## Documentation
 
-***
+| Guide | What it covers |
+| --- | --- |
+| [Getting started](RandEXom/articles/intro.md) | First program and common examples |
+| [Installation](RandEXom/articles/installation.md) | DLL and source-project setup, requirements, verification |
+| [Random sources](RandEXom/articles/random-sources.md) | `ModuloRandom`, `NetRandom`, `SSRNGRandom`, range and byte APIs |
+| [Seed generators](RandEXom/articles/seed-generators.md) | Xorshift, LCG, iterative, custom, and constant seeds |
+| [Boolean helpers](RandEXom/articles/boolean.md) | `TruePercentageR` |
+| [Item helpers](RandEXom/articles/items.md) | Fisher–Yates shuffle and both gacha implementations |
+| [Number helpers](RandEXom/articles/numbers.md) | Slot, pong, distance, and experimental types |
+| [Custom implementations and limitations](RandEXom/articles/extending.md) | Interfaces, shared state, reproducibility, safety |
 
-
-## Requirements
-
-The library targets .NET Standard 2.1.
-
-The test and verification projects target .NET 8.
-
-
-***
-
-## Features
-
-### Random Library
-- Modulo random
-- default .Net random
-- System-Supplied Random Number Generators ([Based on Numerical Recipes in C The Art of Scientific Computing 2nd ed](https://www.amazon.com/Numerical-Recipes-Scientific-Computing-Second/dp/0521431085) )
-
-### Seed Library
-- Iterative
-- Linear Congruential Generators ([Based on Numerical Recipes in C The Art of Scientific Computing 2nd ed](https://www.amazon.com/Numerical-Recipes-Scientific-Computing-Second/dp/0521431085) )
-- default Seed
-- XORShift64 (Based on research by [George Marsaglia](https://www.jstatsoft.org/article/view/v008i14))
-
-### Framework
-| Boolean | 
-
- - True Percentage Randomization
-
-| Item |
-
-- Gacha
-- [Shuffles Fisher Yates](https://digital.library.adelaide.edu.au/items/8d93d3ef-a4d1-4c27-b976-5bcdf3cce5eb)
-
-| Number |
-
-- Distance
-- Distributed Tree
-- Pong
-- Slot
-
-## Download
-
-- [RandEXom.dll v1.5b](https://miputra.github.io/RandEXom/downloads/RandEXom.dll)
-- [GitHub release](https://github.com/miputra/RandEXom/releases/tag/1.5b)
-
-The v1.5b release fixes generator and range calculations. Seeded sequences may differ from earlier releases.
-
-## How to use
-
-Note: Every IDE has a different way to add .dll as a reference. 
-
-If you use the visual studio on your project:
-
-1. In Solution Explorer, right-click your project, then click add reference
-2. On the bottom left window, click the browser button, and choose RandEXom.dll
-3. Now you can using RandEXom library in your project
-
-
-***
-
-
+The [documentation home](RandEXom/index.md) and [API overview](RandEXom/api/index.md) are also included in the repository. The library targets .NET Standard 2.1; the verification project targets .NET 8. There is no published NuGet package listed here—use the release DLL or a source-project reference.
 
 ## Verification
 
-Run `dotnet run --project Verification/Verification.csproj` to check the published LCG sequence and the library's range, weighted draw, percentage, and distance edge cases. Random range methods use an inclusive minimum and exclusive maximum.
+Run `dotnet run --project Verification/Verification.csproj` to check the published LCG sequence and the library's range, weighted draw, percentage, and distance edge cases.
 
 ## Support the project
 

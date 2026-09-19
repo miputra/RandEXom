@@ -46,7 +46,7 @@ var random = new ModuloRandom(seed: 12345);
 int value = random.NextInt(0, 100); // 0 through 99
 </code></pre>
   <p>Minimum bounds are inclusive; maximum bounds are exclusive. The source is available in the <a href="https://github.com/miputra/RandEXom">GitHub repository</a>.</p>
-  <p>For more examples of seeded generators, shuffling, weighted draws, and percentages, read the <a href="https://github.com/miputra/RandEXom/blob/main/RandEXom/articles/intro.md">usage guide</a>.</p>
+  <p>Read the <a href="https://github.com/miputra/RandEXom/blob/main/RandEXom/index.md">documentation</a> for installation, all random sources and seed generators, shuffling, weighted draws, percentages, number helpers, and extension points.</p>
   <h2>What changed in v1.5b</h2>
   <p>This release corrects LCG and xorshift64* transitions, bounded sampling, weighted draws, and several range helpers. <strong>Seeded output sequences may differ from earlier releases.</strong> Review the <a href="https://github.com/miputra/RandEXom/blob/main/README.md">README</a> and <a href="https://github.com/miputra/RandEXom/tree/main/Verification">verification checks</a> for details.</p>
   <section class="card" aria-labelledby="support-title">

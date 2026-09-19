@@ -8,4 +8,4 @@ The public types are grouped by namespace:
 - `RandEXom.Framework.Boolean`, `.Item`, and `.Number`: percentage, shuffle, weighted-draw, and range helpers.
 - `RandEXom.Interface`: contracts for custom random and seed implementations.
 
-Use the [getting-started guide](../articles/intro.md) for examples. The [source tree](https://github.com/miputra/RandEXom/tree/main/RandEXom) contains the current method signatures and XML comments. When building the DocFX site, the project file is included by `docfx.json` to generate type pages under this section.
+Use [getting started](../articles/intro.md) for a first example, then the guides for [random sources](../articles/random-sources.md), [seed generators](../articles/seed-generators.md), [Boolean helpers](../articles/boolean.md), [item helpers](../articles/items.md), [number helpers](../articles/numbers.md), and [custom implementations](../articles/extending.md). The [source tree](https://github.com/miputra/RandEXom/tree/main/RandEXom) contains the current method signatures and XML comments. This authored overview is built by DocFX; it does not depend on generated metadata.

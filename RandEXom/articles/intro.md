@@ -1,6 +1,8 @@
 
 # Getting started
 
+This page gives a quick path from download to a few common draws. For the complete feature set, use the [installation](installation.md), [random source](random-sources.md), [seed generator](seed-generators.md), [Boolean](boolean.md), [item](items.md), [number](numbers.md), and [extension and limitations](extending.md) guides.
+
 RandEXom targets .NET Standard 2.1. Download the [v1.5b DLL](https://miputra.github.io/RandEXom/downloads/RandEXom.dll) or the [GitHub release](https://github.com/miputra/RandEXom/releases/tag/1.5b), then add the DLL as a reference to a compatible .NET project. In Visual Studio, right-click the project in Solution Explorer, choose **Add Reference**, browse to the DLL, and confirm.
 
 ## Generate a bounded number
@@ -56,4 +58,4 @@ bool result = succeeds.Next(); // independent 25% chance of true
 
 Percentages must be between 0 and 100. Each call is an independent draw, not a promise that exactly 25 out of 100 calls return true.
 
-For the full public surface, see the [API documentation](../api/index.md). From the repository root, run `dotnet run --project Verification/Verification.csproj` for the library's verification checks.
+For the full public surface, see the [API overview](../api/index.md). From the repository root, run `dotnet run --project Verification/Verification.csproj` for the library's verification checks.

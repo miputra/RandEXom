@@ -1,2 +1,16 @@
 - name: Getting started
   href: intro.md
+- name: Installation
+  href: installation.md
+- name: Random sources
+  href: random-sources.md
+- name: Seed generators
+  href: seed-generators.md
+- name: Boolean helpers
+  href: boolean.md
+- name: Item helpers
+  href: items.md
+- name: Number helpers
+  href: numbers.md
+- name: Custom implementations and limitations
+  href: extending.md
