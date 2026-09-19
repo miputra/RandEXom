@@ -39,14 +39,7 @@ article code, code { background: #1b2940; color: #9de7ce; border-radius: 4px; }
 pre, pre code { background: #0b1320; color: #e8eef8; }
 pre { border: 1px solid #344562; border-radius: 10px; padding: 18px; overflow-x: auto; white-space: pre; }
 pre code { white-space: pre; }
-pre .hljs { color: #e8eef8; }
-pre .hljs-keyword, pre .hljs-selector-tag { color: #8bd0ff; }
-pre .hljs-string, pre .hljs-template-variable { color: #f3bd9c; }
-pre .hljs-comment, pre .hljs-meta { color: #b5c4d6; }
-pre .hljs-number, pre .hljs-literal, pre .hljs-symbol, pre .hljs-bullet { color: #d5b8ff; }
-pre .hljs-type, pre .hljs-title, pre .hljs-name, pre .hljs-section { color: #9de7ce; }
-pre .hljs-attribute, pre .hljs-attr, pre .hljs-variable, pre .hljs-selector-attr, pre .hljs-selector-class, pre .hljs-selector-id, pre .hljs-selector-pseudo { color: #f2d38b; }
-pre .hljs-tag { color: #e8eef8; }
+pre code, pre code * { color: #fff !important; }
 .table, table { background: #17253c; color: #e8eef8; }
 .table > thead > tr > th, .table > tbody > tr > td, table th, table td { border-color: #344562; }
 .table-striped > tbody > tr:nth-of-type(odd) { background: #1b2d46; }
