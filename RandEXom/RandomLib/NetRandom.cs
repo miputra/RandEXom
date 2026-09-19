@@ -56,7 +56,7 @@ namespace RandEXom.RandomLib
         public virtual int NextInt(int min, int max)
         {
             if(seed.previous != seed.now)
-                net_r = new System.Random((int)seed.now);
+                net_r = new System.Random((int)RandEXom.Utility.TypeR.RoundLongToInt(seed.now));
             seed.Next();
             return net_r.Next(min,max);
         }
@@ -65,7 +65,7 @@ namespace RandEXom.RandomLib
         {
             if (seed.previous != seed.now)
             {
-                this.net_r = new System.Random((int)seed.now);
+                this.net_r = new System.Random((int)RandEXom.Utility.TypeR.RoundLongToInt(seed.now));
             }
             seed.Next();
             this.net_r.NextBytes(buffers);
@@ -80,7 +80,8 @@ namespace RandEXom.RandomLib
         /// <returns></returns>
         public virtual long NextLong(long min, long max)
         {
-            ulong uRange = (ulong)(max - min);
+            if (min >= max) throw new ArgumentOutOfRangeException(nameof(max));
+            ulong uRange = unchecked((ulong)(max - min));
 
             ulong ulongRand;
             do

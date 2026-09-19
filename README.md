@@ -1,4 +1,4 @@
-**What is RandEXom?**
+﻿**What is RandEXom?**
 
 RandEXom is a C# randomisation utility library to give more controllable randomization parameter. There are so many ways you can do to do randomizing in programming, and RandEXom trying to archieve those methods in a single library, either by using an already made algorithm or a new algorithm, so we can do randomizing with whatever method we want.
 
@@ -59,3 +59,7 @@ If you use the visual studio on your project:
 ***
 
 
+
+## Verification
+
+Run `dotnet run --project Verification/Verification.csproj` to check the published LCG sequence and the library's range, weighted draw, percentage, and distance edge cases. Random range methods use an inclusive minimum and exclusive maximum.

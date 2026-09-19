@@ -26,7 +26,7 @@ namespace RandEXom.Framework.Item
             int c = 0;
             foreach(KeyValuePair<T,int> p in items_current)
             {
-                c += p.Value;
+                c = checked(c + p.Value);
             }
             return c;
         }
@@ -64,13 +64,11 @@ namespace RandEXom.Framework.Item
         {
             //if(items_init.Find(x=> x.value == item))
             //items_init.Add(new Item<T>(item,count));
-            if (!items_init.ContainsKey(item))
-            {
-                items_init.Add(item, 0);
-                items_current.Add(item, 0);
-            }
-            items_init[item] += count;
-            items_current[item] += count;
+            if (count <= 0) throw new ArgumentOutOfRangeException(nameof(count));
+            if (!items_init.ContainsKey(item)) items_init.Add(item, 0);
+            if (!items_current.ContainsKey(item)) items_current.Add(item, 0);
+            items_init[item] = checked(items_init[item] + count);
+            items_current[item] = checked(items_current[item] + count);
         }
 
         /// <inheritdoc/>
@@ -119,64 +117,20 @@ namespace RandEXom.Framework.Item
             if (items_current.Keys.Count <= 0)
                 return default(T);
 
-            int n = Count();
-            int r = rand.NextInt(0, n);
-            Dictionary<T, double> temp = new Dictionary<T, double>();
-
-            double minVal = 0;
-            foreach (KeyValuePair<T,int> pair in items_current)
+            int remaining = Count();
+            if (remaining <= 0) return default(T);
+            int draw = rand.NextInt(0, remaining);
+            foreach (KeyValuePair<T, int> pair in items_current.ToList())
             {
-                double p = (double)pair.Value / (double)n;
-                if (temp.Count <= 0)
-                    minVal = p;
-                else
+                if (draw < pair.Value)
                 {
-                    minVal = Math.Min(p, minVal);
+                    items_current[pair.Key]--;
+                    if (items_current[pair.Key] == 0) items_current.Remove(pair.Key);
+                    return pair.Key;
                 }
-                temp.Add(pair.Key, p);
+                draw -= pair.Value;
             }
-            double maxVal = 0;
-            while (minVal < 2)
-            {
-                maxVal = 0;
-                for(int i=0; i < temp.Keys.Count; i++)
-                {
-                    T key = temp.Keys.ToList()[i];
-                    temp[key] *= 10;
-                    if (i == 0) {
-                        minVal = temp[key];
-                    } else
-                    {
-                        minVal = Math.Min(temp[key], minVal);
-                    }
-                    maxVal = Math.Max(maxVal, temp[key]);
-                }
-            }
-
-            List<T> o = temp.Keys.OrderBy(x => temp[x]).ToList();
-            foreach (T get in o)
-            {               
-
-                if (r % Math.Round(maxVal - temp[get]) == 0)
-                {
-                    items_current[get] -= 1;
-                    if (items_current[get] <= 0)
-                        items_current.Remove(get);
-                    return get;
-                }
-            }
-
-            if(o.Count > 0)
-            {
-                T get = o[o.Count - 1];
-                items_current[get] -= 1;
-                if (items_current[get] <= 0)
-                    items_current.Remove(get);
-                return get;
-            }
-
-            return default(T);
-  
+            throw new InvalidOperationException("Item counts are inconsistent.");
         }
 
         public void RemoveEmpty(T item)

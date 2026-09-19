@@ -15,18 +15,7 @@ namespace RandEXom.Utility
         /// <returns></returns>
         public static long RoundLongToInt(long value)
         {
-            if (value <= int.MaxValue)
-                return value;
-
-            int new_value = 0;
-
-            while (value > int.MaxValue)
-            {
-                new_value += int.MaxValue;
-                value -= int.MaxValue;
-            }
-            new_value += (int)value;
-            return new_value;
+            return unchecked((int)(value ^ (value >> 32)));
         }
     }
 }

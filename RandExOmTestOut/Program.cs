@@ -50,7 +50,7 @@ namespace RandExOmTestOut
                         TestXORShift();
                         break;
                     case "7":
-                        TestXORShift();
+                        TestXORShiftStar();
                         break;
                     case "8":
                         TestDistributed();
@@ -245,8 +245,11 @@ namespace RandExOmTestOut
             {
                 Console.WriteLine(rand.Next(0, 100));
             }
+            
 
 
         }
+
+        
     }
 }

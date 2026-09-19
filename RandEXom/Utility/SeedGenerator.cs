@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RandEXom.Utility
 {
-    internal class SeedGenerator
+    public class SeedGenerator
     {
         public static long GetJoinedCurrentDate()
         {

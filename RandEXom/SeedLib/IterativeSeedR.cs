@@ -68,7 +68,7 @@ namespace RandEXom.SeedLib
             //Console.WriteLine("init seed = " + new_seed);
             //Console.WriteLine("init seed = " + this.init);
             this.currentSeed = _seed;
-            this.currentSeed = currentSeed == 0 ? currentSeed + 1 : currentSeed;
+
             this.previousSeed = currentSeed;
         }
 
@@ -100,7 +100,7 @@ namespace RandEXom.SeedLib
                         );
                     break;
             }
-            currentSeed = currentSeed == 0 ? currentSeed + 1 : currentSeed;
+
         }        
 
     }

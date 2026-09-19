@@ -5,6 +5,8 @@
 
 using RandEXom.Interface;
 using RandEXom.SeedLib;
+using System;
+using System.Numerics;
 
 namespace RandEXom.Framework.Number
 {
@@ -33,14 +35,20 @@ namespace RandEXom.Framework.Number
 
         public virtual int Next(int min, int max)
         {
+            if (min >= max) throw new ArgumentOutOfRangeException(nameof(max));
+            if ((long)max - min == 1) return min;
             int_pong *= -1;
-            return int_pong == 1 ? rand.NextInt(min, min + (max-min)/2) : rand.NextInt(min + (max - min) / 2,max);
+            int mid = (int)((long)min + ((long)max - min) / 2);
+            return int_pong == 1 ? rand.NextInt(min, mid) : rand.NextInt(mid, max);
         }
 
         public virtual long Next(long min, long max)
         {
+            if (min >= max) throw new ArgumentOutOfRangeException(nameof(max));
+            if ((BigInteger)max - min == 1) return min;
             long_pong *= -1;
-            return long_pong == 1 ? rand.NextLong(min, min + (max - min) / 2) : rand.NextLong(min + (max - min) / 2, max);
+            long mid = (long)((BigInteger)min + ((BigInteger)max - min) / 2);
+            return long_pong == 1 ? rand.NextLong(min, mid) : rand.NextLong(mid, max);
         }
     }
 }

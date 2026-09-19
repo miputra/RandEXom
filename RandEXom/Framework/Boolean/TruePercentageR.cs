@@ -1,62 +1,43 @@
-﻿using RandEXom.Interface;
+﻿using System;
+using RandEXom.Interface;
 using RandEXom.SeedLib;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using RandEXom.Framework.Item;
 
 namespace RandEXom.Framework.Boolean
 {
-
-    /// <summary>
-    /// Do Random of boolean using initial persentage
-    /// </summary>
+    /// <summary>Returns true with the specified percentage on each independent draw.</summary>
     public class TruePercentageR
     {
-        IRandomR rand;
-        List<bool> items = new List<bool>();
-        float persentage = 0;
-        GachaR<bool> gachaR;
+        private const long Scale = 1L << 32;
+        private readonly IRandomR rand;
+        private readonly float percentage;
+        private long threshold;
 
-        /// <summary>
-        /// </summary>
-        /// <param name="percentage">the chance of 'true'</param>
-        public TruePercentageR(float percentage)
+        public TruePercentageR(float percentage) : this(new RandomLib.NetRandom(new SeedR()), percentage) { }
+        public TruePercentageR(long seed, float percentage) : this(new RandomLib.NetRandom(new SeedR(seed)), percentage) { }
+        public TruePercentageR(IRandomR framework, float percentage)
         {
-            rand = new RandomLib.NetRandom(new SeedR());
-            gachaR = new GachaR<bool>(rand);
-            this.persentage = percentage;
+            rand = framework ?? throw new ArgumentNullException(nameof(framework));
+            if (float.IsNaN(percentage) || percentage < 0 || percentage > 100)
+                throw new ArgumentOutOfRangeException(nameof(percentage));
+            this.percentage = percentage;
+            CreateItems();
         }
 
-        public TruePercentageR(long seed, float persentage)
-        {
-            rand = new RandomLib.NetRandom(new SeedR(seed));
-            gachaR = new GachaR<bool>(rand);
-            this.persentage = persentage;
-        }
-
-        public TruePercentageR(RandEXom.Interface.IRandomR framework, float persentage)
-        {
-            rand = framework;
-            gachaR = new GachaR<bool>(rand);
-            this.persentage = persentage;
-        }
-
+        /// <summary>Recalculates the probability threshold.</summary>
         public void CreateItems()
         {
-            gachaR.AddItem(true, (int)(persentage * 100));
-            gachaR.AddItem(false, 10000 - (int)(persentage * 100));
-            gachaR.Shuffle();
+            threshold = (long)Math.Round((double)percentage / 100 * Scale, MidpointRounding.AwayFromZero);
         }
 
         public bool Next()
         {
-            return gachaR.Pull();
+            return rand.NextLong(0, Scale) < threshold;
         }
 
+        /// <summary>Recalculates the probability threshold; draws have no batch state.</summary>
         public void Reset()
         {
-            gachaR.Refill();           
+            CreateItems();
         }
     }
 }

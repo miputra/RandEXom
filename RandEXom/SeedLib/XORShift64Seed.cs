@@ -14,6 +14,7 @@ namespace RandEXom.SeedLib
         readonly int shift1 = 13;
         readonly int shift2 = 7;
         readonly int shift3 = 17;
+        readonly bool starDirection = false;
         private long _seed = 0;
         public long init
         {
@@ -47,6 +48,8 @@ namespace RandEXom.SeedLib
 
         protected long currentSeed = 0;
         protected long previousSeed = 0;
+
+        public XORShift64Seed(int seed) : this((long?)seed) { }
 
         public XORShift64Seed(long? seed = null)
         {
@@ -82,15 +85,21 @@ namespace RandEXom.SeedLib
                     this.shift3 = 17;
                     break;
                 case Type.Xorshift64_star:
+                    this.starDirection = true;
                     this.shift1 = 12;
                     this.shift2 = 25;
                     this.shift3 = 27;
-                    break;                
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(type));
             }
         }
 
         public XORShift64Seed(int shift1, int shift2, int shift3, long? seed = null)
         {
+            if (shift1 < 1 || shift1 > 63) throw new ArgumentOutOfRangeException(nameof(shift1));
+            if (shift2 < 1 || shift2 > 63) throw new ArgumentOutOfRangeException(nameof(shift2));
+            if (shift3 < 1 || shift3 > 63) throw new ArgumentOutOfRangeException(nameof(shift3));
             long new_seed = 0;
             if (seed == null)
                 new_seed = DateTime.Now.Ticks; //Utility.SeedGenerator.GetJoinedCurrentDate();
@@ -109,15 +118,23 @@ namespace RandEXom.SeedLib
         public virtual void Next()
         {
             previousSeed = currentSeed;
-            ulong c = unchecked((ulong)(currentSeed - long.MinValue));
+            ulong c = unchecked((ulong)currentSeed);
             //c ^= c << 13;
             //c ^= c >> 7;
             //c ^= c << 17;
-            c ^= c << shift1;
-            c ^= c >> shift2;
-            c ^= c << shift3;
-            currentSeed = unchecked((long)c + long.MinValue);
-            currentSeed = currentSeed == 0 ? currentSeed + 1 : currentSeed;
+            if (starDirection)
+            {
+                c ^= c >> shift1;
+                c ^= c << shift2;
+                c ^= c >> shift3;
+            }
+            else
+            {
+                c ^= c << shift1;
+                c ^= c >> shift2;
+                c ^= c << shift3;
+            }
+            currentSeed = unchecked((long)c);
         }
     }
 }

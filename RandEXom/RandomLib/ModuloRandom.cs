@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Numerics;
 
 namespace RandEXom.RandomLib
 {
@@ -22,12 +23,14 @@ namespace RandEXom.RandomLib
             XORShift64_Star
         }
 
+        public ModuloRandom(int seed) : this((long?)seed) { }
+
         public ModuloRandom(long? seed = null)
         {
             this.seed = new SeedLib.XORShift64Seed(seed);
         }
 
-        public ModuloRandom(long multiplier, long?seed = null)
+        public ModuloRandom(long multiplier, long? seed)
         {
             this.seed = new SeedLib.XORShift64Seed(seed);
             this.multiplier = multiplier;
@@ -35,7 +38,9 @@ namespace RandEXom.RandomLib
 
         public ModuloRandom(Multiplier multiplier, long?seed = null)
         {
-            this.seed = new SeedLib.XORShift64Seed(seed);
+            this.seed = multiplier == Multiplier.XORShift64_Star
+                ? new SeedLib.XORShift64Seed(SeedLib.XORShift64Seed.Type.Xorshift64_star, seed)
+                : new SeedLib.XORShift64Seed(seed);
             switch (multiplier)
             {
                 case Multiplier.One:
@@ -44,18 +49,20 @@ namespace RandEXom.RandomLib
                 case Multiplier.XORShift64_Star:
                     this.multiplier = 2685821657736338717;
                     break;
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(multiplier));
             }
         }
 
         public ModuloRandom(Interface.ISeedR seed, long multiplier = 1)
         {
-            this.seed = seed;
+            this.seed = seed ?? throw new ArgumentNullException(nameof(seed));
             this.multiplier = multiplier;
         }
 
         public ModuloRandom(Interface.ISeedR seed, Multiplier multiplier)
         {
-            this.seed = seed;
+            this.seed = seed ?? throw new ArgumentNullException(nameof(seed));
             switch (multiplier)
             {
                 case Multiplier.One:
@@ -64,6 +71,8 @@ namespace RandEXom.RandomLib
                 case Multiplier.XORShift64_Star:
                     this.multiplier = 2685821657736338717;
                     break;
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(multiplier));
 
             }
         }
@@ -75,29 +84,37 @@ namespace RandEXom.RandomLib
 
         public virtual void NextBytes(byte[] buffers)
         {
-            long seed = this.seed.now * multiplier;
-
+            if (buffers == null) throw new ArgumentNullException(nameof(buffers));
             for (int i = 0; i < buffers.Length; i++)
-            {
-                buffers[i] = (byte)(Math.Abs((seed)) % (byte.MaxValue+1));
-                this.seed.Next();
-            }
+                buffers[i] = (byte)(NextRaw() >> 56);
         }
 
         public virtual int NextInt(int min, int max)
         {
-            long seed = this.seed.now * multiplier;
-            int val = min + (int)Math.Abs(seed % (max - min));
-            this.seed.Next();
-            return val;
+            if (min >= max) throw new ArgumentOutOfRangeException(nameof(max));
+            return (int)((long)min + (long)NextBounded((ulong)((long)max - min)));
         }
 
         public virtual long NextLong(long min, long max)
         {
-            long seed = this.seed.now * multiplier;
-            long val = min + Math.Abs((seed % (max - min)));
-            this.seed.Next();
-            return val;
+            if (min >= max) throw new ArgumentOutOfRangeException(nameof(max));
+            return unchecked((long)((ulong)min + NextBounded(unchecked((ulong)(max - min)))));
+        }
+
+        private ulong NextRaw()
+        {
+            seed.Next();
+            return unchecked((ulong)seed.now * (ulong)multiplier);
+        }
+
+        private ulong NextBounded(ulong span)
+        {
+            BigInteger size = BigInteger.One << 64;
+            BigInteger bucket = size / span;
+            BigInteger limit = bucket * span;
+            ulong value;
+            do { value = NextRaw(); } while ((BigInteger)value >= limit);
+            return (ulong)((BigInteger)value / bucket);
         }
 
         public ISeedR GetSeed()

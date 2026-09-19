@@ -11,6 +11,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Numerics;
 
 namespace RandEXom.Framework.Number
 {
@@ -20,7 +21,8 @@ namespace RandEXom.Framework.Number
         readonly int level = 5;
         readonly int child = 2;
         readonly long min = int.MinValue;
-        readonly ulong range = int.MaxValue - int.MaxValue;
+        readonly long max = int.MaxValue;
+
         IRandomR random;
 
         public class Node
@@ -58,7 +60,6 @@ namespace RandEXom.Framework.Number
             /// </summary>
             public void UpdateWeightFB(Node node, bool updateWeight = false)
             {
-                if (!childs.Contains(node))
                 {
                     //do this so we doesn't need to recount all of nodes
                     if (updateWeight)
@@ -87,9 +88,12 @@ namespace RandEXom.Framework.Number
             random = new RandomLib.NetRandom();
             this.level = level;
             this.child = child;
+            if (min >= max) throw new ArgumentOutOfRangeException(nameof(max));
             this.min = min;
+            this.max = max;
             CreateNodes(level, child);
-            this.range = unchecked((ulong)(max - min)) / (ulong)bottomNode.Count;
+            if ((BigInteger)bottomNode.Count > (BigInteger)max - min)
+                throw new ArgumentOutOfRangeException(nameof(level), "More leaves than values in the range.");
         }
 
         public DistributedTreeNestedR(long seed, int level = 5, int child = 2, long min = int.MinValue, long max = int.MaxValue)
@@ -97,9 +101,12 @@ namespace RandEXom.Framework.Number
             random = new RandomLib.NetRandom(seed);
             this.level = level;
             this.child = child;
+            if (min >= max) throw new ArgumentOutOfRangeException(nameof(max));
             this.min = min;
+            this.max = max;
             CreateNodes(level, child);
-            this.range = unchecked((ulong)(max - min)) / (ulong)bottomNode.Count;
+            if ((BigInteger)bottomNode.Count > (BigInteger)max - min)
+                throw new ArgumentOutOfRangeException(nameof(level), "More leaves than values in the range.");
         }
 
         public DistributedTreeNestedR(IRandomR random, int level = 5, int child = 2, long min = int.MinValue, long max = int.MaxValue)
@@ -107,13 +114,18 @@ namespace RandEXom.Framework.Number
             this.random = random;
             this.level = level;
             this.child = child;
+            if (min >= max) throw new ArgumentOutOfRangeException(nameof(max));
             this.min = min;
+            this.max = max;
             CreateNodes(level, child);
-            this.range = unchecked((ulong)(max - min)) / (ulong)bottomNode.Count;
+            if ((BigInteger)bottomNode.Count > (BigInteger)max - min)
+                throw new ArgumentOutOfRangeException(nameof(level), "More leaves than values in the range.");
         }
 
         public void CreateNodes(int level, int child)
         {
+            if (level < 1) throw new ArgumentOutOfRangeException(nameof(level));
+            if (child < 1) throw new ArgumentOutOfRangeException(nameof(child));
             top = new Node();
             List<Node> parents = new List<Node> { top };
             List<Node> childrens = new List<Node>();
@@ -125,7 +137,7 @@ namespace RandEXom.Framework.Number
                     for (int i = 0; i < child; i++)
                     {
                         Node ch = new Node();
-                        ch.parent = top;
+                        ch.parent = parent;
                         childrens.Add(ch);
                         parent.childs.Add(ch);
                     }
@@ -140,34 +152,25 @@ namespace RandEXom.Framework.Number
 
         public virtual int NextInt()
         {
-            return (int)Next();
+            return checked((int)Next());
         }
 
         public virtual long Next()
         {
-            List<Node> childs = top.childs;
-
-            if (bottomNode.Count() == 0)
-                return random.NextLong(min, unchecked(min + (long)range));
-
-            if (childs.Count == 0)
-                return random.NextLong(min, unchecked(min + (long)range) * bottomNode.Count());
-
-            childs = childs.OrderBy(x => x.weight).ToList();
-            int minWeight = childs[0].weight;
-            childs.RemoveAll(x => x.weight > minWeight);
-
-            Node node = null;
-            int i = 0;
-            while (childs.Count > 0)
+            Node node = top;
+            while (node.childs.Count > 0)
             {
-                i = random.NextInt(0, childs.Count());
-                node = childs[i];
-                childs = node.childs;
+                int least = node.childs.Min(x => x.weight);
+                List<Node> choices = node.childs.Where(x => x.weight == least).ToList();
+                node = choices[random.NextInt(0, choices.Count)];
             }
-            i = bottomNode.IndexOf(node);
+            int index = bottomNode.IndexOf(node);
+            BigInteger span = (BigInteger)max - min;
+            BigInteger start = (BigInteger)min + span * index / bottomNode.Count;
+            BigInteger end = (BigInteger)min + span * (index + 1) / bottomNode.Count;
+            if (start == end) throw new InvalidOperationException("More leaves than values in the range.");
             node.UpdateWeight(node.weight + 1);
-            return random.NextLong(unchecked(min + (long)range) * (i), unchecked(min + (long)range) * (i + 1));
+            return random.NextLong((long)start, (long)end);
         }
     }
 }

@@ -11,6 +11,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Numerics;
 
 namespace RandEXom.RandomLib
 {
@@ -45,27 +46,31 @@ namespace RandEXom.RandomLib
             RANDU
         }
 
+        public SSRNGRandom(int seed) : this((long?)seed) { }
+
         public SSRNGRandom(long ? seed = null, long m = 4294967296)
         {
-            this.seed = new SeedLib.LCGSeedR(seed);
+            if (m <= 1) throw new ArgumentOutOfRangeException(nameof(m));
+            this.seed = new SeedLib.LCGSeedR(seed, m: m);
             this.m = m;
         }
 
         public SSRNGRandom(Interface.ISeedR seed, long m = 4294967296)
         {
-            this.seed = seed;
+            if (m <= 1) throw new ArgumentOutOfRangeException(nameof(m));
+            this.seed = seed ?? throw new ArgumentNullException(nameof(seed));
             this.m = m;
         }
 
         public SSRNGRandom(ParameterTemplate template, long? seed = null)
         {
-            this.seed = new SeedLib.LCGSeedR(seed);
+            this.seed = new SeedLib.LCGSeedR((SeedLib.LCGSeedR.ParameterTemplate)template, seed);
             SetParameter(template);
         }
 
         public SSRNGRandom(Interface.ISeedR seed, ParameterTemplate template)
         {
-            this.seed = seed;
+            this.seed = seed ?? throw new ArgumentNullException(nameof(seed));
             SetParameter(template);
         }
 
@@ -115,6 +120,7 @@ namespace RandEXom.RandomLib
                 case ParameterTemplate.random0:
                     this.m = 134456; //  2^3 * 7^5
                     break;
+                case ParameterTemplate.IBM:
                 case ParameterTemplate.RANDU:
                     this.m = 2147483648; //  2^31
                     break;
@@ -127,6 +133,8 @@ namespace RandEXom.RandomLib
                 case ParameterTemplate.ZX81:
                     this.m = 65537; // 2^16 + 1
                     break;
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(template));
             }
         }
 
@@ -138,25 +146,45 @@ namespace RandEXom.RandomLib
 
         public virtual void NextBytes(byte[] buffers)
         {
+            if (buffers == null) throw new ArgumentNullException(nameof(buffers));
             for (int i = 0; i < buffers.Length; i++)
             {
-                buffers[i] = (byte)Math.Abs((seed.now % m));
-                seed.Next();                
+                buffers[i] = (byte)NextBounded(256);
             }
         }
 
         public virtual int NextInt(int min, int max)
         {
-            int val = min + Math.Abs((int)((seed.now % m) % (max - min)));  
-            seed.Next();
-            return val;
+            if (min >= max) throw new ArgumentOutOfRangeException(nameof(max));
+            return (int)((long)min + (long)NextBounded((ulong)((long)max - min)));
         }
 
         public virtual long NextLong(long min, long max)
         {
-            long val = min + Math.Abs(((seed.now % m) % (max - min))); 
-            seed.Next();
-            return val;
+            if (min >= max) throw new ArgumentOutOfRangeException(nameof(max));
+            ulong span = unchecked((ulong)(max - min));
+            return unchecked((long)((ulong)min + NextBounded(span)));
+        }
+
+        private ulong NextBounded(ulong span)
+        {
+            BigInteger size;
+            BigInteger value;
+            BigInteger bound = span;
+            do
+            {
+                size = BigInteger.One;
+                value = BigInteger.Zero;
+                do
+                {
+                    long digit = seed.now % m;
+                    if (digit < 0) digit += m;
+                    value = value * m + digit;
+                    size *= m;
+                    seed.Next();
+                } while (size < bound);
+            } while (value >= size - size % bound);
+            return (ulong)(value / (size / bound));
         }
 
         public ISeedR GetSeed()

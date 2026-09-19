@@ -9,7 +9,7 @@ namespace RandEXom.SeedLib
     /// <summary>
     /// If you want to custom how the seed work. Each of the random process will use a new seed by your function.
     /// </summary>
-    class IterativeSeedRCustom : RandEXom.Interface.ISeedR
+    public class IterativeSeedRCustom : RandEXom.Interface.ISeedR
     {
         private long _seed = 0;
         public long init
@@ -62,9 +62,9 @@ namespace RandEXom.SeedLib
                 new_seed = (long)seed;
             this._seed = new_seed;
             this.currentSeed = _seed;
-            this.currentSeed = currentSeed == 0 ? currentSeed + 1 : currentSeed;
+
             this.previousSeed = currentSeed;
-            this.process = process;
+            this.process = process ?? throw new ArgumentNullException(nameof(process));
         }
 
         public void Next()
@@ -72,7 +72,7 @@ namespace RandEXom.SeedLib
             this.previousSeed = currentSeed;
 
             this.currentSeed = process(currentSeed);
-            currentSeed = currentSeed == 0 ? currentSeed + 1 : currentSeed;
+
         }
     }
 }

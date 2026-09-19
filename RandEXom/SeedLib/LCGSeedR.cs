@@ -10,6 +10,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Numerics;
 
 namespace RandEXom.SeedLib
 {
@@ -24,6 +25,8 @@ namespace RandEXom.SeedLib
 
         private long a = 1664525; //multiplier (based on numerical recipes)
         private long c = 1013904223; //Increment (based on numerical recipes)
+        private long m = 4294967296;
+        public long Modulus { get { return m; } }
         
 
         //based on wiki of linear congruential generators
@@ -83,20 +86,22 @@ namespace RandEXom.SeedLib
         /// <param name="a">multiplier</param>
         /// <param name="c">Increment</param>
         /// <param name="m">modulo</param>
-        public LCGSeedR(long? seed = null, long a = 1664525, long c = 1013904223) //long m = 2 ^ 32)
+        public LCGSeedR(int seed) : this((long?)seed) { }
+
+        public LCGSeedR(long? seed = null, long a = 1664525, long c = 1013904223, long m = 4294967296)
         {
+            if (m <= 1) throw new ArgumentOutOfRangeException(nameof(m));
             long new_seed = 0;
             if (seed == null)
                 new_seed = DateTime.Now.Ticks; // Utility.SeedGenerator.GetJoinedCurrentDate();
             else
                 new_seed = (long)seed;
             this._seed = new_seed;
-            this.currentSeed = new_seed;
-            this.currentSeed = currentSeed == 0 ? currentSeed + 1 : currentSeed;
-            this.previousSeed = new_seed;
+            this.m = m;
+            this.currentSeed = Normalize(new_seed);
+            this.previousSeed = currentSeed;
             this.a = a;
             this.c = c;
-            //this.m = m;
         }
 
         /// <summary>
@@ -113,9 +118,6 @@ namespace RandEXom.SeedLib
                 new_seed = (long)seed;
             this._seed = new_seed;
 
-            this.currentSeed = new_seed;
-            this.previousSeed = new_seed;
-
             switch (template)
             {
                 case ParameterTemplate.Numerical_Recipes:
@@ -125,6 +127,7 @@ namespace RandEXom.SeedLib
                 case ParameterTemplate.Apple_CarbonLib:
                     this.a = 16807;
                     this.c = 0;
+                    this.m = 2147483647;
                     break;
                 case ParameterTemplate.Borland_C:
                     this.a = 22695477;
@@ -137,6 +140,7 @@ namespace RandEXom.SeedLib
                 case ParameterTemplate.cc65:
                     this.a = 65793;
                     this.c = 4282663;
+                    this.m = 8388608;
                     break;
                 case ParameterTemplate.cc65_2:
                     this.a = 16843009;
@@ -145,18 +149,22 @@ namespace RandEXom.SeedLib
                 case ParameterTemplate.C_Plus_11:
                     this.a = 48271;
                     this.c = 0;
+                    this.m = 2147483647;
                     break;
                 case ParameterTemplate.GLIBC:
                     this.a = 1103515245;
                     this.c = 12345;
+                    this.m = 2147483648;
                     break;
                 case ParameterTemplate.Java:
                     this.a = 25214903917;
                     this.c = 11;
+                    this.m = 281474976710656;
                     break;
                 case ParameterTemplate.Microsoft_Visual_Basic:
                     this.a = 1140671485;
                     this.c = 12820163;
+                    this.m = 16777216;
                     break;
                 case ParameterTemplate.Microsoft_Visual_C:
                     this.a = 214013;
@@ -169,18 +177,23 @@ namespace RandEXom.SeedLib
                 case ParameterTemplate.POSIX:
                     this.a = 25214903917;
                     this.c = 11;
+                    this.m = 281474976710656;
                     break;
                 case ParameterTemplate.random0:
                     this.a = 8121;
                     this.c = 28411;
+                    this.m = 134456;
                     break;
+                case ParameterTemplate.IBM:
                 case ParameterTemplate.RANDU:
                     this.a = 65539;
                     this.c = 0;
+                    this.m = 2147483648;
                     break;
                 case ParameterTemplate.RtlUniform:
                     this.a = 2147483629;
                     this.c = 2147483587;
+                    this.m = 2147483647;
                     break;
                 case ParameterTemplate.Turbo_Pascal:
                     this.a = 134775813;
@@ -189,15 +202,26 @@ namespace RandEXom.SeedLib
                 case ParameterTemplate.ZX81:
                     this.a = 75;
                     this.c = 74;
+                    this.m = 65537;
                     break;
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(template));
             }
+            this.currentSeed = Normalize(new_seed);
+            this.previousSeed = currentSeed;
+        }
+
+        private long Normalize(BigInteger value)
+        {
+            BigInteger result = value % m;
+            if (result < 0) result += m;
+            return (long)result;
         }
 
         public void Next()
         {
             previousSeed = currentSeed;
-            currentSeed = (a * currentSeed + c);
-            currentSeed = currentSeed == 0 ? currentSeed + 1 : currentSeed;
+            currentSeed = Normalize((BigInteger)a * currentSeed + c);
         }
     }
 }

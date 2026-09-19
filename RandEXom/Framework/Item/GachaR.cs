@@ -43,6 +43,7 @@ namespace RandEXom.Framework.Item
 
         public virtual void AddItem(T item, int count)
         {
+            if (count <= 0) throw new System.ArgumentOutOfRangeException(nameof(count));
             for(int i=0; i < count; i++)
             {
                 items_init.Add(item);
@@ -82,7 +83,7 @@ namespace RandEXom.Framework.Item
 
         public List<T> ToList()
         {
-            return items_current;
+            return new List<T>(items_current);
         }
         
 
@@ -95,6 +96,7 @@ namespace RandEXom.Framework.Item
 
                 else
                 {
+                    if (items_init.Count == 0) return default(T);
                     Refill();
                     return Pull();
                 }
@@ -113,8 +115,7 @@ namespace RandEXom.Framework.Item
         /// <inheritdoc/>
         public int Count(T type)
         {
-            dynamic t1 = type;
-            return items_current.FindAll(x => x == t1).Count();
+            return items_current.Count(x => EqualityComparer<T>.Default.Equals(x, type));
         }
         /// <inheritdoc/>
         public int CountType()
