@@ -1,7 +1,7 @@
 
 # Getting started
 
-This page gives a quick path from download to a few common draws. For the complete feature set, use the [installation](installation.md), [random source](random-sources.md), [seed generator](seed-generators.md), [Boolean](boolean.md), [item](items.md), [number](numbers.md), and [extension and limitations](extending.md) guides.
+First read [how the library fits together](architecture.md): `SeedLib` holds state, `RandomLib` produces values, and `Framework` applies values to tasks. This page then gives a quick path from download to a few common draws. For a type-by-type lookup, use the [class index](../api/index.md).
 
 RandEXom targets .NET Standard 2.1. Download the [v1.5b DLL](https://miputra.github.io/RandEXom/downloads/RandEXom.dll) or the [GitHub release](https://github.com/miputra/RandEXom/releases/tag/1.5b), then add the DLL as a reference to a compatible .NET project. In Visual Studio, right-click the project in Solution Explorer, choose **Add Reference**, browse to the DLL, and confirm.
 

@@ -1,6 +1,14 @@
 # Random sources
 
-Random sources implement `RandEXom.Interface.IRandomR`. All expose `NextInt(min, max)`, `NextLong(min, max)`, `NextBytes(buffer)`, `GetSeed()`, and `GetSeedSTR()`. For the range methods, `min` is included and `max` is excluded. Always pass `min < max`; behavior for an empty range differs between implementations. The methods advance internal state, so repeated calls usually produce different results.
+`RandomLib` is the **draw layer** between `SeedLib` and `Framework`. A source implements `RandEXom.Interface.IRandomR`: it turns state into integer ranges or bytes and can be passed to a framework helper. You can also call it directly. See the [layer diagram](architecture.md), [seed progression choices](seed-generators.md), and [class index](../api/index.md).
+
+| Source | Built-in seed behavior | Main distinction |
+| --- | --- | --- |
+| `ModuloRandom` | Creates `XORShift64Seed` unless given an `ISeedR` | Raw xorshift-based output with bounded sampling |
+| `NetRandom` | Creates constant internal `SeedR` unless given an `ISeedR` | Wraps `System.Random`; dynamic seeds can trigger reseeding |
+| `SSRNGRandom` | Creates `LCGSeedR` unless given an `ISeedR` | Historical LCG output moduli and presets |
+
+All expose `NextInt(min, max)`, `NextLong(min, max)`, `NextBytes(buffer)`, `GetSeed()`, and `GetSeedSTR()`. For the range methods, `min` is included and `max` is excluded. Always pass `min < max`; behavior for an empty range differs between implementations. The methods advance internal state, so repeated calls usually produce different results.
 
 ```csharp
 using RandEXom.RandomLib;

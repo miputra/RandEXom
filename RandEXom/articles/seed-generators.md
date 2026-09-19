@@ -1,6 +1,16 @@
 # Seed generators
 
-Seed generators implement `RandEXom.Interface.ISeedR`. They expose `init` (the original input seed), `now` (current state), `previous` (state before the most recent advance), and `Next()` to advance. Pass an `ISeedR` to a random source to control its seed progression.
+`SeedLib` is the **state layer**. It does not offer a `NextInt(min, max)` method or shuffle a list. A seed generator implements `RandEXom.Interface.ISeedR` and exposes `init` (original input), `now` (current state), `previous` (state before the latest advance), and `Next()` to advance. A `RandomLib` source consumes that state and provides bounded draws; a `Framework` helper can then use those draws. See the [layer diagram](architecture.md) and [class index](../api/index.md).
+
+| Choose | When you need |
+| --- | --- |
+| `XORShift64Seed` | The default progression of `ModuloRandom` or explicit xorshift variants |
+| `LCGSeedR` | A parameterized LCG or historical preset |
+| `IterativeSeedR` | A simple built-in update operation |
+| `IterativeSeedRCustom` | Your own state-update function |
+| `SeedR` | Constant state inside library defaults; not publicly constructible |
+
+The source decides *when* to call `Next()`. For example, `ModuloRandom` advances the seed before each raw draw, whereas `SSRNGRandom` reads a state digit and then advances. Therefore, swapping the source while retaining the same `ISeedR` is not sequence-preserving.
 
 ```csharp
 using RandEXom.RandomLib;

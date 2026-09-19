@@ -1,16 +1,22 @@
-- name: Getting started
-  href: intro.md
+- name: How the library fits together
+  href: architecture.md
 - name: Installation
   href: installation.md
-- name: Random sources
-  href: random-sources.md
-- name: Seed generators
+- name: Getting started
+  href: intro.md
+- name: SeedLib — seed generators
   href: seed-generators.md
-- name: Boolean helpers
+- name: RandomLib — random sources
+  href: random-sources.md
+- name: Framework — choosing a behavior
+  href: framework.md
+- name: Framework.Boolean
   href: boolean.md
-- name: Item helpers
+- name: Framework.Item
   href: items.md
-- name: Number helpers
+- name: Framework.Number
   href: numbers.md
-- name: Custom implementations and limitations
+- name: Utility
+  href: utility.md
+- name: Interfaces, extension, and limitations
   href: extending.md

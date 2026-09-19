@@ -1,6 +1,6 @@
 # Number helpers
 
-These types live in `RandEXom.Framework.Number` and accept either a seed number or an `IRandomR` source. Their range methods include the minimum and exclude the maximum.
+This branch of [Framework](framework.md) adds different rules to numeric draws. Its usable types are `SlotR` (plain range), `PongR` (alternating halves), and `DistanceR` (gap from the last result). They live in `RandEXom.Framework.Number` and accept either a seed number or an `IRandomR` source. Their range methods include the minimum and exclude the maximum. Experimental tree and unfinished dice/noise types are listed below so their presence in source code is not mistaken for a supported feature.
 
 ## `SlotR`: one bounded integer
 

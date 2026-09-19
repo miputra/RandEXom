@@ -1,6 +1,6 @@
 # Boolean helpers
 
-`RandEXom.Framework.Boolean.TruePercentageR` returns `true` with the requested probability on each independent draw. It accepts a percentage from 0 through 100, a seed for repeatable tests, or an `IRandomR` implementation.
+This branch of [Framework](framework.md) converts a bounded draw from `IRandomR` into a Boolean event. It contains one helper, `RandEXom.Framework.Boolean.TruePercentageR`, which returns `true` with the requested probability on each independent draw. It accepts a percentage from 0 through 100, a seed for repeatable tests, or an `IRandomR` implementation.
 
 ```csharp
 using RandEXom.Framework.Boolean;

@@ -1,8 +1,8 @@
 
 # RandEXom documentation
 
-RandEXom is a .NET Standard 2.1 library for configurable randomization in C#. It includes random sources, seed generators, and helpers for common selection and range problems.
+RandEXom is a .NET Standard 2.1 library for configurable randomization in C#. It includes seed generators, random sources, and task-specific framework helpers. The layers are connected through interfaces; utilities support a few underlying operations.
 
-Start with [getting started](articles/intro.md), then use the guides for [installation](articles/installation.md), [random sources](articles/random-sources.md), [seed generators](articles/seed-generators.md), [Boolean helpers](articles/boolean.md), [item helpers](articles/items.md), [number helpers](articles/numbers.md), and [custom implementations and limitations](articles/extending.md). The [API overview](api/index.md) lists the available namespaces.
+Start with [how the library fits together](articles/architecture.md) to understand the layers and their relationships. Then follow [installation](articles/installation.md) and [getting started](articles/intro.md). For a specific area, use [SeedLib](articles/seed-generators.md), [RandomLib](articles/random-sources.md), [Framework](articles/framework.md) and its [Boolean](articles/boolean.md), [Item](articles/items.md), and [Number](articles/numbers.md) branches, or [Utility](articles/utility.md). The [class index](api/index.md) maps every type to its guide; [interfaces and limitations](articles/extending.md) explain how to extend the library safely.
 
 The [README](https://github.com/miputra/RandEXom/blob/main/README.md) has release information, verification instructions, and ways to support the project.

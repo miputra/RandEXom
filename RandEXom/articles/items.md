@@ -1,6 +1,6 @@
 # Item helpers
 
-These helpers live in `RandEXom.Framework.Item`. Each can be constructed with a numeric seed or a shared `IRandomR` source. A shared source makes call order matter across helpers.
+This branch of [Framework](framework.md) uses random draws to reorder a list or select items from a pool. Its three public helpers live in `RandEXom.Framework.Item`: `Shuffles_FisherYates`, `GachaR<T>`, and `GachaRBatched<T>`. Each can be constructed with a numeric seed or a shared `IRandomR` source. A shared source makes call order matter across helpers. Both gacha variants implement `IGachaR<T>`; shuffle does not.
 
 ## Fisher–Yates shuffle
 

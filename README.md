@@ -19,18 +19,17 @@ Random range methods include the minimum and exclude the maximum.
 
 ## Documentation
 
-| Guide | What it covers |
-| --- | --- |
-| [Getting started](RandEXom/articles/intro.md) | First program and common examples |
-| [Installation](RandEXom/articles/installation.md) | DLL and source-project setup, requirements, verification |
-| [Random sources](RandEXom/articles/random-sources.md) | `ModuloRandom`, `NetRandom`, `SSRNGRandom`, range and byte APIs |
-| [Seed generators](RandEXom/articles/seed-generators.md) | Xorshift, LCG, iterative, custom, and constant seeds |
-| [Boolean helpers](RandEXom/articles/boolean.md) | `TruePercentageR` |
-| [Item helpers](RandEXom/articles/items.md) | Fisher–Yates shuffle and both gacha implementations |
-| [Number helpers](RandEXom/articles/numbers.md) | Slot, pong, distance, and experimental types |
-| [Custom implementations and limitations](RandEXom/articles/extending.md) | Interfaces, shared state, reproducibility, safety |
+Read [how RandEXom fits together](RandEXom/articles/architecture.md) first: `SeedLib` manages state → `RandomLib` turns state into draws → `Framework` uses draws for application behavior. `Utility` provides supporting functions; `Interface` defines the contracts between layers.
 
-The [documentation home](RandEXom/index.md) and [API overview](RandEXom/api/index.md) are also included in the repository. The library targets .NET Standard 2.1; the verification project targets .NET 8. There is no published NuGet package listed here—use the release DLL or a source-project reference.
+| Next step | Guide |
+| --- | --- |
+| Install and make a first draw | [Installation](RandEXom/articles/installation.md) · [Getting started](RandEXom/articles/intro.md) |
+| Choose the seed progression and random source | [SeedLib](RandEXom/articles/seed-generators.md) · [RandomLib](RandEXom/articles/random-sources.md) |
+| Apply task-specific behavior | [Framework overview](RandEXom/articles/framework.md) → [Boolean](RandEXom/articles/boolean.md) · [Item](RandEXom/articles/items.md) · [Number](RandEXom/articles/numbers.md) |
+| Understand support and customization | [Utility](RandEXom/articles/utility.md) · [Interfaces, extension, and limitations](RandEXom/articles/extending.md) |
+| Locate a particular class | [Class index](RandEXom/api/index.md) |
+
+The [documentation home](RandEXom/index.md) is also included in the repository. The library targets .NET Standard 2.1; the verification project targets .NET 8. There is no published NuGet package listed here—use the release DLL or a source-project reference.
 
 ## Verification
 
