@@ -1,0 +1,180 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>3.1 Framework: behaviors built on draws </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="3.1 Framework: behaviors built on draws ">
+    <meta name="generator" content="docfx 2.59.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../index.html">RandEXom <span class="brand-divider">/</span> Docs</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <ul class="nav navbar-nav">
+                <li><a href="../../">Project home</a></li>
+                <li><a href="../index.html">Guide map</a></li>
+                <li><a href="../api/index.html">Class index</a></li>
+              </ul>
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search docs" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="31-framework-behaviors-built-on-draws">3.1 Framework: behaviors built on draws</h1>
+
+<p>Chapter 3: Framework helpers · Page 1 of 4 · <a href="../index.html">Guide map</a></p>
+<p><code>RandEXom.Framework</code> is the task layer. A framework class accepts or creates an <code>IRandomR</code> source, then adds rules around its draws: decide whether a probability succeeds, reorder or pick items, or constrain a number. It is not a replacement for <code>RandomLib</code>. If all you need is an integer in <code>[min, max)</code>, call <code>IRandomR.NextInt</code> directly; <code>SlotR</code> is a wrapper around that operation.</p>
+<pre><code class="lang-text">Framework.Boolean.TruePercentageR ── compare a bounded draw to a probability
+Framework.Item.Shuffles_FisherYates ── use draws to swap list positions
+Framework.Item.GachaR&lt;T&gt; / GachaRBatched&lt;T&gt; ── use draws to remove items from a pool
+Framework.Number.SlotR / PongR / DistanceR ── apply rules to numeric draws
+                 │
+                 └── each uses IRandomR ← RandomLib ← ISeedR ← SeedLib
+</code></pre><h2 id="choose-a-behavior">Choose a behavior</h2>
+<table>
+<thead>
+<tr>
+<th>You want</th>
+<th>Type</th>
+<th>Behavior and state</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A <code>true</code>/<code>false</code> event with a specified chance</td>
+<td><code>TruePercentageR</code></td>
+<td>Independent probability on each call; no quota</td>
+</tr>
+<tr>
+<td>A rearranged existing list</td>
+<td><code>Shuffles_FisherYates</code></td>
+<td>Mutates the list in place</td>
+</tr>
+<tr>
+<td>A weighted bag that can refill automatically</td>
+<td><code>GachaR&lt;T&gt;</code></td>
+<td>Stores individual copies, removes one per pull</td>
+</tr>
+<tr>
+<td>A weighted bag with large counts</td>
+<td><code>GachaRBatched&lt;T&gt;</code></td>
+<td>Stores counts, removes one per pull, manual refill</td>
+</tr>
+<tr>
+<td>One draw for each slot-machine reel</td>
+<td><code>SlotR</code></td>
+<td>Call <code>Next()</code> once per reel; delegates each draw to its random source</td>
+</tr>
+<tr>
+<td>Alternating low/high halves of a range</td>
+<td><code>PongR</code></td>
+<td>Maintains alternation state</td>
+</tr>
+<tr>
+<td>Numbers separated from the previous result</td>
+<td><code>DistanceR</code></td>
+<td>Remembers the previous draw</td>
+</tr>
+</tbody>
+</table>
+<p>The <code>DistributedTreeR</code> and <code>DistributedTreeNestedR</code> number classes are obsolete/experimental; dice and noise classes are unfinished and <code>DEBUG</code>-only. See <a href="numbers.html">Framework.Number</a> rather than treating them as supported alternatives.</p>
+<h2 id="default-versus-supplied-sources">Default versus supplied sources</h2>
+<p>Most helpers offer a default constructor, a numeric-seed constructor, and a constructor accepting <code>IRandomR</code>. The first two create a <code>NetRandom</code> internally. The third gives you control over the source and its seed algorithm:</p>
+<pre><code class="lang-csharp">using RandEXom.Framework.Number;
+using RandEXom.RandomLib;
+
+var source = new ModuloRandom(seed: 42);
+var spaced = new DistanceR(source, distance: 3);
+int next = spaced.Next(0, 10);
+</code></pre><p>If two helpers receive the <em>same</em> <code>source</code> object, their draws interleave and influence each other&#39;s later results. If they each construct a source from the same numeric seed, they have separate state. Framework classes may also maintain their own state—such as a bag&#39;s remaining items or <code>DistanceR</code>&#39;s last result—which is distinct from random-source state. A helper&#39;s <code>Reset()</code> or <code>Refill()</code> does not generally rewind its source.</p>
+<p>For operations and examples, continue to <a href="boolean.html">Boolean</a>, <a href="items.html">Item</a>, or <a href="numbers.html">Number</a>. The <a href="../api/index.html">class index</a> maps every type, and <a href="architecture.html">how the library fits together</a> explains the layer underneath.</p>
+<hr>
+<p>← Previous: <a href="random-sources.html">2.2 RandomLib</a> · <a href="../index.html">Guide map</a> · Next: <a href="boolean.html">3.2 Boolean</a> →</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/miputra/RandEXom/blob/main/RandEXom/articles/framework.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

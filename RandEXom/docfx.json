@@ -15,9 +15,10 @@
         ]
       }
     ],
-    "dest": "_site",
+    "dest": "../docs/guide",
     "template": [
-      "default"
+      "default",
+      "templates/randexom"
     ]
   }
 }

@@ -1,4 +1,6 @@
-# How RandEXom fits together
+# 1.1 How RandEXom fits together
+
+Chapter 1: Start here · Page 1 of 3 · [Guide map](../index.md)
 
 RandEXom is arranged in layers. A **seed generator** supplies state, a **random source** turns that state into bounded numbers or bytes, and a **framework helper** applies those draws to a task such as shuffling or drawing from a bag. The interfaces connect the layers; utilities support internal conversions and optional time-based seed creation.
 
@@ -60,3 +62,7 @@ Changing *either* the seed algorithm or the random-source algorithm changes the 
 | Generate a date-based numeric seed | `Utility.SeedGenerator` | Optional convenience; not security-grade |
 
 All bounded range examples use `[min, max)`: the lower bound is included, the upper bound is excluded. The generators here are not cryptographic random-number generators. See [limitations](extending.md) before relying on sequences across versions or runtimes.
+
+---
+
+[Guide map](../index.md) · Next: [1.2 Installation](installation.md) →

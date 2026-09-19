@@ -1,0 +1,201 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>2.2 RandomLib: random sources </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="2.2 RandomLib: random sources ">
+    <meta name="generator" content="docfx 2.59.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../index.html">RandEXom <span class="brand-divider">/</span> Docs</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <ul class="nav navbar-nav">
+                <li><a href="../../">Project home</a></li>
+                <li><a href="../index.html">Guide map</a></li>
+                <li><a href="../api/index.html">Class index</a></li>
+              </ul>
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search docs" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="22-randomlib-random-sources">2.2 RandomLib: random sources</h1>
+
+<p>Chapter 2: Core libraries · Page 2 of 2 · <a href="../index.html">Guide map</a></p>
+<p><code>RandomLib</code> is the <strong>draw layer</strong> between <code>SeedLib</code> and <code>Framework</code>. A source implements <code>RandEXom.Interface.IRandomR</code>: it turns state into integer ranges or bytes and can be passed to a framework helper. You can also call it directly. See the <a href="architecture.html">layer diagram</a>, <a href="seed-generators.html">seed progression choices</a>, and <a href="../api/index.html">class index</a>.</p>
+<table>
+<thead>
+<tr>
+<th>Source</th>
+<th>Built-in seed behavior</th>
+<th>Main distinction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ModuloRandom</code></td>
+<td>Creates <code>XORShift64Seed</code> unless given an <code>ISeedR</code></td>
+<td>Raw xorshift-based output with bounded sampling</td>
+</tr>
+<tr>
+<td><code>NetRandom</code></td>
+<td>Creates constant internal <code>SeedR</code> unless given an <code>ISeedR</code></td>
+<td>Wraps <code>System.Random</code>; dynamic seeds can trigger reseeding</td>
+</tr>
+<tr>
+<td><code>SSRNGRandom</code></td>
+<td>Creates <code>LCGSeedR</code> unless given an <code>ISeedR</code></td>
+<td>Historical LCG output moduli and presets</td>
+</tr>
+</tbody>
+</table>
+<p>All expose <code>NextInt(min, max)</code>, <code>NextLong(min, max)</code>, <code>NextBytes(buffer)</code>, <code>GetSeed()</code>, and <code>GetSeedSTR()</code>. For the range methods, <code>min</code> is included and <code>max</code> is excluded. Always pass <code>min &lt; max</code>; behavior for an empty range differs between implementations. The methods advance internal state, so repeated calls usually produce different results.</p>
+<pre><code class="lang-csharp">using RandEXom.RandomLib;
+
+var random = new ModuloRandom(seed: 12345);
+int die = random.NextInt(1, 7);
+long sample = random.NextLong(-1000, 1000);
+byte[] bytes = new byte[16];
+random.NextBytes(bytes);
+</code></pre><p>The byte array is filled in place. <code>GetSeedSTR()</code> returns the initial seed as text, not a serialized snapshot of the generator&#39;s current state. A fixed seed can reproduce a sequence with the same generator and library version, but v1.5b changed some sequences from earlier releases.</p>
+<h2 id="modulorandom"><code>ModuloRandom</code></h2>
+<p><code>ModuloRandom</code> is the simple general-purpose choice in this library. By default it advances an <code>XORShift64Seed</code>; you can pass a seed number, an <code>ISeedR</code>, or a multiplier option. Its bounded methods use rejection sampling to avoid modulo bias.</p>
+<pre><code class="lang-csharp">using RandEXom.RandomLib;
+
+var regular = new ModuloRandom(seed: 42);
+var star = new ModuloRandom(ModuloRandom.Multiplier.XORShift64_Star, seed: 42);
+int result = star.NextInt(0, 10);
+</code></pre><p>The <code>XORShift64_Star</code> option selects the associated xorshift transition and multiplier when constructed from a seed number. It uses the shift sizes and multiplier of the xorshift64* example in <a href="https://vigna.di.unimi.it/ftp/papers/xorshift.pdf">Vigna’s paper</a>, but the implementation’s middle shift goes <strong>right</strong>, whereas the paper’s goes <strong>left</strong>. It is therefore not the exact published generator. Passing a custom <code>ISeedR</code> lets you pair the output source with a different seed progression; see <a href="seed-generators.html">seed generators</a>.</p>
+<h2 id="netrandom"><code>NetRandom</code></h2>
+<p><code>NetRandom</code> wraps <code>System.Random</code>. It accepts an optional numeric seed or an <code>ISeedR</code>. Its <code>NextLong</code> uses random bytes to sample the requested range.</p>
+<pre><code class="lang-csharp">using RandEXom.RandomLib;
+
+var random = new NetRandom(seed: 42);
+int index = random.NextInt(0, 5);
+</code></pre><p><code>NetRandom</code> converts its seed to a 32-bit value for <code>System.Random</code>; different 64-bit seeds can therefore map to the same internal seed. For reproducibility, also keep the same target runtime: <code>System.Random</code> is a .NET implementation detail, not a cross-runtime sequence contract.</p>
+<p>See the <a href="https://learn.microsoft.com/dotnet/api/system.random">Microsoft <code>System.Random</code> documentation</a> for platform behavior. This wrapper should not be described as implementing a <em>Numerical Recipes</em> generator.</p>
+<h2 id="ssrngrandom"><code>SSRNGRandom</code></h2>
+<p><code>SSRNGRandom</code> exposes historical system-supplied LCG parameter presets. It can construct a matching <code>LCGSeedR</code> from a preset, or accept an <code>ISeedR</code> and an output modulus. Use it when a particular generator family or preset is part of your experiment, not as a security primitive.</p>
+<pre><code class="lang-csharp">using RandEXom.RandomLib;
+
+var random = new SSRNGRandom(
+    SSRNGRandom.ParameterTemplate.Numerical_Recipes,
+    seed: 42);
+int value = random.NextInt(0, 100);
+</code></pre><p>Available presets: <code>ZX81</code>, <code>Numerical_Recipes</code>, <code>Borland_C</code>, <code>GLIBC</code>, <code>IBM</code>, <code>Borland_Delphi</code>, <code>Turbo_Pascal</code>, <code>Microsoft_Visual_C</code>, <code>Microsoft_Visual_Basic</code>, <code>RtlUniform</code>, <code>Apple_CarbonLib</code>, <code>C_Plus_11</code>, <code>MTH_RANDOM</code>, <code>Java</code>, <code>random0</code>, <code>POSIX</code>, <code>cc65</code>, <code>cc65_2</code>, and <code>RANDU</code>. The output modulus must be greater than one.</p>
+<p>The default LCG constants are attributed to the <em><a href="https://numerical.recipes/">Numerical Recipes in C</a></em> book. <a href="https://www.ams.org/mcom/1999-68-225/S0025-5718-99-00996-5/S0025-5718-99-00996-5.pdf">L’Ecuyer’s paper on LCG parameter quality</a> is relevant background, <strong>not</strong> the source of every named preset. See <a href="research.html">research and provenance</a>.</p>
+<h2 id="choosing-a-source">Choosing a source</h2>
+<table>
+<thead>
+<tr>
+<th>Need</th>
+<th>Starting point</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A seeded random source for application or simulation use</td>
+<td><code>ModuloRandom(seed: ...)</code></td>
+</tr>
+<tr>
+<td>The platform <code>System.Random</code> implementation</td>
+<td><code>NetRandom(seed: ...)</code></td>
+</tr>
+<tr>
+<td>A historical LCG preset</td>
+<td><code>SSRNGRandom(ParameterTemplate, seed: ...)</code></td>
+</tr>
+</tbody>
+</table>
+<p>None of these classes is documented as cryptographically secure. Use a platform cryptographic random-number generator for tokens, passwords, keys, or other security-sensitive values.</p>
+<hr>
+<p>← Previous: <a href="seed-generators.html">2.1 SeedLib</a> · <a href="../index.html">Guide map</a> · Next: <a href="framework.html">3.1 Framework overview</a> →</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/miputra/RandEXom/blob/main/RandEXom/articles/random-sources.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

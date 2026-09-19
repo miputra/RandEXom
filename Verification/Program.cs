@@ -41,6 +41,19 @@ byte[] starByte = new byte[1];
 starRandom.NextBytes(starByte);
 Check(starByte[0] == (byte)(unchecked((ulong)33554433 * 2685821657736338717UL) >> 56), "xorshift64* multiplier");
 
+// Reference sequence from Vigna's Figure 10, starting from state 1.
+long[] starStates = { 1126174793148417, 3659449627584515, 2306758490171379329, 585415316980522496 };
+byte[] starBytes = { 171, 185, 77, 14 };
+for (int i = 0; i < starStates.Length; i++)
+{
+    long oldState = star.now;
+    star.Next();
+    Check(star.previous == oldState && star.now == starStates[i], "xorshift64* reference states");
+    starRandom.NextBytes(starByte);
+    Check(starByte[0] == starBytes[i], "xorshift64* reference output bytes");
+    Check(starRandom.GetSeed().now == starStates[i], "xorshift64* retains unmultiplied state");
+}
+
 var bytes = new byte[8];
 var modulo = new ModuloRandom(seed: 123);
 modulo.NextBytes(bytes);

@@ -17,6 +17,11 @@
     .card { background: #1b2940; border: 1px solid #344562; border-radius: 16px; padding: 24px; margin: 30px 0; }
     .button { display: inline-block; background: #79d8a2; color: #10221a; text-decoration: none; font-weight: 700; border-radius: 8px; padding: 12px 18px; margin: 8px 12px 8px 0; }
     .button.secondary { background: transparent; border: 1px solid #8bd8ff; color: #8bd8ff; }
+    .guide-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 16px; margin: 22px 0; }
+    .guide-link { display: block; background: #1b2940; border: 1px solid #344562; border-radius: 12px; padding: 20px; text-decoration: none; }
+    .guide-link:hover, .guide-link:focus { border-color: #79d8a2; background: #223650; }
+    .guide-link strong { display: block; color: #f2f8ff; font-size: 1.08rem; }
+    .guide-link span { display: block; color: #bed0e7; margin-top: 8px; }
     code, pre { background: #0b1320; border-radius: 6px; }
     code { padding: 2px 5px; }
     pre { padding: 18px; overflow-x: auto; }
@@ -31,6 +36,7 @@
   <div class="eyebrow">RandEXom · v1.5b</div>
   <h1>Build the randomizer you need.</h1>
   <p class="lead">RandEXom is a C# library with interchangeable seed generators, bounded random sources, and helpers for weighted picks, percentages, shuffles, and number ranges.</p>
+  <a class="button" href="guide/">Read the documentation</a>
   <section class="card" aria-labelledby="download-title">
     <h2 id="download-title">Download</h2>
     <p>For .NET Standard 2.1 or a compatible runtime.</p>
@@ -46,9 +52,17 @@ var random = new ModuloRandom(seed: 12345);
 int value = random.NextInt(0, 100); // 0 through 99
 </code></pre>
   <p>Minimum bounds are inclusive; maximum bounds are exclusive. The source is available in the <a href="https://github.com/miputra/RandEXom">GitHub repository</a>.</p>
-  <p>New to the library? Start with <a href="https://github.com/miputra/RandEXom/blob/main/RandEXom/articles/architecture.md">how RandEXom fits together</a>, then follow the <a href="https://github.com/miputra/RandEXom/blob/main/RandEXom/index.md">documentation</a> for installation and each subsystem. Use the <a href="https://github.com/miputra/RandEXom/blob/main/RandEXom/api/index.md">class index</a> to find a particular type.</p>
+  <h2>Documentation</h2>
+  <p>Follow four chapters in order, or jump straight to a type. Every guide page shows its chapter and links to the previous and next page.</p>
+  <div class="guide-grid">
+    <a class="guide-link" href="guide/articles/architecture.html"><strong>1. Start here</strong><span>Understand the layers, install the DLL, and make a first draw.</span></a>
+    <a class="guide-link" href="guide/articles/seed-generators.html"><strong>2. Core libraries</strong><span>Choose seed progression and a source of numbers or bytes.</span></a>
+    <a class="guide-link" href="guide/articles/framework.html"><strong>3. Framework</strong><span>Apply draws to percentages, item pools, and number rules.</span></a>
+    <a class="guide-link" href="guide/articles/utility.html"><strong>4. Reference</strong><span>Explore utilities, extension points, and the class index.</span></a>
+  </div>
+  <p>Looking for one class? Go to the <a href="guide/api/index.html">class index</a>. For algorithm papers, book sources, and implementation differences, see <a href="guide/articles/research.html">research and provenance</a>.</p>
   <h2>What changed in v1.5b</h2>
-  <p>This release corrects LCG and xorshift64* transitions, bounded sampling, weighted draws, and several range helpers. <strong>Seeded output sequences may differ from earlier releases.</strong> Review the <a href="https://github.com/miputra/RandEXom/blob/main/README.md">README</a> and <a href="https://github.com/miputra/RandEXom/tree/main/Verification">verification checks</a> for details.</p>
+  <p>This release updates LCG and xorshift transitions, bounded sampling, weighted draws, and several range helpers. <strong>Seeded output sequences may differ from earlier releases.</strong> The xorshift64* option still differs from the published generator in one shift direction; see <a href="guide/articles/research.html">research and provenance</a>. Review the <a href="https://github.com/miputra/RandEXom/blob/main/README.md">README</a> and <a href="https://github.com/miputra/RandEXom/tree/main/Verification">verification checks</a> for details.</p>
   <section class="card" aria-labelledby="support-title">
     <h2 id="support-title">Support RandEXom</h2>
     <p>Donations are optional and help support continued development.</p>

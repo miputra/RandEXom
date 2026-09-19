@@ -4,7 +4,7 @@ using RandEXom.SeedLib;
 
 namespace RandEXom.Framework.Number
 {
-    /// <summary>Generates an integer in the requested range.</summary>
+    /// <summary>Draws one value per call, so callers can spin each slot-machine reel separately.</summary>
     public class SlotR
     {
         private readonly IRandomR rand;

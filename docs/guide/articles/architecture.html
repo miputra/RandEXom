@@ -1,0 +1,244 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>1.1 How RandEXom fits together </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="1.1 How RandEXom fits together ">
+    <meta name="generator" content="docfx 2.59.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../index.html">RandEXom <span class="brand-divider">/</span> Docs</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <ul class="nav navbar-nav">
+                <li><a href="../../">Project home</a></li>
+                <li><a href="../index.html">Guide map</a></li>
+                <li><a href="../api/index.html">Class index</a></li>
+              </ul>
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search docs" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="11-how-randexom-fits-together">1.1 How RandEXom fits together</h1>
+
+<p>Chapter 1: Start here · Page 1 of 3 · <a href="../index.html">Guide map</a></p>
+<p>RandEXom is arranged in layers. A <strong>seed generator</strong> supplies state, a <strong>random source</strong> turns that state into bounded numbers or bytes, and a <strong>framework helper</strong> applies those draws to a task such as shuffling or drawing from a bag. The interfaces connect the layers; utilities support internal conversions and optional time-based seed creation.</p>
+<pre><code class="lang-text">Your application
+  └─ Framework.Boolean / Framework.Item / Framework.Number  (optional task helpers)
+       └─ IRandomR ← RandomLib                              (draw numbers and bytes)
+            └─ ISeedR ← SeedLib                              (hold/advance seed state)
+
+Utility ── supporting functions; not a required layer in application code
+</code></pre><p>You can use <code>RandomLib</code> directly without a framework helper. Most helpers also have constructors that build their own default <code>NetRandom</code>; supplying an <code>IRandomR</code> yourself lets you choose and share the source. No framework helper is necessary merely to get a bounded number.</p>
+<h2 id="namespaces-and-responsibilities">Namespaces and responsibilities</h2>
+<table>
+<thead>
+<tr>
+<th>Namespace</th>
+<th>Question it answers</th>
+<th>Main contract or types</th>
+<th>Read next</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>RandEXom.Interface</code></td>
+<td>What can be plugged into another layer?</td>
+<td><code>ISeedR</code>, <code>IRandomR</code>, <code>IGachaR&lt;T&gt;</code></td>
+<td><a href="extending.html">Contracts and extension</a></td>
+</tr>
+<tr>
+<td><code>RandEXom.SeedLib</code></td>
+<td>How does the seed state change?</td>
+<td><code>XORShift64Seed</code>, <code>LCGSeedR</code>, <code>IterativeSeedR</code>, <code>IterativeSeedRCustom</code></td>
+<td><a href="seed-generators.html">SeedLib</a></td>
+</tr>
+<tr>
+<td><code>RandEXom.RandomLib</code></td>
+<td>How are bounded values and bytes generated?</td>
+<td><code>ModuloRandom</code>, <code>NetRandom</code>, <code>SSRNGRandom</code></td>
+<td><a href="random-sources.html">RandomLib</a></td>
+</tr>
+<tr>
+<td><code>RandEXom.Framework</code></td>
+<td>Which task-level behavior wraps a source?</td>
+<td>Boolean, Item, and Number branches</td>
+<td><a href="framework.html">Framework overview</a></td>
+</tr>
+<tr>
+<td><code>RandEXom.Framework.Boolean</code></td>
+<td>Should this independent chance succeed?</td>
+<td><code>TruePercentageR</code></td>
+<td><a href="boolean.html">Boolean</a></td>
+</tr>
+<tr>
+<td><code>RandEXom.Framework.Item</code></td>
+<td>How do I reorder or draw items?</td>
+<td><code>Shuffles_FisherYates</code>, <code>GachaR&lt;T&gt;</code>, <code>GachaRBatched&lt;T&gt;</code></td>
+<td><a href="items.html">Item</a></td>
+</tr>
+<tr>
+<td><code>RandEXom.Framework.Number</code></td>
+<td>What range behavior do I need?</td>
+<td><code>SlotR</code>, <code>PongR</code>, <code>DistanceR</code>; experimental tree types</td>
+<td><a href="numbers.html">Number</a></td>
+</tr>
+<tr>
+<td><code>RandEXom.Utility</code></td>
+<td>What supporting conversions exist?</td>
+<td>public <code>SeedGenerator</code>; internal <code>TypeR</code></td>
+<td><a href="utility.html">Utility</a></td>
+</tr>
+</tbody>
+</table>
+<p>The <a href="../api/index.html">class index</a> maps each type to its guide and availability. <code>Framework</code> means an application-level behavior built <em>on top of</em> a random source, not a separate random engine.</p>
+<h2 id="follow-one-draw-through-the-layers">Follow one draw through the layers</h2>
+<pre><code class="lang-csharp">using RandEXom.Framework.Boolean;
+using RandEXom.RandomLib;
+using RandEXom.SeedLib;
+
+var seed = new LCGSeedR(LCGSeedR.ParameterTemplate.Numerical_Recipes, seed: 42);
+var random = new ModuloRandom(seed);
+var chance = new TruePercentageR(random, percentage: 25f);
+bool result = chance.Next();
+</code></pre><ol>
+<li><code>LCGSeedR</code> starts from seed 42 and implements <code>ISeedR</code>.</li>
+<li><code>ModuloRandom</code> holds that seed generator and implements <code>IRandomR</code>.</li>
+<li><code>TruePercentageR</code> asks its random source for a bounded value and compares it with a threshold representing 25%.</li>
+<li>The draw advances state. The next <code>chance.Next()</code> uses the subsequent state, not a fresh copy of seed 42.</li>
+</ol>
+<p>Changing <em>either</em> the seed algorithm or the random-source algorithm changes the resulting sequence. A seed is an input to an algorithm, not a complete specification of the output. Some helpers construct <code>NetRandom</code> with a constant internal seed by default; passing a <code>RandomLib</code> implementation explicitly makes the composition visible.</p>
+<h2 id="how-to-choose-a-path">How to choose a path</h2>
+<table>
+<thead>
+<tr>
+<th>Goal</th>
+<th>Start here</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Draw an integer or fill bytes</td>
+<td><code>RandomLib.ModuloRandom</code></td>
+<td>Direct <code>NextInt</code>, <code>NextLong</code>, <code>NextBytes</code> API</td>
+</tr>
+<tr>
+<td>Reproduce a particular seed progression</td>
+<td>A <code>SeedLib</code> implementation, then a <code>RandomLib</code> source</td>
+<td>Seed and source are separate choices</td>
+</tr>
+<tr>
+<td>Shuffle or draw without replacement</td>
+<td><code>Framework.Item</code></td>
+<td>Adds list or bag behavior to a source</td>
+</tr>
+<tr>
+<td>Draw a probability or constrained number</td>
+<td><code>Framework.Boolean</code> or <code>.Number</code></td>
+<td>Adds rules to a source; see <a href="framework.html">Framework</a></td>
+</tr>
+<tr>
+<td>Supply a different algorithm</td>
+<td><code>ISeedR</code> or <code>IRandomR</code></td>
+<td>Plug into existing constructors</td>
+</tr>
+<tr>
+<td>Generate a date-based numeric seed</td>
+<td><code>Utility.SeedGenerator</code></td>
+<td>Optional convenience; not security-grade</td>
+</tr>
+</tbody>
+</table>
+<p>All bounded range examples use <code>[min, max)</code>: the lower bound is included, the upper bound is excluded. The generators here are not cryptographic random-number generators. See <a href="extending.html">limitations</a> before relying on sequences across versions or runtimes.</p>
+<hr>
+<p><a href="../index.html">Guide map</a> · Next: <a href="installation.html">1.2 Installation</a> →</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/miputra/RandEXom/blob/main/RandEXom/articles/architecture.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,151 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>1.3 Getting started </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="1.3 Getting started ">
+    <meta name="generator" content="docfx 2.59.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../index.html">RandEXom <span class="brand-divider">/</span> Docs</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <ul class="nav navbar-nav">
+                <li><a href="../../">Project home</a></li>
+                <li><a href="../index.html">Guide map</a></li>
+                <li><a href="../api/index.html">Class index</a></li>
+              </ul>
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search docs" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="13-getting-started">1.3 Getting started</h1>
+
+<p>Chapter 1: Start here · Page 3 of 3 · <a href="../index.html">Guide map</a></p>
+<p>First read <a href="architecture.html">how the library fits together</a>: <code>SeedLib</code> holds state, <code>RandomLib</code> produces values, and <code>Framework</code> applies values to tasks. This page then gives a quick path from download to a few common draws. For a type-by-type lookup, use the <a href="../api/index.html">class index</a>.</p>
+<p>RandEXom targets .NET Standard 2.1. Download the <a href="https://miputra.github.io/RandEXom/downloads/RandEXom.dll">v1.5b DLL</a> or the <a href="https://github.com/miputra/RandEXom/releases/tag/1.5b">GitHub release</a>, then add the DLL as a reference to a compatible .NET project. In Visual Studio, right-click the project in Solution Explorer, choose <strong>Add Reference</strong>, browse to the DLL, and confirm.</p>
+<h2 id="generate-a-bounded-number">Generate a bounded number</h2>
+<pre><code class="lang-csharp">using RandEXom.RandomLib;
+
+var random = new ModuloRandom(seed: 12345);
+int roll = random.NextInt(1, 7); // 1 through 6
+long sample = random.NextLong(0, 1000); // 0 through 999
+</code></pre><p>The minimum is inclusive and the maximum is exclusive. The minimum must be smaller than the maximum. Supplying a seed makes the generator&#39;s sequence reproducible for the same library version; v1.5b corrected generator behavior, so do not assume its output matches older releases. These generators are for simulation and application randomization, not cryptographic secrets.</p>
+<h2 id="choose-a-seed-generator">Choose a seed generator</h2>
+<p><code>ModuloRandom</code> accepts an <code>ISeedR</code> implementation. For example, use the Numerical Recipes LCG parameters with a known seed:</p>
+<pre><code class="lang-csharp">using RandEXom.RandomLib;
+using RandEXom.SeedLib;
+
+var seed = new LCGSeedR(LCGSeedR.ParameterTemplate.Numerical_Recipes, seed: 42);
+var random = new ModuloRandom(seed);
+int value = random.NextInt(0, 10);
+</code></pre><h2 id="shuffle-and-draw-items">Shuffle and draw items</h2>
+<pre><code class="lang-csharp">using System.Collections.Generic;
+using RandEXom.Framework.Item;
+
+var cards = new List&lt;string&gt; { &quot;red&quot;, &quot;blue&quot;, &quot;green&quot; };
+new Shuffles_FisherYates(seed: 42).Shuffle(cards); // modifies the list in place
+
+var bag = new GachaR&lt;string&gt;(seed: 42, reset_on_empty: false);
+bag.AddItem(&quot;common&quot;, 3);
+bag.AddItem(&quot;rare&quot;, 1);
+string drawn = bag.Pull(); // removes one item from the bag
+</code></pre><p><code>AddItem</code> adds <code>count</code> copies, so adding more copies gives an item more chances to be drawn. With <code>reset_on_empty: false</code>, <code>Pull()</code> returns the type&#39;s default value when the bag is empty; the default behavior refills it instead. Use <code>Refill()</code> to restore the initial contents manually.</p>
+<h2 id="draw-a-percentage">Draw a percentage</h2>
+<pre><code class="lang-csharp">using RandEXom.Framework.Boolean;
+
+var succeeds = new TruePercentageR(seed: 42, percentage: 25f);
+bool result = succeeds.Next(); // independent 25% chance of true
+</code></pre><p>Percentages must be between 0 and 100. Each call is an independent draw, not a promise that exactly 25 out of 100 calls return true.</p>
+<p>For the full public surface, see the <a href="../api/index.html">API overview</a>. From the repository root, run <code>dotnet run --project Verification/Verification.csproj</code> for the library&#39;s verification checks.</p>
+<hr>
+<p>← Previous: <a href="installation.html">1.2 Installation</a> · <a href="../index.html">Guide map</a> · Next: <a href="seed-generators.html">2.1 SeedLib</a> →</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/miputra/RandEXom/blob/main/RandEXom/articles/intro.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

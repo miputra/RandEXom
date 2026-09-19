@@ -1,0 +1,148 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>4.2 Interfaces, extension, and limitations </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="4.2 Interfaces, extension, and limitations ">
+    <meta name="generator" content="docfx 2.59.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../index.html">RandEXom <span class="brand-divider">/</span> Docs</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <ul class="nav navbar-nav">
+                <li><a href="../../">Project home</a></li>
+                <li><a href="../index.html">Guide map</a></li>
+                <li><a href="../api/index.html">Class index</a></li>
+              </ul>
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search docs" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="42-interfaces-extension-and-limitations">4.2 Interfaces, extension, and limitations</h1>
+
+<p>Chapter 4: Reference · Page 2 of 4 · <a href="../index.html">Guide map</a></p>
+<p>RandEXom separates a random source (<code>IRandomR</code>) from a seed generator (<code>ISeedR</code>). Most Boolean, item, and number helpers accept an <code>IRandomR</code>, so you can choose one source and reuse it across helpers. Be aware that sharing a source shares its mutable state: a call from one helper changes the sequence seen by the next.</p>
+<h2 id="pass-a-custom-seed-progression">Pass a custom seed progression</h2>
+<p>The easiest extension point is <code>IterativeSeedRCustom</code>, which implements <code>ISeedR</code> from a function:</p>
+<pre><code class="lang-csharp">using RandEXom.RandomLib;
+using RandEXom.SeedLib;
+
+var seed = new IterativeSeedRCustom(
+    current =&gt; unchecked(current * 17 + 3),
+    seed: 42);
+var random = new ModuloRandom(seed);
+int value = random.NextInt(0, 100);
+</code></pre><p>The example shows the extension mechanism, not a recommended statistical algorithm. A custom function with a short cycle or constant output can make draws poor or even prevent useful progression.</p>
+<h2 id="implement-an-interface">Implement an interface</h2>
+<p>An <code>ISeedR</code> implementation must expose <code>init</code>, <code>now</code>, <code>previous</code>, and <code>Next()</code>. An <code>IRandomR</code> implementation must provide <code>NextInt</code>, <code>NextLong</code>, <code>NextBytes</code>, <code>GetSeed</code>, and <code>GetSeedSTR</code>. Follow the range contract—minimum inclusive, maximum exclusive—and reject empty or reversed ranges. Advance state consistently when generating values and bytes.</p>
+<p>For example, a custom source can be passed directly to a helper:</p>
+<pre><code class="lang-csharp">using RandEXom.Framework.Boolean;
+using RandEXom.Interface;
+using RandEXom.RandomLib;
+
+IRandomR source = new ModuloRandom(seed: 42);
+var flag = new TruePercentageR(source, percentage: 10f);
+</code></pre><h2 id="important-limits">Important limits</h2>
+<ul>
+<li>RandEXom&#39;s generators are not cryptographic random-number generators. Do not use them for keys, credentials, tokens, or other security-sensitive values.</li>
+<li>Reproducibility depends on the generator, seed, library version, and—in the case of <code>NetRandom</code>—the .NET runtime. v1.5b fixed several generator and range calculations, changing some seeded sequences.</li>
+<li>Helper instances and random sources are mutable. Do not assume they are safe for concurrent use without your own synchronization.</li>
+<li><code>GetSeedSTR()</code> reports the initial seed, not enough information to resume a generator from an arbitrary point.</li>
+<li>For <code>[min, max)</code>, <code>min</code> must be less than <code>max</code>; <code>max</code> itself cannot be returned. Use <code>NextInt(1, 7)</code> for a six-sided die.</li>
+<li><code>GachaR&lt;T&gt;</code> and <code>GachaRBatched&lt;T&gt;</code> can return <code>default(T)</code> when empty, which may be indistinguishable from a valid item. Check the remaining count if that matters.</li>
+<li>The distributed-tree types are obsolete/experimental, and dice/noise types are debug-only placeholders. See <a href="numbers.html">number helpers</a>.</li>
+</ul>
+<h2 id="verification">Verification</h2>
+<p>Run <code>dotnet run --project Verification/Verification.csproj</code> from the repository root. If you change a generator or helper, add cases there for fixed-seed sequences, extreme bounds, empty pools, and invalid arguments.</p>
+<hr>
+<p>← Previous: <a href="utility.html">4.1 Utility</a> · <a href="../index.html">Guide map</a> · Next: <a href="research.html">4.3 Research and provenance</a> →</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/miputra/RandEXom/blob/main/RandEXom/articles/extending.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

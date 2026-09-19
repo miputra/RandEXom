@@ -1,0 +1,143 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>3.4 Framework.Number </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="3.4 Framework.Number ">
+    <meta name="generator" content="docfx 2.59.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../index.html">RandEXom <span class="brand-divider">/</span> Docs</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <ul class="nav navbar-nav">
+                <li><a href="../../">Project home</a></li>
+                <li><a href="../index.html">Guide map</a></li>
+                <li><a href="../api/index.html">Class index</a></li>
+              </ul>
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search docs" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="34-frameworknumber">3.4 Framework.Number</h1>
+
+<p>Chapter 3: Framework helpers · Page 4 of 4 · <a href="../index.html">Guide map</a></p>
+<p>This branch of <a href="framework.html">Framework</a> adds different rules to numeric draws. Its usable types are <code>SlotR</code> (one draw per slot-machine reel), <code>PongR</code> (alternating halves), and <code>DistanceR</code> (gap from the last result). They live in <code>RandEXom.Framework.Number</code> and accept either a seed number or an <code>IRandomR</code> source. Their range methods include the minimum and exclude the maximum. Experimental tree and unfinished dice/noise types are listed below so their presence in source code is not mistaken for a supported feature.</p>
+<h2 id="slotr-spin-one-reel-at-a-time"><code>SlotR</code>: spin one reel at a time</h2>
+<p><code>SlotR</code> is inspired by a classical slot machine: call <code>Next(min, max)</code> once for <strong>each reel or slot position</strong>, in order. Each call draws one bounded value from the configured random source and advances that source. It does not generate an entire three-reel result in one call, remember how many reels exist, or enforce slot-machine payout rules. Your application chooses the reel count and combines the returned values.</p>
+<pre><code class="lang-csharp">using RandEXom.Framework.Number;
+
+var slot = new SlotR(seed: 42);
+int[] reels = new int[3];
+for (int i = 0; i &lt; reels.Length; i++)
+{
+    reels[i] = slot.Next(0, 10); // draw this reel: 0 through 9
+}
+</code></pre><p>The example produces three reel values by making three sequential calls. If reels use different symbols or ranges, pass the appropriate bounds on each call. <code>SlotR</code> itself simply delegates each draw to <code>IRandomR.NextInt</code>.</p>
+<h2 id="pongr-alternate-halves"><code>PongR</code>: alternate halves</h2>
+<p><code>PongR</code> alternates between the lower and upper halves of a range on successive calls. Basically it is like a pong ball where bounce high and low. The first call samples the lower half. The integer and long overloads maintain <strong>separate</strong> alternation state.</p>
+<pre><code class="lang-csharp">var pong = new PongR(seed: 42);
+int lower = pong.Next(0, 10); // 0 through 4
+int upper = pong.Next(0, 10); // 5 through 9
+</code></pre><p>For odd-sized ranges, the upper half contains one extra value. For a one-value range, every call returns that value without changing the alternation state. Changing ranges between calls does not reset the alternating half.</p>
+<h2 id="distancer-keep-draws-apart"><code>DistanceR</code>: keep draws apart</h2>
+<p><code>DistanceR</code> samples a value at least <code>distance</code> away from its <strong>previous</strong> result. The first draw is unrestricted within the range.</p>
+<pre><code class="lang-csharp">var spaced = new DistanceR(seed: 42, distance: 3);
+int first = spaced.Next(0, 10);
+int second = spaced.Next(0, 10); // |second - first| &gt;= 3
+</code></pre><p><code>distance</code> must be nonnegative, and <code>SetDistance()</code> changes it for future calls. A distance of zero imposes no spacing. If no value in <code>[min, max)</code> can satisfy the requested gap, <code>Next()</code> throws <code>InvalidOperationException</code>. This is not a constraint against <em>all</em> earlier values—only the immediately preceding one. <code>Next</code> has both <code>int</code> and <code>long</code> overloads.</p>
+<h2 id="experimental-distributed-trees">Experimental distributed trees</h2>
+<p><code>DistributedTreeR</code> and <code>DistributedTreeNestedR</code> partition a numeric range into tree leaves and favor branches with lower accumulated weights. Both expose <code>Next()</code> and <code>NextInt()</code> plus <code>CreateNodes(level, child)</code>. These types are marked obsolete. <code>DistributedTreeR</code> is also hidden from IntelliSense and has shared static node storage; <code>DistributedTreeNestedR</code> is explicitly still in development. <strong>Do not rely on either for production behavior</strong>. They are documented here for completeness, not recommended as an alternative to <code>SlotR</code> or <code>DistanceR</code>.</p>
+<h2 id="debug-only-placeholders">Debug-only placeholders</h2>
+<p><code>DiceR</code>, <code>Dice6F</code>, and <code>PerlinNoise</code> are compiled only under <code>DEBUG</code>. <code>DiceR</code> is abstract, and these classes have no usable finished randomization or noise implementation. They are not part of the documented release workflow. The Perlin name refers to Ken Perlin’s <a href="https://mrl.cs.nyu.edu/~perlin/paper445.pdf">“Improving Noise” (2002)</a>, but this project <strong>does not yet implement</strong> that paper’s algorithm.</p>
+<hr>
+<p>← Previous: <a href="items.html">3.3 Item</a> · <a href="../index.html">Guide map</a> · Next: <a href="utility.html">4.1 Utility</a> →</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/miputra/RandEXom/blob/main/RandEXom/articles/numbers.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

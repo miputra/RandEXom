@@ -1,4 +1,6 @@
-# Custom implementations and limitations
+# 4.2 Interfaces, extension, and limitations
+
+Chapter 4: Reference · Page 2 of 4 · [Guide map](../index.md)
 
 RandEXom separates a random source (`IRandomR`) from a seed generator (`ISeedR`). Most Boolean, item, and number helpers accept an `IRandomR`, so you can choose one source and reuse it across helpers. Be aware that sharing a source shares its mutable state: a call from one helper changes the sequence seen by the next.
 
@@ -47,3 +49,7 @@ var flag = new TruePercentageR(source, percentage: 10f);
 ## Verification
 
 Run `dotnet run --project Verification/Verification.csproj` from the repository root. If you change a generator or helper, add cases there for fixed-seed sequences, extreme bounds, empty pools, and invalid arguments.
+
+---
+
+← Previous: [4.1 Utility](utility.md) · [Guide map](../index.md) · Next: [4.3 Research and provenance](research.md) →

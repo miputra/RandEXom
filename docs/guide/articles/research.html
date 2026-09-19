@@ -1,0 +1,151 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>4.3 Research and provenance </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="4.3 Research and provenance ">
+    <meta name="generator" content="docfx 2.59.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../index.html">RandEXom <span class="brand-divider">/</span> Docs</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <ul class="nav navbar-nav">
+                <li><a href="../../">Project home</a></li>
+                <li><a href="../index.html">Guide map</a></li>
+                <li><a href="../api/index.html">Class index</a></li>
+              </ul>
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search docs" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="43-research-and-provenance">4.3 Research and provenance</h1>
+
+<p>Chapter 4: Reference · Page 3 of 4 · <a href="../index.html">Guide map</a></p>
+<p>This page distinguishes <strong>implemented algorithms</strong>, <strong>parameter sources</strong>, and <strong>research related to an unfinished placeholder</strong>. A citation is not a claim that RandEXom reproduces every method or quality result in that work. Follow the feature guides for what this code actually does.</p>
+<h2 id="implemented-algorithm-families">Implemented algorithm families</h2>
+<table>
+<thead>
+<tr>
+<th>RandEXom feature</th>
+<th>Research paper</th>
+<th>What the link supports</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>XORShift64Seed</code> (<code>Xorshift64</code>)</td>
+<td>George Marsaglia, <a href="https://www.jstatsoft.org/article/view/v008i14">“Xorshift RNGs” (2003)</a></td>
+<td>The xorshift generator family; RandEXom uses a 64-bit shift/xor state transition.</td>
+</tr>
+<tr>
+<td><code>XORShift64Seed</code> and <code>ModuloRandom</code> (<code>XORShift64_Star</code>)</td>
+<td>Sebastiano Vigna, <a href="https://vigna.di.unimi.it/ftp/papers/xorshift.pdf">“An experimental exploration of Marsaglia’s xorshift generators, scrambled” (2016)</a></td>
+<td>The built-in star option matches Figure 10’s right–left–right transition (12, 25, 27) and output multiplier (2685821657736338717). The seed generator retains the unmultiplied state. The paper’s statistical results concern the raw generator, not RandEXom’s bounded-number or byte APIs, nor arbitrary custom seed generators paired with the multiplier.</td>
+</tr>
+<tr>
+<td><code>Shuffles_FisherYates</code></td>
+<td>Richard Durstenfeld, <a href="https://doi.org/10.1145/364520.364540">“Algorithm 235: Random permutation” (1964)</a></td>
+<td>The in-place swap approach to random permutation. RandEXom uses a forward traversal equivalent to the paper’s backward traversal.</td>
+</tr>
+</tbody>
+</table>
+<p>The name “Fisher–Yates” also acknowledges the earlier shuffle procedure by Ronald Fisher and Frank Yates. Their <em>Statistical Tables for Biological, Agricultural and Medical Research</em> is a <strong>book</strong>, not the linked Durstenfeld paper. The <a href="https://wellcomecollection.org/works/udsvs2rx">1938 library catalog record</a> is provided for historical provenance.</p>
+<h2 id="lcg-research-versus-preset-provenance">LCG research versus preset provenance</h2>
+<p><code>LCGSeedR</code> and <code>SSRNGRandom</code> use linear-congruential recurrences. Pierre L’Ecuyer’s paper <a href="https://www.ams.org/mcom/1999-68-225/S0025-5718-99-00996-5/S0025-5718-99-00996-5.pdf">“Tables of Linear Congruential Generators of Different Sizes and Good Lattice Structure” (1999)</a> discusses parameter quality and the lattice structure of LCGs. <strong>The paper is background research, not the source of RandEXom’s named historical presets.</strong></p>
+<p>The default <code>a = 1664525</code>, <code>c = 1013904223</code>, <code>m = 2^32</code> combination is from <em><a href="https://numerical.recipes/">Numerical Recipes in C, 2nd edition, section 7.1</a></em>. That is a <strong>book</strong>, not a research paper. Other enum presets carry names of historical systems; their names alone do not certify the quality or exact runtime output of those systems. See <a href="seed-generators.html">SeedLib</a> and <a href="random-sources.html">RandomLib</a> for this implementation’s behavior.</p>
+<h2 id="related-research-not-an-implemented-feature">Related research, not an implemented feature</h2>
+<p><code>PerlinNoise</code> is currently an empty <code>DEBUG</code>-only placeholder. Ken Perlin’s <a href="https://mrl.cs.nyu.edu/~perlin/paper445.pdf">“Improving Noise” (2002)</a> is the relevant research reference for the name and a possible future implementation, <strong>not</strong> evidence that RandEXom currently implements Perlin noise.</p>
+<h2 id="platform-behavior-and-project-specific-helpers">Platform behavior and project-specific helpers</h2>
+<p><code>NetRandom</code> wraps <code>System.Random</code>; its behavior should be read from <a href="https://learn.microsoft.com/dotnet/api/system.random">Microsoft’s API documentation</a>, not attributed to a <em>Numerical Recipes</em> algorithm. <code>TruePercentageR</code>, <code>GachaR&lt;T&gt;</code>, <code>GachaRBatched&lt;T&gt;</code>, <code>SlotR</code>, <code>PongR</code>, and <code>DistanceR</code> are documented from the code’s behavior rather than presented as implementations of a particular paper. If research is added to their design later, it should be linked next to the exact claim it supports.</p>
+<hr>
+<p>← Previous: <a href="extending.html">4.2 Interfaces and limitations</a> · <a href="../index.html">Guide map</a> · Next: <a href="../api/index.html">4.4 Class index</a> →</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/miputra/RandEXom/blob/main/RandEXom/articles/research.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

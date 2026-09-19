@@ -1,4 +1,6 @@
-# Boolean helpers
+# 3.2 Framework.Boolean
+
+Chapter 3: Framework helpers · Page 2 of 4 · [Guide map](../index.md)
 
 This branch of [Framework](framework.md) converts a bounded draw from `IRandomR` into a Boolean event. It contains one helper, `RandEXom.Framework.Boolean.TruePercentageR`, which returns `true` with the requested probability on each independent draw. It accepts a percentage from 0 through 100, a seed for repeatable tests, or an `IRandomR` implementation.
 
@@ -21,3 +23,7 @@ var succeeds = new TruePercentageR(random, percentage: 12.5f);
 ```
 
 Sharing a source also shares its advancing state, so the order of calls across helpers affects the sequence. `Reset()` recalculates the probability threshold; it does not rewind the random source or balance past results. `CreateItems()` performs the same threshold calculation and usually need not be called directly.
+
+---
+
+← Previous: [3.1 Framework overview](framework.md) · [Guide map](../index.md) · Next: [3.3 Item](items.md) →

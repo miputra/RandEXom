@@ -1,4 +1,6 @@
-# Installation
+# 1.2 Installation
+
+Chapter 1: Start here · Page 2 of 3 · [Guide map](../index.md)
 
 RandEXom v1.5b targets **.NET Standard 2.1**. Use it from a project whose runtime supports that target. The repository's verification project targets .NET 8. RandEXom is currently distributed as a DLL and a GitHub release, not as a NuGet package.
 
@@ -51,3 +53,7 @@ dotnet run --project Verification/Verification.csproj
 ```
 
 The verification program checks generator sequences and range, percentage, weighted-draw, and distance edge cases. A successful run prints `All verification checks passed.`
+
+---
+
+← Previous: [1.1 How the library fits together](architecture.md) · [Guide map](../index.md) · Next: [1.3 Getting started](intro.md) →

@@ -19,6 +19,8 @@ Random range methods include the minimum and exclude the maximum.
 
 ## Documentation
 
+Read the [hosted documentation on GitHub Pages](https://miputra.github.io/RandEXom/guide/) for the styled sidebar, chapter navigation, and previous/next links. The Markdown sources below remain available in the repository.
+
 Read [how RandEXom fits together](RandEXom/articles/architecture.md) first: `SeedLib` manages state → `RandomLib` turns state into draws → `Framework` uses draws for application behavior. `Utility` provides supporting functions; `Interface` defines the contracts between layers.
 
 | Next step | Guide |
@@ -27,9 +29,12 @@ Read [how RandEXom fits together](RandEXom/articles/architecture.md) first: `See
 | Choose the seed progression and random source | [SeedLib](RandEXom/articles/seed-generators.md) · [RandomLib](RandEXom/articles/random-sources.md) |
 | Apply task-specific behavior | [Framework overview](RandEXom/articles/framework.md) → [Boolean](RandEXom/articles/boolean.md) · [Item](RandEXom/articles/items.md) · [Number](RandEXom/articles/numbers.md) |
 | Understand support and customization | [Utility](RandEXom/articles/utility.md) · [Interfaces, extension, and limitations](RandEXom/articles/extending.md) |
+| Find the original research and parameter sources | [Research and provenance](RandEXom/articles/research.md) |
 | Locate a particular class | [Class index](RandEXom/api/index.md) |
 
 The [documentation home](RandEXom/index.md) is also included in the repository. The library targets .NET Standard 2.1; the verification project targets .NET 8. There is no published NuGet package listed here—use the release DLL or a source-project reference.
+
+To rebuild the GitHub Pages guide after editing the Markdown sources, run `docfx build RandEXom/docfx.json` from the repository root and commit the updated `docs/guide` files. The repository's GitHub Pages site serves the `docs/` directory; `docs/.nojekyll` keeps DocFX assets intact.
 
 ## Verification
 

@@ -1,0 +1,292 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>4.4 Class index </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="4.4 Class index ">
+    <meta name="generator" content="docfx 2.59.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="../articles/toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../index.html">RandEXom <span class="brand-divider">/</span> Docs</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <ul class="nav navbar-nav">
+                <li><a href="../../">Project home</a></li>
+                <li><a href="../index.html">Guide map</a></li>
+                <li><a href="../api/index.html">Class index</a></li>
+              </ul>
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search docs" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="44-class-index">4.4 Class index</h1>
+
+<p>Chapter 4: Reference · Page 4 of 4 · <a href="../index.html">Guide map</a></p>
+<p>This is a map from source namespaces and class names to the explanatory guide. Start with <a href="../articles/architecture.html">the architecture</a> if <code>SeedLib</code>, <code>RandomLib</code>, and <code>Framework</code> are new to you; follow <a href="../articles/installation.html">installation</a> and <a href="../articles/intro.html">getting started</a> for a first program. The <a href="https://github.com/miputra/RandEXom/tree/main/RandEXom">source tree</a> has exact signatures and XML comments.</p>
+<h2 id="contracts-randexominterface">Contracts (<code>RandEXom.Interface</code>)</h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Connects</th>
+<th>Guide</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ISeedR</code></td>
+<td>A state generator to a random source</td>
+<td><a href="../articles/seed-generators.html">SeedLib</a>, <a href="../articles/extending.html">implementing interfaces</a></td>
+</tr>
+<tr>
+<td><code>IRandomR</code></td>
+<td>A random source to framework helpers</td>
+<td><a href="../articles/random-sources.html">RandomLib</a>, <a href="../articles/extending.html">implementing interfaces</a></td>
+</tr>
+<tr>
+<td><code>IGachaR&lt;T&gt;</code></td>
+<td>Shared bag operations for both item-pool variants</td>
+<td><a href="../articles/items.html">Framework.Item</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="state-randexomseedlib">State (<code>RandEXom.SeedLib</code>)</h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Role</th>
+<th>Guide</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>XORShift64Seed</code></td>
+<td>Xorshift state, default for <code>ModuloRandom</code></td>
+<td><a href="../articles/seed-generators.html">SeedLib</a></td>
+</tr>
+<tr>
+<td><code>LCGSeedR</code></td>
+<td>Linear-congruential state and presets</td>
+<td><a href="../articles/seed-generators.html">SeedLib</a></td>
+</tr>
+<tr>
+<td><code>IterativeSeedR</code></td>
+<td>Built-in arithmetic/trigonometric progressions</td>
+<td><a href="../articles/seed-generators.html">SeedLib</a></td>
+</tr>
+<tr>
+<td><code>IterativeSeedRCustom</code></td>
+<td>Function-defined progression</td>
+<td><a href="../articles/seed-generators.html">SeedLib</a></td>
+</tr>
+<tr>
+<td><code>SeedR</code></td>
+<td>Constant internal state; not public to consumers</td>
+<td><a href="../articles/seed-generators.html">SeedLib</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="draws-randexomrandomlib">Draws (<code>RandEXom.RandomLib</code>)</h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Role</th>
+<th>Guide</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ModuloRandom</code></td>
+<td>Xorshift-backed bounded source by default</td>
+<td><a href="../articles/random-sources.html">RandomLib</a></td>
+</tr>
+<tr>
+<td><code>NetRandom</code></td>
+<td>Adapter around <code>System.Random</code></td>
+<td><a href="../articles/random-sources.html">RandomLib</a></td>
+</tr>
+<tr>
+<td><code>SSRNGRandom</code></td>
+<td>Historical LCG parameter-based source</td>
+<td><a href="../articles/random-sources.html">RandomLib</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="behaviors-randexomframework">Behaviors (<code>RandEXom.Framework</code>)</h2>
+<table>
+<thead>
+<tr>
+<th>Namespace and type</th>
+<th>Role</th>
+<th>Guide</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Boolean.TruePercentageR</code></td>
+<td>Independent percentage outcome</td>
+<td><a href="../articles/boolean.html">Framework.Boolean</a></td>
+</tr>
+<tr>
+<td><code>Item.Shuffles_FisherYates</code></td>
+<td>In-place list shuffle</td>
+<td><a href="../articles/items.html">Framework.Item</a></td>
+</tr>
+<tr>
+<td><code>Item.GachaR&lt;T&gt;</code></td>
+<td>List-backed weighted bag with optional automatic refill</td>
+<td><a href="../articles/items.html">Framework.Item</a></td>
+</tr>
+<tr>
+<td><code>Item.GachaRBatched&lt;T&gt;</code></td>
+<td>Count-backed weighted bag with manual refill</td>
+<td><a href="../articles/items.html">Framework.Item</a></td>
+</tr>
+<tr>
+<td><code>Number.SlotR</code></td>
+<td>One bounded draw per call, intended for spinning reels one by one</td>
+<td><a href="../articles/numbers.html">Framework.Number</a></td>
+</tr>
+<tr>
+<td><code>Number.PongR</code></td>
+<td>Alternating lower/upper range halves</td>
+<td><a href="../articles/numbers.html">Framework.Number</a></td>
+</tr>
+<tr>
+<td><code>Number.DistanceR</code></td>
+<td>Minimum gap from the previous result</td>
+<td><a href="../articles/numbers.html">Framework.Number</a></td>
+</tr>
+<tr>
+<td><code>Number.DistributedTreeR</code></td>
+<td>Obsolete/experimental tree distribution</td>
+<td><a href="../articles/numbers.html">Framework.Number</a></td>
+</tr>
+<tr>
+<td><code>Number.DistributedTreeNestedR</code></td>
+<td>Obsolete/experimental nested tree</td>
+<td><a href="../articles/numbers.html">Framework.Number</a></td>
+</tr>
+<tr>
+<td><code>Number.DiceR</code>, <code>Number.Dice6F</code>, <code>_2DNoise.PerlinNoise</code></td>
+<td>Incomplete, <code>DEBUG</code>-only types</td>
+<td><a href="../articles/numbers.html">Framework.Number</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="support-randexomutility">Support (<code>RandEXom.Utility</code>)</h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Availability and role</th>
+<th>Guide</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>SeedGenerator</code></td>
+<td>Public time-derived numeric seed helper</td>
+<td><a href="../articles/utility.html">Utility</a></td>
+</tr>
+<tr>
+<td><code>TypeR</code></td>
+<td>Internal 64-to-32-bit seed conversion used by <code>NetRandom</code></td>
+<td><a href="../articles/utility.html">Utility</a></td>
+</tr>
+</tbody>
+</table>
+<p>This is an authored index, not generated member-by-member API metadata. Its purpose is to make the layer boundaries and type names discoverable; for overload signatures, see the linked source and feature guides.</p>
+<hr>
+<p>← Previous: <a href="../articles/research.html">4.3 Research and provenance</a> · <a href="../index.html">Guide map</a> · End of guide</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/miputra/RandEXom/blob/main/RandEXom/api/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

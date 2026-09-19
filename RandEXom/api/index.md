@@ -1,5 +1,7 @@
 
-# Class index
+# 4.4 Class index
+
+Chapter 4: Reference · Page 4 of 4 · [Guide map](../index.md)
 
 This is a map from source namespaces and class names to the explanatory guide. Start with [the architecture](../articles/architecture.md) if `SeedLib`, `RandomLib`, and `Framework` are new to you; follow [installation](../articles/installation.md) and [getting started](../articles/intro.md) for a first program. The [source tree](https://github.com/miputra/RandEXom/tree/main/RandEXom) has exact signatures and XML comments.
 
@@ -37,7 +39,7 @@ This is a map from source namespaces and class names to the explanatory guide. S
 | `Item.Shuffles_FisherYates` | In-place list shuffle | [Framework.Item](../articles/items.md) |
 | `Item.GachaR<T>` | List-backed weighted bag with optional automatic refill | [Framework.Item](../articles/items.md) |
 | `Item.GachaRBatched<T>` | Count-backed weighted bag with manual refill | [Framework.Item](../articles/items.md) |
-| `Number.SlotR` | One integer within a range | [Framework.Number](../articles/numbers.md) |
+| `Number.SlotR` | One bounded draw per call, intended for spinning reels one by one | [Framework.Number](../articles/numbers.md) |
 | `Number.PongR` | Alternating lower/upper range halves | [Framework.Number](../articles/numbers.md) |
 | `Number.DistanceR` | Minimum gap from the previous result | [Framework.Number](../articles/numbers.md) |
 | `Number.DistributedTreeR` | Obsolete/experimental tree distribution | [Framework.Number](../articles/numbers.md) |
@@ -52,3 +54,7 @@ This is a map from source namespaces and class names to the explanatory guide. S
 | `TypeR` | Internal 64-to-32-bit seed conversion used by `NetRandom` | [Utility](../articles/utility.md) |
 
 This is an authored index, not generated member-by-member API metadata. Its purpose is to make the layer boundaries and type names discoverable; for overload signatures, see the linked source and feature guides.
+
+---
+
+← Previous: [4.3 Research and provenance](../articles/research.md) · [Guide map](../index.md) · End of guide

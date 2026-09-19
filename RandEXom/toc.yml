@@ -1,5 +1,3 @@
 
-- name: Articles
+- name: Read the guide
   href: articles/
-- name: API overview
-  href: api/index.md

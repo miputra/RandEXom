@@ -1,4 +1,6 @@
-# Random sources
+# 2.2 RandomLib: random sources
+
+Chapter 2: Core libraries · Page 2 of 2 · [Guide map](../index.md)
 
 `RandomLib` is the **draw layer** between `SeedLib` and `Framework`. A source implements `RandEXom.Interface.IRandomR`: it turns state into integer ranges or bytes and can be passed to a framework helper. You can also call it directly. See the [layer diagram](architecture.md), [seed progression choices](seed-generators.md), and [class index](../api/index.md).
 
@@ -34,7 +36,7 @@ var star = new ModuloRandom(ModuloRandom.Multiplier.XORShift64_Star, seed: 42);
 int result = star.NextInt(0, 10);
 ```
 
-The `XORShift64_Star` option selects the matching xorshift transition and multiplier when constructed from a seed number. Passing a custom `ISeedR` lets you pair the output source with a different seed progression; see [seed generators](seed-generators.md).
+The `XORShift64_Star` option selects the associated xorshift transition and multiplier when constructed from a seed number. It uses the shift sizes and multiplier of the xorshift64* example in [Vigna’s paper](https://vigna.di.unimi.it/ftp/papers/xorshift.pdf), but the implementation’s middle shift goes **right**, whereas the paper’s goes **left**. It is therefore not the exact published generator. Passing a custom `ISeedR` lets you pair the output source with a different seed progression; see [seed generators](seed-generators.md).
 
 ## `NetRandom`
 
@@ -48,6 +50,8 @@ int index = random.NextInt(0, 5);
 ```
 
 `NetRandom` converts its seed to a 32-bit value for `System.Random`; different 64-bit seeds can therefore map to the same internal seed. For reproducibility, also keep the same target runtime: `System.Random` is a .NET implementation detail, not a cross-runtime sequence contract.
+
+See the [Microsoft `System.Random` documentation](https://learn.microsoft.com/dotnet/api/system.random) for platform behavior. This wrapper should not be described as implementing a *Numerical Recipes* generator.
 
 ## `SSRNGRandom`
 
@@ -64,6 +68,8 @@ int value = random.NextInt(0, 100);
 
 Available presets: `ZX81`, `Numerical_Recipes`, `Borland_C`, `GLIBC`, `IBM`, `Borland_Delphi`, `Turbo_Pascal`, `Microsoft_Visual_C`, `Microsoft_Visual_Basic`, `RtlUniform`, `Apple_CarbonLib`, `C_Plus_11`, `MTH_RANDOM`, `Java`, `random0`, `POSIX`, `cc65`, `cc65_2`, and `RANDU`. The output modulus must be greater than one.
 
+The default LCG constants are attributed to the *[Numerical Recipes in C](https://numerical.recipes/)* book. [L’Ecuyer’s paper on LCG parameter quality](https://www.ams.org/mcom/1999-68-225/S0025-5718-99-00996-5/S0025-5718-99-00996-5.pdf) is relevant background, **not** the source of every named preset. See [research and provenance](research.md).
+
 ## Choosing a source
 
 | Need | Starting point |
@@ -73,3 +79,7 @@ Available presets: `ZX81`, `Numerical_Recipes`, `Borland_C`, `GLIBC`, `IBM`, `Bo
 | A historical LCG preset | `SSRNGRandom(ParameterTemplate, seed: ...)` |
 
 None of these classes is documented as cryptographically secure. Use a platform cryptographic random-number generator for tokens, passwords, keys, or other security-sensitive values.
+
+---
+
+← Previous: [2.1 SeedLib](seed-generators.md) · [Guide map](../index.md) · Next: [3.1 Framework overview](framework.md) →

@@ -1,5 +1,7 @@
 
-# Getting started
+# 1.3 Getting started
+
+Chapter 1: Start here · Page 3 of 3 · [Guide map](../index.md)
 
 First read [how the library fits together](architecture.md): `SeedLib` holds state, `RandomLib` produces values, and `Framework` applies values to tasks. This page then gives a quick path from download to a few common draws. For a type-by-type lookup, use the [class index](../api/index.md).
 
@@ -59,3 +61,7 @@ bool result = succeeds.Next(); // independent 25% chance of true
 Percentages must be between 0 and 100. Each call is an independent draw, not a promise that exactly 25 out of 100 calls return true.
 
 For the full public surface, see the [API overview](../api/index.md). From the repository root, run `dotnet run --project Verification/Verification.csproj` for the library's verification checks.
+
+---
+
+← Previous: [1.2 Installation](installation.md) · [Guide map](../index.md) · Next: [2.1 SeedLib](seed-generators.md) →

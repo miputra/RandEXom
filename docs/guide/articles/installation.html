@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>1.2 Installation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="1.2 Installation ">
+    <meta name="generator" content="docfx 2.59.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../index.html">RandEXom <span class="brand-divider">/</span> Docs</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <ul class="nav navbar-nav">
+                <li><a href="../../">Project home</a></li>
+                <li><a href="../index.html">Guide map</a></li>
+                <li><a href="../api/index.html">Class index</a></li>
+              </ul>
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search docs" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="12-installation">1.2 Installation</h1>
+
+<p>Chapter 1: Start here · Page 2 of 3 · <a href="../index.html">Guide map</a></p>
+<p>RandEXom v1.5b targets <strong>.NET Standard 2.1</strong>. Use it from a project whose runtime supports that target. The repository&#39;s verification project targets .NET 8. RandEXom is currently distributed as a DLL and a GitHub release, not as a NuGet package.</p>
+<h2 id="use-the-published-dll">Use the published DLL</h2>
+<ol>
+<li>Download <a href="https://miputra.github.io/RandEXom/downloads/RandEXom.dll">RandEXom.dll v1.5b</a> or the asset from the <a href="https://github.com/miputra/RandEXom/releases/tag/1.5b">v1.5b release</a>.</li>
+<li>Place the DLL in your project, for example at <code>lib/RandEXom.dll</code>.</li>
+<li><p>Add a reference in your IDE. In Visual Studio, right-click your project, choose <strong>Add</strong> &gt; <strong>Project Reference</strong> (or <strong>Add Reference</strong>), use <strong>Browse</strong>, and select the DLL. You can also add a file reference directly to your <code>.csproj</code>:</p>
+<pre><code class="lang-xml">&lt;ItemGroup&gt;
+  &lt;Reference Include=&quot;RandEXom&quot;&gt;
+    &lt;HintPath&gt;lib/RandEXom.dll&lt;/HintPath&gt;
+  &lt;/Reference&gt;
+&lt;/ItemGroup&gt;
+</code></pre></li>
+<li><p>Build your application, then import a namespace such as <code>RandEXom.RandomLib</code>.</p>
+</li>
+</ol>
+<p>The published DLL on the project site has SHA-256 <code>148f2e0f5e3ca3512d41fe1c47ecf0e9e06384b41115566fe27546b99dd6a1e7</code>. Compare the hash after downloading if you need to confirm you received that exact site artifact.</p>
+<h2 id="reference-the-source-project">Reference the source project</h2>
+<p>If you cloned the repository, you can reference the project instead of copying a DLL:</p>
+<pre><code class="lang-sh">dotnet add path/to/YourApp.csproj reference path/to/RandEXom/RandEXom.csproj
+</code></pre><p>Use paths appropriate to your checkout. A project reference builds RandEXom with your application and follows local source changes; the published DLL keeps your application on the selected release.</p>
+<h2 id="first-compile-check">First compile check</h2>
+<pre><code class="lang-csharp">using RandEXom.RandomLib;
+
+var random = new ModuloRandom(seed: 12345);
+Console.WriteLine(random.NextInt(1, 7)); // one of 1, 2, 3, 4, 5, 6
+</code></pre><p>For this top-level-statement example, use a recent C# SDK project. See <a href="intro.html">getting started</a> for more examples and <a href="random-sources.html">random sources</a> for choosing a generator.</p>
+<h2 id="build-and-verify-this-repository">Build and verify this repository</h2>
+<p>From the repository root:</p>
+<pre><code class="lang-sh">dotnet build RandEXom.sln
+dotnet run --project Verification/Verification.csproj
+</code></pre><p>The verification program checks generator sequences and range, percentage, weighted-draw, and distance edge cases. A successful run prints <code>All verification checks passed.</code></p>
+<hr>
+<p>← Previous: <a href="architecture.html">1.1 How the library fits together</a> · <a href="../index.html">Guide map</a> · Next: <a href="intro.html">1.3 Getting started</a> →</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/miputra/RandEXom/blob/main/RandEXom/articles/installation.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
