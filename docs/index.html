@@ -21,6 +21,7 @@
     code { padding: 2px 5px; }
     pre { padding: 18px; overflow-x: auto; }
     pre code { padding: 0; }
+    .address { overflow-wrap: anywhere; user-select: all; }
     .muted { color: #a9bbd0; }
     footer { margin-top: 64px; color: #a9bbd0; font-size: .9rem; }
   </style>
@@ -45,8 +46,17 @@ var random = new ModuloRandom(seed: 12345);
 int value = random.NextInt(0, 100); // 0 through 99
 </code></pre>
   <p>Minimum bounds are inclusive; maximum bounds are exclusive. The source is available in the <a href="https://github.com/miputra/RandEXom">GitHub repository</a>.</p>
+  <p>For more examples of seeded generators, shuffling, weighted draws, and percentages, read the <a href="https://github.com/miputra/RandEXom/blob/main/RandEXom/articles/intro.md">usage guide</a>.</p>
   <h2>What changed in v1.5b</h2>
   <p>This release corrects LCG and xorshift64* transitions, bounded sampling, weighted draws, and several range helpers. <strong>Seeded output sequences may differ from earlier releases.</strong> Review the <a href="https://github.com/miputra/RandEXom/blob/main/README.md">README</a> and <a href="https://github.com/miputra/RandEXom/tree/main/Verification">verification checks</a> for details.</p>
+  <section class="card" aria-labelledby="support-title">
+    <h2 id="support-title">Support RandEXom</h2>
+    <p>Donations are optional and help support continued development.</p>
+    <a class="button" href="https://trakteer.id/miputra?quantity=1">Support on Trakteer</a>
+    <p><strong>BNB</strong> · BNB Smart Chain (BEP-20)<br><code class="address">0xE122d7d44604d59b27Ca3FAA44Fc1Da94CE0aE03</code></p>
+    <p><strong>SOL</strong> · Solana<br><code class="address">C8A5J9w7UkXeLVeCWhpP47SPCPvnuS55RJWybzFhB3jF</code></p>
+    <p class="muted">Check the full address and network in your wallet before sending. Transfers to the wrong address or network may not be recoverable.</p>
+  </section>
   <footer>RandEXom is licensed under the <a href="https://github.com/miputra/RandEXom/blob/main/LICENSE">MIT License</a>.</footer>
 </main>
 </body>
