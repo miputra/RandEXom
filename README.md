@@ -4,7 +4,7 @@ RandEXom is a C# randomization library for .NET Standard 2.1. It provides interc
 
 ## Quick start
 
-Download the [latest source build of RandEXom.dll](https://miputra.github.io/RandEXom/downloads/RandEXom.dll), or use the earlier [v1.5b GitHub release](https://github.com/miputra/RandEXom/releases/tag/1.5b). The [TestOut build](https://miputra.github.io/RandEXom/downloads/RandExOmTestOut-win-x64.zip) and [benchmark build](https://miputra.github.io/RandEXom/downloads/RandEXomBenchmark-win-x64.zip) are also available for Windows x64 with the .NET 8 runtime.
+Download the [latest source build on GitHub Releases](https://github.com/miputra/RandEXom/releases/tag/build-2026-09-20), including RandEXom.dll, TestOut, and the benchmark app. The Windows x64 apps require the .NET 8 runtime.
 
 ```csharp
 using RandEXom.RandomLib;

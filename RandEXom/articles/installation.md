@@ -8,7 +8,7 @@ RandEXom v1.5b targets **.NET Standard 2.1**. Use it from a project whose runtim
 
 ## 1.2.1 Use the published DLL
 
-1. Download the [latest source build of RandEXom.dll](https://miputra.github.io/RandEXom/downloads/RandEXom.dll), or the older asset from the [v1.5b release](https://github.com/miputra/RandEXom/releases/tag/1.5b).
+1. Download RandEXom.dll from the [latest source build release](https://github.com/miputra/RandEXom/releases/tag/build-2026-09-20).
 2. Place the DLL in your project, for example at `lib/RandEXom.dll`.
 3. Add a reference in your IDE. In Visual Studio, right-click your project, choose **Add** > **Project Reference** (or **Add Reference**), use **Browse**, and select the DLL. You can also add a file reference directly to your `.csproj`:
 

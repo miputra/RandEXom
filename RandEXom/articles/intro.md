@@ -5,7 +5,7 @@ Chapter 1: Start here · Section 3 · [Guide map](../index.md)
 
 First read [how the library fits together](architecture.md): `SeedLib` holds state, `RandomLib` produces values, and `Framework` applies values to tasks. This page then gives a quick path from download to a few common draws. For a type-by-type lookup, use the [class index](../api/index.md).
 
-RandEXom targets .NET Standard 2.1. Download the [latest source build DLL](https://miputra.github.io/RandEXom/downloads/RandEXom.dll) or the earlier [v1.5b GitHub release](https://github.com/miputra/RandEXom/releases/tag/1.5b), then add the DLL as a reference to a compatible .NET project. In Visual Studio, right-click the project in Solution Explorer, choose **Add Reference**, browse to the DLL, and confirm.
+RandEXom targets .NET Standard 2.1. Download the DLL from the [latest source build release](https://github.com/miputra/RandEXom/releases/tag/build-2026-09-20), then add it as a reference to a compatible .NET project. In Visual Studio, right-click the project in Solution Explorer, choose **Add Reference**, browse to the DLL, and confirm.
 
 <a id="generate-a-bounded-number"></a>
 
