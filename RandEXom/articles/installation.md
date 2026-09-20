@@ -8,7 +8,7 @@ RandEXom v1.5b targets **.NET Standard 2.1**. Use it from a project whose runtim
 
 ## 1.2.1 Use the published DLL
 
-1. Download [RandEXom.dll v1.5b](https://miputra.github.io/RandEXom/downloads/RandEXom.dll) or the asset from the [v1.5b release](https://github.com/miputra/RandEXom/releases/tag/1.5b).
+1. Download the [latest source build of RandEXom.dll](https://miputra.github.io/RandEXom/downloads/RandEXom.dll), or the older asset from the [v1.5b release](https://github.com/miputra/RandEXom/releases/tag/1.5b).
 2. Place the DLL in your project, for example at `lib/RandEXom.dll`.
 3. Add a reference in your IDE. In Visual Studio, right-click your project, choose **Add** > **Project Reference** (or **Add Reference**), use **Browse**, and select the DLL. You can also add a file reference directly to your `.csproj`:
 
@@ -22,7 +22,7 @@ RandEXom v1.5b targets **.NET Standard 2.1**. Use it from a project whose runtim
 
 4. Build your application, then import a namespace such as `RandEXom.RandomLib`.
 
-The published DLL on the project site has SHA-256 `148f2e0f5e3ca3512d41fe1c47ecf0e9e06384b41115566fe27546b99dd6a1e7`. Compare the hash after downloading if you need to confirm you received that exact site artifact.
+The latest DLL on the project site has SHA-256 `781585415b14d979b0c787d75f289f12a1492c0ebb4e37dd862ef684b23d719a`. [Checksums for all downloads](https://miputra.github.io/RandEXom/downloads/SHA256SUMS.txt) also cover the TestOut and benchmark packages. These packages target Windows x64 and require the .NET 8 runtime.
 
 <a id="reference-the-source-project"></a>
 

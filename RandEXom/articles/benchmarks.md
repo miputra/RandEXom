@@ -6,7 +6,7 @@ These measurements were collected on **20 September 2026** using the standalone 
 
 ## Run the benchmark
 
-Double-click `RandEXomBenchmark.exe` beside `RandEXom.dll`. The menu lists available methods, performance/memory measurements, quality diagnostics, smoke checks, settings/injection, and byte export. Settings let you select a DLL, source, seed type, constructor JSON, item count, samples, and report directory. Command-line use remains available:
+Download the [Windows x64 benchmark build](https://miputra.github.io/RandEXom/downloads/RandEXomBenchmark-win-x64.zip), extract it, then double-click `RandEXomBenchmark.exe` beside its included `RandEXom.dll`. The menu lists available methods, performance/memory measurements, quality diagnostics, smoke checks, settings/injection, and byte export. Settings let you select a DLL, source, seed type, constructor JSON, item count, samples, and report directory. Command-line use remains available:
 
 ```powershell
 .\RandEXomBenchmark.exe performance --dll RandEXom.dll --filter RandomLib --samples 25

@@ -2,7 +2,7 @@
 
 Chapter 4: Reference · Section 5 · [Guide map](../index.md)
 
-`RandExOmTestOut` is the console demonstration project. It prints draws so you can see how each helper behaves. The [benchmark runner](benchmarks.md) measures speed, allocations, and statistical diagnostics; [Verification](extending.md#verification) checks correctness cases.
+`RandExOmTestOut` is the console demonstration project. It prints draws so you can see how each helper behaves. Download the [Windows x64 TestOut build](https://miputra.github.io/RandEXom/downloads/RandExOmTestOut-win-x64.zip) with the latest library DLL included. The [benchmark runner](benchmarks.md) measures speed, allocations, and statistical diagnostics; [Verification](extending.md#verification) checks correctness cases.
 
 ## Open TestOut
 

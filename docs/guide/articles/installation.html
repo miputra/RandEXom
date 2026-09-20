@@ -68,7 +68,7 @@
 <p><a id="use-the-published-dll"></a></p>
 <h2 id="121-use-the-published-dll">1.2.1 Use the published DLL</h2>
 <ol>
-<li>Download <a href="https://miputra.github.io/RandEXom/downloads/RandEXom.dll">RandEXom.dll v1.5b</a> or the asset from the <a href="https://github.com/miputra/RandEXom/releases/tag/1.5b">v1.5b release</a>.</li>
+<li>Download the <a href="https://miputra.github.io/RandEXom/downloads/RandEXom.dll">latest source build of RandEXom.dll</a>, or the older asset from the <a href="https://github.com/miputra/RandEXom/releases/tag/1.5b">v1.5b release</a>.</li>
 <li>Place the DLL in your project, for example at <code>lib/RandEXom.dll</code>.</li>
 <li><p>Add a reference in your IDE. In Visual Studio, right-click your project, choose <strong>Add</strong> &gt; <strong>Project Reference</strong> (or <strong>Add Reference</strong>), use <strong>Browse</strong>, and select the DLL. You can also add a file reference directly to your <code>.csproj</code>:</p>
 <pre><code class="lang-xml">&lt;ItemGroup&gt;
@@ -80,7 +80,7 @@
 <li><p>Build your application, then import a namespace such as <code>RandEXom.RandomLib</code>.</p>
 </li>
 </ol>
-<p>The published DLL on the project site has SHA-256 <code>148f2e0f5e3ca3512d41fe1c47ecf0e9e06384b41115566fe27546b99dd6a1e7</code>. Compare the hash after downloading if you need to confirm you received that exact site artifact.</p>
+<p>The latest DLL on the project site has SHA-256 <code>781585415b14d979b0c787d75f289f12a1492c0ebb4e37dd862ef684b23d719a</code>. <a href="https://miputra.github.io/RandEXom/downloads/SHA256SUMS.txt">Checksums for all downloads</a> also cover the TestOut and benchmark packages. These packages target Windows x64 and require the .NET 8 runtime.</p>
 <p><a id="reference-the-source-project"></a></p>
 <h2 id="122-reference-the-source-project">1.2.2 Reference the source project</h2>
 <p>If you cloned the repository, you can reference the project instead of copying a DLL:</p>
