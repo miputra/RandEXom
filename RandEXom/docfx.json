@@ -15,6 +15,14 @@
         ]
       }
     ],
+    "resource": [
+      {
+        "files": [
+          "articles/benchmark-results/**/*.json",
+          "articles/benchmark-results/**/*.csv"
+        ]
+      }
+    ],
     "dest": "../docs/guide",
     "template": [
       "default",

@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>4.1.1 Public: SeedGenerator.GetJoinedCurrentDate() </title>
+    <title>4.1.1 Public: SeedGenerator </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="4.1.1 Public: SeedGenerator.GetJoinedCurrentDate() ">
+    <meta name="title" content="4.1.1 Public: SeedGenerator ">
     <meta name="generator" content="docfx 2.59.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -61,16 +61,33 @@
         <div class="article row grid">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="411-public-seedgeneratorgetjoinedcurrentdate">4.1.1 Public: <code>SeedGenerator.GetJoinedCurrentDate()</code></h1>
+<h1 id="411-public-seedgenerator">4.1.1 Public: <code>SeedGenerator</code></h1>
 
 <p><a href="utility.html">Parent: 4.1 Utility namespace</a> · <a href="../index.html">Guide map</a></p>
-<p>This static method builds a <code>long</code> by concatenating parts of the <em>local</em> current date and time (milliseconds, seconds, minutes, hours, day, month, and two-digit year). It is a convenience for creating a time-derived input seed:</p>
+<p><code>SeedGenerator</code> offers a local clock seed and an optional seed from <a href="https://www.random.org/clients/http/api/">Random.org&#39;s HTTPS integer service</a>. Both return a <code>long</code> that you can pass to a seeded constructor.</p>
+<h2 id="local-clock-seed">Local clock seed</h2>
 <pre><code class="lang-csharp">using RandEXom.RandomLib;
 using RandEXom.Utility;
 
 long seed = SeedGenerator.GetJoinedCurrentDate();
 var random = new ModuloRandom(seed);
-</code></pre><p>The returned number is not the random sequence itself; <code>ModuloRandom</code> still applies its seed and output algorithms. This value is not a unique identifier, high-entropy secret, or cryptographic seed. The implementation uses local clock fields and concatenates their unpadded decimal representations, so different timestamps can potentially form the same digits. Prefer a fixed explicit seed for reproducible tests. Most constructors can choose a time-based seed when you omit one, so you rarely need this helper.</p>
+</code></pre><p><code>GetJoinedCurrentDate()</code> concatenates parts of the <em>local</em> current date and time (milliseconds, seconds, minutes, hours, day, month, and two-digit year). It does not pad fields, so different timestamps can form the same digits. This method does not promise a unique or cryptographically secure seed. Use a fixed seed for reproducible tests.</p>
+<h2 id="randomorg-seed">Random.org seed</h2>
+<pre><code class="lang-csharp">using RandEXom.RandomLib;
+using RandEXom.Utility;
+
+long seed = await SeedGenerator.GetRandomOrgSeedAsync();
+var random = new ModuloRandom(seed);
+</code></pre><p><code>GetRandomOrgSeedAsync()</code> makes one HTTPS request for two new independent integers in <code>[0, 999999999]</code>, then combines them as <code>first * 1_000_000_000 + second</code>. The result is nonnegative and below <code>1_000_000_000_000_000_000</code>, so it fits in a <code>long</code>. It is a seed for your local generator, not a stream of Random.org results. This method uses Random.org&#39;s <a href="https://www.random.org/clients/http/api/">keyless HTTP integer interface</a>; no API key is required. It does not use the separate <a href="https://api.random.org/json-rpc/4/basic">JSON-RPC API</a>, which requires a key.</p>
+<p>The request is asynchronous and accepts an optional <code>CancellationToken</code>. The default HTTP client has a three-minute timeout, and requests made through this helper are serialized so it does not send parallel calls. Network, HTTP, quota, cancellation, and invalid-response failures are propagated; the helper does not substitute a local seed. Random.org&#39;s <a href="https://www.random.org/clients/">automated-client guidelines</a> recommend infrequent requests, a generous timeout, quota awareness, and a contact email in the User-Agent for regular automated use. For frequent use, generate one seed and reuse a local random source, or use an appropriate Random.org API client. The default client identifies this project by its repository URL.</p>
+<p>If you need a configured client or want to test without using Random.org&#39;s quota, use the overload:</p>
+<pre><code class="lang-csharp">using System.Net.Http;
+using RandEXom.Utility;
+
+using var client = new HttpClient { Timeout = TimeSpan.FromMinutes(3) };
+client.DefaultRequestHeaders.UserAgent.ParseAdd(&quot;MyApp/1.0 (contact@example.com)&quot;);
+long seed = await SeedGenerator.GetRandomOrgSeedAsync(client);
+</code></pre><p>You own and dispose a supplied client. For tests, supply a client with a fake <code>HttpMessageHandler</code>; the project&#39;s <a href="extending.html#verification">Verification</a> uses this approach and makes no live Random.org request. A Random.org seed is not reproducible unless you save its returned value. It does not make RandEXom&#39;s random generators cryptographically secure.</p>
 <hr>
 <p>← Previous: <a href="utility.html">4.1 Utility namespace</a> · <a href="utility.html">Parent: 4.1 Utility namespace</a> · Next: <a href="utility-typer.html">4.1.2 Internal: TypeR.RoundLongToInt(long)</a> →</p>
 </article>

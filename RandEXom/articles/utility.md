@@ -6,9 +6,9 @@ Chapter 4: Reference · Section 1 · [Guide map](../index.md)
 
 ## In this chapter
 
-- <a id="public-seedgeneratorgetjoinedcurrentdate"></a>[4.1.1 Public: SeedGenerator.GetJoinedCurrentDate()](utility-seedgenerator.md)
+- <a id="public-seedgenerator"></a>[4.1.1 Public: SeedGenerator](utility-seedgenerator.md)
 - <a id="internal-typerroundlongtointlong"></a>[4.1.2 Internal: TypeR.RoundLongToInt(long)](utility-typer.md)
 
 ---
 
-← Previous: [3.4.5 Debug-only placeholders](numbers-debug-placeholders.md) · [Guide map](../index.md) · Next: [4.1.1 Public: SeedGenerator.GetJoinedCurrentDate()](utility-seedgenerator.md) →
+← Previous: [3.4.3 DistanceR](numbers-distancer.md) · [Guide map](../index.md) · Next: [4.1.1 Public: SeedGenerator](utility-seedgenerator.md) →

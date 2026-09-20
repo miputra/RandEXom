@@ -50,13 +50,15 @@ var flag = new TruePercentageR(source, percentage: 10f);
 - `GetSeedSTR()` reports the initial seed, not enough information to resume a generator from an arbitrary point.
 - For `[min, max)`, `min` must be less than `max`; `max` itself cannot be returned. Use `NextInt(1, 7)` for a six-sided die.
 - `GachaR<T>` and `GachaRBatched<T>` can return `default(T)` when empty, which may be indistinguishable from a valid item. Check the remaining count if that matters.
-- The distributed-tree types are obsolete/experimental, and dice/noise types are debug-only placeholders. See [number helpers](numbers.md).
+- `DistributedTreeR<T>` divides items once at initialization. Removal locks empty endpoints without redistributing items; check `Count()` before a pull when a stored default value is possible. See [the item-tree guide](items-distributedtreer.md).
 
 <a id="verification"></a>
 
 ## 4.2.4 Verification
 
 Run `dotnet run --project Verification/Verification.csproj` from the repository root. If you change a generator or helper, add cases there for fixed-seed sequences, extreme bounds, empty pools, and invalid arguments.
+
+Use [TestOut](test-output.md) for interactive examples and [the benchmark runner](benchmarks.md) for measured performance and randomness diagnostics. They serve different purposes from correctness verification.
 
 ---
 

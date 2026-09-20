@@ -1,4 +1,4 @@
-﻿# RandEXom
+# RandEXom
 
 RandEXom is a C# randomization library for .NET Standard 2.1. It provides interchangeable random sources and seed generators, plus helpers for shuffling, weighted picks, percentages, and number ranges.
 
@@ -39,6 +39,23 @@ To rebuild the GitHub Pages guide after editing the Markdown sources, run `docfx
 ## Verification
 
 Run `dotnet run --project Verification/Verification.csproj` to check the published LCG sequence and the library's range, weighted draw, percentage, and distance edge cases.
+
+## Output examples
+
+Open `RandExOmTestOut.exe` for interactive demonstrations, or run `dotnet run --project RandExOmTestOut/RandExOmTestOut.csproj`. [The TestOut guide](RandEXom/articles/test-output.md) documents all nine menu options and the item-tree keep/remove output.
+
+## Benchmarks
+
+`RandEXomBenchmark` loads a DLL at runtime and discovers supported classes/methods, with configurable random/seed injection. It has no reference to the RandEXom project. Publish the runner once, then use the executable beside any compatible RandEXom.dll. See the [benchmark guide](RandEXomBenchmark/README.md) for publishing, coverage, and report interpretation.
+
+Double-click the executable for a numbered menu like TestOut, or pass arguments from PowerShell as below.
+
+See the [measured benchmark comparisons](RandEXom/articles/benchmarks.md) for timing, allocation, randomness diagnostics, run configuration, and downloadable reports from the current build.
+
+```powershell
+.\RandEXomBenchmark.exe performance --dll RandEXom.dll
+.\RandEXomBenchmark.exe quality --dll RandEXom.dll
+```
 
 ## Support the project
 

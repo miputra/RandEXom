@@ -23,4 +23,4 @@ Use `GachaR<T>` when you want the simple list-backed behavior and optional autom
 
 ---
 
-← Previous: [3.3.2 GachaR<T>: list-backed bag](items-gachar.md) · [Parent: 3.3 Framework.Item](items.md) · Next: [3.4 Number](numbers.md) →
+← Previous: [3.3.2 GachaR<T>: list-backed bag](items-gachar.md) · [Parent: 3.3 Framework.Item](items.md) · Next: [3.3.4 DistributedTreeR<T>](items-distributedtreer.md) →

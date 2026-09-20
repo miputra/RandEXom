@@ -67,7 +67,7 @@
 <p><code>TypeR</code> is an internal class and <strong>cannot be called from a consuming assembly</strong>. <code>NetRandom</code> uses its conversion to fold a 64-bit seed into the 32-bit seed supplied to <code>System.Random</code>. As a consequence, distinct <code>long</code> seeds may produce the same <code>NetRandom</code> initialization. It is not a general-purpose rounding operation despite the method&#39;s name.</p>
 <p>If you need to control a <code>NetRandom</code> sequence, pass a seed to <code>new NetRandom(42)</code>; do not try to reference <code>TypeR</code> in your application. See <a href="random-sources.html">RandomLib</a> for the resulting random-source behavior and <a href="seed-generators.html">SeedLib</a> for changing seed progression.</p>
 <hr>
-<p>← Previous: <a href="utility-seedgenerator.html">4.1.1 Public: SeedGenerator.GetJoinedCurrentDate()</a> · <a href="utility.html">Parent: 4.1 Utility namespace</a> · Next: <a href="extending.html">4.2 Interfaces and limitations</a> →</p>
+<p>← Previous: <a href="utility-seedgenerator.html">4.1.1 Public: SeedGenerator</a> · <a href="utility.html">Parent: 4.1 Utility namespace</a> · Next: <a href="extending.html">4.2 Interfaces and limitations</a> →</p>
 </article>
           </div>
           

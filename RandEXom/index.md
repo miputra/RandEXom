@@ -57,26 +57,25 @@ RandEXom is a .NET Standard 2.1 library. Its main path is **SeedLib state → Ra
 
    - [3.2.1 TruePercentageR](articles/boolean-truepercentager.md)
 
-3. [Item](articles/items.md) — shuffling and two kinds of gacha bag.
+3. [Item](articles/items.md) — shuffling, gacha bags, and a tree picker.
 
    - [3.3.1 Shuffles_FisherYates: Fisher–Yates shuffle](articles/items-shuffles-fisheryates.md)
    - [3.3.2 GachaR<T>: list-backed bag](articles/items-gachar.md)
    - [3.3.3 GachaRBatched<T>: count-backed bag](articles/items-gacharbatched.md)
+   - [3.3.4 DistributedTreeR<T>: random branch item picker](articles/items-distributedtreer.md)
 
 4. [Number](articles/numbers.md) — slot, alternating halves, and minimum distance.
 
    - [3.4.1 SlotR: spin one reel at a time](articles/numbers-slotr.md)
    - [3.4.2 PongR: alternate halves](articles/numbers-pongr.md)
    - [3.4.3 DistanceR: keep draws apart](articles/numbers-distancer.md)
-   - [3.4.4 Experimental distributed trees](articles/numbers-distributed-trees.md)
-   - [3.4.5 Debug-only placeholders](articles/numbers-debug-placeholders.md)
 
 
 ## 4. Reference
 
 1. [Utility](articles/utility.md) — time-derived seed helper and internal conversion.
 
-   - [4.1.1 Public: SeedGenerator.GetJoinedCurrentDate()](articles/utility-seedgenerator.md)
+   - [4.1.1 Public: SeedGenerator](articles/utility-seedgenerator.md)
    - [4.1.2 Internal: TypeR.RoundLongToInt(long)](articles/utility-typer.md)
 
 2. [Interfaces and limitations](articles/extending.md) — plug in your own source or seed and understand the limits.
@@ -94,6 +93,10 @@ RandEXom is a .NET Standard 2.1 library. Its main path is **SeedLib state → Ra
    - [4.3.4 Platform behavior and project-specific helpers](articles/research.md#platform-behavior-and-project-specific-helpers)
 
 4. [Class index](api/index.md) — find a type by name and jump to its guide.
+
+5. [TestOut: interactive output examples](articles/test-output.md) — menu options, example output, and how to run.
+
+6. [Benchmarks: measured comparisons](articles/benchmarks.md) — results, configuration, and reproducible runs.
 
 Looking for one class rather than a learning path? Use the [class index](api/index.md). The [README](https://github.com/miputra/RandEXom/blob/main/README.md) has release information, verification instructions, and support options.
 

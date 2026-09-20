@@ -8,4 +8,4 @@ If you need to control a `NetRandom` sequence, pass a seed to `new NetRandom(42)
 
 ---
 
-← Previous: [4.1.1 Public: SeedGenerator.GetJoinedCurrentDate()](utility-seedgenerator.md) · [Parent: 4.1 Utility namespace](utility.md) · Next: [4.2 Interfaces and limitations](extending.md) →
+← Previous: [4.1.1 Public: SeedGenerator](utility-seedgenerator.md) · [Parent: 4.1 Utility namespace](utility.md) · Next: [4.2 Interfaces and limitations](extending.md) →

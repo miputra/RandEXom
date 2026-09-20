@@ -50,9 +50,8 @@ This is a map from source namespaces and class names to the explanatory guide. S
 | `Number.SlotR` | One bounded draw per call, intended for spinning reels one by one | [Open subchapter](../articles/numbers-slotr.md) |
 | `Number.PongR` | Alternating lower/upper range halves | [Open subchapter](../articles/numbers-pongr.md) |
 | `Number.DistanceR` | Minimum gap from the previous result | [Open subchapter](../articles/numbers-distancer.md) |
-| `Number.DistributedTreeR` | Obsolete/experimental tree distribution | [Open subchapter](../articles/numbers-distributed-trees.md) |
-| `Number.DistributedTreeNestedR` | Obsolete/experimental nested tree | [Open subchapter](../articles/numbers-distributed-trees.md) |
-| `Number.DiceR`, `Number.Dice6F`, `_2DNoise.PerlinNoise` | Incomplete, `DEBUG`-only types | [Open subchapter](../articles/numbers-debug-placeholders.md) |
+| `Item.DistributedTreeR<T>` | Random branch item picker with optional removal and empty-endpoint locking | [Open subchapter](../articles/items-distributedtreer.md) |
+| `_2DNoise.PerlinNoise` | Empty, `DEBUG`-only placeholder | [Research context](../articles/research.md#related-research-not-an-implemented-feature) |
 
 <a id="support-randexom-utility"></a>
 
@@ -60,11 +59,11 @@ This is a map from source namespaces and class names to the explanatory guide. S
 
 | Type | Availability and role | Guide |
 | --- | --- | --- |
-| `SeedGenerator` | Public time-derived numeric seed helper | [Open subchapter](../articles/utility-seedgenerator.md) |
+| `SeedGenerator` | Public local clock and Random.org seed helpers | [Open subchapter](../articles/utility-seedgenerator.md) |
 | `TypeR` | Internal 64-to-32-bit seed conversion used by `NetRandom` | [Open subchapter](../articles/utility-typer.md) |
 
 This is an authored index, not generated member-by-member API metadata. Its purpose is to make the layer boundaries and type names discoverable; for overload signatures, see the linked source and feature guides.
 
 ---
 
-← Previous: [4.3 Research and provenance](../articles/research.md) · [Guide map](../index.md) · End of guide
+← Previous: [4.3 Research and provenance](../articles/research.md) · [Guide map](../index.md) · Next: [4.5 TestOut](../articles/test-output.md) →

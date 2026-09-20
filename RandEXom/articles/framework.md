@@ -8,6 +8,7 @@ Chapter 3: Framework helpers · Section 1 · [Guide map](../index.md)
 Framework.Boolean.TruePercentageR ── compare a bounded draw to a probability
 Framework.Item.Shuffles_FisherYates ── use draws to swap list positions
 Framework.Item.GachaR<T> / GachaRBatched<T> ── use draws to remove items from a pool
+Framework.Item.DistributedTreeR<T> ── choose branches, then keep or remove an item
 Framework.Number.SlotR / PongR / DistanceR ── apply rules to numeric draws
                  │
                  └── each uses IRandomR ← RandomLib ← ISeedR ← SeedLib
@@ -23,11 +24,12 @@ Framework.Number.SlotR / PongR / DistanceR ── apply rules to numeric draws
 | A rearranged existing list | `Shuffles_FisherYates` | Mutates the list in place |
 | A weighted bag that can refill automatically | `GachaR<T>` | Stores individual copies, removes one per pull |
 | A weighted bag with large counts | `GachaRBatched<T>` | Stores counts, removes one per pull, manual refill |
+| Items grouped at tree endpoints | `DistributedTreeR<T>` | Chooses branches randomly; optionally removes items and locks empty endpoints |
 | One draw for each slot-machine reel | `SlotR` | Call `Next()` once per reel; delegates each draw to its random source |
 | Alternating low/high halves of a range | `PongR` | Maintains alternation state |
 | Numbers separated from the previous result | `DistanceR` | Remembers the previous draw |
 
-The `DistributedTreeR` and `DistributedTreeNestedR` number classes are obsolete/experimental; dice and noise classes are unfinished and `DEBUG`-only. See [Framework.Number](numbers.md) rather than treating them as supported alternatives.
+`PerlinNoise` remains an empty `DEBUG`-only placeholder; see [research context](research.md#related-research-not-an-implemented-feature).
 
 <a id="default-versus-supplied-sources"></a>
 

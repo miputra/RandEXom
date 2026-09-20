@@ -62,6 +62,8 @@ dotnet run --project Verification/Verification.csproj
 
 The verification program checks generator sequences and range, percentage, weighted-draw, and distance edge cases. A successful run prints `All verification checks passed.`
 
+For interactive examples, start [TestOut](test-output.md). For speed, allocation, and randomness diagnostics, use the separate DLL-loaded [benchmark runner and comparison results](benchmarks.md).
+
 ---
 
 ← Previous: [1.1 How the library fits together](architecture.md) · [Guide map](../index.md) · Next: [1.3 Getting started](intro.md) →

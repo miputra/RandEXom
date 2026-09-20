@@ -77,7 +77,7 @@ bag.Refill(); // restore the initial counts
 <p><code>Remove(value)</code> removes <strong>all</strong> copies of that key from both initial and current counts. <code>RemoveEmpty(item)</code> records the current counts as the new refill baseline; its <code>item</code> argument is unused. <code>Refill(bool isIterative)</code> and <code>RemoveEmpty(item, bool isIterative)</code> have overloads that copy dictionaries in different ways but produce the same intended pool state. Avoid <code>null</code> keys: the dictionary-backed implementation does not accept them.</p>
 <p>Use <code>GachaR&lt;T&gt;</code> when you want the simple list-backed behavior and optional automatic refill. Use <code>GachaRBatched&lt;T&gt;</code> when counts are large and you want to control refilling explicitly. In both versions, a <code>default(T)</code> result is ambiguous if that value is also a legitimate item; check <code>Count()</code> before drawing when that matters.</p>
 <hr>
-<p>← Previous: <a href="items-gachar.html">3.3.2 GachaR<t>: list-backed bag</t></a> · <a href="items.html">Parent: 3.3 Framework.Item</a> · Next: <a href="numbers.html">3.4 Number</a> →</p>
+<p>← Previous: <a href="items-gachar.html">3.3.2 GachaR<t>: list-backed bag</t></a> · <a href="items.html">Parent: 3.3 Framework.Item</a> · Next: <a href="items-distributedtreer.html">3.3.4 DistributedTreeR<t></t></a> →</p>
 </article>
           </div>
           

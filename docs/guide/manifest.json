@@ -9,7 +9,7 @@
       "output": {
         ".html": {
           "relative_path": "api/index.html",
-          "hash": "vpoib+sp/eGi0M2f+kMUZohXcvACSrA8KSL/7K5BzEI="
+          "hash": "YVeu2IwtfaNO1Z3vJ9cej0jS4pd1JasmemVBSeIXY7c="
         }
       },
       "is_incremental": false,
@@ -21,7 +21,184 @@
       "output": {
         ".html": {
           "relative_path": "articles/architecture.html",
-          "hash": "ziNvVQZFGvf5N2gE36ezavcrv8eTfD3y0ceXYOweZag="
+          "hash": "wlsfoGDlSMBFBX0Dn4ko/z1Ier9DwqgH75bkke/0U+o="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/benchmark-results/2026-09-20/items-1/performance.csv",
+      "output": {
+        "resource": {
+          "relative_path": "articles/benchmark-results/2026-09-20/items-1/performance.csv"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/benchmark-results/2026-09-20/items-1/performance.json",
+      "output": {
+        "resource": {
+          "relative_path": "articles/benchmark-results/2026-09-20/items-1/performance.json"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/benchmark-results/2026-09-20/items-2/performance.csv",
+      "output": {
+        "resource": {
+          "relative_path": "articles/benchmark-results/2026-09-20/items-2/performance.csv"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/benchmark-results/2026-09-20/items-2/performance.json",
+      "output": {
+        "resource": {
+          "relative_path": "articles/benchmark-results/2026-09-20/items-2/performance.json"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/benchmark-results/2026-09-20/items-3/performance.csv",
+      "output": {
+        "resource": {
+          "relative_path": "articles/benchmark-results/2026-09-20/items-3/performance.csv"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/benchmark-results/2026-09-20/items-3/performance.json",
+      "output": {
+        "resource": {
+          "relative_path": "articles/benchmark-results/2026-09-20/items-3/performance.json"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/benchmark-results/2026-09-20/items.json",
+      "output": {
+        "resource": {
+          "relative_path": "articles/benchmark-results/2026-09-20/items.json"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/benchmark-results/2026-09-20/quality/quality.csv",
+      "output": {
+        "resource": {
+          "relative_path": "articles/benchmark-results/2026-09-20/quality/quality.csv"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/benchmark-results/2026-09-20/quality/quality.json",
+      "output": {
+        "resource": {
+          "relative_path": "articles/benchmark-results/2026-09-20/quality/quality.json"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/benchmark-results/2026-09-20/sources-1/performance.csv",
+      "output": {
+        "resource": {
+          "relative_path": "articles/benchmark-results/2026-09-20/sources-1/performance.csv"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/benchmark-results/2026-09-20/sources-1/performance.json",
+      "output": {
+        "resource": {
+          "relative_path": "articles/benchmark-results/2026-09-20/sources-1/performance.json"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/benchmark-results/2026-09-20/sources-2/performance.csv",
+      "output": {
+        "resource": {
+          "relative_path": "articles/benchmark-results/2026-09-20/sources-2/performance.csv"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/benchmark-results/2026-09-20/sources-2/performance.json",
+      "output": {
+        "resource": {
+          "relative_path": "articles/benchmark-results/2026-09-20/sources-2/performance.json"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/benchmark-results/2026-09-20/sources-3/performance.csv",
+      "output": {
+        "resource": {
+          "relative_path": "articles/benchmark-results/2026-09-20/sources-3/performance.csv"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/benchmark-results/2026-09-20/sources-3/performance.json",
+      "output": {
+        "resource": {
+          "relative_path": "articles/benchmark-results/2026-09-20/sources-3/performance.json"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/benchmarks.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/benchmarks.html",
+          "hash": "9D8Ofn5is/gz1vCtosxFcFb6TIs5gfFIkRXFgxr+AOU="
         }
       },
       "is_incremental": false,
@@ -57,7 +234,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/extending.html",
-          "hash": "jeSXcwfGgx4g4A4T7VZWbKJoTqd/QUkGAODM7YEZUo0="
+          "hash": "EmGDHjLpbP7vJ93pfpVxsvdj3CTAFSW/PMVQobVDR8I="
         }
       },
       "is_incremental": false,
@@ -69,7 +246,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/framework.html",
-          "hash": "HoDPlxVYvNYBJW+KTy3/aqEFx5mSp5JxX3U1pG8yAk0="
+          "hash": "6b/jsT3e9WYaKAXyUl0qY5vb3aIaQuMwWPYrxxkf75w="
         }
       },
       "is_incremental": false,
@@ -81,7 +258,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/installation.html",
-          "hash": "/TRsspNuRlVdeCSQf73SWRLbNeDVZwc4VEN6RGCMqBk="
+          "hash": "IE037DBOzGXvSSWEOYhUdsr3jaR2Bv8iwCB6z+GHzHQ="
         }
       },
       "is_incremental": false,
@@ -97,6 +274,18 @@
         }
       },
       "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/items-distributedtreer.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/items-distributedtreer.html",
+          "hash": "VBn5ZYk1A4TL5wkbFmCdfZo5Wd2p5hMQxxm+/aaIjAw="
+        }
+      },
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -117,7 +306,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/items-gacharbatched.html",
-          "hash": "GtFnM9MrHKKGr6AxRA9ae5pCHCSdmeShd0Q3Gh++3K4="
+          "hash": "yyONgq48Y95lf9knY9QP9+KwSHda/DidyKJFkY5RctA="
         }
       },
       "is_incremental": false,
@@ -141,19 +330,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/items.html",
-          "hash": "rlh1j3j37Fd5uX5lqH8XFwqw41j4JstJFAsQQVz4f5Y="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/numbers-debug-placeholders.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/numbers-debug-placeholders.html",
-          "hash": "CvSLD4Zm1HaN2QR/T+A5ADFmEOnhweRu9wmIDzINt18="
+          "hash": "1cBIo9x2+23nXHQ7lIQ/ZM6gmXOKuxDdBmWGUmDT4UI="
         }
       },
       "is_incremental": false,
@@ -165,19 +342,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/numbers-distancer.html",
-          "hash": "jvYyAXhpTFJhVcJXxpYWZd7NMKpO7UvGheWYzxIy5Mo="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "articles/numbers-distributed-trees.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/numbers-distributed-trees.html",
-          "hash": "mo2uD6MfNNWMFiLWtV19w5k+zToQYE4ZFzxQnud8NHs="
+          "hash": "6CjCFVcS9XC3APBGRmB2i/pqzqpaqO+lRmXL5DYeQz4="
         }
       },
       "is_incremental": false,
@@ -213,7 +378,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/numbers.html",
-          "hash": "81c+RqI6pTFAKm7JwSQSdqxDWVtz5MsYqTmExhtoeuc="
+          "hash": "KfWDOp8mnW96+toiTLORpOAySPNCA4DGNdV48GlL47Q="
         }
       },
       "is_incremental": false,
@@ -285,7 +450,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/research.html",
-          "hash": "dHl4qz05Yd6xZyoC9tISkBalmElhQaLrP72+TeI/2Jk="
+          "hash": "wbnOjPeC6EBn4X9x36ZvukfEdPh7u0MQVrAG9dWM9KM="
         }
       },
       "is_incremental": false,
@@ -365,11 +530,23 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/test-output.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/test-output.html",
+          "hash": "Dh6XoOtFIbSlee5W+79CiFtq8ZyFLyyqTuKSnpfhmuI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/utility-seedgenerator.md",
       "output": {
         ".html": {
           "relative_path": "articles/utility-seedgenerator.html",
-          "hash": "zuqAo7cpwUIVG4sEeZWnjJt80xgQ6nvpUm6FIeFCAdI="
+          "hash": "rzv7OFbB2mreqSY4H4pWl6wZRJcIS4ePVSZqLC+NzxY="
         }
       },
       "is_incremental": false,
@@ -381,7 +558,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/utility-typer.html",
-          "hash": "Ranc+LvwHU9Y/MbLmCilh1tb+ZJsQ/qywH1ZjWyFbuU="
+          "hash": "ZRTwfgF+ZNNNRvdgss6/GuBb+/3ipigxxNiUwFc5UuU="
         }
       },
       "is_incremental": false,
@@ -393,7 +570,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/utility.html",
-          "hash": "NXuWYIND6Vp8VF+eeH/lutEk19OjUakgP9r03Ko3IYU="
+          "hash": "gYTtkx/2H+4zlVfNNLBpHRqtdt5fXQUeNE7zyhqz3kU="
         }
       },
       "is_incremental": false,
@@ -405,7 +582,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "xuZPMYw1Z2UGlGc44EgkVEiBzgynjun+eEefJj2ezXU="
+          "hash": "eLYirPFQlAJOK3JOHxCpA21lTmjTEgBNEVhqbiF130Q="
         }
       },
       "is_incremental": false,
@@ -417,7 +594,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "iEmmmmZsWAmBSv+2HRNiGc59+Xe1TKUrcxcOUjCEEbg="
+          "hash": "bmah52YPrpSl1XjuKPqt6s/0z28l7vPwypyGeVT9wU8="
         }
       },
       "is_incremental": false,
@@ -436,8 +613,15 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 34,
-          "skipped_file_count": 34
+          "total_file_count": 35,
+          "skipped_file_count": 30
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
         },
         "TocDocumentProcessor": {
           "can_incremental": false,

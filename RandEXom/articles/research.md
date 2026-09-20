@@ -34,7 +34,7 @@ The default `a = 1664525`, `c = 1013904223`, `m = 2^32` combination is from *[Nu
 
 ## 4.3.4 Platform behavior and project-specific helpers
 
-`NetRandom` wraps `System.Random`; its behavior should be read from [Microsoft’s API documentation](https://learn.microsoft.com/dotnet/api/system.random), not attributed to a *Numerical Recipes* algorithm. `TruePercentageR`, `GachaR<T>`, `GachaRBatched<T>`, `SlotR`, `PongR`, and `DistanceR` are documented from the code’s behavior rather than presented as implementations of a particular paper. If research is added to their design later, it should be linked next to the exact claim it supports.
+`NetRandom` wraps `System.Random`; its behavior should be read from [Microsoft’s API documentation](https://learn.microsoft.com/dotnet/api/system.random), not attributed to a *Numerical Recipes* algorithm. `TruePercentageR`, `GachaR<T>`, `GachaRBatched<T>`, `DistributedTreeR<T>`, `SlotR`, `PongR`, and `DistanceR` are documented from the code’s behavior rather than presented as implementations of a particular paper. If research is added to their design later, it should be linked next to the exact claim it supports.
 
 ---
 

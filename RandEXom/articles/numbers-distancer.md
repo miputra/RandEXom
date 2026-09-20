@@ -16,4 +16,4 @@ int second = spaced.Next(0, 10); // |second - first| >= 3
 
 ---
 
-← Previous: [3.4.2 PongR: alternate halves](numbers-pongr.md) · [Parent: 3.4 Framework.Number](numbers.md) · Next: [3.4.4 Experimental distributed trees](numbers-distributed-trees.md) →
+← Previous: [3.4.2 PongR: alternate halves](numbers-pongr.md) · [Parent: 3.4 Framework.Number](numbers.md) · Next: [4.1 Utility](utility.md) →

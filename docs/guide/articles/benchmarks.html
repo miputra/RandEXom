@@ -1,0 +1,330 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>4.6 Benchmarks: measured comparisons </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="4.6 Benchmarks: measured comparisons ">
+    <meta name="generator" content="docfx 2.59.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../index.html">RandEXom <span class="brand-divider">/</span> Docs</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <ul class="nav navbar-nav">
+                <li><a href="../../">Project home</a></li>
+                <li><a href="../index.html">Guide map</a></li>
+                <li><a href="../api/index.html">Class index</a></li>
+              </ul>
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search docs" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="46-benchmarks-measured-comparisons">4.6 Benchmarks: measured comparisons</h1>
+
+<p>Chapter 4: Reference · Section 6 · <a href="../index.html">Guide map</a></p>
+<p>These measurements were collected on <strong>20 September 2026</strong> using the standalone DLL-loaded benchmark runner. They describe this local build and workload, not the older downloadable release or every possible seed/source combination.</p>
+<h2 id="run-the-benchmark">Run the benchmark</h2>
+<p>Double-click <code>RandEXomBenchmark.exe</code> beside <code>RandEXom.dll</code>. The menu lists available methods, performance/memory measurements, quality diagnostics, smoke checks, settings/injection, and byte export. Settings let you select a DLL, source, seed type, constructor JSON, item count, samples, and report directory. Command-line use remains available:</p>
+<pre><code class="lang-powershell">.\RandEXomBenchmark.exe performance --dll RandEXom.dll --filter RandomLib --samples 25
+.\RandEXomBenchmark.exe quality --dll RandEXom.dll --bytes 262144
+</code></pre><p>The Windows x64 executable needs the .NET 8 runtime, not an SDK or target project. It discovers compatible public classes/methods and compiles delegates before timing. See the <a href="https://github.com/miputra/RandEXom/blob/main/RandEXomBenchmark/README.md">runner guide in the repository</a> for publishing, injection rules, supported signatures, and export. Use <a href="test-output.html">TestOut</a> to watch behavior instead of measuring it.</p>
+<h2 id="measurement-setup">Measurement setup</h2>
+<ul>
+<li>Release DLL built from the current source; fixed performance seed 12345.</li>
+<li>Windows 10.0.19045, x64 process, .NET 8.0.28, 12 logical processors; stopwatch frequency 10,000,000 ticks/second.</li>
+<li>Three separate process runs for each group, each with three warmup batches and 25 measured samples per workload.</li>
+<li>Tables report the <strong>median of the three per-run medians</strong>, with the smallest/largest per-run median beside it. These ranges are observed variation, not confidence intervals. Allocation columns average the reported managed bytes per call across runs.</li>
+<li>Sources use their default seed algorithms: NetRandom with its internal constant seed, ModuloRandom with XORShift64Seed, SSRNGRandom with default LCG parameters. No custom seed injection was supplied for source comparisons.</li>
+<li>Numeric comparisons use [0, 1,000,000); byte calls fill a reused 1,024-byte buffer. Each measured source sample contains 4,096 calls.</li>
+<li>The desktop was not isolated from other activity. Measurements include delegate/loop overhead and can vary with JIT tiering, GC, and scheduling. Some integer samples are below one millisecond; treat small differences cautiously and inspect <code>MinSampleMs</code> in the reports.</li>
+</ul>
+<p>DLL assembly version: <code>0.1.5.0</code>. SHA-256:</p>
+<pre><code class="lang-text">E45424D9CA2E6D66BAAC82135AF55CE8C62943880E4F77D0C7595A732DC282C6
+</code></pre><h2 id="random-source-comparison">Random-source comparison</h2>
+<table>
+<thead>
+<tr>
+<th>Source</th>
+<th>Operation</th>
+<th style="text-align:right">Median ns/call</th>
+<th style="text-align:right">Run-median range (ns)</th>
+<th style="text-align:right">Calls/second from median</th>
+<th style="text-align:right">Allocated B/call</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NetRandom</td>
+<td>NextInt</td>
+<td style="text-align:right">31.54</td>
+<td style="text-align:right">31.10–31.96</td>
+<td style="text-align:right">31702786</td>
+<td style="text-align:right">0.00</td>
+</tr>
+<tr>
+<td>NetRandom</td>
+<td>NextLong</td>
+<td style="text-align:right">75.59</td>
+<td style="text-align:right">74.51–89.16</td>
+<td style="text-align:right">13229974</td>
+<td style="text-align:right">32.00</td>
+</tr>
+<tr>
+<td>NetRandom</td>
+<td>NextBytes (1,024 bytes)</td>
+<td style="text-align:right">4472.58</td>
+<td style="text-align:right">3768.29–4643.51</td>
+<td style="text-align:right">223584</td>
+<td style="text-align:right">0.00</td>
+</tr>
+<tr>
+<td>ModuloRandom</td>
+<td>NextInt</td>
+<td style="text-align:right">483.81</td>
+<td style="text-align:right">393.46–596.00</td>
+<td style="text-align:right">2066912</td>
+<td style="text-align:right">168.00</td>
+</tr>
+<tr>
+<td>ModuloRandom</td>
+<td>NextLong</td>
+<td style="text-align:right">428.56</td>
+<td style="text-align:right">389.72–719.14</td>
+<td style="text-align:right">2333371</td>
+<td style="text-align:right">168.00</td>
+</tr>
+<tr>
+<td>ModuloRandom</td>
+<td>NextBytes (1,024 bytes)</td>
+<td style="text-align:right">4048.68</td>
+<td style="text-align:right">3997.90–4612.35</td>
+<td style="text-align:right">246994</td>
+<td style="text-align:right">0.00</td>
+</tr>
+<tr>
+<td>SSRNGRandom</td>
+<td>NextInt</td>
+<td style="text-align:right">379.69</td>
+<td style="text-align:right">313.62–546.17</td>
+<td style="text-align:right">2633745</td>
+<td style="text-align:right">288.61</td>
+</tr>
+<tr>
+<td>SSRNGRandom</td>
+<td>NextLong</td>
+<td style="text-align:right">395.61</td>
+<td style="text-align:right">366.09–403.37</td>
+<td style="text-align:right">2527771</td>
+<td style="text-align:right">288.61</td>
+</tr>
+<tr>
+<td>SSRNGRandom</td>
+<td>NextBytes (1,024 bytes)</td>
+<td style="text-align:right">336893.07</td>
+<td style="text-align:right">330420.12–340202.69</td>
+<td style="text-align:right">2968</td>
+<td style="text-align:right">294925.12</td>
+</tr>
+</tbody>
+</table>
+<p>NetRandom had the lowest bounded-int and bounded-long median times in this configuration. ModuloRandom and NetRandom byte-fill timings overlap across runs. SSRNGRandom byte filling incurred substantially more managed allocation here. These results compare complete public APIs, including their range conversion and seed progression, rather than raw generator transitions. To convert byte-fill calls/second to bytes/second, multiply by 1,024.</p>
+<p><a id="item-picker-comparison"></a></p>
+<h2 id="item-picker-comparison">Item-picker comparison</h2>
+<p>All rows use 256 distinct integer items, ModuloRandom with its default seed generator, and no initial shuffle. The tree has two branches and three steps (eight endpoints, initially 32 items each). Each sample starts with a fresh full pool outside the timed region and measures exactly 256 pulls; removal samples include endpoint locking as the pool drains. Construction and refill costs are excluded from this table.</p>
+<table>
+<thead>
+<tr>
+<th>Picker</th>
+<th>Behavior</th>
+<th style="text-align:right">Median ns/pull</th>
+<th style="text-align:right">Run-median range (ns)</th>
+<th style="text-align:right">Allocated B/pull</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>GachaR&lt;int&gt;</code></td>
+<td>Remove</td>
+<td style="text-align:right">504.30</td>
+<td style="text-align:right">485.16–650.39</td>
+<td style="text-align:right">168.31</td>
+</tr>
+<tr>
+<td><code>GachaRBatched&lt;int&gt;</code></td>
+<td>Remove</td>
+<td style="text-align:right">7047.66</td>
+<td style="text-align:right">6807.42–9217.19</td>
+<td style="text-align:right">1252.41</td>
+</tr>
+<tr>
+<td><code>DistributedTreeR&lt;int&gt;</code></td>
+<td>Keep</td>
+<td style="text-align:right">1694.92</td>
+<td style="text-align:right">1669.53–1724.61</td>
+<td style="text-align:right">704.00</td>
+</tr>
+<tr>
+<td><code>DistributedTreeR&lt;int&gt;</code></td>
+<td>Remove and lock</td>
+<td style="text-align:right">1785.94</td>
+<td style="text-align:right">1736.33–2630.86</td>
+<td style="text-align:right">699.59</td>
+</tr>
+</tbody>
+</table>
+<p>GachaR was fastest for this small, distinct-item removal workload. This does not establish the best choice for large repeated weights: GachaRBatched stores counts, while the tree deliberately chooses available branches before items. The keep row permits repeats and is not a without-replacement alternative. Equal branch choices also mean the tree is not a uniformly shuffled bag after endpoints start emptying.</p>
+<h2 id="randomness-diagnostics">Randomness diagnostics</h2>
+<p>Each source was checked with 262,144 bytes and seeds 1, 12345, and 987654321. All nine source/seed cases reproduced their byte sequence and had zero range-check failures. The table shows seed 12345; all seeds, bit-balance/runs statistics, pair-frequency statistics, and integer-distribution statistics are in the downloadable report.</p>
+<table>
+<thead>
+<tr>
+<th>Source</th>
+<th style="text-align:right">Byte chi-square</th>
+<th style="text-align:right">Entropy (bits/byte)</th>
+<th style="text-align:right">Lag-1 correlation</th>
+<th style="text-align:right">Int chi-square</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ModuloRandom</td>
+<td style="text-align:right">324.88</td>
+<td style="text-align:right">7.999108</td>
+<td style="text-align:right">-0.003292</td>
+<td style="text-align:right">300.24</td>
+</tr>
+<tr>
+<td>NetRandom</td>
+<td style="text-align:right">274.95</td>
+<td style="text-align:right">7.999242</td>
+<td style="text-align:right">0.002673</td>
+<td style="text-align:right">214.81</td>
+</tr>
+<tr>
+<td>SSRNGRandom</td>
+<td style="text-align:right">265.68</td>
+<td style="text-align:right">7.999269</td>
+<td style="text-align:right">-0.000144</td>
+<td style="text-align:right">252.99</td>
+</tr>
+</tbody>
+</table>
+<p>For 256 uniform buckets, the chi-square statistic is expected around 255, not zero. Entropy approaching 8 and low lag-1 correlation are descriptive diagnostics, not proof of independence or a quality certification. No p-values or overall pass/fail quality scores are claimed. Constrained helpers and item-removal sequences are not evaluated under the same independent-uniform assumptions.</p>
+<h2 id="download-the-measurements">Download the measurements</h2>
+<p>The measurements are unchanged from the runner output; only absolute local DLL paths in JSON were normalized to repository-relative paths. Each JSON includes the DLL hash and environment. These archived results remain a dated snapshot when the code changes.</p>
+<table>
+<thead>
+<tr>
+<th>Group</th>
+<th>Run 1</th>
+<th>Run 2</th>
+<th>Run 3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sources</td>
+<td><a href="benchmark-results/2026-09-20/sources-1/performance.json">JSON</a> · <a href="benchmark-results/2026-09-20/sources-1/performance.csv">CSV</a></td>
+<td><a href="benchmark-results/2026-09-20/sources-2/performance.json">JSON</a> · <a href="benchmark-results/2026-09-20/sources-2/performance.csv">CSV</a></td>
+<td><a href="benchmark-results/2026-09-20/sources-3/performance.json">JSON</a> · <a href="benchmark-results/2026-09-20/sources-3/performance.csv">CSV</a></td>
+</tr>
+<tr>
+<td>items</td>
+<td><a href="benchmark-results/2026-09-20/items-1/performance.json">JSON</a> · <a href="benchmark-results/2026-09-20/items-1/performance.csv">CSV</a></td>
+<td><a href="benchmark-results/2026-09-20/items-2/performance.json">JSON</a> · <a href="benchmark-results/2026-09-20/items-2/performance.csv">CSV</a></td>
+<td><a href="benchmark-results/2026-09-20/items-3/performance.json">JSON</a> · <a href="benchmark-results/2026-09-20/items-3/performance.csv">CSV</a></td>
+</tr>
+</tbody>
+</table>
+<p>Quality: <a href="benchmark-results/2026-09-20/quality/quality.json">JSON</a> · <a href="benchmark-results/2026-09-20/quality/quality.csv">CSV</a>. Item constructor settings: <a href="benchmark-results/2026-09-20/items.json">items.json</a>.</p>
+<h2 id="reproduce-the-comparison">Reproduce the comparison</h2>
+<p>Use the same DLL hash for an exact build comparison, or record the new hash when benchmarking another build. Put the runner, DLL, and downloaded items.json in one folder. Run the source and item commands three times into distinct output folders, then run quality once:</p>
+<pre><code class="lang-powershell">foreach ($run in 1..3) {
+    .\RandEXomBenchmark.exe performance --dll RandEXom.dll --filter RandomLib --samples 25 --output &quot;results/sources-$run&quot;
+    .\RandEXomBenchmark.exe performance --dll RandEXom.dll --filter Framework.Item --random ModuloRandom --items 256 --config items.json --samples 25 --output &quot;results/items-$run&quot;
+}
+.\RandEXomBenchmark.exe quality --dll RandEXom.dll --bytes 262144 --output results/quality
+</code></pre><hr>
+<p>← Previous: <a href="test-output.html">4.5 TestOut</a> · <a href="../index.html">Guide map</a> · End of guide</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/miputra/RandEXom/blob/main/RandEXom/articles/benchmarks.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

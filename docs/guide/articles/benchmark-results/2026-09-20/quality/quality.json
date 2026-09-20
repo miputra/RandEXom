@@ -1,0 +1,178 @@
+{
+  "CreatedUtc": "2026-09-20T04:39:33.4381218Z",
+  "Runtime": ".NET 8.0.28",
+  "Library": "RandEXom/bin/docs-benchmark/RandEXom.dll",
+  "LibraryVersion": "0.1.5.0",
+  "Sha256": "E45424D9CA2E6D66BAAC82135AF55CE8C62943880E4F77D0C7595A732DC282C6",
+  "SeedType": null,
+  "Arguments": {},
+  "OS": "Microsoft Windows 10.0.19045",
+  "Architecture": "X64",
+  "ProcessorCount": 12,
+  "SampleBytes": 262144,
+  "Note": "Descriptive diagnostics, not a complete NIST/TestU01/PractRand battery or a security certification.",
+  "Results": [
+    {
+      "Source": "RandEXom.RandomLib.ModuloRandom",
+      "Seed": 1,
+      "SampleBytes": 262144,
+      "Bytes": {
+        "ByteChiSquare": 259.6796875,
+        "EntropyBitsPerByte": 7.999283885863132,
+        "OneBitFraction": 0.49970197677612305,
+        "MonobitZ": -0.8631674575031097,
+        "RunsZ": -0.30332063722271496,
+        "Lag1Correlation": 0.0009018878696059756,
+        "PairChiSquare": 245.203125,
+        "Runs": 1048357
+      },
+      "IntChiSquare": 231.4296875,
+      "SeedReplayMatches": true,
+      "RangeFailures": 0
+    },
+    {
+      "Source": "RandEXom.RandomLib.ModuloRandom",
+      "Seed": 12345,
+      "SampleBytes": 262144,
+      "Bytes": {
+        "ByteChiSquare": 324.87890625,
+        "EntropyBitsPerByte": 7.999108353061846,
+        "OneBitFraction": 0.5006718635559082,
+        "MonobitZ": 1.9459247161950106,
+        "RunsZ": 1.695807542704226,
+        "Lag1Correlation": -0.003292468247413361,
+        "PairChiSquare": 269.359375,
+        "Runs": 1049803
+      },
+      "IntChiSquare": 300.244140625,
+      "SeedReplayMatches": true,
+      "RangeFailures": 0
+    },
+    {
+      "Source": "RandEXom.RandomLib.ModuloRandom",
+      "Seed": 987654321,
+      "SampleBytes": 262144,
+      "Bytes": {
+        "ByteChiSquare": 241.822265625,
+        "EntropyBitsPerByte": 7.999334661192834,
+        "OneBitFraction": 0.5001974105834961,
+        "MonobitZ": 0.5717621238500599,
+        "RunsZ": -1.3559835001076064,
+        "Lag1Correlation": -0.0013652386710470948,
+        "PairChiSquare": 242.68359375,
+        "Runs": 1047595
+      },
+      "IntChiSquare": 246.296875,
+      "SeedReplayMatches": true,
+      "RangeFailures": 0
+    },
+    {
+      "Source": "RandEXom.RandomLib.NetRandom",
+      "Seed": 1,
+      "SampleBytes": 262144,
+      "Bytes": {
+        "ByteChiSquare": 236.873046875,
+        "EntropyBitsPerByte": 7.999345799740706,
+        "OneBitFraction": 0.5005965232849121,
+        "MonobitZ": 1.7277159829382245,
+        "RunsZ": 0.08078225199362289,
+        "Lag1Correlation": 0.003364861549057365,
+        "PairChiSquare": 252.01171875,
+        "Runs": 1048634
+      },
+      "IntChiSquare": 257.830078125,
+      "SeedReplayMatches": true,
+      "RangeFailures": 0
+    },
+    {
+      "Source": "RandEXom.RandomLib.NetRandom",
+      "Seed": 12345,
+      "SampleBytes": 262144,
+      "Bytes": {
+        "ByteChiSquare": 274.951171875,
+        "EntropyBitsPerByte": 7.9992417597885295,
+        "OneBitFraction": 0.4994668960571289,
+        "MonobitZ": -1.5440339479815626,
+        "RunsZ": -1.183311651800854,
+        "Lag1Correlation": 0.0026726580692743767,
+        "PairChiSquare": 317.46484375,
+        "Runs": 1047719
+      },
+      "IntChiSquare": 214.806640625,
+      "SeedReplayMatches": true,
+      "RangeFailures": 0
+    },
+    {
+      "Source": "RandEXom.RandomLib.NetRandom",
+      "Seed": 987654321,
+      "SampleBytes": 262144,
+      "Bytes": {
+        "ByteChiSquare": 251.076171875,
+        "EntropyBitsPerByte": 7.999310384438295,
+        "OneBitFraction": 0.5003180503845215,
+        "MonobitZ": 0.9211723106473186,
+        "RunsZ": -0.2631981858454791,
+        "Lag1Correlation": -9.160934369473265E-06,
+        "PairChiSquare": 260.0234375,
+        "Runs": 1048386
+      },
+      "IntChiSquare": 248.65625,
+      "SeedReplayMatches": true,
+      "RangeFailures": 0
+    },
+    {
+      "Source": "RandEXom.RandomLib.SSRNGRandom",
+      "Seed": 1,
+      "SampleBytes": 262144,
+      "Bytes": {
+        "ByteChiSquare": 256.080078125,
+        "EntropyBitsPerByte": 7.999296315375613,
+        "OneBitFraction": 0.4997701644897461,
+        "MonobitZ": -0.6656747432263982,
+        "RunsZ": -0.3932985461056079,
+        "Lag1Correlation": 0.0017037999941494973,
+        "PairChiSquare": 258.36328125,
+        "Runs": 1048292
+      },
+      "IntChiSquare": 236.46875,
+      "SeedReplayMatches": true,
+      "RangeFailures": 0
+    },
+    {
+      "Source": "RandEXom.RandomLib.SSRNGRandom",
+      "Seed": 12345,
+      "SampleBytes": 262144,
+      "Bytes": {
+        "ByteChiSquare": 265.677734375,
+        "EntropyBitsPerByte": 7.999269318147248,
+        "OneBitFraction": 0.49950647354125977,
+        "MonobitZ": -1.4294053096251498,
+        "RunsZ": -1.0330102351142763,
+        "Lag1Correlation": -0.0001436918110436334,
+        "PairChiSquare": 270.37109375,
+        "Runs": 1047828
+      },
+      "IntChiSquare": 252.994140625,
+      "SeedReplayMatches": true,
+      "RangeFailures": 0
+    },
+    {
+      "Source": "RandEXom.RandomLib.SSRNGRandom",
+      "Seed": 987654321,
+      "SampleBytes": 262144,
+      "Bytes": {
+        "ByteChiSquare": 254.072265625,
+        "EntropyBitsPerByte": 7.999303638686005,
+        "OneBitFraction": 0.5003042221069336,
+        "MonobitZ": 0.8811213406191744,
+        "RunsZ": 1.3484592355218066,
+        "Lag1Correlation": -0.00025244395358256565,
+        "PairChiSquare": 262.828125,
+        "Runs": 1049553
+      },
+      "IntChiSquare": 254.046875,
+      "SeedReplayMatches": true,
+      "RangeFailures": 0
+    }
+  ]
+}

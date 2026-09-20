@@ -64,12 +64,13 @@
 <h1 id="33-frameworkitem">3.3 Framework.Item</h1>
 
 <p>Chapter 3: Framework helpers · Section 3 · <a href="../index.html">Guide map</a></p>
-<p>This branch of <a href="framework.html">Framework</a> uses random draws to reorder a list or select items from a pool. Its three public helpers live in <code>RandEXom.Framework.Item</code>: <code>Shuffles_FisherYates</code>, <code>GachaR&lt;T&gt;</code>, and <code>GachaRBatched&lt;T&gt;</code>. Each can be constructed with a numeric seed or a shared <code>IRandomR</code> source. A shared source makes call order matter across helpers. Both gacha variants implement <code>IGachaR&lt;T&gt;</code>; shuffle does not.</p>
+<p>This branch of <a href="framework.html">Framework</a> uses random draws to reorder a list or select items from a pool. Its four public helpers live in <code>RandEXom.Framework.Item</code>: <code>Shuffles_FisherYates</code>, <code>GachaR&lt;T&gt;</code>, <code>GachaRBatched&lt;T&gt;</code>, and <code>DistributedTreeR&lt;T&gt;</code>. Each can be constructed with a numeric seed or a shared <code>IRandomR</code> source. A shared source makes call order matter across helpers. Both gacha variants implement <code>IGachaR&lt;T&gt;</code>; shuffle and the tree picker do not.</p>
 <h2 id="in-this-chapter">In this chapter</h2>
 <ul>
 <li><a id="fisheryates-shuffle"></a><a href="items-shuffles-fisheryates.html">3.3.1 Shuffles_FisherYates: Fisher–Yates shuffle</a></li>
 <li><a id="gachart-list-backed-bag"></a><a href="items-gachar.html">3.3.2 GachaR<t>: list-backed bag</t></a></li>
 <li><a id="gacharbatchedt-count-backed-bag"></a><a href="items-gacharbatched.html">3.3.3 GachaRBatched<t>: count-backed bag</t></a></li>
+<li><a href="items-distributedtreer.html">3.3.4 DistributedTreeR<t>: random branch item picker</t></a></li>
 </ul>
 <hr>
 <p>← Previous: <a href="boolean-truepercentager.html">3.2.1 TruePercentageR</a> · <a href="../index.html">Guide map</a> · Next: <a href="items-shuffles-fisheryates.html">3.3.1 Shuffles_FisherYates: Fisher–Yates shuffle</a> →</p>

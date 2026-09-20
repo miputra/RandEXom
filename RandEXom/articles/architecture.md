@@ -26,8 +26,8 @@ You can use `RandomLib` directly without a framework helper. Most helpers also h
 | `RandEXom.RandomLib` | How are bounded values and bytes generated? | `ModuloRandom`, `NetRandom`, `SSRNGRandom` | [RandomLib](random-sources.md) |
 | `RandEXom.Framework` | Which task-level behavior wraps a source? | Boolean, Item, and Number branches | [Framework overview](framework.md) |
 | `RandEXom.Framework.Boolean` | Should this independent chance succeed? | `TruePercentageR` | [Boolean](boolean.md) |
-| `RandEXom.Framework.Item` | How do I reorder or draw items? | `Shuffles_FisherYates`, `GachaR<T>`, `GachaRBatched<T>` | [Item](items.md) |
-| `RandEXom.Framework.Number` | What range behavior do I need? | `SlotR`, `PongR`, `DistanceR`; experimental tree types | [Number](numbers.md) |
+| `RandEXom.Framework.Item` | How do I reorder or draw items? | `Shuffles_FisherYates`, `GachaR<T>`, `GachaRBatched<T>`, `DistributedTreeR<T>` | [Item](items.md) |
+| `RandEXom.Framework.Number` | What range behavior do I need? | `SlotR`, `PongR`, `DistanceR` | [Number](numbers.md) |
 | `RandEXom.Utility` | What supporting conversions exist? | public `SeedGenerator`; internal `TypeR` | [Utility](utility.md) |
 
 The [class index](../api/index.md) maps each type to its guide and availability. `Framework` means an application-level behavior built *on top of* a random source, not a separate random engine.

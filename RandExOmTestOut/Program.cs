@@ -1,4 +1,4 @@
-﻿
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,8 +26,8 @@ namespace RandExOmTestOut
                 Console.WriteLine("[5] to test SSRNG");
                 Console.WriteLine("[6] to test XORShift");
                 Console.WriteLine("[7] to test XORShiftStar");
-                Console.WriteLine("[8] to test Distributed Tree");
-                Console.WriteLine("[9] to test SlotR");
+                Console.WriteLine("[8] to test SlotR");
+                Console.WriteLine("[9] to test Distributed Tree Item");
                 string res = Console.ReadLine();
                 switch (res)
                 {
@@ -53,10 +53,10 @@ namespace RandExOmTestOut
                         TestXORShiftStar();
                         break;
                     case "8":
-                        TestDistributed();
+                        TestSlotNumber();
                         break;
                     case "9":
-                        TestSlotNumber();
+                        TestDistributedItem();
                         break;
                     default:
                         return;
@@ -222,20 +222,54 @@ namespace RandExOmTestOut
             }
         }
 
-        static void TestDistributed()
+        static void TestDistributedItem()
         {
-            DistributedTreeR rand = new DistributedTreeR(min: 0, max: 100);
-            for (int i = 0; i < 10; i++)
-            {
-                Console.WriteLine(rand.NextInt());
-            }
+            DateTime lastTime = DateTime.Now;
+            List<string> items = Enumerable.Range(1, 12).Select(x => "Item" + x).ToList();
 
-            Console.WriteLine("Test long");
-
-            for (int i = 0; i < 10; i++)
+            foreach (bool do_shuffle in new[] { false, true })
             {
-                Console.WriteLine(rand.Next());
+                foreach (bool remove_on_pull in new[] { false, true })
+                {
+                    ModuloRandom random = new ModuloRandom(new RandEXom.SeedLib.XORShift64Seed(123));
+                    DistributedTreeR<string> rand = new DistributedTreeR<string>(items, random,
+                        step: 2, child: 2, do_shuffle: do_shuffle, remove_on_pull: remove_on_pull);
+                    Console.WriteLine("=====================================");
+                    Console.WriteLine("Shuffle: " + do_shuffle + ", Remove on pull: " + remove_on_pull);
+
+                    //save initial groups so we can see which endpoints become locked
+                    List<string> initial = rand.ToList();
+                    for (int endpoint = 0; endpoint < 4; endpoint++)
+                        Console.WriteLine("Endpoint " + endpoint + ": " + string.Join(", ", initial.Skip(endpoint * 3).Take(3)));
+
+                    HashSet<string> pulled = new HashSet<string>();
+                    for (int i = 0; i < items.Count; i++)
+                    {
+                        string get = rand.Pull();
+                        int endpoint = initial.IndexOf(get) / 3;
+                        Console.WriteLine(get + " from endpoint " + endpoint + ", Remaining: " + rand.Count());
+                        if (remove_on_pull)
+                        {
+                            if (!pulled.Add(get)) throw new Exception("Item pulled more than once.");
+                            if (rand.Count() != items.Count - i - 1) throw new Exception("Wrong remaining item count.");
+                            if (!rand.ToList().Intersect(initial.Skip(endpoint * 3).Take(3)).Any())
+                                Console.WriteLine("Endpoint " + endpoint + " is empty and locked.");
+                        }
+                        else if (!rand.ToList().SequenceEqual(initial))
+                            throw new Exception("Items changed when keeping the pulled item.");
+                    }
+
+                    if (remove_on_pull)
+                    {
+                        if (!pulled.SetEquals(items) || rand.ToList().Count != 0 || rand.Pull() != null)
+                            throw new Exception("Tree did not finish empty.");
+                        Console.WriteLine("All endpoints locked. Empty pull returns null.");
+                    }
+                    Console.WriteLine("Test passed.");
+                }
             }
+            string finish = (DateTime.Now - lastTime).TotalMilliseconds.ToString();
+            Console.WriteLine("Process is done by " + finish + "ms");
         }
 
         static void TestSlotNumber()
@@ -245,11 +279,11 @@ namespace RandExOmTestOut
             {
                 Console.WriteLine(rand.Next(0, 100));
             }
-            
+
 
 
         }
 
-        
+
     }
 }

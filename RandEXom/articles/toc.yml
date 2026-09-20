@@ -80,6 +80,8 @@
       href: items-gachar.md
     - name: "3.3.3 GachaRBatched<T>: count-backed bag"
       href: items-gacharbatched.md
+    - name: "3.3.4 DistributedTreeR<T>: random branch item picker"
+      href: items-distributedtreer.md
   - name: 3.4 Number
     href: numbers.md
     items:
@@ -89,16 +91,12 @@
       href: numbers-pongr.md
     - name: "3.4.3 DistanceR: keep draws apart"
       href: numbers-distancer.md
-    - name: "3.4.4 Experimental distributed trees"
-      href: numbers-distributed-trees.md
-    - name: "3.4.5 Debug-only placeholders"
-      href: numbers-debug-placeholders.md
 - name: 4. Reference
   items:
   - name: 4.1 Utility
     href: utility.md
     items:
-    - name: "4.1.1 Public: SeedGenerator.GetJoinedCurrentDate()"
+    - name: "4.1.1 Public: SeedGenerator"
       href: utility-seedgenerator.md
     - name: "4.1.2 Internal: TypeR.RoundLongToInt(long)"
       href: utility-typer.md
@@ -137,3 +135,7 @@
       href: ../api/index.md#behaviors-randexom-framework
     - name: "4.4.5 Support (RandEXom.Utility)"
       href: ../api/index.md#support-randexom-utility
+  - name: "4.5 TestOut: interactive output examples"
+    href: test-output.md
+  - name: "4.6 Benchmarks: measured comparisons"
+    href: benchmarks.md

@@ -96,11 +96,12 @@ var flag = new TruePercentageR(source, percentage: 10f);
 <li><code>GetSeedSTR()</code> reports the initial seed, not enough information to resume a generator from an arbitrary point.</li>
 <li>For <code>[min, max)</code>, <code>min</code> must be less than <code>max</code>; <code>max</code> itself cannot be returned. Use <code>NextInt(1, 7)</code> for a six-sided die.</li>
 <li><code>GachaR&lt;T&gt;</code> and <code>GachaRBatched&lt;T&gt;</code> can return <code>default(T)</code> when empty, which may be indistinguishable from a valid item. Check the remaining count if that matters.</li>
-<li>The distributed-tree types are obsolete/experimental, and dice/noise types are debug-only placeholders. See <a href="numbers.html">number helpers</a>.</li>
+<li><code>DistributedTreeR&lt;T&gt;</code> divides items once at initialization. Removal locks empty endpoints without redistributing items; check <code>Count()</code> before a pull when a stored default value is possible. See <a href="items-distributedtreer.html">the item-tree guide</a>.</li>
 </ul>
 <p><a id="verification"></a></p>
 <h2 id="424-verification">4.2.4 Verification</h2>
 <p>Run <code>dotnet run --project Verification/Verification.csproj</code> from the repository root. If you change a generator or helper, add cases there for fixed-seed sequences, extreme bounds, empty pools, and invalid arguments.</p>
+<p>Use <a href="test-output.html">TestOut</a> for interactive examples and <a href="benchmarks.html">the benchmark runner</a> for measured performance and randomness diagnostics. They serve different purposes from correctness verification.</p>
 <hr>
 <p>← Previous: <a href="utility-typer.html">4.1.2 Internal: TypeR.RoundLongToInt(long)</a> · <a href="../index.html">Guide map</a> · Next: <a href="research.html">4.3 Research and provenance</a> →</p>
 </article>

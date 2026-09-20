@@ -68,6 +68,7 @@
 <pre><code class="lang-text">Framework.Boolean.TruePercentageR ── compare a bounded draw to a probability
 Framework.Item.Shuffles_FisherYates ── use draws to swap list positions
 Framework.Item.GachaR&lt;T&gt; / GachaRBatched&lt;T&gt; ── use draws to remove items from a pool
+Framework.Item.DistributedTreeR&lt;T&gt; ── choose branches, then keep or remove an item
 Framework.Number.SlotR / PongR / DistanceR ── apply rules to numeric draws
                  │
                  └── each uses IRandomR ← RandomLib ← ISeedR ← SeedLib
@@ -103,6 +104,11 @@ Framework.Number.SlotR / PongR / DistanceR ── apply rules to numeric draws
 <td>Stores counts, removes one per pull, manual refill</td>
 </tr>
 <tr>
+<td>Items grouped at tree endpoints</td>
+<td><code>DistributedTreeR&lt;T&gt;</code></td>
+<td>Chooses branches randomly; optionally removes items and locks empty endpoints</td>
+</tr>
+<tr>
 <td>One draw for each slot-machine reel</td>
 <td><code>SlotR</code></td>
 <td>Call <code>Next()</code> once per reel; delegates each draw to its random source</td>
@@ -119,7 +125,7 @@ Framework.Number.SlotR / PongR / DistanceR ── apply rules to numeric draws
 </tr>
 </tbody>
 </table>
-<p>The <code>DistributedTreeR</code> and <code>DistributedTreeNestedR</code> number classes are obsolete/experimental; dice and noise classes are unfinished and <code>DEBUG</code>-only. See <a href="numbers.html">Framework.Number</a> rather than treating them as supported alternatives.</p>
+<p><code>PerlinNoise</code> remains an empty <code>DEBUG</code>-only placeholder; see <a href="research.html#related-research-not-an-implemented-feature">research context</a>.</p>
 <p><a id="default-versus-supplied-sources"></a></p>
 <h2 id="312-default-versus-supplied-sources">3.1.2 Default versus supplied sources</h2>
 <p>Most helpers offer a default constructor, a numeric-seed constructor, and a constructor accepting <code>IRandomR</code>. The first two create a <code>NetRandom</code> internally. The third gives you control over the source and its seed algorithm:</p>

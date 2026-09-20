@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RandEXom", "RandEXom\RandEX
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RandExOmTestOut", "RandExOmTestOut\RandExOmTestOut.csproj", "{8F396598-7E5C-4EA9-88FF-A6B3BD0C0B8E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RandEXomBenchmark", "RandEXomBenchmark\RandEXomBenchmark.csproj", "{4C96984A-5552-46F7-88D3-2D3D6E5062A6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{8F396598-7E5C-4EA9-88FF-A6B3BD0C0B8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8F396598-7E5C-4EA9-88FF-A6B3BD0C0B8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8F396598-7E5C-4EA9-88FF-A6B3BD0C0B8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C96984A-5552-46F7-88D3-2D3D6E5062A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C96984A-5552-46F7-88D3-2D3D6E5062A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C96984A-5552-46F7-88D3-2D3D6E5062A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C96984A-5552-46F7-88D3-2D3D6E5062A6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,190 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>4.5 TestOut: interactive output examples </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="4.5 TestOut: interactive output examples ">
+    <meta name="generator" content="docfx 2.59.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../index.html">RandEXom <span class="brand-divider">/</span> Docs</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <ul class="nav navbar-nav">
+                <li><a href="../../">Project home</a></li>
+                <li><a href="../index.html">Guide map</a></li>
+                <li><a href="../api/index.html">Class index</a></li>
+              </ul>
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search docs" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="45-testout-interactive-output-examples">4.5 TestOut: interactive output examples</h1>
+
+<p>Chapter 4: Reference · Section 5 · <a href="../index.html">Guide map</a></p>
+<p><code>RandExOmTestOut</code> is the console demonstration project. It prints draws so you can see how each helper behaves. The <a href="benchmarks.html">benchmark runner</a> measures speed, allocations, and statistical diagnostics; <a href="extending.html#verification">Verification</a> checks correctness cases.</p>
+<h2 id="open-testout">Open TestOut</h2>
+<p>Build <code>RandExOmTestOut</code> in Visual Studio and start it, or double-click <code>RandExOmTestOut.exe</code> in its build/publish folder. Keep its accompanying DLL and runtime files together. It targets .NET 8.</p>
+<p>From the repository root, you can also run:</p>
+<pre><code class="lang-powershell">dotnet run --project RandExOmTestOut/RandExOmTestOut.csproj
+</code></pre><p>Unlike the DLL-loaded benchmark runner, TestOut has a project reference to RandEXom. Building TestOut builds the library too. Enter a menu number and press Enter. After each example finishes, the menu appears again. Enter <code>0</code> or any unlisted value to exit; end-of-input also exits.</p>
+<h2 id="menu-options">Menu options</h2>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Menu label</th>
+<th>What it demonstrates</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>gacha</td>
+<td><code>GachaR&lt;string&gt;</code> pulls from weighted rarity entries</td>
+</tr>
+<tr>
+<td>2</td>
+<td>gachalite</td>
+<td><code>GachaRBatched&lt;string&gt;</code> uses counts for the same rarity entries; “gachalite” is the menu label</td>
+</tr>
+<tr>
+<td>3</td>
+<td>pong</td>
+<td><code>PongR</code> alternates range halves for int and long draws</td>
+</tr>
+<tr>
+<td>4</td>
+<td>distance</td>
+<td><code>DistanceR</code> keeps a gap from the previous draw, including mixed int/long calls</td>
+</tr>
+<tr>
+<td>5</td>
+<td>SSRNG</td>
+<td><code>SSRNGRandom</code> bounded int and long output</td>
+</tr>
+<tr>
+<td>6</td>
+<td>XORShift</td>
+<td>Default <code>ModuloRandom</code> output</td>
+</tr>
+<tr>
+<td>7</td>
+<td>XORShiftStar</td>
+<td><code>ModuloRandom</code> with <code>XORShift64_Star</code></td>
+</tr>
+<tr>
+<td>8</td>
+<td>SlotR</td>
+<td>Ten bounded draws from Next(0, 100)</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Distributed Tree Item</td>
+<td>Ordered/shuffled endpoint placement with both keep and remove modes</td>
+</tr>
+</tbody>
+</table>
+<p>Most demonstrations use default seeds, so their output can differ between runs. Console-printing time and the demo&#39;s elapsed-time line are not a reliable speed comparison; use the dedicated benchmark runner for that.</p>
+<p><a id="item-tree-output"></a></p>
+<h2 id="item-tree-output">Item-tree output</h2>
+<p>Option <strong>9</strong> runs all four combinations of <code>do_shuffle</code> and <code>remove_on_pull</code> for <code>DistributedTreeR&lt;string&gt;</code>. Each starts with 12 distinct items, two branches per node, two steps, and <code>ModuloRandom(new XORShift64Seed(123))</code>. The four endpoint groups start with three items each.</p>
+<p>The ordered removal case begins like this:</p>
+<pre><code class="lang-text">Shuffle: False, Remove on pull: True
+Endpoint 0: Item1, Item2, Item3
+Endpoint 1: Item4, Item5, Item6
+Endpoint 2: Item7, Item8, Item9
+Endpoint 3: Item10, Item11, Item12
+Item5 from endpoint 1, Remaining: 11
+Item6 from endpoint 1, Remaining: 10
+Item4 from endpoint 1, Remaining: 9
+Endpoint 1 is empty and locked.
+</code></pre><p>Endpoint numbers are zero-based and refer to the initial placement. In keep mode, all 12 items remain available and repeated values are expected. In removal mode, each item appears once, the remaining count falls to zero, and empty endpoints stop receiving draws. No items move between groups. When a whole branch empties, the picker stops visiting that branch too.</p>
+<p>The removal cases finish with:</p>
+<pre><code class="lang-text">All endpoints locked. Empty pull returns null.
+Test passed.
+</code></pre><p>The demo checks unchanged placement in keep mode, unique removed items, remaining counts, and the exhausted result. These checks supplement the more detailed <a href="extending.html#verification">Verification cases</a>, including deterministic branch paths and uneven endpoint sizes. See <a href="items-distributedtreer.html">the item-tree guide</a> for the API and <a href="benchmarks.html#item-picker-comparison">measured comparisons</a> for pull costs.</p>
+<hr>
+<p>← Previous: <a href="../api/index.html">4.4 Class index</a> · <a href="../index.html">Guide map</a> · Next: <a href="benchmarks.html">4.6 Benchmarks</a> →</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/miputra/RandEXom/blob/main/RandEXom/articles/test-output.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
